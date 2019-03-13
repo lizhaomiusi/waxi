@@ -56,6 +56,9 @@ backend default {
 ```
 
 当对网页的信息更新频率要求很高时，就可以使用下列命令进行设置
+
 [root@proxy02 varnish]#ln -s /usr/local/varnish/bin/* /usr/bin/
+
 [root@proxy02 varnish]#varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 ban.url index.html
+
 [root@proxy02 varnish]#varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 ban.url ".*"
