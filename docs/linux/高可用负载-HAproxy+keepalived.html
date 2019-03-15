@@ -1,0 +1,975 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>高可用负载-HAproxy+keepalived · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="高可用负载-Nginx.html" />
+    
+    
+    <link rel="prev" href="高可用负载--LVS四层负载均衡.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="git命令推送github.html">
+            
+                <a href="git命令推送github.html">
+            
+                    
+                    git命令推送github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="npm更换成淘宝镜像源以及cnpm.html">
+            
+                <a href="npm更换成淘宝镜像源以及cnpm.html">
+            
+                    
+                    npm更换成淘宝镜像源以及cnpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="VPN服务器之PPTP.html">
+            
+                <a href="VPN服务器之PPTP.html">
+            
+                    
+                    VPN服务器之PPTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="使用NGINX+LUA实现WAF功能.html">
+            
+                <a href="使用NGINX+LUA实现WAF功能.html">
+            
+                    
+                    使用NGINX+LUA实现WAF功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="应用-6xyum安装LNMP.html">
+            
+                <a href="应用-6xyum安装LNMP.html">
+            
+                    
+                    应用-6xyum安装LNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="应用-6x编译LNMP环境.html">
+            
+                <a href="应用-6x编译LNMP环境.html">
+            
+                    
+                    应用-6x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="应用-7x编译LNMP环境.html">
+            
+                <a href="应用-7x编译LNMP环境.html">
+            
+                    
+                    应用-7x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="应用-堡垒机Teleport.html">
+            
+                <a href="应用-堡垒机Teleport.html">
+            
+                    
+                    应用-堡垒机Teleport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="批量分发密钥-1密钥对创建.html">
+            
+                <a href="批量分发密钥-1密钥对创建.html">
+            
+                    
+                    批量分发密钥-1密钥对创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="批量分发密钥-ansible方式.html">
+            
+                <a href="批量分发密钥-ansible方式.html">
+            
+                    
+                    批量分发密钥-ansible方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="批量分发密钥-sshpass方式.html">
+            
+                <a href="批量分发密钥-sshpass方式.html">
+            
+                    
+                    批量分发密钥-sshpass方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="批量分发密钥-去除yes-no的提示.html">
+            
+                <a href="批量分发密钥-去除yes-no的提示.html">
+            
+                    
+                    批量分发密钥-去除yes-no的提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="文档-git-idoc文档中心.html">
+            
+                <a href="文档-git-idoc文档中心.html">
+            
+                    
+                    文档-git-idoc文档中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="文档-gitbook文档中心服务.html">
+            
+                <a href="文档-gitbook文档中心服务.html">
+            
+                    
+                    文档-gitbook文档中心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="文档-mindoc配置.html">
+            
+                <a href="文档-mindoc配置.html">
+            
+                    
+                    文档-mindoc配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="普通用户添加ssh或禁止ssh.html">
+            
+                <a href="普通用户添加ssh或禁止ssh.html">
+            
+                    
+                    普通用户添加ssh或禁止ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="监控-zabbix-agent端的配置.html">
+            
+                <a href="监控-zabbix-agent端的配置.html">
+            
+                    
+                    监控-zabbix-agent端的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="监控-zabbix_API方式.html">
+            
+                <a href="监控-zabbix_API方式.html">
+            
+                    
+                    监控-zabbix_API方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="监控-zabbix监控nginx.html">
+            
+                <a href="监控-zabbix监控nginx.html">
+            
+                    
+                    监控-zabbix监控nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="监控-zabbix部署.html">
+            
+                <a href="监控-zabbix部署.html">
+            
+                    
+                    监控-zabbix部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="监控-zabbix部署1.html">
+            
+                <a href="监控-zabbix部署1.html">
+            
+                    
+                    监控-zabbix部署1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="网盘-Cloudreve_on_Docker.html">
+            
+                <a href="网盘-Cloudreve_on_Docker.html">
+            
+                    
+                    网盘-Cloudreve_on_Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="网盘-Docker+Nextcloud快速部署.html">
+            
+                <a href="网盘-Docker+Nextcloud快速部署.html">
+            
+                    
+                    网盘-Docker+Nextcloud快速部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="网盘-OpenMediaVault_NAS.html">
+            
+                <a href="网盘-OpenMediaVault_NAS.html">
+            
+                    
+                    网盘-OpenMediaVault_NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="网盘-owncloud存储.html">
+            
+                <a href="网盘-owncloud存储.html">
+            
+                    
+                    网盘-owncloud存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="运维-ansible环境.html">
+            
+                <a href="运维-ansible环境.html">
+            
+                    
+                    运维-ansible环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="部署-cobbler.html">
+            
+                <a href="部署-cobbler.html">
+            
+                    
+                    部署-cobbler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="部署-EPEL源_yum源.html">
+            
+                <a href="部署-EPEL源_yum源.html">
+            
+                    
+                    部署-EPEL源_yum源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="部署-PXE.html">
+            
+                <a href="部署-PXE.html">
+            
+                    
+                    部署-PXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="部署-yum仓库配置.html">
+            
+                <a href="部署-yum仓库配置.html">
+            
+                    
+                    部署-yum仓库配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="部署-同步阿里云镜像的rpm包.html">
+            
+                <a href="部署-同步阿里云镜像的rpm包.html">
+            
+                    
+                    部署-同步阿里云镜像的rpm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="高可用负载--HAProxy.html">
+            
+                <a href="高可用负载--HAProxy.html">
+            
+                    
+                    高可用负载--HAProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="高可用负载--Keepalived.html">
+            
+                <a href="高可用负载--Keepalived.html">
+            
+                    
+                    高可用负载--Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="高可用负载--LVS+keepalive.html">
+            
+                <a href="高可用负载--LVS+keepalive.html">
+            
+                    
+                    高可用负载--LVS+keepalive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="高可用负载--LVS四层负载均衡.html">
+            
+                <a href="高可用负载--LVS四层负载均衡.html">
+            
+                    
+                    高可用负载--LVS四层负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.37" data-path="高可用负载-HAproxy+keepalived.html">
+            
+                <a href="高可用负载-HAproxy+keepalived.html">
+            
+                    
+                    高可用负载-HAproxy+keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="高可用负载-Nginx.html">
+            
+                <a href="高可用负载-Nginx.html">
+            
+                    
+                    高可用负载-Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >高可用负载-HAproxy+keepalived</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5229;&#x7528;keepalived&#x548C;haproxy&#x914D;&#x7F6E;mysql&#x7684;&#x9AD8;&#x53EF;&#x7528;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<p>HAproxy&#x914D;&#x7F6E;</p>
+<p>https:\/\/www.cnblogs.com\/tae44\/p\/4717334.html</p>
+<p>https:\/\/www.jianshu.com\/p\/01eb60ed7d8c</p>
+<p>https:\/\/www.jianshu.com\/p\/495d4a8812e7</p>
+<p>#</p>
+<p>&#x51C6;&#x5907;5&#x53F0;CentOS7.3&#x4E3B;&#x673A;&#x548C;&#x4E00;&#x4E2A;VIP&#x5730;&#x5740;:</p>
+<p>yum install haproxy -y</p>
+<p>or</p>
+<p>&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;</p>
+<p>&#x9700;&#x8981;&#x7FFB;&#x5899; http:\/\/www.haproxy.org\/download\/1.7\/src\/haproxy-1.7.2.tar.gz</p>
+<p>tar -xzf haproxy-1.7.2.tar.gz</p>
+<p>#</p>
+<p>&#x4E0B;&#x9762;&#x6848;&#x4F8B;&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;</p>
+<p>&#x51C6;&#x5907;&#x4E00;&#x4E2A;&#x53EF;&#x7528;IP&#x7528;&#x4F5C;&#x865A;&#x62DF;IP(VIP):</p>
+<p>VIP=10.1.2.100</p>
+<p>&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5668;&#x4F1A;&#x7528;&#x5230;2&#x53F0;&#x4E3B;&#x673A;&#xFF0C;&#x4E00;&#x4E3B;&#x4E00;&#x5907;&#x7684;&#x67B6;&#x6784;</p>
+<p>lb1(&#x9ED8;&#x8BA4;&#x4E3A;&#x4E3B;)=10.1.2.12</p>
+<p>lb2(&#x9ED8;&#x8BA4;&#x4E3A;&#x5907;)=10.1.2.13</p>
+<p>&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x96C6;&#x7FA4;&#x4E2D;&#x4E3B;&#x673A;&#x7684;IP&#x5730;&#x5740;</p>
+<p>S1=10.1.2.14</p>
+<p>S2=10.1.2.15</p>
+<p>S3=10.1.2.16</p>
+<p>#</p>
+<p>&#x6240;&#x6709;&#x4E3B;&#x673A;&#x4E0A;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;</p>
+<p>systemctl stop firewalld</p>
+<p>systemctl disable firewalld</p>
+<p>&#x6240;&#x6709;&#x4E3B;&#x673A;&#x5173;&#x95ED;selinux</p>
+<p>setenforce 0</p>
+<p>vi \/etc\/selinux\/config</p>
+<p>SELINUX=disabled</p>
+<p>#</p>
+<p>&#x5B89;&#x88C5;haproxy&#x548C;keepalived</p>
+<p>lb1&#x548C;lb2&#x4E0A;&#x5B89;&#x88C5;haproxy&#x548C;keepalived</p>
+<p>yum install haproxy keepalived -y</p>
+<p>#</p>
+<p>s1 s2 s3&#x4E0A;&#x5B89;&#x88C5;nginx&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x628A;nginx&#x4F5C;&#x4E3A;&#x540E;&#x7AEF;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5176;&#x4ED6;&#x540E;&#x7AEF;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E00;&#x6B65;&#x53EF;&#x4EE5;&#x7701;&#x7565;</p>
+<p>yum install epel-release -y</p>
+<p>yum install nginx -y</p>
+<p>#</p>
+<p>&#x914D;&#x7F6E;&#x4E3B;keepalived</p>
+<p>&#x7F16;&#x8F91;lb1</p>
+<p>vi \/etc\/keepalived\/keepalived.conf</p>
+<p>! Configuration File for keepalived</p>
+<p>#</p>
+<p>global_defs {</p>
+<p> # &#x901A;&#x77E5;&#x90AE;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x7684;&#x914D;&#x7F6E;</p>
+<p> notification_email {</p>
+<p> # &#x5F53;master&#x5931;&#x53BB;VIP&#x6216;&#x5219;VIP&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x53D1;&#x4E00;&#x5C01;&#x901A;&#x77E5;&#x90AE;&#x4EF6;&#x5230;your-email@qq.com</p>
+<p> your-email@qq.com</p>
+<p> }</p>
+<p> # &#x53D1;&#x4EF6;&#x4EBA;&#x4FE1;&#x606F;</p>
+<p> notification_email_from keepalived@qq.com</p>
+<p> # &#x90AE;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</p>
+<p> smtp_server 127.0.0.1</p>
+<p> # &#x90AE;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</p>
+<p> smtp_connect_timeout 30</p>
+<p> # &#x90AE;&#x4EF6;TITLE</p>
+<p> router_id LVS_DEVEL</p>
+<p>}</p>
+<p>#</p>
+<p>vrrp_instance VI_1 {</p>
+<p> # &#x4E3B;&#x673A;: MASTER</p>
+<p> # &#x5907;&#x673A;: BACKUP</p>
+<p> state MASTER</p>
+<p> # &#x5B9E;&#x4F8B;&#x7ED1;&#x5B9A;&#x7684;&#x7F51;&#x5361;, &#x7528;ip a&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x7F51;&#x5361;&#x7F16;&#x53F7;</p>
+<p> interface eno16777984</p>
+<p> # &#x865A;&#x62DF;&#x8DEF;&#x7531;&#x6807;&#x8BC6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6807;&#x8BC6;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x5B57;(1-255)&#xFF0C;&#x5728;&#x4E00;&#x4E2A;VRRP&#x5B9E;&#x4F8B;&#x4E2D;&#x4E3B;&#x5907;&#x670D;&#x52A1;&#x5668;ID&#x5FC5;&#x987B;&#x4E00;&#x6837;</p>
+<p> virtual_router_id 88</p>
+<p> # &#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6570;&#x5B57;&#x8D8A;&#x5927;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E2D;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x4F18;&#x5148;&#x7EA7;&#x8981;&#x9AD8;&#x4E8E;&#x5907;&#x670D;&#x52A1;&#x5668;</p>
+<p> priority 100</p>
+<p> # &#x4E3B;&#x5907;&#x4E4B;&#x95F4;&#x540C;&#x6B65;&#x68C0;&#x67E5;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5355;&#x4F4D;&#x79D2;</p>
+<p> advert_int 1</p>
+<p> # &#x9A8C;&#x8BC1;&#x7C7B;&#x578B;&#x548C;&#x5BC6;&#x7801;</p>
+<p> authentication {</p>
+<p> # &#x9A8C;&#x8BC1;&#x7C7B;&#x578B;&#x6709;&#x4E24;&#x79CD; PASS&#x548C;HA</p>
+<p> auth_type PASS</p>
+<p> # &#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E2D;&#x4E3B;&#x5907;&#x5BC6;&#x7801;&#x4FDD;&#x6301;&#x4E00;&#x6837;</p>
+<p> auth_pass 11111111</p>
+<p> }</p>
+<p> # &#x865A;&#x62DF;IP&#x5730;&#x5740;,&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x6BCF;&#x884C;&#x4E00;&#x4E2A;</p>
+<p> virtual_ipaddress {</p>
+<p> 192.168.1.100</p>
+<p> }</p>
+<p>}</p>
+<p>#</p>
+<p>virtual_server 192.168.1.100 443 {</p>
+<p> # &#x5065;&#x5EB7;&#x68C0;&#x67E5;&#x65F6;&#x95F4;&#x95F4;&#x9694;</p>
+<p> delay_loop 6</p>
+<p> # &#x8C03;&#x5EA6;&#x7B97;&#x6CD5;</p>
+<p> # Doc: http:\/\/www.keepalived.org\/doc\/scheduling_algorithms.html</p>
+<p> # Round Robin (rr)</p>
+<p> # Weighted Round Robin (wrr)</p>
+<p> # Least Connection (lc)</p>
+<p> # Weighted Least Connection (wlc)</p>
+<p> # Locality-Based Least Connection (lblc)</p>
+<p> # Locality-Based Least Connection with Replication (lblcr)</p>
+<p> # Destination Hashing (dh)</p>
+<p> # Source Hashing (sh)</p>
+<p> # Shortest Expected Delay (seq)</p>
+<p> # Never Queue (nq)</p>
+<p> # Overflow-Connection (ovf)</p>
+<p> lb_algo rr</p>
+<p> lb_kind NAT</p>
+<p> persistence_timeout 50</p>
+<p> protocol TCP</p>
+<p> # &#x901A;&#x8FC7;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x628A;Master&#x5207;&#x6362;&#x5230;&#x771F;&#x5B9E;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x670D;&#x52A1;&#x5668;&#x4E0A;</p>
+<p> # &#x771F;&#x5B9E;&#x7684;&#x4E3B;&#x673A;&#x4F1A;&#x5B9A;&#x671F;&#x786E;&#x5B9A;&#x8FDB;&#x884C;&#x5065;&#x5EB7;&#x68C0;&#x67E5;&#xFF0C;&#x5982;&#x679C;MASTER&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5219;&#x5207;&#x6362;&#x5230;&#x5907;&#x673A;&#x4E0A;</p>
+<p> real_server 192.168.1.101 443 {</p>
+<p> weight 1</p>
+<p> TCP_CHECK {</p>
+<p> # &#x8FDE;&#x63A5;&#x8D85;&#x7AEF;&#x53E3;</p>
+<p> connect_port 443</p>
+<p> # &#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</p>
+<p> connect_timeout 3</p>
+<p> }</p>
+<p> }</p>
+<p> real_server 192.168.1.102 443 {</p>
+<p> weight 1</p>
+<p> TCP_CHECK {</p>
+<p> connect_port 443</p>
+<p> connect_timeout 3</p>
+<p> }</p>
+<p> }</p>
+<p>}</p>
+<p>#</p>
+<hr>
+<p>&#x914D;&#x7F6E;&#x4ECE;keepalived</p>
+<p>&#x7F16;&#x8F91;lb2</p>
+<p>vi \/etc\/keepalived\/keepalived.conf</p>
+<p>! Configuration File for keepalived</p>
+<p>#</p>
+<p>global_defs {</p>
+<p> # &#x901A;&#x77E5;&#x90AE;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x7684;&#x914D;&#x7F6E;</p>
+<p> notification_email {</p>
+<p> # &#x5F53;master&#x5931;&#x53BB;VIP&#x6216;&#x5219;VIP&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x53D1;&#x4E00;&#x5C01;&#x901A;&#x77E5;&#x90AE;&#x4EF6;&#x5230;your-email@qq.com</p>
+<p> your-email@qq.com</p>
+<p> }</p>
+<p> # &#x53D1;&#x4EF6;&#x4EBA;&#x4FE1;&#x606F;</p>
+<p> notification_email_from keepalived@qq.com</p>
+<p> # &#x90AE;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</p>
+<p> smtp_server 127.0.0.1</p>
+<p> # &#x90AE;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</p>
+<p> smtp_connect_timeout 30</p>
+<p> # &#x90AE;&#x4EF6;TITLE</p>
+<p> router_id LVS_DEVEL</p>
+<p>}</p>
+<p>#</p>
+<p>vrrp_instance VI_1 {</p>
+<p> # &#x4E3B;&#x673A;: MASTER</p>
+<p> # &#x5907;&#x673A;: BACKUP</p>
+<p> state BACKUP</p>
+<p> # &#x5B9E;&#x4F8B;&#x7ED1;&#x5B9A;&#x7684;&#x7F51;&#x5361;, &#x7528;ip a&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x7F51;&#x5361;&#x7F16;&#x53F7;</p>
+<p> interface eno16777984</p>
+<p> # &#x865A;&#x62DF;&#x8DEF;&#x7531;&#x6807;&#x8BC6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6807;&#x8BC6;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x5B57;(1-255)&#xFF0C;&#x5728;&#x4E00;&#x4E2A;VRRP&#x5B9E;&#x4F8B;&#x4E2D;&#x4E3B;&#x5907;&#x670D;&#x52A1;&#x5668;ID&#x5FC5;&#x987B;&#x4E00;&#x6837;</p>
+<p> virtual_router_id 88</p>
+<p> # &#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6570;&#x5B57;&#x8D8A;&#x5927;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E2D;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x4F18;&#x5148;&#x7EA7;&#x8981;&#x9AD8;&#x4E8E;&#x5907;&#x670D;&#x52A1;&#x5668;</p>
+<p> priority 99</p>
+<p> # &#x4E3B;&#x5907;&#x4E4B;&#x95F4;&#x540C;&#x6B65;&#x68C0;&#x67E5;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5355;&#x4F4D;&#x79D2;</p>
+<p> advert_int 1</p>
+<p> # &#x9A8C;&#x8BC1;&#x7C7B;&#x578B;&#x548C;&#x5BC6;&#x7801;</p>
+<p> authentication {</p>
+<p> # &#x9A8C;&#x8BC1;&#x7C7B;&#x578B;&#x6709;&#x4E24;&#x79CD; PASS&#x548C;HA</p>
+<p> auth_type PASS</p>
+<p> # &#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E2D;&#x4E3B;&#x5907;&#x5BC6;&#x7801;&#x4FDD;&#x6301;&#x4E00;&#x6837;</p>
+<p> auth_pass 11111111</p>
+<p> }</p>
+<p> # &#x865A;&#x62DF;IP&#x5730;&#x5740;,&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x6BCF;&#x884C;&#x4E00;&#x4E2A;</p>
+<p> virtual_ipaddress {</p>
+<p> 192.168.1.100</p>
+<p> }</p>
+<p>}</p>
+<p>#</p>
+<p>virtual_server 192.168.1.100 443 {</p>
+<p> # &#x5065;&#x5EB7;&#x68C0;&#x67E5;&#x65F6;&#x95F4;&#x95F4;&#x9694;</p>
+<p> delay_loop 6</p>
+<p> # &#x8C03;&#x5EA6;&#x7B97;&#x6CD5;</p>
+<p> # Doc: http:\/\/www.keepalived.org\/doc\/scheduling_algorithms.html</p>
+<p> # Round Robin (rr)</p>
+<p> # Weighted Round Robin (wrr)</p>
+<p> # Least Connection (lc)</p>
+<p> # Weighted Least Connection (wlc)</p>
+<p> # Locality-Based Least Connection (lblc)</p>
+<p> # Locality-Based Least Connection with Replication (lblcr)</p>
+<p> # Destination Hashing (dh)</p>
+<p> # Source Hashing (sh)</p>
+<p> # Shortest Expected Delay (seq)</p>
+<p> # Never Queue (nq)</p>
+<p> # Overflow-Connection (ovf)</p>
+<p> lb_algo rr</p>
+<p> lb_kind NAT</p>
+<p> persistence_timeout 50</p>
+<p> protocol TCP</p>
+<p> # &#x901A;&#x8FC7;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x628A;Master&#x5207;&#x6362;&#x5230;&#x771F;&#x5B9E;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x670D;&#x52A1;&#x5668;&#x4E0A;</p>
+<p> # &#x771F;&#x5B9E;&#x7684;&#x4E3B;&#x673A;&#x4F1A;&#x5B9A;&#x671F;&#x786E;&#x5B9A;&#x8FDB;&#x884C;&#x5065;&#x5EB7;&#x68C0;&#x67E5;&#xFF0C;&#x5982;&#x679C;MASTER&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5219;&#x5207;&#x6362;&#x5230;&#x5907;&#x673A;&#x4E0A;</p>
+<p> real_server 192.168.1.101 443 {</p>
+<p> weight 1</p>
+<p> TCP_CHECK {</p>
+<p> # &#x8FDE;&#x63A5;&#x8D85;&#x7AEF;&#x53E3;</p>
+<p> connect_port 443</p>
+<p> # &#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</p>
+<p> connect_timeout 3</p>
+<p> }</p>
+<p> }</p>
+<p> real_server 192.168.1.102 443 {</p>
+<p> weight 1</p>
+<p> TCP_CHECK {</p>
+<p> connect_port 443</p>
+<p> connect_timeout 3</p>
+<p> }</p>
+<p> }</p>
+<p>}</p>
+<p>#</p>
+<p>&#x914D;&#x7F6E;haproxy</p>
+<p>&#x7F16;&#x8F91;lb1&#x548C;lb2&#x4E0A;&#x7684;</p>
+<p>\/etc\/haproxy\/haproxy.cfg</p>
+<p>&#x628A;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x5305;&#x542B;IP&#x52A0;&#x5230;backend&#x91CC;</p>
+<p>#</p>
+<p>&#x914D;&#x7F6E;haproxy&#x670D;&#x52A1;:</p>
+<p>&#x6CE8;&#x91CA;&#x6389;&#x9ED8;&#x8BA4;&#x7684;&#x4EE3;&#x7406;&#x914D;&#x7F6E;&#x5E76;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x914D;&#x7F6E;&#xFF1B;</p>
+<p>vim \/etc\/haproxy\/haproxy.cfg</p>
+<p>#</p>
+<p>frontend testweb #&#x5B9A;&#x4E49;&#x540D;&#x79F0;&#x4E3A; testweb &#x7684;frontend</p>
+<p>bind *:80 #&#x76D1;&#x542C;&#x6240;&#x6709;&#x5730;&#x5740;&#x7684;web&#x670D;&#x52A1;80&#x7AEF;&#x53E3;</p>
+<p>default_backend mywebs #&#x5B9A;&#x4E49;&#x540D;&#x79F0;&#x4E3A;mywebs&#x7684;backend&#x540E;&#x7AEF;web&#x670D;&#x52A1;</p>
+<p>#</p>
+<p>backend mywebs #&#x5B9A;&#x4E49;&#x540D;&#x79F0;&#x4E3A;mywebs&#x7684;backend</p>
+<p>balance roundrobin #&#x5B9A;&#x4E49;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;</p>
+<p>server srv1 192.168.21.11:80 check</p>
+<p>server srv2 192.168.21.12:80 check</p>
+<p>server srv2 192.168.21.13:80 check</p>
+<p>#</p>
+<p>&#x914D;&#x7F6E;nginx</p>
+<p>#</p>
+<p>echo &quot;10.1.2.14&quot; \/usr\/share\/nginx\/html\/index.html</p>
+<p>echo &quot;10.1.2.15&quot; \/usr\/share\/nginx\/html\/index.html</p>
+<p>#</p>
+<p>&#x91CD;&#x542F;&#x670D;&#x52A1;nginx haproxy keepalived</p>
+<p>#</p>
+<p>systemctl restart nginx</p>
+<p>systemctl enable nginx</p>
+<p>systemctl restart haproxy</p>
+<p>systemctl enable haproxy</p>
+<p>systemctl restart keepalived</p>
+<p>systemctl enable keepalived</p>
+<p>#</p>
+<p>&#x5728;MASTER&#x4E0A;&#x8FD0;&#x884C;ip a</p>
+<p>&#x4F1A;&#x53D1;&#x73B0;VIP(10.1.2.100)&#x5DF2;&#x7ECF;&#x7ED1;&#x5B9A;&#x597D;&#x4E86;&#x5982;&#x679C;&#x53D1;&#x73B0;VIP&#x65E0;&#x6CD5;&#x7ED1;&#x5B9A;</p>
+<p>vi \/etc\/sysctl.conf</p>
+<p>&#x6DFB;&#x52A0;&#x4E24;&#x884C;</p>
+<p>net.ipv4.ip_forward = 1</p>
+<p>net.ipv4.ip_nonlocal_bind = 1</p>
+<p>&#x8BA9;&#x65B0;&#x914D;&#x7F6E;&#x751F;&#x6548;</p>
+<p>sysctl -p</p>
+<p>#</p>
+<p>&#x9A8C;&#x8BC1;&#x548C;&#x6D4B;&#x8BD5;</p>
+<p>#</p>
+<ol>
+<li><p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165; http:\/\/10.1.2.100 https:\/\/10.1.2.100 &#x67E5;&#x770B;&#x662F;&#x5426;&#x6210;&#x529F;&#x663E;&#x793A;nginx&#x6B22;&#x8FCE;&#x9875;&#x9762;</p>
+</li>
+<li><p>lb1&#x5173;&#x673A;&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE; http:\/\/10.1.2.100 &#x5982;&#x679C;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x8BF4;&#x660E;VIP&#x6210;&#x529F;&#x5207;&#x6362;&#x5230;&#x5907;&#x673A;</p>
+</li>
+<li><p>lb2&#x4E0A;&#x6267;&#x884C;ip a&#xFF0C;&#x67E5;&#x770B;&#x7F51;&#x5361;&#x662F;&#x5426;&#x7ED1;&#x5B9A;VIP(192.168.21.100)</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="高可用负载--LVS四层负载均衡.html" class="navigation navigation-prev " aria-label="Previous page: 高可用负载--LVS四层负载均衡">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="高可用负载-Nginx.html" class="navigation navigation-next " aria-label="Next page: 高可用负载-Nginx">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"高可用负载-HAproxy+keepalived","level":"1.37","depth":1,"next":{"title":"高可用负载-Nginx","level":"1.38","depth":1,"path":"高可用负载-Nginx.md","ref":"高可用负载-Nginx.md","articles":[]},"previous":{"title":"高可用负载--LVS四层负载均衡","level":"1.36","depth":1,"path":"高可用负载--LVS四层负载均衡.md","ref":"高可用负载--LVS四层负载均衡.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"高可用负载-HAproxy+keepalived.md","mtime":"2019-03-15T14:03:20.287Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-15T17:14:54.926Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1165 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>高可用负载--LVS四层负载均衡 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="高可用负载-HAproxy+keepalived.html" />
+    
+    
+    <link rel="prev" href="高可用负载--LVS+keepalive.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="git命令推送github.html">
+            
+                <a href="git命令推送github.html">
+            
+                    
+                    git命令推送github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="npm更换成淘宝镜像源以及cnpm.html">
+            
+                <a href="npm更换成淘宝镜像源以及cnpm.html">
+            
+                    
+                    npm更换成淘宝镜像源以及cnpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="VPN服务器之PPTP.html">
+            
+                <a href="VPN服务器之PPTP.html">
+            
+                    
+                    VPN服务器之PPTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="使用NGINX+LUA实现WAF功能.html">
+            
+                <a href="使用NGINX+LUA实现WAF功能.html">
+            
+                    
+                    使用NGINX+LUA实现WAF功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="应用-6xyum安装LNMP.html">
+            
+                <a href="应用-6xyum安装LNMP.html">
+            
+                    
+                    应用-6xyum安装LNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="应用-6x编译LNMP环境.html">
+            
+                <a href="应用-6x编译LNMP环境.html">
+            
+                    
+                    应用-6x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="应用-7x编译LNMP环境.html">
+            
+                <a href="应用-7x编译LNMP环境.html">
+            
+                    
+                    应用-7x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="应用-堡垒机Teleport.html">
+            
+                <a href="应用-堡垒机Teleport.html">
+            
+                    
+                    应用-堡垒机Teleport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="批量分发密钥-1密钥对创建.html">
+            
+                <a href="批量分发密钥-1密钥对创建.html">
+            
+                    
+                    批量分发密钥-1密钥对创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="批量分发密钥-ansible方式.html">
+            
+                <a href="批量分发密钥-ansible方式.html">
+            
+                    
+                    批量分发密钥-ansible方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="批量分发密钥-sshpass方式.html">
+            
+                <a href="批量分发密钥-sshpass方式.html">
+            
+                    
+                    批量分发密钥-sshpass方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="批量分发密钥-去除yes-no的提示.html">
+            
+                <a href="批量分发密钥-去除yes-no的提示.html">
+            
+                    
+                    批量分发密钥-去除yes-no的提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="文档-git-idoc文档中心.html">
+            
+                <a href="文档-git-idoc文档中心.html">
+            
+                    
+                    文档-git-idoc文档中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="文档-gitbook文档中心服务.html">
+            
+                <a href="文档-gitbook文档中心服务.html">
+            
+                    
+                    文档-gitbook文档中心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="文档-mindoc配置.html">
+            
+                <a href="文档-mindoc配置.html">
+            
+                    
+                    文档-mindoc配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="普通用户添加ssh或禁止ssh.html">
+            
+                <a href="普通用户添加ssh或禁止ssh.html">
+            
+                    
+                    普通用户添加ssh或禁止ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="监控-zabbix-agent端的配置.html">
+            
+                <a href="监控-zabbix-agent端的配置.html">
+            
+                    
+                    监控-zabbix-agent端的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="监控-zabbix_API方式.html">
+            
+                <a href="监控-zabbix_API方式.html">
+            
+                    
+                    监控-zabbix_API方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="监控-zabbix监控nginx.html">
+            
+                <a href="监控-zabbix监控nginx.html">
+            
+                    
+                    监控-zabbix监控nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="监控-zabbix部署.html">
+            
+                <a href="监控-zabbix部署.html">
+            
+                    
+                    监控-zabbix部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="监控-zabbix部署1.html">
+            
+                <a href="监控-zabbix部署1.html">
+            
+                    
+                    监控-zabbix部署1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="网盘-Cloudreve_on_Docker.html">
+            
+                <a href="网盘-Cloudreve_on_Docker.html">
+            
+                    
+                    网盘-Cloudreve_on_Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="网盘-Docker+Nextcloud快速部署.html">
+            
+                <a href="网盘-Docker+Nextcloud快速部署.html">
+            
+                    
+                    网盘-Docker+Nextcloud快速部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="网盘-OpenMediaVault_NAS.html">
+            
+                <a href="网盘-OpenMediaVault_NAS.html">
+            
+                    
+                    网盘-OpenMediaVault_NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="网盘-owncloud存储.html">
+            
+                <a href="网盘-owncloud存储.html">
+            
+                    
+                    网盘-owncloud存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="运维-ansible环境.html">
+            
+                <a href="运维-ansible环境.html">
+            
+                    
+                    运维-ansible环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="部署-cobbler.html">
+            
+                <a href="部署-cobbler.html">
+            
+                    
+                    部署-cobbler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="部署-EPEL源_yum源.html">
+            
+                <a href="部署-EPEL源_yum源.html">
+            
+                    
+                    部署-EPEL源_yum源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="部署-PXE.html">
+            
+                <a href="部署-PXE.html">
+            
+                    
+                    部署-PXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="部署-yum仓库配置.html">
+            
+                <a href="部署-yum仓库配置.html">
+            
+                    
+                    部署-yum仓库配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="部署-同步阿里云镜像的rpm包.html">
+            
+                <a href="部署-同步阿里云镜像的rpm包.html">
+            
+                    
+                    部署-同步阿里云镜像的rpm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="高可用负载--HAProxy.html">
+            
+                <a href="高可用负载--HAProxy.html">
+            
+                    
+                    高可用负载--HAProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="高可用负载--Keepalived.html">
+            
+                <a href="高可用负载--Keepalived.html">
+            
+                    
+                    高可用负载--Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="高可用负载--LVS+keepalive.html">
+            
+                <a href="高可用负载--LVS+keepalive.html">
+            
+                    
+                    高可用负载--LVS+keepalive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.36" data-path="高可用负载--LVS四层负载均衡.html">
+            
+                <a href="高可用负载--LVS四层负载均衡.html">
+            
+                    
+                    高可用负载--LVS四层负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="高可用负载-HAproxy+keepalived.html">
+            
+                <a href="高可用负载-HAproxy+keepalived.html">
+            
+                    
+                    高可用负载-HAproxy+keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="高可用负载-Nginx.html">
+            
+                <a href="高可用负载-Nginx.html">
+            
+                    
+                    高可用负载-Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >高可用负载--LVS四层负载均衡</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>LVS&#x56DB;&#x5C42;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<p>LVS&#x662F; Linux Virtual Server &#x7684;&#x7B80;&#x79F0;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;Linux&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p>#</p>
+<p>http:\/\/zh.linuxvirtualserver.org\/ LVS&#x4E2D;&#x6587;&#x7AD9;&#x70B9;</p>
+<p>https:\/\/www.cnblogs.com\/liwei0526vip\/p\/6370103.html</p>
+<p>http:\/\/www.cnblogs.com\/klb561\/p\/9215704.html</p>
+<p>https:\/\/www.cnblogs.com\/lixigang\/p\/5371815.html</p>
+<p>http:\/\/www.cnblogs.com\/clsn\/p\/7920637.html</p>
+<p>https:\/\/www.jianshu.com\/p\/d9f288653039</p>
+<p>https:\/\/www.cnblogs.com\/lixigang\/p\/5371815.html</p>
+<p>https:\/\/www.cnblogs.com\/liwei0526vip\/p\/6370103.html</p>
+<hr>
+<p>LVS&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</p>
+<p>LB&#x96C6;&#x7FA4;&#x7684;&#x67B6;&#x6784;&#x548C;&#x539F;&#x7406;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x5F53;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#x8FC7;&#x6765;&#x65F6;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x5206;&#x53D1;&#x5230;Director Server&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x5B83;&#x628A;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#x6839;&#x636E;&#x8BBE;&#x7F6E;&#x597D;&#x7684;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#xFF0C;&#x667A;&#x80FD;&#x5747;&#x8861;&#x5730;&#x5206;&#x53D1;&#x5230;&#x540E;&#x7AEF;&#x771F;&#x6B63;&#x670D;&#x52A1;&#x5668;(real server)&#x4E0A;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x4E0D;&#x540C;&#x673A;&#x5668;&#x4E0A;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E86;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#xFF0C;&#x8FD9;&#x6837;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<p>LVS&#x662F; Linux Virtual Server &#x7684;&#x7B80;&#x79F0;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;Linux&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7531;&#x7AE0;&#x6587;&#x5D69;&#x535A;&#x58EB;&#x53D1;&#x8D77;&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;&#x5B83;&#x7684;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x662F; http:\/\/www.linuxvirtualserver.org &#x73B0;&#x5728; LVS &#x5DF2;&#x7ECF;&#x662F; Linux &#x5185;&#x6838;&#x6807;&#x51C6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x4F7F;&#x7528; LVS &#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x7684;&#x6280;&#x672F;&#x76EE;&#x6807;&#x662F;&#xFF1A;&#x901A;&#x8FC7; LVS &#x8FBE;&#x5230;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x6280;&#x672F;&#x548C; Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x9AD8;&#x6027;&#x80FD;&#x9AD8;&#x53EF;&#x7528;&#x7684; Linux &#x670D;&#x52A1;&#x5668;&#x96C6;&#x7FA4;&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x826F;&#x597D;&#x7684;&#x53EF;&#x9760;&#x6027;&#x3001;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x548C;&#x53EF;&#x64CD;&#x4F5C;&#x6027;&#x3002;&#x4ECE;&#x800C;&#x4EE5;&#x4F4E;&#x5EC9;&#x7684;&#x6210;&#x672C;&#x5B9E;&#x73B0;&#x6700;&#x4F18;&#x7684;&#x6027;&#x80FD;&#x3002;LVS &#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x96C6;&#x7FA4;&#x7684;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#x9879;&#x76EE;&#xFF0C;LVS&#x67B6;&#x6784;&#x4ECE;&#x903B;&#x8F91;&#x4E0A;&#x53EF;&#x5206;&#x4E3A;&#x8C03;&#x5EA6;&#x5C42;&#x3001;Server&#x96C6;&#x7FA4;&#x5C42;&#x548C;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x3002;</p>
+<hr>
+<p>LVS&#x7684;&#x57FA;&#x672C;&#x5DE5;&#x4F5C;&#x539F;&#x7406;</p>
+<p>#</p>
+<ol>
+<li><p>&#x5F53;&#x7528;&#x6237;&#x5411;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x8C03;&#x5EA6;&#x5668;&#xFF08;Director Server&#xFF09;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#xFF0C;&#x8C03;&#x5EA6;&#x5668;&#x5C06;&#x8BF7;&#x6C42;&#x53D1;&#x5F80;&#x81F3;&#x5185;&#x6838;&#x7A7A;&#x95F4;</p>
+</li>
+<li><p>PREROUTING&#x94FE;&#x9996;&#x5148;&#x4F1A;&#x63A5;&#x6536;&#x5230;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#xFF0C;&#x5224;&#x65AD;&#x76EE;&#x6807;IP&#x786E;&#x5B9A;&#x662F;&#x672C;&#x673A;IP&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5305;&#x53D1;&#x5F80;INPUT&#x94FE;</p>
+</li>
+<li><p>IPVS&#x662F;&#x5DE5;&#x4F5C;&#x5728;INPUT&#x94FE;&#x4E0A;&#x7684;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x5230;&#x8FBE;INPUT&#x65F6;&#xFF0C;IPVS&#x4F1A;&#x5C06;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x548C;&#x81EA;&#x5DF1;&#x5DF2;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x6BD4;&#x5BF9;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x7684;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;IPVS&#x4F1A;&#x5F3A;&#x884C;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5305;&#x91CC;&#x7684;&#x76EE;&#x6807;IP&#x5730;&#x5740;&#x53CA;&#x7AEF;&#x53E3;&#xFF0C;&#x5E76;&#x5C06;&#x65B0;&#x7684;&#x6570;&#x636E;&#x5305;&#x53D1;&#x5F80;POSTROUTING&#x94FE;</p>
+</li>
+<li><p>POSTROUTING&#x94FE;&#x63A5;&#x6536;&#x6570;&#x636E;&#x5305;&#x540E;&#x53D1;&#x73B0;&#x76EE;&#x6807;IP&#x5730;&#x5740;&#x521A;&#x597D;&#x662F;&#x81EA;&#x5DF1;&#x7684;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;&#x901A;&#x8FC7;&#x9009;&#x8DEF;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5305;&#x6700;&#x7EC8;&#x53D1;&#x9001;&#x7ED9;&#x540E;&#x7AEF;&#x7684;&#x670D;&#x52A1;&#x5668;</p>
+</li>
+</ol>
+<hr>
+<p>LVS&#x7684;&#x7EC4;&#x6210;</p>
+<p>LVS &#x7531;2&#x90E8;&#x5206;&#x7A0B;&#x5E8F;&#x7EC4;&#x6210;&#xFF0C;&#x5305;&#x62EC; ipvs &#x548C; ipvsadm&#x3002;</p>
+<ol>
+<li><p>ipvs(ip virtual server)&#xFF1A;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x5DE5;&#x4F5C;&#x5728;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#xFF0C;&#x53EB;ipvs&#xFF0C;&#x662F;&#x771F;&#x6B63;&#x751F;&#x6548;&#x5B9E;&#x73B0;&#x8C03;&#x5EA6;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</li>
+<li><p>ipvsadm&#xFF1A;&#x53E6;&#x5916;&#x4E00;&#x6BB5;&#x662F;&#x5DE5;&#x4F5C;&#x5728;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#xFF0C;&#x53EB;ipvsadm&#xFF0C;&#x8D1F;&#x8D23;&#x4E3A;ipvs&#x5185;&#x6838;&#x6846;&#x67B6;&#x7F16;&#x5199;&#x89C4;&#x5219;&#xFF0C;&#x5B9A;&#x4E49;&#x8C01;&#x662F;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#xFF0C;&#x800C;&#x8C01;&#x662F;&#x540E;&#x7AEF;&#x771F;&#x5B9E;&#x7684;&#x670D;&#x52A1;&#x5668;(Real Server)</p>
+</li>
+</ol>
+<hr>
+<p>LVS&#x76F8;&#x5173;&#x672F;&#x8BED;</p>
+<ol>
+<li><p>DS&#xFF1A;Director Server&#x3002;&#x6307;&#x7684;&#x662F;&#x524D;&#x7AEF;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5668;&#x8282;&#x70B9;&#x3002;</p>
+</li>
+<li><p>RS&#xFF1A;Real Server&#x3002;&#x540E;&#x7AEF;&#x771F;&#x5B9E;&#x7684;&#x5DE5;&#x4F5C;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+</li>
+<li><p>VIP&#xFF1A;&#x5411;&#x5916;&#x90E8;&#x76F4;&#x63A5;&#x9762;&#x5411;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#xFF0C;&#x4F5C;&#x4E3A;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;&#x76EE;&#x6807;&#x7684;IP&#x5730;&#x5740;&#x3002;</p>
+</li>
+<li><p>DIP&#xFF1A;Director Server IP&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x548C;&#x5185;&#x90E8;&#x4E3B;&#x673A;&#x901A;&#x8BAF;&#x7684;IP&#x5730;&#x5740;&#x3002;</p>
+</li>
+<li><p>RIP&#xFF1A;Real Server IP&#xFF0C;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x7684;IP&#x5730;&#x5740;&#x3002;</p>
+</li>
+<li><p>CIP&#xFF1A;Client IP&#xFF0C;&#x8BBF;&#x95EE;&#x5BA2;&#x6237;&#x7AEF;&#x7684;IP&#x5730;&#x5740;&#x3002;</p>
+</li>
+</ol>
+<hr>
+<p>LVS&#x7684;&#x516B;&#x79CD;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;</p>
+<ol>
+<li>&#x8F6E;&#x53EB;&#x8C03;&#x5EA6; rr</li>
+</ol>
+<p>&#x8FD9;&#x79CD;&#x7B97;&#x6CD5;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x6309;&#x4F9D;&#x6B21;&#x5FAA;&#x73AF;&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x8BF7;&#x6C42;&#x8C03;&#x5EA6;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x6700;&#x5927;&#x7684;&#x7279;&#x70B9;&#x5C31;&#x662F;&#x7B80;&#x5355;&#x3002;&#x8F6E;&#x8BE2;&#x7B97;&#x6CD5;&#x5047;&#x8BBE;&#x6240;&#x6709;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x80FD;&#x529B;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8C03;&#x5EA6;&#x5668;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x5E73;&#x5747;&#x5206;&#x914D;&#x7ED9;&#x6BCF;&#x4E2A;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E0D;&#x7BA1;&#x540E;&#x7AEF; RS &#x914D;&#x7F6E;&#x548C;&#x5904;&#x7406;&#x80FD;&#x529B;&#xFF0C;&#x975E;&#x5E38;&#x5747;&#x8861;&#x5730;&#x5206;&#x53D1;&#x4E0B;&#x53BB;&#x3002;</p>
+<ol>
+<li>&#x52A0;&#x6743;&#x8F6E;&#x53EB; wrr</li>
+</ol>
+<p>&#x8FD9;&#x79CD;&#x7B97;&#x6CD5;&#x6BD4; rr &#x7684;&#x7B97;&#x6CD5;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x6743;&#x91CD;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9; RS &#x8BBE;&#x7F6E;&#x6743;&#x91CD;&#xFF0C;&#x6743;&#x91CD;&#x8D8A;&#x9AD8;&#xFF0C;&#x90A3;&#x4E48;&#x5206;&#x53D1;&#x7684;&#x8BF7;&#x6C42;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x6743;&#x91CD;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4; 0 - 100&#x3002;&#x4E3B;&#x8981;&#x662F;&#x5BF9;rr&#x7B97;&#x6CD5;&#x7684;&#x4E00;&#x79CD;&#x4F18;&#x5316;&#x548C;&#x8865;&#x5145;&#xFF0C; LVS &#x4F1A;&#x8003;&#x8651;&#x6BCF;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x5E76;&#x7ED9;&#x6BCF;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x6DFB;&#x52A0;&#x8981;&#x7ED9;&#x6743;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;A&#x7684;&#x6743;&#x503C;&#x4E3A;1&#xFF0C;&#x670D;&#x52A1;&#x5668;B&#x7684;&#x6743;&#x503C;&#x4E3A;2&#xFF0C;&#x5219;&#x8C03;&#x5EA6;&#x5230;&#x670D;&#x52A1;&#x5668;B&#x7684;&#x8BF7;&#x6C42;&#x4F1A;&#x662F;&#x670D;&#x52A1;&#x5668;A&#x7684;2&#x500D;&#x3002;&#x6743;&#x503C;&#x8D8A;&#x9AD8;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5904;&#x7406;&#x7684;&#x8BF7;&#x6C42;&#x8D8A;&#x591A;&#x3002;</p>
+<ol>
+<li>&#x6700;&#x5C11;&#x94FE;&#x63A5; lc</li>
+</ol>
+<p>&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x4F1A;&#x6839;&#x636E;&#x540E;&#x7AEF; RS &#x7684;&#x8FDE;&#x63A5;&#x6570;&#x6765;&#x51B3;&#x5B9A;&#x628A;&#x8BF7;&#x6C42;&#x5206;&#x53D1;&#x7ED9;&#x8C01;&#xFF0C;&#x6BD4;&#x5982; RS1 &#x8FDE;&#x63A5;&#x6570;&#x6BD4; RS2 &#x8FDE;&#x63A5;&#x6570;&#x5C11;&#xFF0C;&#x90A3;&#x4E48;&#x8BF7;&#x6C42;&#x5C31;&#x4F18;&#x5148;&#x53D1;&#x7ED9; RS1</p>
+<ol>
+<li>&#x52A0;&#x6743;&#x6700;&#x5C11;&#x94FE;&#x63A5; wlc</li>
+</ol>
+<p>&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x6BD4; lc &#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x6743;&#x91CD;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<ol>
+<li>&#x57FA;&#x4E8E;&#x5C40;&#x90E8;&#x6027;&#x7684;&#x6700;&#x5C11;&#x8FDE;&#x63A5;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5; lblc</li>
+</ol>
+<p>&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x662F;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x5305;&#x7684;&#x76EE;&#x6807; IP &#x5730;&#x5740;&#x7684;&#x4E00;&#x79CD;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x5148;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x7684;&#x76EE;&#x6807; IP &#x5730;&#x5740;&#x5BFB;&#x627E;&#x6700;&#x8FD1;&#x7684;&#x8BE5;&#x76EE;&#x6807; IP &#x5730;&#x5740;&#x6240;&#x6709;&#x4F7F;&#x7528;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4F9D;&#x7136;&#x53EF;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x80FD;&#x529B;&#x5904;&#x7406;&#x8BE5;&#x8BF7;&#x6C42;&#xFF0C;&#x8C03;&#x5EA6;&#x5668;&#x4F1A;&#x5C3D;&#x91CF;&#x9009;&#x62E9;&#x76F8;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x7EE7;&#x7EED;&#x9009;&#x62E9;&#x5176;&#x5B83;&#x53EF;&#x884C;&#x7684;&#x670D;&#x52A1;&#x5668;</p>
+<ol>
+<li>&#x590D;&#x6742;&#x7684;&#x57FA;&#x4E8E;&#x5C40;&#x90E8;&#x6027;&#x6700;&#x5C11;&#x7684;&#x8FDE;&#x63A5;&#x7B97;&#x6CD5; lblcr</li>
+</ol>
+<p>&#x8BB0;&#x5F55;&#x7684;&#x4E0D;&#x662F;&#x8981;&#x7ED9;&#x76EE;&#x6807; IP &#x4E0E;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#x8BB0;&#x5F55;&#xFF0C;&#x5B83;&#x4F1A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x76EE;&#x6807; IP &#x5230;&#x4E00;&#x7EC4;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x9632;&#x6B62;&#x5355;&#x70B9;&#x670D;&#x52A1;&#x5668;&#x8D1F;&#x8F7D;&#x8FC7;&#x9AD8;&#x3002;</p>
+<ol>
+<li>&#x76EE;&#x6807;&#x5730;&#x5740;&#x6563;&#x5217;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5; dh</li>
+</ol>
+<p>&#x8BE5;&#x7B97;&#x6CD5;&#x662F;&#x6839;&#x636E;&#x76EE;&#x6807; IP &#x5730;&#x5740;&#x901A;&#x8FC7;&#x6563;&#x5217;&#x51FD;&#x6570;&#x5C06;&#x76EE;&#x6807; IP &#x4E0E;&#x670D;&#x52A1;&#x5668;&#x5EFA;&#x7ACB;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x51FA;&#x73B0;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x53EF;&#x7528;&#x6216;&#x8D1F;&#x8F7D;&#x8FC7;&#x9AD8;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53D1;&#x5F80;&#x8BE5;&#x76EE;&#x6807; IP &#x7684;&#x8BF7;&#x6C42;&#x4F1A;&#x56FA;&#x5B9A;&#x53D1;&#x7ED9;&#x8BE5;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<ol>
+<li>&#x6E90;&#x5730;&#x5740;&#x6563;&#x5217;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5; sh</li>
+</ol>
+<p>&#x4E0E;&#x76EE;&#x6807;&#x5730;&#x5740;&#x6563;&#x5217;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x5B83;&#x662F;&#x6839;&#x636E;&#x6E90;&#x5730;&#x5740;&#x6563;&#x5217;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x9759;&#x6001;&#x5206;&#x914D;&#x56FA;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x5668;&#x8D44;&#x6E90;&#x3002;</p>
+<hr>
+<p>LVS\/NAT&#x539F;&#x7406;&#x548C;&#x7279;&#x70B9;</p>
+<ol>
+<li>&#x91CD;&#x70B9;&#x7406;&#x89E3;NAT&#x65B9;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x548C;&#x6570;&#x636E;&#x5305;&#x7684;&#x6539;&#x53D8;&#x3002;</li>
+</ol>
+<p>#</p>
+<p>(a). &#x5F53;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x5230;&#x8FBE;Director Server&#xFF0C;&#x6B64;&#x65F6;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;&#x4F1A;&#x5148;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x7684;PREROUTING&#x94FE;&#x3002; &#x6B64;&#x65F6;&#x62A5;&#x6587;&#x7684;&#x6E90;IP&#x4E3A;CIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;VIP</p>
+<p>(b). PREROUTING&#x68C0;&#x67E5;&#x53D1;&#x73B0;&#x6570;&#x636E;&#x5305;&#x7684;&#x76EE;&#x6807;IP&#x662F;&#x672C;&#x673A;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5305;&#x9001;&#x81F3;INPUT&#x94FE;</p>
+<p>(c). IPVS&#x6BD4;&#x5BF9;&#x6570;&#x636E;&#x5305;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x662F;&#x5426;&#x4E3A;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#xFF0C;&#x82E5;&#x662F;&#xFF0C;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5305;&#x7684;&#x76EE;&#x6807;IP&#x5730;&#x5740;&#x4E3A;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;IP&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6570;&#x636E;&#x5305;&#x53D1;&#x81F3;POSTROUTING&#x94FE;&#x3002; &#x6B64;&#x65F6;&#x62A5;&#x6587;&#x7684;&#x6E90;IP&#x4E3A;CIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;RIP</p>
+<p>(d). POSTROUTING&#x94FE;&#x901A;&#x8FC7;&#x9009;&#x8DEF;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5305;&#x53D1;&#x9001;&#x7ED9;Real Server</p>
+<p>(e). Real Server&#x6BD4;&#x5BF9;&#x53D1;&#x73B0;&#x76EE;&#x6807;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;IP&#xFF0C;&#x5F00;&#x59CB;&#x6784;&#x5EFA;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x53D1;&#x56DE;&#x7ED9;Director Server&#x3002; &#x6B64;&#x65F6;&#x62A5;&#x6587;&#x7684;&#x6E90;IP&#x4E3A;RIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;CIP</p>
+<p>(f). Director Server&#x5728;&#x54CD;&#x5E94;&#x5BA2;&#x6237;&#x7AEF;&#x524D;&#xFF0C;&#x6B64;&#x65F6;&#x4F1A;&#x5C06;&#x6E90;IP&#x5730;&#x5740;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;VIP&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x54CD;&#x5E94;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002; &#x6B64;&#x65F6;&#x62A5;&#x6587;&#x7684;&#x6E90;IP&#x4E3A;VIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;CIP</p>
+<p>#</p>
+<ol>
+<li>LVS-NAT&#x6A21;&#x578B;&#x7684;&#x7279;&#x6027;</li>
+</ol>
+<p>&#x2022; RS&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x5730;&#x5740;&#xFF0C;RS&#x7684;&#x7F51;&#x5173;&#x5FC5;&#x987B;&#x6307;&#x5411;DIP</p>
+<p>&#x2022; DIP&#x548C;RIP&#x5FC5;&#x987B;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x6BB5;&#x5185;</p>
+<p>&#x2022; &#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x90FD;&#x9700;&#x8981;&#x7ECF;&#x8FC7;Director Server&#xFF0C;&#x9AD8;&#x8D1F;&#x8F7D;&#x573A;&#x666F;&#x4E2D;&#xFF0C;Director Server&#x6613;&#x6210;&#x4E3A;&#x6027;&#x80FD;&#x74F6;&#x9888;</p>
+<p>&#x2022; &#x652F;&#x6301;&#x7AEF;&#x53E3;&#x6620;&#x5C04;</p>
+<p>&#x2022; RS&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</p>
+<p>&#x2022; &#x7F3A;&#x9677;&#xFF1A;&#x5BF9;Director Server&#x538B;&#x529B;&#x4F1A;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x90FD;&#x9700;&#x7ECF;&#x8FC7;director server</p>
+<p>#</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<p>1.&#x4F7F;&#x7528;NAT&#x6A21;&#x5F0F;</p>
+<p>&#x6DFB;&#x52A0;&#x5730;&#x5740;&#x4E3A;207.175.44.110:80&#x7684;&#x865A;&#x62DF;&#x670D;&#x52A1;&#xFF0C;&#x6307;&#x5B9A;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x4E3A;&#x8F6E;&#x8F6C;&#x3002;</p>
+<p>ipvsadm -A -t 207.175.44.110:80 -s wrr</p>
+<p>ipvsadm -a -t 207.175.44.110:80 -r 192.168.10.1:80 -m -w 3</p>
+<p>ipvsadm -a -t 207.175.44.110:80 -r 192.168.10.2:80 -m -w 5</p>
+<p>-A&#xFF1A;&#x89C4;&#x5B9A;&#x53D1;&#x5F80;&#x672C;&#x673A;&#x54EA;&#x4E2A;IP:PORT&#x7684;&#x62A5;&#x6587;&#x662F;&#x9700;&#x8981;&#x88AB;&#x8C03;&#x5EA6;&#x7684;</p>
+<p>-a&#xFF1A;&#x4E3A;&#x67D0;&#x4E2A;&#x8C03;&#x5EA6;&#x89C4;&#x5219;&#x6DFB;&#x52A0;Real Server</p>
+<p>-t&#xFF1A;tcp&#x534F;&#x8BAE;&#x8BF7;&#x6C42;</p>
+<p>-s&#xFF1A;&#x5B9A;&#x4E49;&#x8C03;&#x5EA6;&#x89C4;&#x5219;</p>
+<p>-m&#xFF1A;&#x8868;&#x793A;&#x91C7;&#x7528;lvs-nat&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;lvs-dr&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;</p>
+<p>-w&#xFF1A;&#x8C03;&#x5EA6;&#x89C4;&#x5219;&#x662F;wrr&#xFF08;&#x5E26;&#x6743;&#x91CD;&#x7684;&#x8F6E;&#x8BE2;&#xFF09;&#x7528;-w &#x5B9A;&#x4E49;Real Server&#x7684;&#x6743;&#x91CD;</p>
+<p>NAT&#x6A21;&#x5F0F;&#x662F;lvs&#x7684;&#x4E09;&#x79CD;&#x6A21;&#x5F0F;&#x4E2D;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4E00;&#x79CD;&#x3002;&#x6B64;&#x79CD;&#x6A21;&#x5F0F;&#x4E0B;&#x53EA;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x8C03;&#x5EA6;&#x670D;&#x52A1;&#x5668;&#x4E0E;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x4E92;&#x901A;&#x5C31;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x3002;</p>
+<hr>
+<p>&#x516D;&#x3001;LVS\/DR&#x539F;&#x7406;&#x548C;&#x7279;&#x70B9;</p>
+<ol>
+<li>&#x91CD;&#x5C06;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x7684;&#x76EE;&#x6807;MAC&#x5730;&#x5740;&#x8BBE;&#x5B9A;&#x4E3A;&#x6311;&#x9009;&#x51FA;&#x7684;RS&#x7684;MAC&#x5730;&#x5740;</li>
+</ol>
+<p>#</p>
+<p>(a) &#x5F53;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x5230;&#x8FBE;Director Server&#xFF0C;&#x6B64;&#x65F6;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;&#x4F1A;&#x5148;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x7684;PREROUTING&#x94FE;&#x3002; &#x6B64;&#x65F6;&#x62A5;&#x6587;&#x7684;&#x6E90;IP&#x4E3A;CIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;VIP</p>
+<p>(b) PREROUTING&#x68C0;&#x67E5;&#x53D1;&#x73B0;&#x6570;&#x636E;&#x5305;&#x7684;&#x76EE;&#x6807;IP&#x662F;&#x672C;&#x673A;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5305;&#x9001;&#x81F3;INPUT&#x94FE;</p>
+<p>(c) IPVS&#x6BD4;&#x5BF9;&#x6570;&#x636E;&#x5305;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x662F;&#x5426;&#x4E3A;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#xFF0C;&#x82E5;&#x662F;&#xFF0C;&#x5C06;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x4E2D;&#x7684;&#x6E90;MAC&#x5730;&#x5740;&#x4FEE;&#x6539;&#x4E3A;DIP&#x7684;MAC&#x5730;&#x5740;&#xFF0C;&#x5C06;&#x76EE;&#x6807;MAC&#x5730;&#x5740;&#x4FEE;&#x6539;RIP&#x7684;MAC&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6570;&#x636E;&#x5305;&#x53D1;&#x81F3;POSTROUTING&#x94FE;&#x3002; &#x6B64;&#x65F6;&#x7684;&#x6E90;IP&#x548C;&#x76EE;&#x7684;IP&#x5747;&#x672A;&#x4FEE;&#x6539;&#xFF0C;&#x4EC5;&#x4FEE;&#x6539;&#x4E86;&#x6E90;MAC&#x5730;&#x5740;&#x4E3A;DIP&#x7684;MAC&#x5730;&#x5740;&#xFF0C;&#x76EE;&#x6807;MAC&#x5730;&#x5740;&#x4E3A;RIP&#x7684;MAC&#x5730;&#x5740;</p>
+<p>(d) &#x7531;&#x4E8E;DS&#x548C;RS&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x662F;&#x901A;&#x8FC7;&#x4E8C;&#x5C42;&#x6765;&#x4F20;&#x8F93;&#x3002;POSTROUTING&#x94FE;&#x68C0;&#x67E5;&#x76EE;&#x6807;MAC&#x5730;&#x5740;&#x4E3A;RIP&#x7684;MAC&#x5730;&#x5740;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;&#x6570;&#x636E;&#x5305;&#x5C06;&#x4F1A;&#x53D1;&#x81F3;Real Server&#x3002;</p>
+<p>(e) RS&#x53D1;&#x73B0;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x7684;MAC&#x5730;&#x5740;&#x662F;&#x81EA;&#x5DF1;&#x7684;MAC&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x63A5;&#x6536;&#x6B64;&#x62A5;&#x6587;&#x3002;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x901A;&#x8FC7;lo&#x63A5;&#x53E3;&#x4F20;&#x9001;&#x7ED9;eth0&#x7F51;&#x5361;&#x7136;&#x540E;&#x5411;&#x5916;&#x53D1;&#x51FA;&#x3002; &#x6B64;&#x65F6;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#x4E3A;VIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;CIP</p>
+<p>(f) &#x54CD;&#x5E94;&#x62A5;&#x6587;&#x6700;&#x7EC8;&#x9001;&#x8FBE;&#x81F3;&#x5BA2;&#x6237;&#x7AEF;</p>
+<p>#</p>
+<ol>
+<li>LVS-DR&#x6A21;&#x578B;&#x7684;&#x7279;&#x6027;</li>
+</ol>
+<p>&#x2022; &#x7279;&#x70B9;1&#xFF1A;&#x4FDD;&#x8BC1;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x5C06;&#x76EE;&#x6807;&#x5730;&#x5740;&#x4E3A;VIP&#x62A5;&#x6587;&#x7EDF;&#x7EDF;&#x53D1;&#x7ED9;Director Server&#xFF0C;&#x800C;&#x4E0D;&#x662F;RS</p>
+<p>&#x2022; RS&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x5730;&#x5740;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x516C;&#x7F51;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x516C;&#x7F51;&#x5730;&#x5740;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E92;&#x8054;&#x7F51;&#x5BF9;RIP&#x8FDB;&#x884C;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;</p>
+<p>&#x2022; RS&#x8DDF;Director Server&#x5FC5;&#x987B;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x7F51;&#x7EDC;&#x4E2D;</p>
+<p>&#x2022; &#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x7ECF;&#x7531;Director Server&#xFF0C;&#x4F46;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x5FC5;&#x987B;&#x4E0D;&#x80FD;&#x8FDB;&#x8FC7;Director Server</p>
+<p>&#x2022; &#x4E0D;&#x652F;&#x6301;&#x5730;&#x5740;&#x8F6C;&#x6362;&#xFF0C;&#x4E5F;&#x4E0D;&#x652F;&#x6301;&#x7AEF;&#x53E3;&#x6620;&#x5C04;</p>
+<p>&#x2022; RS&#x53EF;&#x4EE5;&#x662F;&#x5927;&#x591A;&#x6570;&#x5E38;&#x89C1;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</p>
+<p>&#x2022; RS&#x7684;&#x7F51;&#x5173;&#x7EDD;&#x4E0D;&#x5141;&#x8BB8;&#x6307;&#x5411;DIP(&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4E0D;&#x5141;&#x8BB8;&#x4ED6;&#x7ECF;&#x8FC7;director)</p>
+<p>&#x2022; RS&#x4E0A;&#x7684;lo&#x63A5;&#x53E3;&#x914D;&#x7F6E;VIP&#x7684;IP&#x5730;&#x5740;</p>
+<p>&#x2022; &#x7F3A;&#x9677;&#xFF1A;RS&#x548C;DS&#x5FC5;&#x987B;&#x5728;&#x540C;&#x4E00;&#x673A;&#x623F;&#x4E2D;</p>
+<p>#</p>
+<ol>
+<li>&#x7279;&#x70B9;1&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</li>
+</ol>
+<p>&#x2022; &#x5728;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x5668;&#x505A;&#x9759;&#x6001;&#x5730;&#x5740;&#x8DEF;&#x7531;&#x7ED1;&#x5B9A;&#xFF0C;&#x5C06;&#x5BF9;&#x4E8E;VIP&#x7684;&#x5730;&#x5740;&#x4EC5;&#x8DEF;&#x7531;&#x5230;Director Server</p>
+<p>&#x2022; &#x5B58;&#x5728;&#x95EE;&#x9898;&#xFF1A;&#x7528;&#x6237;&#x672A;&#x5FC5;&#x6709;&#x8DEF;&#x7531;&#x64CD;&#x4F5C;&#x6743;&#x9650;&#xFF0C;&#x56E0;&#x4E3A;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x8FD0;&#x8425;&#x5546;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x672A;&#x5FC5;&#x5B9E;&#x7528;</p>
+<p>&#x2022; arptables&#xFF1A;&#x5728;arp&#x7684;&#x5C42;&#x6B21;&#x4E0A;&#x5B9E;&#x73B0;&#x5728;ARP&#x89E3;&#x6790;&#x65F6;&#x505A;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;&#xFF0C;&#x8FC7;&#x6EE4;RS&#x54CD;&#x5E94;ARP&#x8BF7;&#x6C42;&#x3002;&#x8FD9;&#x662F;&#x7531;iptables&#x63D0;&#x4F9B;&#x7684;</p>
+<p>&#x2022; &#x4FEE;&#x6539;RS&#x4E0A;&#x5185;&#x6838;&#x53C2;&#x6570;&#xFF08;arp_ignore&#x548C;arp_announce&#xFF09;&#x5C06;RS&#x4E0A;&#x7684;VIP&#x914D;&#x7F6E;&#x5728;lo&#x63A5;&#x53E3;&#x7684;&#x522B;&#x540D;&#x4E0A;&#xFF0C;&#x5E76;&#x9650;&#x5236;&#x5176;&#x4E0D;&#x80FD;&#x54CD;&#x5E94;&#x5BF9;VIP&#x5730;&#x5740;&#x89E3;&#x6790;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>#</p>
+<p>&#x4F7F;&#x7528;DR&#x6A21;&#x5F0F;</p>
+<p>&#x5BF9;&#x4E8E;DR&#x6A21;&#x5F0F;&#x9996;&#x5148;&#x8981;&#x914D;&#x7F6E;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#xFF1A;</p>
+<p>&#x5BF9;&#x4E8E;&#x6BCF;&#x53F0;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x8981;&#x8FDB;&#x884C;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<p>1&#x3001;&#x8BBE;&#x7F6E;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x7684;lo&#x63A5;&#x53E3;&#x4E0D;&#x505A;ARP&#x5E94;&#x7B54;</p>
+<p>echo 1 &gt; \/proc\/sys\/net\/ipv4\/conf\/all\/arg_ignore</p>
+<p>echo 1 &gt; \/proc\/sys\/net\/ipv4\/conf\/lo\/arg_ignore</p>
+<p>&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x5404;&#x4E2A;&#x63A5;&#x53E3;&#x53EA;&#x5BF9;&#x672C;&#x63A5;&#x53E3;&#x4E0A;&#x7684;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x54CD;&#x5E94;</p>
+<p>&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E;arp_announce&#x9009;&#x9879;&#x4E3A;2&#xFF0C;&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;&#x540C;&#x4E0A;</p>
+<p>2&#x3001;&#x5728;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6DFB;&#x52A0;&#x865A;&#x62DF;IP</p>
+<p>ifconfig lo:0 192.168.10.10 boradcast 207.175.44.110 netmask 255.255.255.255</p>
+<p>ip r add 192.168.10.10 dev lo</p>
+<p>&#x63A5;&#x7740;&#x6DFB;&#x52A0;ipvs&#x89C4;&#x5219;&#xFF1A;</p>
+<p>&#x6DFB;&#x52A0;&#x5730;&#x5740;&#x4E3A;192.168.10.10:80&#x7684;&#x865A;&#x62DF;&#x670D;&#x52A1;&#xFF0C;&#x6307;&#x5B9A;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x4E3A;&#x8F6E;&#x8F6C;&#x3002;</p>
+<p>ipvsadm -A -t 192.168.10.10:80 -s rr</p>
+<p>&#x6DFB;&#x52A0;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6307;&#x5B9A;&#x4F20;&#x8F93;&#x6A21;&#x5F0F;&#x4E3A;DR</p>
+<p>ipvsadm -a -t 192.168.10.10:80 -r 192.168.10.1:80 -g</p>
+<p>ipvsadm -a -t 192.168.10.10:80 -r 192.168.10.2:80 -g</p>
+<p>ipvsadm -a -t 192.168.10.10:80 -r 192.168.10.3:80 -g</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x5904;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x5BA2;&#x6237;&#x3001;&#x8C03;&#x5EA6;&#x670D;&#x52A1;&#x5668;&#x3001;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x662F;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x7F51;&#x6BB5;&#x7684;</p>
+<hr>
+<p>&#x4E03;&#x3001;LVS\/Tun&#x539F;&#x7406;&#x548C;&#x7279;&#x70B9;</p>
+<p>&#x5728;&#x539F;&#x6709;&#x7684;IP&#x62A5;&#x6587;&#x5916;&#x518D;&#x6B21;&#x5C01;&#x88C5;&#x591A;&#x4E00;&#x5C42;IP&#x9996;&#x90E8;&#xFF0C;&#x5185;&#x90E8;IP&#x9996;&#x90E8;(&#x6E90;&#x5730;&#x5740;&#x4E3A;CIP&#xFF0C;&#x76EE;&#x6807;IIP&#x4E3A;VIP)&#xFF0C;&#x5916;&#x5C42;IP&#x9996;&#x90E8;(&#x6E90;&#x5730;&#x5740;&#x4E3A;DIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;RIP)</p>
+<p>#</p>
+<p>(a) &#x5F53;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x5230;&#x8FBE;Director Server&#xFF0C;&#x6B64;&#x65F6;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;&#x4F1A;&#x5148;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x7684;PREROUTING&#x94FE;&#x3002; &#x6B64;&#x65F6;&#x62A5;&#x6587;&#x7684;&#x6E90;IP&#x4E3A;CIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;VIP &#x3002;</p>
+<p>(b) PREROUTING&#x68C0;&#x67E5;&#x53D1;&#x73B0;&#x6570;&#x636E;&#x5305;&#x7684;&#x76EE;&#x6807;IP&#x662F;&#x672C;&#x673A;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5305;&#x9001;&#x81F3;INPUT&#x94FE;</p>
+<p>(c) IPVS&#x6BD4;&#x5BF9;&#x6570;&#x636E;&#x5305;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x662F;&#x5426;&#x4E3A;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#xFF0C;&#x82E5;&#x662F;&#xFF0C;&#x5728;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x7684;&#x9996;&#x90E8;&#x518D;&#x6B21;&#x5C01;&#x88C5;&#x4E00;&#x5C42;IP&#x62A5;&#x6587;&#xFF0C;&#x5C01;&#x88C5;&#x6E90;IP&#x4E3A;&#x4E3A;DIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;RIP&#x3002;&#x7136;&#x540E;&#x53D1;&#x81F3;POSTROUTING&#x94FE;&#x3002; &#x6B64;&#x65F6;&#x6E90;IP&#x4E3A;DIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;RIP</p>
+<p>(d) POSTROUTING&#x94FE;&#x6839;&#x636E;&#x6700;&#x65B0;&#x5C01;&#x88C5;&#x7684;IP&#x62A5;&#x6587;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5305;&#x53D1;&#x81F3;RS&#xFF08;&#x56E0;&#x4E3A;&#x5728;&#x5916;&#x5C42;&#x5C01;&#x88C5;&#x591A;&#x4E86;&#x4E00;&#x5C42;IP&#x9996;&#x90E8;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x6B64;&#x65F6;&#x901A;&#x8FC7;&#x96A7;&#x9053;&#x4F20;&#x8F93;&#xFF09;&#x3002; &#x6B64;&#x65F6;&#x6E90;IP&#x4E3A;DIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;RIP</p>
+<p>(e) RS&#x63A5;&#x6536;&#x5230;&#x62A5;&#x6587;&#x540E;&#x53D1;&#x73B0;&#x662F;&#x81EA;&#x5DF1;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x5C06;&#x62A5;&#x6587;&#x63A5;&#x6536;&#x4E0B;&#x6765;&#xFF0C;&#x62C6;&#x9664;&#x6389;&#x6700;&#x5916;&#x5C42;&#x7684;IP&#x540E;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x91CC;&#x9762;&#x8FD8;&#x6709;&#x4E00;&#x5C42;IP&#x9996;&#x90E8;&#xFF0C;&#x800C;&#x4E14;&#x76EE;&#x6807;&#x662F;&#x81EA;&#x5DF1;&#x7684;lo&#x63A5;&#x53E3;VIP&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;RS&#x5F00;&#x59CB;&#x5904;&#x7406;&#x6B64;&#x8BF7;&#x6C42;&#xFF0C;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x901A;&#x8FC7;lo&#x63A5;&#x53E3;&#x9001;&#x7ED9;eth0&#x7F51;&#x5361;&#xFF0C;&#x7136;&#x540E;&#x5411;&#x5916;&#x4F20;&#x9012;&#x3002; &#x6B64;&#x65F6;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#x4E3A;VIP&#xFF0C;&#x76EE;&#x6807;IP&#x4E3A;CIP</p>
+<p>(f) &#x54CD;&#x5E94;&#x62A5;&#x6587;&#x6700;&#x7EC8;&#x9001;&#x8FBE;&#x81F3;&#x5BA2;&#x6237;&#x7AEF;</p>
+<p>#</p>
+<p>LVS-Tun&#x6A21;&#x578B;&#x7279;&#x6027;</p>
+<p>&#x2022; RIP&#x3001;VIP&#x3001;DIP&#x5168;&#x662F;&#x516C;&#x7F51;&#x5730;&#x5740;</p>
+<p>&#x2022; RS&#x7684;&#x7F51;&#x5173;&#x4E0D;&#x4F1A;&#x4E5F;&#x4E0D;&#x53EF;&#x80FD;&#x6307;&#x5411;DIP</p>
+<p>&#x2022; &#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x7ECF;&#x7531;Director Server&#xFF0C;&#x4F46;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x5FC5;&#x987B;&#x4E0D;&#x80FD;&#x8FDB;&#x8FC7;Director Server</p>
+<p>&#x2022; &#x4E0D;&#x652F;&#x6301;&#x7AEF;&#x53E3;&#x6620;&#x5C04;</p>
+<p>&#x2022; RS&#x7684;&#x7CFB;&#x7EDF;&#x5FC5;&#x987B;&#x652F;&#x6301;&#x96A7;&#x9053;</p>
+<p>#</p>
+<p>&#x5176;&#x5B9E;&#x4F01;&#x4E1A;&#x4E2D;&#x6700;&#x5E38;&#x7528;&#x7684;&#x662F; DR &#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF0C;&#x800C; NAT &#x914D;&#x7F6E;&#x4E0A;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x548C;&#x65B9;&#x4FBF;&#xFF0C;&#x540E;&#x8FB9;&#x5B9E;&#x8DF5;&#x4E2D;&#x4F1A;&#x603B;&#x7ED3; DR &#x548C; NAT &#x5177;&#x4F53;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;&#x3002;</p>
+<hr>
+<p>ipvsadm&#x547D;&#x4EE4;</p>
+<p>-A --add-service&#x5728;&#x670D;&#x52A1;&#x5668;&#x5217;&#x8868;&#x4E2D;&#x65B0;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#x8BB0;&#x5F55;</p>
+<p>-t &#x8868;&#x793A;&#x4E3A;tcp&#x670D;&#x52A1;</p>
+<p>-u &#x8868;&#x793A;&#x4E3A;udp&#x670D;&#x52A1;</p>
+<p>-s --scheduler &#x4F7F;&#x7528;&#x7684;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#xFF0C; rr | wrr | lc | wlc | lblb | lblcr | dh | sh | sed | nq &#x9ED8;&#x8BA4;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x662F; wlc</p>
+<p>ipvsadm -a -t 192.168.3.187:80 -r 192.168.200.10:80 -m -w 1</p>
+<p>-a --add-server &#x5728;&#x670D;&#x52A1;&#x5668;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x771F;&#x5B9E;&#x4E3B;&#x673A;&#x8BB0;&#x5F55;</p>
+<p>-t --tcp-service &#x8BF4;&#x660E;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x4F9B;tcp&#x670D;&#x52A1;</p>
+<p>-u --udp-service &#x8BF4;&#x660E;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x4F9B;udp&#x670D;&#x52A1;</p>
+<p>-r --real-server &#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</p>
+<p>-m --masquerading &#x6307;&#x5B9A;LVS&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#x4E3A;NAT&#x6A21;&#x5F0F;</p>
+<p>-g --gatewaying &#x6307;&#x5B9A;LVS&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#x4E3A;&#x76F4;&#x63A5;&#x8DEF;&#x7531;&#x5668;&#x6A21;&#x5F0F;&#xFF08;&#x4E5F;&#x662F;LVS&#x9ED8;&#x8BA4;&#x7684;&#x6A21;&#x5F0F;&#xFF09;DR&#x6A21;&#x5F0F;</p>
+<p>-w --weight &#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6743;&#x503C; -w 1</p>
+<p>-i --ipip &#x6307;&#x5B9A;LVS&#x7684;&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#x4E3A;&#x96A7;&#x9053;&#x6A21;&#x5F0F;</p>
+<p>-p &#x4F1A;&#x8BDD;&#x4FDD;&#x6301;&#x65F6;&#x95F4;&#xFF0C;&#x5B9A;&#x4E49;&#x6D41;&#x91CF;&#x5457;&#x8F6C;&#x5230;&#x540C;&#x4E00;&#x4E2A;realserver&#x7684;&#x4F1A;&#x8BDD;&#x5B58;&#x7559;&#x65F6;&#x95F4;&#xFF0C;&#x4F1A;&#x8BDD;&#x4FDD;&#x6301;20&#x79D2;&#x53EA;&#x627E;&#x8FD9;&#x53F0; -p 20</p>
+<p>--set 30 5 60 # &#x6DFB;&#x52A0;&#x8D85;&#x65F6;</p>
+<p>-C # &#x6E05;&#x9664;&#x6240;&#x6709;&#x521B;&#x5EFA;&#x7684;&#x96C6;&#x7FA4;</p>
+<p>-E # &#x4FEE;&#x6539;&#x5B9A;&#x4E49;&#x8FC7;&#x7684;&#x96C6;&#x7FA4;&#x670D;&#x52A1;</p>
+<p>-D # -t|-u|-f server-address&#xFF1A;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x96C6;&#x7FA4;&#x670D;&#x52A1;</p>
+<p>-L #&#x67E5;&#x770B;</p>
+<p>-n # &#x6570;&#x5B57;&#x683C;&#x5F0F;&#x663E;&#x793A;IP</p>
+<p>-c # &#x8FDE;&#x63A5;&#x6570;&#x76F8;&#x5173;&#x4FE1;&#x606F;</p>
+<p>-L -n -c # &#x67E5;&#x770B;&#x8FDE;&#x63A5;&#x60C5;&#x51B5;</p>
+<p>-L -n --stats # &#x67E5;&#x770B;&#x5206;&#x53D1;&#x60C5;&#x51B5;</p>
+<p>-L -n --rate # &#x67E5;&#x770B;&#x901F;&#x7387;</p>
+<p>-L -n --exact # &#x663E;&#x793A;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x7CBE;&#x786E;&#x503C;</p>
+<p>-Z # --zero &#x6E05;&#x7A7A;&#x8FDE;&#x63A5;&#x8BA1;&#x6570;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<p>ipvsadm -A -t 192.168.8.252:80 -s wrr -p 20 # &#x6DFB;&#x52A0; &#x5206;&#x53D1;&#x670D;&#x52A1;&#x5668;</p>
+<p>ipvsadm -D -t 192.168.8.252:80 -s wrr # &#x5220;&#x9664;</p>
+<p>ipvsadm -E -t 192.168.8.252:80 -s rr # &#x4FEE;&#x6539;</p>
+<p>ipvsadm -Ln # &#x67E5;&#x770B;&#x89C4;&#x5219;</p>
+<p>ipvsadm -C # &#x6E05;&#x7A7A;&#x89C4;&#x5219;</p>
+<p>ipvsadm -a -t 192.168.8.252:80 -r 192.168.8.83 -g # &#x6DFB;&#x52A0;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;</p>
+<p>ipvsadm -d -t 192.168.8.252:80 -r 192.168.8.83 # &#x5220;&#x9664;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;</p>
+<p>ipvsadm -S &gt; ipvsadm.txt # &#x5907;&#x4EFD;</p>
+<p>ipvsadm -R &lt; ipvsadm.txt # &#x8FD8;&#x539F;</p>
+<p>#</p>
+<p>\/etc\/init.d\/ipvsadm save # &#x4FDD;&#x5B58;</p>
+<p>cat \/etc\/sysconfig\/ipvsadm # &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5730;&#x5740;</p>
+<hr>
+<p>LVS&#x7684;NAT&#x8F6C;&#x53D1;&#x6A21;&#x5F0F;</p>
+<p>&#x73AF;&#x5883;</p>
+<p>director*2</p>
+<p>&#x5916;&#x7F51; 192.168.10.99</p>
+<p>&#x5185;&#x7F51; 10.1.2.13\/24</p>
+<p>real server 10.1.2.14\/24 GW 10.1.2.13</p>
+<p>real server 10.1.2.15\/24 GW 10.1.2.13</p>
+<p>#</p>
+<p>&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;</p>
+<p>#&#x4E24;&#x4E2A; real server &#x4E0A;&#x90FD;&#x5B89;&#x88C5; nginx &#x670D;&#x52A1;</p>
+<p>yum install -y nginx</p>
+<p>#Director &#x4E0A;&#x5B89;&#x88C5; ipvsadm</p>
+<p>yum install -y ipvsadm</p>
+<hr>
+<p>Director&#x4E0A; nat &#x5B9E;&#x73B0;&#x811A;&#x672C;</p>
+<p>vim \/usr\/local\/sbin\/lvs_nat.sh</p>
+<p>#! \/bin\/bash</p>
+<p>#</p>
+<p># director&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5F00;&#x542F;&#x8DEF;&#x7531;&#x8F6C;&#x53D1;&#x529F;&#x80FD;&#xFF0C;&#x4E34;&#x65F6;&#x751F;&#x6548;</p>
+<p>echo 1 &gt; \/proc\/sys\/net\/ipv4\/ip_forward</p>
+<p>#&#x6C38;&#x4E45;&#x751F;&#x6548;&#xFF0C;&#x4FEE;&#x6539;sysctl.conf&#xFF1A;</p>
+<p>#vim \/etc\/sysctl.conf</p>
+<p>#net.ipv4.ip_forward = 1 # &#x539F;0&#x6539;&#x4E3A;1</p>
+<p>#sysctl -p # &#x6267;&#x884C;&#x9A6C;&#x4E0A;&#x751F;&#x6548;</p>
+<p>#</p>
+<p># &#x5173;&#x95ED; icmp &#x7684;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x4E34;&#x65F6;&#x751F;&#x6548;</p>
+<p>echo 0 &gt; \/proc\/sys\/net\/ipv4\/conf\/all\/send_redirects</p>
+<p>echo 0 &gt; \/proc\/sys\/net\/ipv4\/conf\/default\/send_redirects</p>
+<p>echo 0 &gt; \/proc\/sys\/net\/ipv4\/conf\/eth0\/send_redirects</p>
+<p>echo 0 &gt; \/proc\/sys\/net\/ipv4\/conf\/eth1\/send_redirects</p>
+<p>#</p>
+<p># director&#x8BBE;&#x7F6E; ipvsadm</p>
+<p>IPVSADM=&apos;\/sbin\/ipvsadm&apos;</p>
+<p>VIP1=&apos;192.168.10.99&apos;</p>
+<p>RS1=&apos;10.1.2.14&apos;</p>
+<p>RS2=&apos;10.1.2.15&apos;</p>
+<p>$IPVSADM -C</p>
+<p>#</p>
+<p># &#x6DFB;&#x52A0;&#x5206;&#x53D1;&#x670D;&#x52A1;&#x5668;</p>
+<p>$IPVSADM -A -t $VIP1:80 -s wrr</p>
+<p>$IPVSADM -a -t $VIP1:80 -r $RS1:80 -m -w 1</p>
+<p>$IPVSADM -a -t $VIP1:80 -r $RS2:80 -m -w 1</p>
+<p>#</p>
+<p># director&#x8BBE;&#x7F6E; nat &#x9632;&#x706B;&#x5899; &#x653E;&#x884C;</p>
+<p>iptables -t nat -F</p>
+<p>iptables -t nat -X</p>
+<p>iptables -t nat -A POSTROUTING -s 10.1.2.0\/24 -j MASQUERADE</p>
+<hr>
+<p>PS&#xFF1A;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5207;&#x8BB0;&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x4E24;&#x53F0; RS &#x4E0A;&#x8BBE;&#x7F6E;&#x7F51;&#x5173;&#x7684; IP &#x4E3A; director &#x7684;&#x5185;&#x7F51; IP&#x3002;</p>
+<p># &#x4FDD;&#x5B58;</p>
+<p>\/etc\/init.d\/ipvsadm save</p>
+<p>#&#x67E5;&#x770B;ipvsadm&#x8BBE;&#x7F6E;&#x7684;&#x89C4;&#x5219;</p>
+<p>ipvsadm -Ln</p>
+<p>#</p>
+<p>yum install elinks -y</p>
+<p>elinks 192.168.21.60 --dump # &#x6D4B;&#x8BD5;</p>
+<hr>
+<p>DR&#xFF08;&#x76F4;&#x63A5;&#x8DEF;&#x7531;&#x6A21;&#x5F0F;&#xFF09;&#xFF08;&#x5E38;&#x7528;&#xFF09;</p>
+<p>&#x73AF;&#x5883;</p>
+<p>Director&#x8282;&#x70B9; eth0 10.1.2.13\/24 vip eth0:1 10.1.2.100\/32</p>
+<p>Real server1 eth0 10.1.2.14\/24 vip lo:1 10.1.2.100\/32</p>
+<p>Real server2 eth0 10.1.2.15\/24 vip lo:1 10.1.2.100\/32</p>
+<p>#</p>
+<p>&#x6C38;&#x4E45;&#x751F;&#x6548;&#xFF0C;&#x4FEE;&#x6539;&#x7F51;&#x5361;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x5E38;&#x7528;&#xFF09;</p>
+<p>vi \/etc\/sysconfig\/network-scripts\/ifcfg-eth0:1</p>
+<p>&#x4E34;&#x65F6;&#x914D;&#x7F6E;</p>
+<p>ifconfig lo:1 10.1.2.100\/32 up # &#x53EF;&#x5199;&#x5165;\/etc\/rc.local&#x5F00;&#x673A;&#x81EA;&#x542F;</p>
+<p>route add -host 10.0.0.10 dev eth0 # &#x6DFB;&#x52A0;&#x4E3B;&#x673A;&#x8DEF;&#x7531; &#x53EF;&#x9009;</p>
+<p>&#x4F1A;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x5DF2;&#x5B58;&#x5730;&#x5740;&#x627E;&#x5230;&#x89E3;&#x51B3;&#x4E24;&#x53F0;rs&#x4E0A;&#x5173;&#x95ED;ARP&#x5E7F;&#x64AD;&#x914D;&#x7F6E;&#x5728;&#x4E0B;</p>
+<p>#</p>
+<p>&#x914D;&#x7F6E;LVS</p>
+<p>#! \/bin\/bash</p>
+<p>echo 1 &gt; \/proc\/sys\/net\/ipv4\/ip_forward</p>
+<p>IPV=&apos;\/sbin\/ipvsadm&apos;</p>
+<p>VIP1=&apos;10.1.2.100&apos;</p>
+<p>RS1=&apos;10.1.2.14&apos;</p>
+<p>RS2=&apos;10.1.2.15&apos;</p>
+<p>ifconfig eth0:1 down</p>
+<p>ifconfig eth0:1 $VIP1 broadcast $VIP1 netmask 255.255.255.255 up</p>
+<p>route add -host $VIP1 dev eth0:1</p>
+<p>$IPV -C</p>
+<p>$IPV -A -t $VIP1:80 -s wrr</p>
+<p>$IPV -a -t $VIP1:80 -r $RS1:80 -g -w 3</p>
+<p>$IPV -a -t $VIP1:80 -r $RS2:80 -g -w 1</p>
+<p>#</p>
+<p>&#x914D;&#x7F6E;&#x4E24;&#x53F0;RS</p>
+<p>&#x5B89;&#x88C5;nginx&#x670D;&#x52A1;</p>
+<p>yum install nginx -y</p>
+<p>#</p>
+<p>#! \/bin\/bash</p>
+<p>VIP1=&apos;10.1.2.100&apos;</p>
+<p>RS=`ifconfig |sed -n &apos;2p&apos; |awk -F&apos;[: ]+&apos; &apos;{print $4}&apos;`</p>
+<p>ifconfig lo:1 $VIP1\/32 up</p>
+<p>route add -host $VIP1 lo:0</p>
+<p>echo $RS &gt; \/usr\/share\/nginx\/html\/index.html</p>
+<p>#&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x51B2;&#x7A81; &#x5728;&#x4E24;&#x53F0;RS&#x4E0A;&#x5173;&#x95ED;ARP&#x8F6C;&#x53D1;&#xFF0C;&#x4E34;&#x65F6;&#x751F;&#x6548;</p>
+<p>echo &quot;1&quot; &gt;\/proc\/sys\/net\/ipv4\/conf\/lo\/arp_ignore</p>
+<p>echo &quot;2&quot; &gt;\/proc\/sys\/net\/ipv4\/conf\/lo\/arp_announce</p>
+<p>echo &quot;1&quot; &gt;\/proc\/sys\/net\/ipv4\/conf\/all\/arp_ignore</p>
+<p>echo &quot;2&quot; &gt;\/proc\/sys\/net\/ipv4\/conf\/all\/arp_announce</p>
+<p>ifconfig lo:1 10.1.2.100\/32 up # &#x53EF;&#x5199;&#x5165;\/etc\/rc.local&#x5F00;&#x673A;&#x81EA;&#x542F;</p>
+<p>&#x4FEE;&#x6539;&#x7F51;&#x5361;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6C38;&#x4E45;&#x751F;&#x6548;&#xFF08;&#x5E38;&#x7528;&#xFF09;</p>
+<p>vi \/etc\/sysconfig\/network-scripts\/lo:1</p>
+<p>#</p>
+<p>&#x6C38;&#x4E45;&#x751F;&#x6548;</p>
+<p>vi \/etc\/sysctl.conf # &#x6700;&#x540E;&#x6DFB;&#x52A0;</p>
+<p>net.ipv4.conf.lo.arp_ignore = 1</p>
+<p>net.ipv4.conf.lo.arp_announce = 2</p>
+<p>net.ipv4.conf.all.arp_ignore = 1</p>
+<p>net.ipv4.conf.all.arp_announce = 2</p>
+<p>sysctl -p</p>
+<hr>
+<p>PS&#xFF1A;</p>
+<p>&#x9AD8;&#x53EF;&#x7528;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019; &#x8981;&#x8003;&#x8651;ARP&#x7F13;&#x5B58;&#x7684;&#x95EE;&#x9898;</p>
+<p>ARP &#x5E7F;&#x64AD;&#x8FDB;&#x884C;&#x65B0;&#x7684;&#x5730;&#x5740;&#x89E3;&#x6790;</p>
+<p>&#x5177;&#x4F53;&#x6E05;&#x7A7A;&#x7F13;&#x5B58;&#x547D;&#x4EE4;</p>
+<p>\/sbin\/arping -I eth0 -c 3 -s 10.0.0.162</p>
+<p>\/sbin\/arping -U -I eth0 10.0.0.162</p>
+<hr>
+<p>#</p>
+<p>AB&#x7F51;&#x7AD9;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</p>
+<p>-n # &#x6D4B;&#x8BD5;&#x4F1A;&#x8BDD;&#x4E2D;&#x6240;&#x6267;&#x884C;&#x7684;&#x8BF7;&#x6C42;&#x603B;&#x4E2A;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;</p>
+<p>-c # &#x4E00;&#x6B21;&#x4EA7;&#x751F;&#x7684;&#x8BF7;&#x6C42;&#x4E2A;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x4E00;&#x6B21;&#x4E00;&#x4E2A;</p>
+<p>1.&#x72EC;&#x7ACB;&#x5B89;&#x88C5;</p>
+<p>ab&#x8FD0;&#x884C;&#x9700;&#x8981;&#x4F9D;&#x8D56;apr-util&#x5305;&#xFF0C;&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#x4E3A;&#xFF1A;</p>
+<p>yum install apr-util -y</p>
+<p>&#x56E0;&#x4E3A;&#x5728;&#x540E;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x4E2D;&#x8981;&#x7528;&#x5230;yumdownload&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230; yumdownload &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x4F9D;&#x8D56; yum-utils&#x4E2D;&#x7684;yumdownload &#x5DE5;&#x5177;</p>
+<p>yum install yum-utils -y</p>
+<p>2.&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;</p>
+<p>&#x89E3;&#x5F00;&#x540E;&#x5C31;&#x80FD;&#x5F97;&#x5230;&#x72EC;&#x7ACB;&#x7684; ab&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
+<p>&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E; &#x5C06;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A; usr &#x76EE;&#x5F55; ab&#x6587;&#x4EF6;&#x5C31;&#x5728;&#x8FD9;&#x4E2A;usr\/bin &#x76EE;&#x5F55;&#x4E2D;</p>
+<p>cd \/opt</p>
+<p>mkdir abtmp</p>
+<p>cd .\/abtmp</p>
+<p>yum install yum-utils.noarch</p>
+<p>yumdownloader httpd-tools*</p>
+<p>rpm2cpio httpd-*.rpm | cpio -idmv</p>
+<p>ln -s \/opt\/abtmp\/usr\/bin\/ab \/usr\/local\/bin\/ab</p>
+<p>ab -n 1000 -c 1000 http:\/\/10.1.2.100</p>
+<hr>
+<p>&#x914D;&#x7F6E;IP-TUN&#x6A21;&#x5F0F; # &#x96A7;&#x9053;&#x6A21;&#x5F0F; &#x5F02;&#x5730;&#x5BB9;&#x707E;</p>
+<p>#DNS view &#x53EA;&#x80FD;DNS &#x5B9A;&#x4F4D;&#x5730;&#x57DF;&#x5C31;&#x8FD1;&#x8BBF;&#x95EE;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x6B66;&#x6C49;&#x5C31;&#x5B9A;&#x4F4D;&#x5230;&#x6B66;&#x6C49;&#xFF0C;&#x5728;&#x4E0A;&#x6D77;&#x5B9A;&#x4F4D;&#x5230;&#x4E0A;&#x6D77;</p>
+<p>#</p>
+<p>&#x73AF;&#x5883;</p>
+<p>DR=10.1.2.12</p>
+<p>VIP=10.1.2.100</p>
+<p>RIP1=10.1.2.13</p>
+<p>RIP2=10.1.2.14</p>
+<p>RIP3=10.1.2.15</p>
+<p>DR&#x914D;&#x7F6E;</p>
+<p>ifconfig eth0:0 $VIP broadcast $VIP netmask 255.255.255.255 up</p>
+<p>&#x5F00;&#x542F;&#x8DEF;&#x7531;&#x8F6C;&#x53D1;&#x529F;&#x80FD;</p>
+<p>echo 1 &gt; \/proc\/sys\/net\/ipv4\/ip_forward</p>
+<p>&#x914D;&#x7F6E;tun&#x6A21;&#x5F0F;</p>
+<p>\/sbin\/ipvsadm -C</p>
+<p>\/sbin\/ipvsadm -A -t $VIP:80 -s rr</p>
+<p>\/sbin\/ipvsadm -a -t $VIP:80 -r $RIP1:80 -i</p>
+<p>\/sbin\/ipvsadm -a -t $VIP:80 -r $RIP2:80 -i</p>
+<p>\/sbin\/ipvsadm -a -t $VIP:80 -r $RIP3:80 -i</p>
+<p>ipvsadm -L -n</p>
+<p>#</p>
+<p>RS&#x914D;&#x7F6E;&#x90FD;&#x662F;&#x4E00;&#x6837;</p>
+<p>1&#x3001;&#x4E34;&#x65F6;&#x52A0;&#x8F7D;</p>
+<p>VIP=10.1.2.100</p>
+<p>ifconfig tunl0 $VIP netmask 255.255.255.255 # &#x9ED8;&#x8BA4;&#x52A0;&#x8F7D;ipip&#x96A7;&#x9053;</p>
+<p>&#x6C38;&#x4E45;&#x751F;&#x6548;</p>
+<p>modprobe ipip # &#x6267;&#x884C;&#x4F1A;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x52A0;&#x8F7D;&#x5B8C;&#x4F1A;&#x51FA;&#x73B0;tunl0&#x96A7;&#x9053;</p>
+<p>&#x6DFB;&#x52A0;&#x7F51;&#x5361;&#x4FEE;&#x6539;&#x5730;&#x5740;</p>
+<p>[root@centos6 network-scripts]# vi ifcfg-tunl0</p>
+<p>DEVICE=tunl0</p>
+<p>IPADDR=10.1.2.100</p>
+<p>NETMASK=255.255.255.255</p>
+<p># If you&apos;re having problems with gated making 127.0.0.0\/8 a martian,</p>
+<p># you can change this to something else (255.255.255.255, for example)</p>
+<p>ONBOOT=yes</p>
+<p>NAME=tunl0</p>
+<p>#</p>
+<p>&#x5173;&#x95ED;ARP&#x76F8;&#x8F6C;&#x53D1;</p>
+<p>&#x4E34;&#x65F6;</p>
+<p>echo &apos;0&apos; &gt; \/proc\/sys\/net\/ipv4\/ip_forward</p>
+<p>echo &apos;1&apos; &gt; \/proc\/sys\/net\/ipv4\/conf\/tunl0\/arp_ignore</p>
+<p>echo &apos;2&apos; &gt; \/proc\/sys\/net\/ipv4\/conf\/tunl0\/arp_announce</p>
+<p>echo &apos;1&apos; &gt; \/proc\/sys\/net\/ipv4\/conf\/all\/arp_ignore</p>
+<p>echo &apos;2&apos; &gt; \/proc\/sys\/net\/ipv4\/conf\/all\/arp_announce</p>
+<p>#rp_filter&#x7528;&#x4E8E;&#x53CD;&#x5411;&#x8FC7;&#x6EE4;&#x6280;&#x672F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;uRPF&#xFF0C;&#x4ED6;&#x9A8C;&#x8BC1;&#x53CD;&#x5411;&#x6570;&#x636E;&#x5305;&#x7684;&#x6D41;&#x5411;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x4F2A;&#x88C5;IP&#x653B;&#x51FB;</p>
+<p>echo &apos;0&apos; &gt; \/proc\/sys\/net\/ipv4\/conf\/tunl0\/rp_filter</p>
+<p>echo &apos;0&apos; &gt; \/proc\/sys\/net\/ipv4\/conf\/all\/rp_filter</p>
+<p>#</p>
+<p>&#x6C38;&#x4E45;&#x751F;&#x6548;</p>
+<p>net.ipv4.conf.tunl0.arp_ignore = 1</p>
+<p>net.ipv4.conf.tunl0.arp_announce = 2</p>
+<p>net.ipv4.conf.all.arp_ignore = 1</p>
+<p>net.ipv4.conf.all.arp_announce = 2</p>
+<p>net.ipv4.conf.tunl0.rp_filter = 0</p>
+<p>#</p>
+<p>&#x5B89;&#x88C5;web</p>
+<p>yum install httpd -y</p>
+<p>&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;</p>
+<hr>
+<p>PS&#xFF1A;arp&#x89E3;&#x91CA;</p>
+<p>https:\/\/www.cnblogs.com\/lipengxiang2009\/p\/7451050.html</p>
+<p>#arp_ignore&#x7684;&#x4F5C;&#x7528;&#x662F;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x5728;&#x6536;&#x5230;&#x5916;&#x90E8;&#x7684;arp&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x662F;&#x5426;&#x8981;&#x8FD4;&#x56DE;arp&#x54CD;&#x5E94;&#x3002;</p>
+<p> arp_ignore&#x53C2;&#x6570;&#x5E38;&#x7528;&#x7684;&#x53D6;&#x503C;&#x4E3B;&#x8981;&#x6709;0&#xFF0C;1&#xFF0C;2&#xFF0C;3~8&#x8F83;&#x5C11;&#x7528;&#x5230;&#xFF1A;</p>
+<p>0&#xFF1A;&#x54CD;&#x5E94;&#x4EFB;&#x610F;&#x7F51;&#x5361;&#x4E0A;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5BF9;&#x672C;&#x673A;IP&#x5730;&#x5740;&#x7684;arp&#x8BF7;&#x6C42;&#xFF08;&#x5305;&#x62EC;&#x73AF;&#x56DE;&#x7F51;&#x5361;&#x4E0A;&#x7684;&#x5730;&#x5740;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x7BA1;&#x8BE5;&#x76EE;&#x7684;IP&#x662F;&#x5426;&#x5728;&#x63A5;&#x6536;&#x7F51;&#x5361;&#x4E0A;&#x3002;</p>
+<p>1&#xFF1A;&#x53EA;&#x54CD;&#x5E94;&#x76EE;&#x7684;IP&#x5730;&#x5740;&#x4E3A;&#x63A5;&#x6536;&#x7F51;&#x5361;&#x4E0A;&#x7684;&#x672C;&#x5730;&#x5730;&#x5740;&#x7684;arp&#x8BF7;&#x6C42;&#x3002;</p>
+<p>2&#xFF1A;&#x53EA;&#x54CD;&#x5E94;&#x76EE;&#x7684;IP&#x5730;&#x5740;&#x4E3A;&#x63A5;&#x6536;&#x7F51;&#x5361;&#x4E0A;&#x7684;&#x672C;&#x5730;&#x5730;&#x5740;&#x7684;arp&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x4E14;arp&#x8BF7;&#x6C42;&#x7684;&#x6E90;IP&#x5FC5;&#x987B;&#x548C;&#x63A5;&#x6536;&#x7F51;&#x5361;&#x540C;&#x7F51;&#x6BB5;&#x3002;</p>
+<p>3&#xFF1A;&#x5982;&#x679C;ARP&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x5305;&#x6240;&#x8BF7;&#x6C42;&#x7684;IP&#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x672C;&#x5730;&#x5730;&#x5740;&#x5176;&#x4F5C;&#x7528;&#x57DF;&#xFF08;scope&#xFF09;&#x4E3A;&#x4E3B;&#x673A;&#xFF08;host&#xFF09;&#xFF0C;&#x5219;&#x4E0D;&#x56DE;&#x5E94;ARP&#x54CD;&#x5E94;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x5982;&#x679C;&#x4F5C;&#x7528;&#x57DF;&#x4E3A;&#x5168;&#x5C40;&#xFF08;global&#xFF09;&#x6216;&#x94FE;&#x8DEF;&#xFF08;link&#xFF09;&#xFF0C;&#x5219;&#x56DE;&#x5E94;ARP&#x54CD;&#x5E94;&#x6570;&#x636E;&#x5305;&#x3002;</p>
+<p>4~7&#xFF1A;&#x4FDD;&#x7559;&#x672A;&#x4F7F;&#x7528;</p>
+<p>8&#xFF1A;&#x4E0D;&#x56DE;&#x5E94;&#x6240;&#x6709;&#x7684;arp&#x8BF7;&#x6C42;</p>
+<p> sysctl.conf&#x4E2D;&#x5305;&#x542B;all&#x548C;eth\/lo&#xFF08;&#x5177;&#x4F53;&#x7F51;&#x5361;&#xFF09;&#x7684;arp_ignore&#x53C2;&#x6570;&#xFF0C;&#x53D6;&#x5176;&#x4E2D;&#x8F83;&#x5927;&#x7684;&#x503C;&#x751F;&#x6548;&#x3002;</p>
+<p>#</p>
+<p>#arp_announce&#x7684;&#x4F5C;&#x7528;&#x662F;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x5728;&#x5BF9;&#x5916;&#x53D1;&#x9001;arp&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x4F55;&#x9009;&#x62E9;arp&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x5305;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#x3002;</p>
+<p>arp_announce&#x53C2;&#x6570;&#x5E38;&#x7528;&#x7684;&#x53D6;&#x503C;&#x6709;0&#xFF0C;1&#xFF0C;2&#x3002;</p>
+<p>0&#xFF1A;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x7F51;&#x5361;&#x4E0A;&#x7684;IP&#x5730;&#x5740;&#x4F5C;&#x4E3A;arp&#x8BF7;&#x6C42;&#x7684;&#x6E90;IP&#xFF0C;&#x901A;&#x5E38;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5305;a&#x7684;&#x6E90;IP&#x3002;</p>
+<p>1&#xFF1A;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x4E0D;&#x5C5E;&#x4E8E;&#x8BE5;&#x53D1;&#x9001;&#x7F51;&#x5361;&#x5B50;&#x7F51;&#x7684;&#x672C;&#x5730;&#x5730;&#x5740;&#x4F5C;&#x4E3A;&#x53D1;&#x9001;arp&#x8BF7;&#x6C42;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#x3002;</p>
+<p>2&#xFF1A;&#x5FFD;&#x7565;IP&#x6570;&#x636E;&#x5305;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#xFF0C;&#x9009;&#x62E9;&#x8BE5;&#x53D1;&#x9001;&#x7F51;&#x5361;&#x4E0A;&#x6700;&#x5408;&#x9002;&#x7684;&#x672C;&#x5730;&#x5730;&#x5740;&#x4F5C;&#x4E3A;arp&#x8BF7;&#x6C42;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#x3002;</p>
+<p> sysctl.conf&#x4E2D;&#x5305;&#x542B;all&#x548C;eth\/lo&#xFF08;&#x5177;&#x4F53;&#x7F51;&#x5361;&#xFF09;&#x7684;arp_ignore&#x53C2;&#x6570;&#xFF0C;&#x53D6;&#x5176;&#x4E2D;&#x8F83;&#x5927;&#x7684;&#x503C;&#x751F;&#x6548;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="高可用负载--LVS+keepalive.html" class="navigation navigation-prev " aria-label="Previous page: 高可用负载--LVS+keepalive">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="高可用负载-HAproxy+keepalived.html" class="navigation navigation-next " aria-label="Next page: 高可用负载-HAproxy+keepalived">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"高可用负载--LVS四层负载均衡","level":"1.36","depth":1,"next":{"title":"高可用负载-HAproxy+keepalived","level":"1.37","depth":1,"path":"高可用负载-HAproxy+keepalived.md","ref":"高可用负载-HAproxy+keepalived.md","articles":[]},"previous":{"title":"高可用负载--LVS+keepalive","level":"1.35","depth":1,"path":"高可用负载--LVS+keepalive.md","ref":"高可用负载--LVS+keepalive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"高可用负载--LVS四层负载均衡.md","mtime":"2019-03-15T14:12:48.859Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-15T17:14:54.926Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
