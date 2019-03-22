@@ -1,0 +1,737 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>if判断 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mysql数据库定期自动备份脚本.html" />
+    
+    
+    <link rel="prev" href="grep命令.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1shell一句话脚本.html">
+            
+                <a href="1shell一句话脚本.html">
+            
+                    
+                    1shell一句话脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="awk命令.html">
+            
+                <a href="awk命令.html">
+            
+                    
+                    awk命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="case命令.html">
+            
+                <a href="case命令.html">
+            
+                    
+                    case命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="DDOS中禁攻击者IP.html">
+            
+                <a href="DDOS中禁攻击者IP.html">
+            
+                    
+                    DDOS中禁攻击者IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="EOF转义问题.html">
+            
+                <a href="EOF转义问题.html">
+            
+                    
+                    EOF转义问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="find命令.html">
+            
+                <a href="find命令.html">
+            
+                    
+                    find命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="for循环.html">
+            
+                <a href="for循环.html">
+            
+                    
+                    for循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="git脚本.html">
+            
+                <a href="git脚本.html">
+            
+                    
+                    git脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="grep命令.html">
+            
+                <a href="grep命令.html">
+            
+                    
+                    grep命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="if判断.html">
+            
+                <a href="if判断.html">
+            
+                    
+                    if判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="mysql数据库定期自动备份脚本.html">
+            
+                <a href="mysql数据库定期自动备份脚本.html">
+            
+                    
+                    mysql数据库定期自动备份脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="read命令.html">
+            
+                <a href="read命令.html">
+            
+                    
+                    read命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="rm回收站.html">
+            
+                <a href="rm回收站.html">
+            
+                    
+                    rm回收站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="rsync备份.html">
+            
+                <a href="rsync备份.html">
+            
+                    
+                    rsync备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="sed命令.html">
+            
+                <a href="sed命令.html">
+            
+                    
+                    sed命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell备份.html">
+            
+                <a href="shell备份.html">
+            
+                    
+                    shell备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="shell打印99乘法表.html">
+            
+                <a href="shell打印99乘法表.html">
+            
+                    
+                    shell打印99乘法表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="shell格式化输出带颜色变量.html">
+            
+                <a href="shell格式化输出带颜色变量.html">
+            
+                    
+                    shell格式化输出带颜色变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="Shell脚本编写.html">
+            
+                <a href="Shell脚本编写.html">
+            
+                    
+                    Shell脚本编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                <a href="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                    
+                    shell脚本编写启动、停止和重启脚本，并添加到系统服务中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="sshd脚本解析.html">
+            
+                <a href="sshd脚本解析.html">
+            
+                    
+                    sshd脚本解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="vim命令.html">
+            
+                <a href="vim命令.html">
+            
+                    
+                    vim命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="按时间创建目录打包.html">
+            
+                <a href="按时间创建目录打包.html">
+            
+                    
+                    按时间创建目录打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="鸡兔同笼.html">
+            
+                <a href="鸡兔同笼.html">
+            
+                    
+                    鸡兔同笼
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="监控mysql脚本.html">
+            
+                <a href="监控mysql脚本.html">
+            
+                    
+                    监控mysql脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="监控脚本使用情况.html">
+            
+                <a href="监控脚本使用情况.html">
+            
+                    
+                    监控脚本使用情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="监控某服务_有没有开启.html">
+            
+                <a href="监控某服务_有没有开启.html">
+            
+                    
+                    监控某服务_有没有开启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="利用Shell脚本检测WebURL状态.html">
+            
+                <a href="利用Shell脚本检测WebURL状态.html">
+            
+                    
+                    利用Shell脚本检测WebURL状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="内核优化.html">
+            
+                <a href="内核优化.html">
+            
+                    
+                    内核优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="判断端口是否异常，然后重启服务.html">
+            
+                <a href="判断端口是否异常，然后重启服务.html">
+            
+                    
+                    判断端口是否异常，然后重启服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="批量创建用户和密码.html">
+            
+                <a href="批量创建用户和密码.html">
+            
+                    
+                    批量创建用户和密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="批量修改主机名脚本.html">
+            
+                <a href="批量修改主机名脚本.html">
+            
+                    
+                    批量修改主机名脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="生成随机密码命令.html">
+            
+                <a href="生成随机密码命令.html">
+            
+                    
+                    生成随机密码命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="使用mtime删除历史文件或日志文件.html">
+            
+                <a href="使用mtime删除历史文件或日志文件.html">
+            
+                    
+                    使用mtime删除历史文件或日志文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="正则表达式.html">
+            
+                <a href="正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >if判断</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>---<br><a href="https://www.cnblogs.com/weifeng1463/p/8757740.html" target="_blank">https://www.cnblogs.com/weifeng1463/p/8757740.html</a><br><a href="https://www.cnblogs.com/luyaran/p/8945426.html" target="_blank">https://www.cnblogs.com/luyaran/p/8945426.html</a><br><a href="https://www.jb51.net/article/52893.htm" target="_blank">https://www.jb51.net/article/52893.htm</a></p>
+<p>shell&#x7684;if&#x548C;else<br>&#x57FA;&#x672C;&#x8BED;&#x6CD5;<br>&#x8FD0;&#x7B97;&#x7B26;<br>-eq =<br>-ne !=<br>-lt \&lt;<br>-le \&lt;=<br>-gt &gt;<br>-ge &gt;=<br>-d &#x76EE;&#x5F55; &#x5982;&#x679C; filename &#x4E3A;&#x76EE;&#x5F55;&#xFF0C;&#x5219;&#x4E3A;&#x771F; [ -d /tmp/mydir ]<br>-e &#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728; &#x5982;&#x679C; filename &#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4E3A;&#x771F; [ -e /var/log/syslog ]<br>-f &#x6587;&#x4EF6;&#x662F;&#x5426;&#x662F;&#x666E;&#x901A;&#x6587;&#x4EF6;&#xFF08;&#x4E0D;&#x662F;&#x76EE;&#x5F55;&#x3001;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x3001;&#x94FE;&#x63A5;&#x6587;&#x4EF6;&#xFF09;&#x5982;&#x679C; filename
+&#x4E3A;&#x5E38;&#x89C4;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x4E3A;&#x771F; [ -f /usr/bin/grep ]<br>-L &#x7B26;&#x53F7;&#x94FE;&#x63A5; &#x5982;&#x679C; filename &#x4E3A;&#x7B26;&#x53F7;&#x94FE;&#x63A5;&#xFF0C;&#x5219;&#x4E3A;&#x771F; [ -L /usr/bin/grep ]<br>-r|-w|-x &#x8868;&#x793A;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x6709;&#x53EF;&#x8BFB;&#x3001;&#x53EF;&#x5199;&#x3001;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF08;&#x6307;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;&#x6D4B;&#x8BD5; &#x547D;&#x4EE4;&#x7684;&#x7528;&#x6237;&#xFF09;<br>-n string &#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x975E;&#x96F6;<br>-z string &#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x4E3A;&#x96F6;<br>|| &#x6216; &#x524D;&#x8FB9;&#x547D;&#x4EE4;&#x5931;&#x8D25;&#x6267;&#x884C;&#x540E;&#x8FB9;&#x7684;&#x547D;&#x4EE4;<br>&amp;&amp; &#x4E0E; &#x524D;&#x8FB9;&#x547D;&#x4EE4;&#x6210;&#x529F;&#x540E;&#x8FD0;&#x884C;&#x540E;&#x8FB9;&#x547D;&#x4EE4;<br>! &#x8868;&#x793A;&#x53D6;&#x53CD;  </p>
+<p>f1 -nt f2 f1&#x662F;&#x5426;&#x6BD4;f2&#x65B0;&#xFF08;new than&#xFF09;<br>f1 -ot f2 f1&#x662F;&#x5426;&#x6BD4;f2&#x65E7;&#xFF08;old than&#xFF09;<br>f1 -ef f2 f1&#x548C;f2&#x662F;&#x5426;&#x662F;&#x76F8;&#x540C;&#x6587;&#x4EF6;&#x7684;&#x786C;&#x94FE;&#x63A5;  </p>
+<p>&#x6587;&#x4EF6;&#x7C7B;&#x578B;<br>-b &#x8868;&#x793A;&#x662F;&#x5757;&#x8BBE;&#x5907;(&#x5149;&#x9A71;&#x3001;&#x8F6F;&#x76D8;&#x7B49;)<br>-c &#x8868;&#x793A;&#x662F;&#x5B57;&#x7B26;&#x8BBE;&#x5907;&#xFF08;&#x952E;&#x76D8;&#x3001;&#x58F0;&#x5361;&#x7B49;)<br>-p &#x8868;&#x793A;&#x662F;&#x7BA1;&#x9053;<br>-h &#x8868;&#x793A;&#x662F;&#x7B26;&#x53F7;&#x94FE;&#x63A5;<br>-s &#x8868;&#x793A;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x4E0D;&#x4E3A;0<br>-S &#x8868;&#x793A;&#x662F;&#x5426;&#x662F;socket<br>-z &#x503C;  </p>
+<hr>
+<p>if&#x8BED;&#x53E5;&#x7528;&#x6CD5;<br>if [&#x6761;&#x4EF6;1]<br>then &#x52A8;&#x4F5C;1<br>fi<br>&#x53CC;&#x5206;&#x652F;&#x7ED3;&#x6784;<br>if [&#x6761;&#x4EF6;1]<br>then &#x52A8;&#x4F5C;1<br>else<br>&#x52A8;&#x4F5C;2<br>fi<br>&#x591A;&#x5206;&#x652F;&#x7ED3;&#x6784;<br>if [&#x6761;&#x4EF6;1]<br>then &#x52A8;&#x4F5C;1<br>elif [&#x6761;&#x4EF6;2]<br>then &#x52A8;&#x4F5C;2<br>&#x2026;&#x2026;&#x2026;&#x2026;&#x3001;<br>else<br>&#x52A8;&#x4F5C;n<br>fi  </p>
+<p>elif&#x5224;&#x65AD;&#x7528;&#x6CD5;<br>&#x591A;&#x91CD;&#x5224;&#x65AD; &#x5982;&#x679C; $1=0 &#x6253;&#x5370;0 &#x6216;&#x8005; $1=1 &#x6253;&#x5370;1 &#x5426;&#x5219; &#x6253;&#x5370;&#x9519;&#x8BEF;<br>#!/bin/bash<br>if [[ $1 = 0 ]];then<br>echo &quot;0&quot;<br>elif [[ $1 = 1 ]];then<br>echo &quot;1&quot;<br>else<br>echo &quot;&#x9519;&#x8BEF;&quot;<br>fi  </p>
+<h2 id="&#x5224;&#x65AD;&#x6761;&#x4EF6;1&#x662F;&#x5426;&#x4E3A;&#x771F;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x771F;&#xFF0C;&#x6267;&#x884C;&#x8BED;&#x53E5;1&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x5047;&#xFF0C;&#x5224;&#x65AD;&#x6761;&#x4EF6;2&#xFF0C;&#x82E5;&#x6761;&#x4EF6;2&#x4E3A;&#x771F;&#xFF0C;&#x6267;&#x884C;&#x8BED;&#x53E5;1&#x3002;&#x3002;&#x3002;&#x82E5;&#x6240;&#x6709;&#x6761;&#x4EF6;&#x90FD;&#x4E3A;&#x5047;&#xFF0C;&#x6267;&#x884C;&#x8BED;&#x53E5;n--">&#x5224;&#x65AD;&#x6761;&#x4EF6;1&#x662F;&#x5426;&#x4E3A;&#x771F;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x771F;&#xFF0C;&#x6267;&#x884C;&#x8BED;&#x53E5;1&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x5047;&#xFF0C;&#x5224;&#x65AD;&#x6761;&#x4EF6;2&#xFF0C;&#x82E5;&#x6761;&#x4EF6;2&#x4E3A;&#x771F;&#xFF0C;&#x6267;&#x884C;&#x8BED;&#x53E5;1.&#x3002;&#x3002;&#x3002;&#x82E5;&#x6240;&#x6709;&#x6761;&#x4EF6;&#x90FD;&#x4E3A;&#x5047;&#xFF0C;&#x6267;&#x884C;&#x8BED;&#x53E5;n  </h2>
+<p>next&#x7528;&#x6CD5;<br>&#x7528;&#x6765;&#x8DF3;&#x4EE3;&#x7801;&#x7528;&#x7684;  </p>
+<h2 id="&#x5982;&#x679C;&#x524D;&#x9762;&#x6761;&#x4EF6;&#x6210;&#x7ACB;-&#x5C31;&#x8DF3;&#x8FC7;&#x4E0B;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x4E0D;&#x6210;&#x7ACB;-&#x76F4;&#x63A5;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;--">&#x5982;&#x679C;&#x524D;&#x9762;&#x6761;&#x4EF6;&#x6210;&#x7ACB; &#x5C31;&#x8DF3;&#x8FC7;&#x4E0B;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x4E0D;&#x6210;&#x7ACB; &#x76F4;&#x63A5;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;  </h2>
+<p>&#x591A;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x8BED;&#x6CD5;<br>shell&#x811A;&#x672C;if&#x5224;&#x65AD;&#x591A;&#x4E2A;&#x6761;&#x4EF6;<br>&#x5982;&#x679C;a&gt;b&#x4E14;a\<c if="" ((="" a="" \=""> b )) &amp;&amp; (( a \&lt; c )) &#x6216;&#x8005;if [[ $a &gt; $b ]] &amp;&amp; [[ $a \&lt; $c ]]
+&#x6216;&#x8005;if [ $a -gt $b -a $a -lt $c ]<br>&#x5982;&#x679C;a&gt;b&#x6216;a\<c if="" ((="" a="" \=""> b )) || (( a \&lt; c )) &#x6216;&#x8005;if [[ $a &gt; $b ]] || [[ $a \&lt; $c ]]
+&#x6216;&#x8005;if [ $a -gt $b -o $a -lt $c ]<br>-o = or  </c></c></p>
+<h2 id="a--and--">-a = and  </h2>
+<p>[ ] &#x5185;&#x53C2;&#x6570;  </p>
+<hr>
+<p>&#x4F4D;&#x7F6E;&#x53D8;&#x91CF;&#x7528;&#x6CD5;<br>$0 &#x6587;&#x4EF6;&#x672C;&#x8EAB;<br>$1 &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<br>$2 &#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;<br>$# &#x4E00;&#x5171;&#x6709;&#x51E0;&#x4E2A;&#x53C2;&#x6570;  </p>
+<h2 id="&#x6240;&#x6709;&#x53C2;&#x6570;--">$\@ &#x6240;&#x6709;&#x53C2;&#x6570;  </h2>
+<p>#&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6570; &#x5982;&#x679C;&#x771F; echo 0 &#x5426;&#x5219; echo 1<br>[ 2 -ne 10 ] &amp;&amp; echo 0 || echo 1<br>0<br>&#x7B49;&#x4EF7;&#x4E8E;<br>[[ 2 != 10 ]] &amp;&amp; echo 0 || echo 1  </p>
+<h2 id="0--">0  </h2>
+<p>&#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x4E32;<br>vat=dashazi<br>[[ $vat = &quot;dashazi&quot; ]] &amp;&amp; echo 0 || echo 1<br>0<br>[[ $vat = &quot;dashazi1&quot; ]] &amp;&amp; echo 0 || echo 1  </p>
+<h2 id="1--">1  </h2>
+<p>&#x6B63;&#x5219;&#x5224;&#x65AD;&#x7528;&#x6CD5;<br>[[ $vat =~ da..a.i ]] &amp;&amp; echo 0 || echo 1<br>0<br>[[ $vat =~ da..a.l ]] &amp;&amp; echo 0 || echo 1  </p>
+<h2 id="1--">1  </h2>
+<p>&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x4E0D;&#x662F;&#x7A7A;&#x503C;<br>[ -z $dir ] &amp;&amp; echo 0 || echo 1<br>&#x9664;&#x4E86;&#x76EE;&#x5F55;&#x5916;  </p>
+<h2 id="--z-dir---echo-0--echo-1--">[ ! -z $dir ] &amp;&amp; echo 0 || echo 1  </h2>
+<p>&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;  </p>
+<h2 id="-x-asdsh---echo-0--echo-1--">[ -x ./asd.sh ] &amp;&amp; echo 0 || echo 1  </h2>
+<p>&#x5224;&#x65AD;&#x8DEF;&#x5F84;<br>dir=/root/tmp<br>echo &quot;$dir&quot;  </p>
+<h2 id="-d-dir---echo-0--echo-1--">[ -d $dir ] &amp;&amp; echo 0 || echo 1  </h2>
+<p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5224;&#x65AD;&#x7528;&#x6CD5;<br>einfo1() {<br>echo &quot;&#x5B58;&#x5728;&quot;<br>}<br>einfo2() {<br>echo &quot;&#x4E0D;&#x5B58;&#x5728;&quot;<br>}<br>dir=/root/tmp<br>[ -d $dir ] &amp;&amp; einfo1 || einfo2<br>dir=/root<br>[ -x $dir/asd.sh ] &amp;&amp; einfo1 || einfo2  </p>
+<hr>
+<p>[ $# -ne 1 ] &amp;&amp; echo &apos;need $1&apos; &amp;&amp; exit 1 #&#x5224;&#x65AD;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7ED9;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x9000;&#x51FA; exit
+1&#x975E;&#x6B63;&#x5E38;&#x9000;&#x51FA; &#x7ED9;$?&#x68C0;&#x67E5;&#x770B;&#x7684;<br>ip=$1 #&#x811A;&#x672C;&#x540E;&#x9762;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x4F20;&#x7ED9;&#x53D8;&#x91CF;ip<br>ping -c 2 -w 2 $ip &gt;/dev/unll 2&gt;&amp;1 #&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x7A7A; &#x4E0D;&#x8F93;&#x51FA;&#x4FE1;&#x606F;<br>[ $? -eq 0 ] &amp;&amp; echo &quot;$ip is on&quot; #&#x5982;&#x679C;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x7B49;&#x4E8E;0 &#x5C31;&#x8F93;&#x51FA;  </p>
+<p>&#x5355;&#x91CD;&#x5224;&#x65AD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;<br>[ $? -eq 0 ] &amp;&amp; echo &quot;$ip is on&quot;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="grep命令.html" class="navigation navigation-prev " aria-label="Previous page: grep命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mysql数据库定期自动备份脚本.html" class="navigation navigation-next " aria-label="Next page: mysql数据库定期自动备份脚本">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"if判断","level":"1.11","depth":1,"next":{"title":"mysql数据库定期自动备份脚本","level":"1.12","depth":1,"path":"mysql数据库定期自动备份脚本.md","ref":"mysql数据库定期自动备份脚本.md","articles":[]},"previous":{"title":"grep命令","level":"1.10","depth":1,"path":"grep命令.md","ref":"grep命令.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"if判断.md","mtime":"2019-03-22T06:26:38.901Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:20:11.587Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

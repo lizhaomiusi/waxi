@@ -1,0 +1,849 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>rsync-客户端配置 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sshpass命令.html" />
+    
+    
+    <link rel="prev" href="rsync-故障.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1常用查询.html">
+            
+                <a href="1常用查询.html">
+            
+                    
+                    1常用查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1日常配置.html">
+            
+                <a href="1日常配置.html">
+            
+                    
+                    1日常配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="25个必须记住的SSH命令.html">
+            
+                <a href="25个必须记住的SSH命令.html">
+            
+                    
+                    25个必须记住的SSH命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="centos_6_网卡问题.html">
+            
+                <a href="centos_6_网卡问题.html">
+            
+                    
+                    centos6网卡问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="centos_7_网卡配置.html">
+            
+                <a href="centos_7_网卡配置.html">
+            
+                    
+                    centos7网卡配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CentOS7添加新磁盘而不用重启.html">
+            
+                <a href="CentOS7添加新磁盘而不用重启.html">
+            
+                    
+                    CentOS7添加新磁盘而不用重启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Centos系统优化.html">
+            
+                <a href="Centos系统优化.html">
+            
+                    
+                    Centos系统优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="crond命令_定时任务.html">
+            
+                <a href="crond命令_定时任务.html">
+            
+                    
+                    crond命令_定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="diff命令.html">
+            
+                <a href="diff命令.html">
+            
+                    
+                    diff命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="iptables的四表五链.html">
+            
+                <a href="iptables的四表五链.html">
+            
+                    
+                    iptables的四表五链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="linux查看和修改PATH环境变量的方法.html">
+            
+                <a href="linux查看和修改PATH环境变量的方法.html">
+            
+                    
+                    linux查看和修改PATH环境变量的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="linux磁盘空间满了.html">
+            
+                <a href="linux磁盘空间满了.html">
+            
+                    
+                    linux磁盘空间满了
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Linux设置SFTP服务用户目录权限.html">
+            
+                <a href="Linux设置SFTP服务用户目录权限.html">
+            
+                    
+                    Linux设置SFTP服务用户目录权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="linux忘记密码.html">
+            
+                <a href="linux忘记密码.html">
+            
+                    
+                    linux忘记密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="linux下添加路由.html">
+            
+                <a href="linux下添加路由.html">
+            
+                    
+                    linux下添加路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="man中文手册安装.html">
+            
+                <a href="man中文手册安装.html">
+            
+                    
+                    man中文手册安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="nc命令.html">
+            
+                <a href="nc命令.html">
+            
+                    
+                    nc命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="nmon性能测试工具.html">
+            
+                <a href="nmon性能测试工具.html">
+            
+                    
+                    nmon性能测试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="pdsh命令.html">
+            
+                <a href="pdsh命令.html">
+            
+                    
+                    pdsh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="pssh命令.html">
+            
+                <a href="pssh命令.html">
+            
+                    
+                    pssh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="rm_-rf_恢复.html">
+            
+                <a href="rm_-rf_恢复.html">
+            
+                    
+                    rm-rf恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="rsync-init.d脚本.html">
+            
+                <a href="rsync-init.d脚本.html">
+            
+                    
+                    rsync-init.d脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="rsync-win平台.html">
+            
+                <a href="rsync-win平台.html">
+            
+                    
+                    rsync-win平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="rsync-参数server端.html">
+            
+                <a href="rsync-参数server端.html">
+            
+                    
+                    rsync-参数server端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="rsync-参数客户端.html">
+            
+                <a href="rsync-参数客户端.html">
+            
+                    
+                    rsync-参数客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="rsync-服务端配置.html">
+            
+                <a href="rsync-服务端配置.html">
+            
+                    
+                    rsync-服务端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="rsync-故障.html">
+            
+                <a href="rsync-故障.html">
+            
+                    
+                    rsync-故障
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.29" data-path="rsync-客户端配置.html">
+            
+                <a href="rsync-客户端配置.html">
+            
+                    
+                    rsync-客户端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="sshpass命令.html">
+            
+                <a href="sshpass命令.html">
+            
+                    
+                    sshpass命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="SSH隧道.html">
+            
+                <a href="SSH隧道.html">
+            
+                    
+                    SSH隧道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="SSH远程连接服务慢解决.html">
+            
+                <a href="SSH远程连接服务慢解决.html">
+            
+                    
+                    SSH远程连接服务慢解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="systemctl命令.html">
+            
+                <a href="systemctl命令.html">
+            
+                    
+                    systemctl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="vnstat进行流量统计.html">
+            
+                <a href="vnstat进行流量统计.html">
+            
+                    
+                    vnstat进行流量统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="安装完centos7需要干.html">
+            
+                <a href="安装完centos7需要干.html">
+            
+                    
+                    安装完centos7需要干
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="安装状态监控Linux_Dash.html">
+            
+                <a href="安装状态监控Linux_Dash.html">
+            
+                    
+                    安装状态监控Linux_Dash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="常见安全检查方法.html">
+            
+                <a href="常见安全检查方法.html">
+            
+                    
+                    常见安全检查方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="服务器删除文件权限不够.html">
+            
+                <a href="服务器删除文件权限不够.html">
+            
+                    
+                    服务器删除文件权限不够
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="更改linux终端中用户名颜色.html">
+            
+                <a href="更改linux终端中用户名颜色.html">
+            
+                    
+                    更改linux终端中用户名颜色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="配置systemctl命令tab自动补全.html">
+            
+                <a href="配置systemctl命令tab自动补全.html">
+            
+                    
+                    配置systemctl命令tab自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="全能系统监控工具dstat.html">
+            
+                <a href="全能系统监控工具dstat.html">
+            
+                    
+                    全能系统监控工具dstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="生产场景如何对linux系统进行合理规划分区.html">
+            
+                <a href="生产场景如何对linux系统进行合理规划分区.html">
+            
+                    
+                    生产场景如何对linux系统进行合理规划分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="使用mkpasswd命令生成随机密码.html">
+            
+                <a href="使用mkpasswd命令生成随机密码.html">
+            
+                    
+                    使用mkpasswd命令生成随机密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="系统屏蔽某个IP的访问.html">
+            
+                <a href="系统屏蔽某个IP的访问.html">
+            
+                    
+                    系统屏蔽某个IP的访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="应该知道的LINUX技巧.html">
+            
+                <a href="应该知道的LINUX技巧.html">
+            
+                    
+                    应该知道的LINUX技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >rsync-客户端配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>rsync&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;<br>-a&#xFF1A;--archive
+&#x7B49;&#x4E8E;&#x53C2;&#x6570;&#xFF1A;-rtplgoD&#xFF0C;&#x5F52;&#x6863;&#x6A21;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x4EE5;&#x9012;&#x5F52;&#x65B9;&#x5F0F;&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4FDD;&#x6301;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#xFF0C;<br>-v&#xFF1A; --verbose &#x8BE6;&#x7EC6;&#x6A21;&#x5F0F;&#x8F93;&#x51FA;<br>-r&#xFF1A; --recursive &#x5BF9;&#x5B50;&#x76EE;&#x5F55;&#x4EE5;&#x9012;&#x5F52;&#x6A21;&#x5F0F;&#x5904;&#x7406;&#x3002;<br>-t&#xFF1A; --times &#x4FDD;&#x6301;&#x6587;&#x4EF6;&#x65F6;&#x95F4;&#x4FE1;&#x606F;</p>
+<p>-p&#xFF1A; --perms &#x4FDD;&#x6301;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x3002;<br>-l&#xFF1A; --links &#x4FDD;&#x7559;&#x8F6F;&#x94FE;&#x63A5;&#x3002;<br>-g&#xFF1A; --group &#x4FDD;&#x6301;&#x6587;&#x4EF6;&#x5C5E;&#x7EC4;&#x4FE1;&#x606F;</p>
+<p>-o&#xFF1A; --owner &#x4FDD;&#x6301;&#x6587;&#x4EF6;&#x5C5E;&#x4E3B;&#x4FE1;&#x606F;&#x3002;<br>-D&#xFF1A; --devices &#x4FDD;&#x6301;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x4FE1;&#x606F;</p>
+<p>-z&#xFF1A; --compress &#x5BF9;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x4EF6;&#x5728;&#x4F20;&#x8F93;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x8FDB;&#x884C;&#x538B;&#x7F29;&#x5904;&#x7406;</p>
+<p>-H&#xFF1A; &#x4FDD;&#x7559;&#x786C;&#x94FE;&#x7ED3;</p>
+<p>-S&#xFF1A; &#x5BF9;&#x7A00;&#x758F;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x4EE5;&#x8282;&#x7701;DST&#x7684;&#x7A7A;&#x95F4;<br>-e&#xFF1A; --rsh=command &#x6307;&#x5B9A;&#x4F7F;&#x7528; rsh&#x3001; ssh &#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x540C;&#x6B65;<br>-P: &#x663E;&#x793A;&#x8FDB;&#x5EA6;<br>--exclude=PATTERN &#x6307;&#x5B9A;&#x6392;&#x9664;&#x4E0D;&#x9700;&#x8981;&#x4F20;&#x8F93;&#x7684;&#x6587;&#x4EF6;&#x6A21;&#x5F0F;&#x3002;<br>--exclude-from=FILE &#x6392;&#x9664; FILE &#x4E2D;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x3002;<br>--bwlimit=KBPS &#x9650;&#x5236; I/O &#x5E26;&#x5BBD;&#xFF0C; KBytes per second&#x3002;<br>--password-file=/etc/rsync.pwd # &#x6307;&#x5B9A;&#x5BC6;&#x7801;&#x6587;&#x4EF6;</p>
+<p>rsync&#x516D;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;</p>
+<p>&#x62F7;&#x8D1D;&#x672C;&#x5730;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;/home/coremail&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230;/cmbak&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>rsync -avSH /home/coremail/ /cmbak/</p>
+<p>&#x62F7;&#x8D1D;&#x672C;&#x5730;&#x673A;&#x5668;&#x7684;&#x5185;&#x5BB9;&#x5230;&#x8FDC;&#x7A0B;&#x673A;&#x5668;&#x3002;</p>
+<p>rsync -av /home/coremail/ 192.168.11.12:/home/coremail/</p>
+<p>&#x8FDC;&#x7A0B;&#x590D;&#x5236;&#x6587;&#x4EF6;&#x7C7B;&#x4F3C;scp</p>
+<p>rsync -av 192.168.11.11:/home/coremail/ /home/coremail/</p>
+<p>&#x62F7;&#x8D1D;&#x8FDC;&#x7A0B;rsync&#x670D;&#x52A1;&#x5668;(daemon&#x5F62;&#x5F0F;&#x8FD0;&#x884C;rsync)&#x7684;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x673A;&#x3002;&#x5F53;DST&#x8DEF;&#x5F84;&#x4FE1;&#x606F;&#x5305;&#x542B;&#x201D;::&#x201D;&#x5206;&#x9694;&#x7B26;&#x65F6;&#x542F;&#x52A8;&#x8BE5;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>rsync -av root\@172.16.78.192::www /databack</p>
+<p>&#x663E;&#x793A;&#x8FDC;&#x7A0B;&#x673A;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x3002;&#x8FD9;&#x7C7B;&#x4F3C;&#x4E8E;rsync&#x4F20;&#x8F93;&#xFF0C;&#x4E0D;&#x8FC7;&#x53EA;&#x8981;&#x5728;&#x547D;&#x4EE4;&#x4E2D;&#x7701;&#x7565;&#x6389;&#x672C;&#x5730;&#x673A;&#x4FE1;&#x606F;&#x5373;&#x53EF;&#x3002;</p>
+<p>rsync -v rsync://192.168.11.11/data</p>
+<p>&#x901A;&#x8FC7;ssh&#x901A;&#x9053;<br>rsync -avzP -e &quot;ssh -p1234&quot; /root/tmp/ root\@10.1.2.13:/root/vm1/</p>
+<p># &#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6307;&#x5B9A;&#x5BC6;&#x7801;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;&#xFF0C;&#x4E34;&#x65F6;&#xFF0C;&#x91CD;&#x542F;&#x5931;&#x6548;<br>export RSYNC_PASSWORD=rsync2</p>
+<p>rsync&#x914D;&#x7F6E;&#x672C;&#x5730;&#x5BC6;&#x7801;&#x6587;&#x4EF6;&#x5B9E;&#x73B0;&#x65E0;&#x4EA4;&#x4E92;&#x540C;&#x6B65;&#xFF0C;&#x6C38;&#x4E45;&#x751F;&#x6548;<br>echo &quot;rsync2&quot; &gt;&gt;/etc/rsyncd.pass<br>chmod 600 /etc/rsyncd.pass<br>&#x65E0;&#x5BC6;&#x7801;&#x540C;&#x6B65;&#x5148;&#x914D;&#x7F6E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5BC6;&#x7801;&#x6587;&#x4EF6;<br>rsync -avzP --password-file=/etc/rsync.pwd rsync1\@10.1.2.12::ftp /root/123.txt</p>
+<p>&#x51E0;&#x79CD;&#x540C;&#x6B65;&#x65B9;&#x5F0F;<br>&#x7D2F;&#x52A0;&#x540C;&#x6B65; # &#x6E90;&#x76EE;&#x5F55;&#x65B0;&#x5EFA;&#x66F4;&#x65B0;&#x590D;&#x5236;&#x5230;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4E0D;&#x7BA1;&#x76EE;&#x6807;&#x53D1;&#x751F;&#x7684;&#x53D8;&#x5316;<br>rsync -avzP --password-file=/etc/rsync.pwd rsync1\@10.1.2.12::ftp/vm1/
+/root/vm1/  </p>
+<p>&#x955C;&#x50CF;&#x540C;&#x6B65; # &#x5220;&#x9664;&#x4E0D;&#x5B58;&#x5728;&#x4E8E;&#x6E90;&#x76EE;&#x5F55;&#x7684;&#x76EE;&#x7684;&#x5730;&#x6587;&#x4EF6; &#x53BB;&#x9664;&#x76EE;&#x6807;&#x53D1;&#x751F;&#x7684;&#x53D8;&#x5316; -delete
+&#x9009;&#x9879;&#xFF0C;&#x8868;&#x793A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x8981;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x5982;&#x679C;
+/tmp/david/&#x76EE;&#x5F55;&#x4E2D;&#x6709;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x5220;&#x9664;&#x3002;<br>rsync -avzP --delete --password-file=/etc/rsync.pwd rsync1\@10.1.2.12::ftp/vm1/
+/root/vm1/  </p>
+<p>&#x540C;&#x6B65;&#x65F6;&#x4E0D;&#x5728;&#x76EE;&#x7684;&#x5730;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;
+,&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x5BF9;&#x76EE;&#x7684;&#x5730;&#x5DF2;&#x7ECF;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x540C;&#x6B65;&#xFF0C;&#x800C;&#x4E0D;&#x7406;&#x4F1A;&#x6E90;&#x76EE;&#x5F55;&#x65B0;&#x589E;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+--existing &#x9009;&#x9879;&#xFF1A;<br>rsync -avzP --existing rsync1\@10.1.2.12::ftp/vm1/ /root/vm1/  </p>
+<p>rsync&#x5B8C;&#x6210;&#x6E90;&#x76EE;&#x5F55;&#x5230;&#x76EE;&#x7684;&#x5730;&#x7684;&#x62F7;&#x8D1D;&#xFF0C;&#x82E5;&#x80FD;&#x67E5;&#x770B;&#x5230;&#x6E90;&#x76EE;&#x5F55;&#x4E0E;&#x76EE;&#x7684;&#x5730;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x8FD9;&#x5BF9;&#x540C;&#x6B65;&#x5341;&#x5206;&#x6709;&#x5E2E;&#x52A9;&#xFF0C;-i
+&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x6E90;&#x76EE;&#x5F55;&#x4E0E;&#x76EE;&#x7684;&#x5730;&#x95F4;&#x7684;&#x5DEE;&#x5F02;<br>rsync -avzi rsync1\@10.1.2.12::ftp/vm1/ /root/vm1/  </p>
+<p>&#x9650;&#x5236;&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;<br>&#x4F7F;&#x7528; --max-size &#x9009;&#x9879;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9650;&#x5236;&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5927;&#x5927;&#x5C0F;&#xFF1A;<br>rsync -avzP --max-size=&apos;100K&apos; --password-file=/etc/rsync.pwd
+rsync1\@10.1.2.12::ftp/vm1/ /root/vm1/  </p>
+<p>&#x5168;&#x62F7;&#x8D1D; # &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; rsync
+&#x91C7;&#x7528;&#x589E;&#x91CF;&#x62F7;&#x8D1D;&#xFF0C;&#x8FD9;&#x6837;&#x80FD;&#x8282;&#x7701;&#x5E26;&#x5BBD;&#xFF0C;&#x5728;&#x6240;&#x540C;&#x6B65;&#x6587;&#x4EF6;&#x4E0D;&#x5927;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; -W
+&#x9009;&#x9879;&#x5B9E;&#x73B0;&#x5168;&#x62F7;&#x8D1D;&#xFF1A;<br>rsync -avzW --password-file=/etc/rsync.pwd rsync1\@10.1.2.12::ftp/vm1/
+/root/vm1/</p>
+<p>&#x53EA;&#x5BF9;&#x6BD4;&#x9700;&#x8981;&#x540C;&#x6B65;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x8FDB;&#x884C;&#x5B9E;&#x8D28;&#x6027;&#x7684;&#x540C;&#x6B65;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5BF9; rsync
+&#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1A;</p>
+<p>rsync -avzn -P &#x6E90;&#x5730;&#x5740; &#x76EE;&#x6807;&#x5730;&#x5740;</p>
+<p>rsync -avz -P --list-only &#x6E90;&#x5730;&#x5740; &#x76EE;&#x6807;&#x5730;&#x5740;</p>
+<p>&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F; -n &#x4E5F;&#x53EF;&#x4EE5;&#x662F; --list-only&#xFF0C;&#x6548;&#x679C;&#x76F8;&#x540C;&#xFF0C;&#x53EA;&#x662F;&#x540E;&#x8005;&#x663E;&#x793A;&#x7684;&#x4FE1;&#x606F;&#x66F4;&#x52A0;&#x8BE6;&#x5C3D;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rsync-故障.html" class="navigation navigation-prev " aria-label="Previous page: rsync-故障">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sshpass命令.html" class="navigation navigation-next " aria-label="Next page: sshpass命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"rsync-客户端配置","level":"1.29","depth":1,"next":{"title":"sshpass命令","level":"1.30","depth":1,"path":"sshpass命令.md","ref":"sshpass命令.md","articles":[]},"previous":{"title":"rsync-故障","level":"1.28","depth":1,"path":"rsync-故障.md","ref":"rsync-故障.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rsync-客户端配置.md","mtime":"2019-03-22T02:37:55.429Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T07:59:19.170Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

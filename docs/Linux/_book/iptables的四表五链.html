@@ -1,0 +1,824 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>iptables的四表五链 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="linux查看和修改PATH环境变量的方法.html" />
+    
+    
+    <link rel="prev" href="diff命令.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1常用查询.html">
+            
+                <a href="1常用查询.html">
+            
+                    
+                    1常用查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1日常配置.html">
+            
+                <a href="1日常配置.html">
+            
+                    
+                    1日常配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="25个必须记住的SSH命令.html">
+            
+                <a href="25个必须记住的SSH命令.html">
+            
+                    
+                    25个必须记住的SSH命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="centos_6_网卡问题.html">
+            
+                <a href="centos_6_网卡问题.html">
+            
+                    
+                    centos6网卡问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="centos_7_网卡配置.html">
+            
+                <a href="centos_7_网卡配置.html">
+            
+                    
+                    centos7网卡配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CentOS7添加新磁盘而不用重启.html">
+            
+                <a href="CentOS7添加新磁盘而不用重启.html">
+            
+                    
+                    CentOS7添加新磁盘而不用重启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Centos系统优化.html">
+            
+                <a href="Centos系统优化.html">
+            
+                    
+                    Centos系统优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="crond命令_定时任务.html">
+            
+                <a href="crond命令_定时任务.html">
+            
+                    
+                    crond命令_定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="diff命令.html">
+            
+                <a href="diff命令.html">
+            
+                    
+                    diff命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="iptables的四表五链.html">
+            
+                <a href="iptables的四表五链.html">
+            
+                    
+                    iptables的四表五链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="linux查看和修改PATH环境变量的方法.html">
+            
+                <a href="linux查看和修改PATH环境变量的方法.html">
+            
+                    
+                    linux查看和修改PATH环境变量的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="linux磁盘空间满了.html">
+            
+                <a href="linux磁盘空间满了.html">
+            
+                    
+                    linux磁盘空间满了
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Linux设置SFTP服务用户目录权限.html">
+            
+                <a href="Linux设置SFTP服务用户目录权限.html">
+            
+                    
+                    Linux设置SFTP服务用户目录权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="linux忘记密码.html">
+            
+                <a href="linux忘记密码.html">
+            
+                    
+                    linux忘记密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="linux下添加路由.html">
+            
+                <a href="linux下添加路由.html">
+            
+                    
+                    linux下添加路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="man中文手册安装.html">
+            
+                <a href="man中文手册安装.html">
+            
+                    
+                    man中文手册安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="nc命令.html">
+            
+                <a href="nc命令.html">
+            
+                    
+                    nc命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="nmon性能测试工具.html">
+            
+                <a href="nmon性能测试工具.html">
+            
+                    
+                    nmon性能测试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="pdsh命令.html">
+            
+                <a href="pdsh命令.html">
+            
+                    
+                    pdsh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="pssh命令.html">
+            
+                <a href="pssh命令.html">
+            
+                    
+                    pssh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="rm_-rf_恢复.html">
+            
+                <a href="rm_-rf_恢复.html">
+            
+                    
+                    rm-rf恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="rsync-init.d脚本.html">
+            
+                <a href="rsync-init.d脚本.html">
+            
+                    
+                    rsync-init.d脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="rsync-win平台.html">
+            
+                <a href="rsync-win平台.html">
+            
+                    
+                    rsync-win平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="rsync-参数server端.html">
+            
+                <a href="rsync-参数server端.html">
+            
+                    
+                    rsync-参数server端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="rsync-参数客户端.html">
+            
+                <a href="rsync-参数客户端.html">
+            
+                    
+                    rsync-参数客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="rsync-服务端配置.html">
+            
+                <a href="rsync-服务端配置.html">
+            
+                    
+                    rsync-服务端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="rsync-故障.html">
+            
+                <a href="rsync-故障.html">
+            
+                    
+                    rsync-故障
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="rsync-客户端配置.html">
+            
+                <a href="rsync-客户端配置.html">
+            
+                    
+                    rsync-客户端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="sshpass命令.html">
+            
+                <a href="sshpass命令.html">
+            
+                    
+                    sshpass命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="SSH隧道.html">
+            
+                <a href="SSH隧道.html">
+            
+                    
+                    SSH隧道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="SSH远程连接服务慢解决.html">
+            
+                <a href="SSH远程连接服务慢解决.html">
+            
+                    
+                    SSH远程连接服务慢解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="systemctl命令.html">
+            
+                <a href="systemctl命令.html">
+            
+                    
+                    systemctl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="vnstat进行流量统计.html">
+            
+                <a href="vnstat进行流量统计.html">
+            
+                    
+                    vnstat进行流量统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="安装完centos7需要干.html">
+            
+                <a href="安装完centos7需要干.html">
+            
+                    
+                    安装完centos7需要干
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="安装状态监控Linux_Dash.html">
+            
+                <a href="安装状态监控Linux_Dash.html">
+            
+                    
+                    安装状态监控Linux_Dash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="常见安全检查方法.html">
+            
+                <a href="常见安全检查方法.html">
+            
+                    
+                    常见安全检查方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="服务器删除文件权限不够.html">
+            
+                <a href="服务器删除文件权限不够.html">
+            
+                    
+                    服务器删除文件权限不够
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="更改linux终端中用户名颜色.html">
+            
+                <a href="更改linux终端中用户名颜色.html">
+            
+                    
+                    更改linux终端中用户名颜色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="配置systemctl命令tab自动补全.html">
+            
+                <a href="配置systemctl命令tab自动补全.html">
+            
+                    
+                    配置systemctl命令tab自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="全能系统监控工具dstat.html">
+            
+                <a href="全能系统监控工具dstat.html">
+            
+                    
+                    全能系统监控工具dstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="生产场景如何对linux系统进行合理规划分区.html">
+            
+                <a href="生产场景如何对linux系统进行合理规划分区.html">
+            
+                    
+                    生产场景如何对linux系统进行合理规划分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="使用mkpasswd命令生成随机密码.html">
+            
+                <a href="使用mkpasswd命令生成随机密码.html">
+            
+                    
+                    使用mkpasswd命令生成随机密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="系统屏蔽某个IP的访问.html">
+            
+                <a href="系统屏蔽某个IP的访问.html">
+            
+                    
+                    系统屏蔽某个IP的访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="应该知道的LINUX技巧.html">
+            
+                <a href="应该知道的LINUX技巧.html">
+            
+                    
+                    应该知道的LINUX技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >iptables的四表五链</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Linux&#x9632;&#x706B;&#x5899;iptables&#x89C4;&#x5219;&#x8BBE;&#x7F6E;</p>
+<p>iptables&#x547D;&#x4EE4;&#x662F;Linux&#x4E0A;&#x5E38;&#x7528;&#x7684;&#x9632;&#x706B;&#x5899;&#x8F6F;&#x4EF6;&#xFF0C;&#x662F;netfilter&#x9879;&#x76EE;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x914D;&#x7F6E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BB8;&#x591A;&#x524D;&#x7AEF;&#x548C;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x914D;&#x7F6E;&#x3002;<br><a href="https://www.cnblogs.com/whych/p/9147900.html" target="_blank">https://www.cnblogs.com/whych/p/9147900.html</a><br><a href="https://www.cnblogs.com/clsn/p/8308678.html" target="_blank">https://www.cnblogs.com/clsn/p/8308678.html</a>  </p>
+<p>&#x56DB;&#x8868;&#x4E94;&#x94FE;<br>&#x89C4;&#x5219;&#x8868;<br>filter # &#x5305;&#x8FC7;&#x6EE4;&#xFF0C;&#x7528;&#x4E8E;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;&#x3002;<br>net # &#x5730;&#x5740;&#x8F6C;&#x6362;&#xFF0C;&#x7528;&#x4E8E;&#x7F51;&#x5173;&#x8DEF;&#x7531;&#x5668;&#x3002;<br>mangle # &#x6570;&#x636E;&#x5305;&#x4FEE;&#x6539;&#xFF08;QOS&#xFF09;&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x8D28;&#x91CF;&#x3002;<br>raw # &#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#xFF1A;&#x7F51;&#x5740;&#x8FC7;&#x6EE4;&#x3002;<br>&#x89C4;&#x5219;&#x94FE;<br>INPUT&#x94FE; # &#x5165;&#x65B9;&#x5411;<br>OUTPUT&#x94FE; # &#x51FA;&#x65B9;&#x5411;<br>FORWARD&#x94FE; # &#x7ECF;&#x8FC7;linux&#x7CFB;&#x7EDF;&#x8DEF;&#x7531;&#x7684;&#x6570;&#x636E;&#x5305;<br>PREROUTING&#x94FE; # &#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x76EE;&#x7684;&#x5730;&#x5740;&#xFF08;DNAT&#xFF09;<br>POSTROUTING&#x94FE; # &#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x6E90;&#x5730;&#x5740;&#xFF08;SNAT&#xFF09;<br>&#x52A8;&#x4F5C;<br>accept # &#x5141;&#x8BB8;&#x6570;&#x636E;&#x5305;<br>DROP # &#x62D2;&#x7EDD;&#x6570;&#x636E;&#x5305;<br>REJECT # &#x62D2;&#x7EDD;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x5E76;&#x901A;&#x77E5;&#x5BF9;&#x65B9;<br>REDIRECT # &#x7AEF;&#x53E3;&#x91CD;&#x5B9A;&#x5411;&#x3001;&#x6620;&#x5C04;&#x3001;&#x900F;&#x660E;&#x4EE3;&#x7406;<br>SNAT # &#x6E90;&#x5730;&#x5740;&#x8F6C;&#x6362;<br>DNAT # &#x76EE;&#x6807;&#x5730;&#x5740;&#x8F6C;&#x6362;<br>MASQUERADE # IP&#x4F2A;&#x88C5;&#xFF08;NAT&#xFF09;&#xFF0C;&#x7528;&#x4E8E;ADSL<br>LOG # &#x65E5;&#x5FD7;&#x8BB0;&#x5F55;<br>-j LOG: &#x8BB0;&#x5F55;&#x65E5;&#x5FD7;<br>&#x3000;&#x3000;--log-level<br>&#x3000;&#x3000;--log-prefix<br>&#x3000;&#x3000;--log-tcp-sequence<br>&#x3000;&#x3000;--log-uid<br>&#x3000;&#x3000;--log-ip-options:&#x8BB0;&#x5F55;ip&#x9009;&#x9879;&#x4FE1;&#x606F;<br>&#x3000;eg&#xFF1A;&#x8BB0;&#x5F55;&#x54EA;&#x4E00;&#x523B;&#xFF0C;&#x8C01;&#x53D1;&#x8D77;&#x4E86;ping&#x8BF7;&#x6C42;<br>&#x3000;&#x3000;&#x3000;&#x3000;iptables -I INPUT 4 -d 172.16.100.7 -p icmp --icmp-type 8 -j LOG
+--log-prefix &quot;----firewall log for icmp----&quot;<br>&#x3000;&#x3000;&#x3000;&#x3000;//&#x5C06;&#x4FDD;&#x5B58;&#x5728; /var/log/messages  </p>
+<p>&#x89C4;&#x5219;&#x8868;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;:raw&#x2192;mangle&#x2192;nat&#x2192;filter<br>&#x89C4;&#x5219;&#x94FE;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;:<br>&#x5165;&#x7AD9;&#x987A;&#x5E8F;:PREROUTING&#x2192;INPUT<br>&#x51FA;&#x7AD9;&#x987A;&#x5E8F;:OUTPUT&#x2192;POSTROUTING<br>&#x8F6C;&#x53D1;&#x987A;&#x5E8F;:PREROUTING&#x2192;FORWARD&#x2192;POSTROUTING  </p>
+<p>&#x8BED;&#x6CD5;&#x53C2;&#x6570;<br>&#x5728;iptables&#x4E2D;&#x6240;&#x6709;&#x94FE;&#x540D;&#x5FC5;&#x987B;&#x5927;&#x5199;&#xFF0C;&#x8868;&#x660E;&#x5FC5;&#x987B;&#x5C0F;&#x5199;&#xFF0C;&#x52A8;&#x4F5C;&#x5FC5;&#x987B;&#x5927;&#x5199;&#xFF0C;&#x5339;&#x914D;&#x5FC5;&#x987B;&#x5C0F;&#x5199;&#x3002;<br>iptables [-t &#x8868;&#x540D;] \&lt;-A|D|I|R&gt; &#x94FE;&#x540D; [&#x89C4;&#x5219;&#x7F16;&#x53F7;] [-i|o &#x7F51;&#x5361;&#x540D;&#x79F0;] [-p
+&#x534F;&#x8BAE;&#x7C7B;&#x578B;] [-s &#x6E90;&#x5730;&#x5740;|&#x6E90;&#x5B50;&#x7F51;] [--sport &#x6E90;&#x7AEF;&#x53E3;&#x53F7;] [-d &#x76EE;&#x6807;ip&#x5730;&#x5740;|&#x76EE;&#x6807;&#x5B50;&#x7F51;]
+[--dport &#x76EE;&#x6807;&#x7AEF;&#x53E3;&#x53F7;] \&lt;-j &#x52A8;&#x4F5C;&gt;<br>&#x53C2;&#x6570;<br>[-t &#x8868;&#x540D;]&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x8868;,&#x9ED8;&#x8BA4;filter&#x8868;<br>-A&#xFF1A;&#x5728;&#x89C4;&#x5219;&#x5217;&#x8868;&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x6761;&#x89C4;&#x5219;,&#x9ED8;&#x8BA4;&#x6DFB;&#x52A0;&#x5230;&#x5C3E;&#x90E8;<br>-D&#xFF1A;&#x5220;&#x9664;&#x89C4;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x8DDF;&#x5B8C;&#x6574;&#x7684;&#x89C4;&#x5219;&#x63CF;&#x8FF0;&#xFF0C;&#x4E5F;&#x53EF;&#x8DDF;&#x89C4;&#x5219;&#x7F16;&#x53F7;<br>-I&#xFF1A;&#x63D2;&#x5165;&#x4E00;&#x6761;&#x89C4;&#x5219;&#xFF0C;&#x9ED8;&#x8BA4;&#x5728;&#x7B2C;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x524D;&#x63D2;&#x5165;,&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#x5982;:-I INPUT 3<br>-R&#xFF1A;&#x66FF;&#x6362;&#x67D0;&#x6761;&#x89C4;&#x5219;&#xFF0C;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x89C4;&#x5219;&#x987A;&#x5E8F;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x8981;&#x6307;&#x5B9A;&#x66FF;&#x6362;&#x7684;&#x89C4;&#x5219;&#x7F16;&#x53F7;<br>-v&#xFF1A;&#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;<br>-n&#xFF1A;&#x4EE5;&#x6570;&#x5B57;&#x5F62;&#x5F0F;&#x663E;&#x793A;IP&#x548C;&#x7AEF;&#x53E3;&#x3002;&#x4E00;&#x822C;&#x4E0E;-v&#x8FDE;&#x7528;<br>-E&#xFF1A;&#x91CD;&#x65B0;&#x547D;&#x540D;&#x81EA;&#x5B9A;&#x4E49;&#x94FE;<br>-F&#xFF1A;&#x6E05;&#x9664;&#x89C4;&#x5219;&#x94FE;&#x4E2D;&#x5DF2;&#x6709;&#x7684;&#x6761;&#x76EE;<br>-X&#xFF1A;&#x5220;&#x9664;&#x81EA;&#x5B9A;&#x4E49;&#x7A7A;&#x94FE;&#xFF0C;&#x5982;&#x679C;&#x94FE;&#x91CC;&#x9762;&#x6709;&#x89C4;&#x5219;&#xFF0C;&#x5219;&#x65E0;&#x6CD5;&#x5220;&#x9664;<br>-Z&#xFF1A;&#x6E05;&#x7A7A;&#x89C4;&#x5219;&#x94FE;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5305;&#x8BA1;&#x7B97;&#x5668;&#x548C;&#x5B57;&#x8282;&#x8BA1;&#x6570;&#x5668;<br>-N&#xFF1A;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x94FE;<br>-P&#xFF1A;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x94FE;&#x4E2D;&#x7684;&#x9ED8;&#x8BA4;&#x76EE;&#x6807;<br>-p&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x5339;&#x914D;&#x7684;&#x6570;&#x636E;&#x5305;&#x534F;&#x8BAE;&#x7C7B;&#x578B;<br>-s&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x5339;&#x914D;&#x7684;&#x6570;&#x636E;&#x5305;&#x6E90;ip&#x5730;&#x5740;<br>-d&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x5339;&#x914D;&#x7684;&#x6570;&#x636E;&#x5305;&#x76EE;&#x6807;IP&#x5730;&#x5740;<br>-j\&lt;&#x76EE;&#x6807;&gt;&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x76EE;&#x6807;,&#x6307;&#x5B9A;&#x52A8;&#x4F5C;<br>-i\&lt;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&gt;&#xFF1A;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5305;&#x8FDB;&#x5165;&#x672C;&#x673A;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;<br>-o\&lt;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&gt;&#xFF1A;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5305;&#x8981;&#x79BB;&#x5F00;&#x672C;&#x673A;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;<br>-L&#xFF1A;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x89C4;&#x5219;<br>-n&#xFF1A;&#x4EE5;&#x6570;&#x5B57;&#x683C;&#x5F0F;&#x663E;&#x793A;&#x4E3B;&#x673A;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x53F7;<br>-v&#xFF1A;&#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;<br>-vv&#xFF1A;&#x663E;&#x793A;&#x66F4;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;<br>-x&#xFF1A;&#x663E;&#x793A;&#x7CBE;&#x786E;&#x503C;<br>--line-numbers:&#x663E;&#x793A;&#x89C4;&#x5219;&#x53F7;<br>-h&#xFF1A;&#x663E;&#x793A;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;  </p>
+<p>input&#x65B9;&#x5F0F;&#x603B;&#x7ED3;&#xFF1A; dport&#x6307;&#x672C;&#x5730;&#xFF0C;sport&#x6307;&#x5916;&#x90E8;&#x3002;<br>output&#x884C;&#x4E3A;&#x603B;&#x7ED3;&#xFF1A;dport&#x6307;&#x5916;&#x90E8;&#xFF0C;sport&#x6307;&#x672C;&#x5730;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x8981;&#x5220;&#x9664;INPUT&#x91CC;&#x5E8F;&#x53F7;&#x4E3A;8&#x7684;&#x89C4;&#x5219;&#xFF0C;<br>&#x5148;&#x4EE5;&#x7F16;&#x53F7;&#x67E5;&#x8BE2;&#x7136;&#x540E;&#x5220;&#x9664;<br>iptables -L -n --line-numbers<br>iptables -D INPUT 8  </p>
+<p>iptables&#x5E38;&#x7528;&#x547D;&#x4EE4;<br>iptables -L -n -v # &#x67E5;&#x770B;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;iptables&#x89C4;&#x5219;,&#x5E26;&#x4E0A;-v&#x53C2;&#x6570;&#xFF0C;&#x4F1A;&#x663E;&#x793A;in out<br>iptables-save &gt;/home/pi/iptables.bak # &#x5907;&#x4EFD;&#x89C4;&#x5219;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x7684;&#x6307;&#x5B9A;&#x6587;&#x4EF6;<br>iptables-restore \&lt;/home/pi/iptables.bak # &#x6062;&#x590D;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x89C4;&#x5219;<br>service iptables save # &#x914D;&#x7F6E;&#x4FDD;&#x5B58;&#x5230;/etc/sysconfig/iptables &#x6C38;&#x4E45;&#x751F;&#x6548;  </p>
+<p>&#x793A;&#x4F8B;<br>iptables -P INPUT ACCEPT|DROP # &#x5B9A;&#x4E49;&#x9ED8;&#x8BA4;&#x89C4;&#x5219;&#x5E93;&#x5165;&#x6D41;&#x91CF;&#x5168;&#x90E8;,&#x653E;&#x884C;&#x6216;&#x62D2;&#x7EDD;<br>iptables -P OUTPUT ACCEPT|DROP # &#x5B9A;&#x4E49;&#x9ED8;&#x8BA4;&#x89C4;&#x5219;&#x5E93;&#x51FA;&#x6D41;&#x91CF;&#x5168;&#x90E8;,&#x653E;&#x884C;&#x6216;&#x62D2;&#x7EDD;<br># &#x5141;&#x8BB8;&#x8BBF;&#x95EE;22&#x7AEF;&#x53E3; -A&#x65B0;&#x589E; -p&#x6307;&#x5B9A;&#x534F;&#x8BAE;tcp --dport&#x6307;&#x5B9A;&#x7AEF;&#x53E3;80 -j&#x6307;&#x5B9A;&#x52A8;&#x4F5C;&#x653E;&#x884C;&#x6216;&#x62D2;&#x7EDD;<br>iptables -I INPUT -p tcp --dport 80 -j ACCEPT|DROP  </p>
+<p>&#x5BF9;IP<br>iptables -I INPUT -s 123.45.6.7 -j ACCEPT|DROP # &#x5355;&#x4E2A;IP,&#x653E;&#x884C;&#x6216;&#x62D2;&#x7EDD;<br>iptables -I INPUT -s 123.45.6.0/24 -j ACCEPT|DROP # IP&#x6BB5;,&#x653E;&#x884C;&#x6216;&#x62D2;&#x7EDD;<br># &#x5F00;&#x653E;&#x6216;&#x62D2;&#x7EDD;&#x4ECE;eth0&#x53E3;&#x8FDB;&#x5165;&#x4E14;&#x6E90;&#x5730;&#x5740;&#x4E3A;10.1.2.0/24&#x7F51;&#x6BB5;&#x53D1;&#x5F80;&#x672C;&#x673A;&#x7684;80&#x7AEF;&#x53E3;&#x7684;&#x6570;&#x636E;<br>iptables -I INPUT -i eth1 -s 10.1.3.0/24 -p tcp --dport 80 -j ACCEPT|DROP  </p>
+<p>&#x9664;10.0.0.0&#x7F51;&#x6BB5;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#x4E3B;&#x673A;&#x610F;&#x5916;&#xFF0C;&#x5176;&#x4F59;&#x7F51;&#x6BB5;&#x90FD;&#x7981;&#x6B62;<br>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;<br>iptables -A INPUT -s 10.0.0.0/24 -d 172.16.1.8 -j ACCEPT<br>&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x89C4;&#x5219;&#xFF0C;&#x5C06;&#x9ED8;&#x8BA4;&#x89C4;&#x5219;&#x6539;&#x4E3A;&#x62D2;&#x7EDD;<br>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;<br>! # &#x8868;&#x793A;&#x5BF9;&#x89C4;&#x5219;&#x4FE1;&#x606F;&#x8FDB;&#x884C;&#x53D6;&#x53CD;<br>iptables -A INPUT ! -s 10.0.0.0/24 -d 172.16.1.8 -j DROP  </p>
+<p>&#x6D4B;&#x8BD5;&#x5339;&#x914D;&#x5217;&#x4E3E;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#x3002;<br>iptables -A INPUT -p tcp --dport 22:80 -j DROP # &#x8BBE;&#x7F6E;&#x8FDE;&#x7EED;&#x591A;&#x7AEF;&#x53E3;&#x63A7;&#x5236;&#x7B56;&#x7565;<br>iptables -A INPUT -p tcp -m multiport --dport 22,80 -j DROP #
+&#x8BBE;&#x7F6E;&#x4E0D;&#x8FDE;&#x7EED;&#x591A;&#x7AEF;&#x53E3;&#x63A7;&#x5236;&#x7B56;&#x7565;<br>-m &#x53C2;&#x6570;&#x8868;&#x793A;&#x589E;&#x52A0;&#x6269;&#x5C55;&#x5339;&#x914D;&#x529F;&#x80FD;&#xFF0C;multiport &#x5B9E;&#x73B0;&#x4E0D;&#x8FDE;&#x7EED;&#x591A;&#x7AEF;&#x53E3;&#x6269;&#x5C55;&#x5339;&#x914D;  </p>
+<p>NAT&#x5730;&#x5740;&#x8F6C;&#x6362;<br>echo 1 &gt; /proc/sys/net/ipv4/ip_forward #&#x4E34;&#x65F6;<br>vi /etc/sysctl.conf #&#x6C38;&#x4E45;<br>net.ipv4.ip_forward = 1<br>&#x7F51;&#x5173;&#x6253;&#x5F00;&#x8F6C;&#x53D1;&#x529F;&#x80FD;&#x4E4B;&#x540E;&#xFF0C;&#x4E24;&#x4E2A;&#x7F51;&#x6BB5;&#x7684;&#x4E3B;&#x673A;&#x4FBF;&#x53EF;&#x901A;&#x4FE1;&#xFF0C;&#x4F46;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x8981;NAT&#x5730;&#x5740;&#x8F6C;&#x6362;&#x5462;<br>&#x4E3B;&#x8981;&#x662F;&#x63A5;&#x5165;&#x5916;&#x7F51;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x867D;&#x7136;&#x62A5;&#x6587;&#x80FD;&#x53D1;&#x51FA;&#x53BB;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4E0D;&#x505A;&#x5730;&#x5740;&#x8F6C;&#x6362;&#xFF0C;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x56DE;&#x4E0D;&#x6765;&#xFF0C;&#x4E0D;&#x50CF;&#x8FD9;&#x91CC;&#x7684;&#x4E24;&#x4E2A;&#x7F51;&#x6BB5;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#xFF0C;&#x62A5;&#x6587;&#x80FD;&#x56DE;&#x6765;&#x662F;&#x56E0;&#x4E3A;&#x8DEF;&#x7531;&#x7684;&#x539F;&#x56E0;<br>&#x6240;&#x4EE5;&#x914D;&#x7F6E;&#x9632;&#x706B;&#x5899;&#x7B56;&#x7565;<br>&#x9996;&#x5148;&#x6E05;&#x7A7A;&#x7B56;&#x7565;<br>iptables -t nat -F<br>iptables -t nat -X<br>NAT&#x5730;&#x5740;&#x8F6C;&#x6362; -t&#x6307;&#x5B9A;&#x8868; -A&#x65B0;&#x589E;SNAT -s&#x6307;&#x5B9A;&#x6E90;&#x5730;&#x5740; -j&#x52A8;&#x4F5C;&#x52A8;&#x6001;&#x8F6C;&#x6362;&#x5916;&#x7F51;&#x5730;&#x5740;<br>iptables -t nat -A POSTROUTING -s 10.1.3.0/24 -j MASQUERADE  </p>
+<p>&#x5730;&#x5740;&#x8F6C;&#x6362;<br>iptables -t nat -A POSTROUTING -s 10.1.3.0/24 -o eth0 -j SNAT --to-source
+10.1.2.21<br>-s &#x6307;&#x5B9A;&#x5C06;&#x54EA;&#x4E9B;&#x5185;&#x7F51;&#x7F51;&#x6BB5;&#x8FDB;&#x884C;&#x6620;&#x5C04;&#x8F6C;&#x6362;<br>-o &#x5728;&#x90A3;&#x4E2A;&#x7F51;&#x5361;&#x4E0A;NAT<br>-j SNAT&#x5C06;&#x6E90;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x53D8;&#x66F4;<br>-j DNAT&#x5C06;&#x76EE;&#x6807;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x53D8;&#x66F4;<br>--to-source &#x5C06;&#x6E90;&#x5730;&#x5740;&#x6620;&#x5C04;&#x4E3A;&#x4EC0;&#x4E48;IP&#x5730;&#x5740;<br>--to-destination &#x5C06;&#x76EE;&#x6807;&#x5730;&#x5740;&#x6620;&#x5C04;&#x4E3A;&#x4EC0;&#x4E48;IP&#x5730;&#x5740;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="diff命令.html" class="navigation navigation-prev " aria-label="Previous page: diff命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="linux查看和修改PATH环境变量的方法.html" class="navigation navigation-next " aria-label="Next page: linux查看和修改PATH环境变量的方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"iptables的四表五链","level":"1.11","depth":1,"next":{"title":"linux查看和修改PATH环境变量的方法","level":"1.12","depth":1,"path":"linux查看和修改PATH环境变量的方法.md","ref":"linux查看和修改PATH环境变量的方法.md","articles":[]},"previous":{"title":"diff命令","level":"1.10","depth":1,"path":"diff命令.md","ref":"diff命令.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iptables的四表五链.md","mtime":"2019-03-22T02:34:42.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T07:59:19.170Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

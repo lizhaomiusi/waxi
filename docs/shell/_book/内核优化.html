@@ -1,0 +1,760 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>内核优化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="判断端口是否异常，然后重启服务.html" />
+    
+    
+    <link rel="prev" href="利用Shell脚本检测WebURL状态.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1shell一句话脚本.html">
+            
+                <a href="1shell一句话脚本.html">
+            
+                    
+                    1shell一句话脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="awk命令.html">
+            
+                <a href="awk命令.html">
+            
+                    
+                    awk命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="case命令.html">
+            
+                <a href="case命令.html">
+            
+                    
+                    case命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="DDOS中禁攻击者IP.html">
+            
+                <a href="DDOS中禁攻击者IP.html">
+            
+                    
+                    DDOS中禁攻击者IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="EOF转义问题.html">
+            
+                <a href="EOF转义问题.html">
+            
+                    
+                    EOF转义问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="find命令.html">
+            
+                <a href="find命令.html">
+            
+                    
+                    find命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="for循环.html">
+            
+                <a href="for循环.html">
+            
+                    
+                    for循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="git脚本.html">
+            
+                <a href="git脚本.html">
+            
+                    
+                    git脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="grep命令.html">
+            
+                <a href="grep命令.html">
+            
+                    
+                    grep命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="if判断.html">
+            
+                <a href="if判断.html">
+            
+                    
+                    if判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="mysql数据库定期自动备份脚本.html">
+            
+                <a href="mysql数据库定期自动备份脚本.html">
+            
+                    
+                    mysql数据库定期自动备份脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="read命令.html">
+            
+                <a href="read命令.html">
+            
+                    
+                    read命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="rm回收站.html">
+            
+                <a href="rm回收站.html">
+            
+                    
+                    rm回收站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="rsync备份.html">
+            
+                <a href="rsync备份.html">
+            
+                    
+                    rsync备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="sed命令.html">
+            
+                <a href="sed命令.html">
+            
+                    
+                    sed命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell备份.html">
+            
+                <a href="shell备份.html">
+            
+                    
+                    shell备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="shell打印99乘法表.html">
+            
+                <a href="shell打印99乘法表.html">
+            
+                    
+                    shell打印99乘法表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="shell格式化输出带颜色变量.html">
+            
+                <a href="shell格式化输出带颜色变量.html">
+            
+                    
+                    shell格式化输出带颜色变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="Shell脚本编写.html">
+            
+                <a href="Shell脚本编写.html">
+            
+                    
+                    Shell脚本编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                <a href="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                    
+                    shell脚本编写启动、停止和重启脚本，并添加到系统服务中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="sshd脚本解析.html">
+            
+                <a href="sshd脚本解析.html">
+            
+                    
+                    sshd脚本解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="vim命令.html">
+            
+                <a href="vim命令.html">
+            
+                    
+                    vim命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="按时间创建目录打包.html">
+            
+                <a href="按时间创建目录打包.html">
+            
+                    
+                    按时间创建目录打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="鸡兔同笼.html">
+            
+                <a href="鸡兔同笼.html">
+            
+                    
+                    鸡兔同笼
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="监控mysql脚本.html">
+            
+                <a href="监控mysql脚本.html">
+            
+                    
+                    监控mysql脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="监控脚本使用情况.html">
+            
+                <a href="监控脚本使用情况.html">
+            
+                    
+                    监控脚本使用情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="监控某服务_有没有开启.html">
+            
+                <a href="监控某服务_有没有开启.html">
+            
+                    
+                    监控某服务_有没有开启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="利用Shell脚本检测WebURL状态.html">
+            
+                <a href="利用Shell脚本检测WebURL状态.html">
+            
+                    
+                    利用Shell脚本检测WebURL状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.31" data-path="内核优化.html">
+            
+                <a href="内核优化.html">
+            
+                    
+                    内核优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="判断端口是否异常，然后重启服务.html">
+            
+                <a href="判断端口是否异常，然后重启服务.html">
+            
+                    
+                    判断端口是否异常，然后重启服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="批量创建用户和密码.html">
+            
+                <a href="批量创建用户和密码.html">
+            
+                    
+                    批量创建用户和密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="批量修改主机名脚本.html">
+            
+                <a href="批量修改主机名脚本.html">
+            
+                    
+                    批量修改主机名脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="生成随机密码命令.html">
+            
+                <a href="生成随机密码命令.html">
+            
+                    
+                    生成随机密码命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="使用mtime删除历史文件或日志文件.html">
+            
+                <a href="使用mtime删除历史文件或日志文件.html">
+            
+                    
+                    使用mtime删除历史文件或日志文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="正则表达式.html">
+            
+                <a href="正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >内核优化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5185;&#x6838;&#x4F18;&#x5316;</p>
+<p>&#x4E00;&#x3001;&#x5185;&#x6838;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>1&#x3001;tcp&#x5957;&#x63A5;&#x5B57;&#x65B9;&#x9762;</p>
+<p>#&#x4FDD;&#x6301;&#x5728;FIN-WAIT-2&#x72B6;&#x6001;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4F7F;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x66F4;&#x591A;&#x8FDE;&#x63A5;&#x3002;&#x6B64;&#x53C2;&#x6570;&#x503C;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#x3002;</p>
+<p>net.ipv4.tcp_fin_timeout = 2</p>
+<p>#&#x5F00;&#x542F;&#x91CD;&#x7528;&#xFF0C;&#x5141;&#x8BB8;&#x5C06;TIME_WAIT socket&#x7528;&#x4E8E;&#x65B0;&#x7684;TCP&#x8FDE;&#x63A5;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x8868;&#x793A;&#x5173;&#x95ED;&#x3002;</p>
+<p>net.ipv4.tcp_tw_reuse = 1</p>
+<p>#&#x5F00;&#x542F;TCP&#x8FDE;&#x63A5;&#x4E2D;TIME_WAIT socket&#x7684;&#x5FEB;&#x901F;&#x56DE;&#x6536;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0&#xFF0C;&#x8868;&#x793A;&#x5173;&#x95ED;&#x3002;</p>
+<p>net.ipv4.tcp_tw_recycle = 1</p>
+<p>net.ipv4.tcp_syn_retries=1</p>
+<p>#&#x5F00;&#x542F;SYN
+cookie&#xFF0C;&#x51FA;&#x73B0;SYN&#x7B49;&#x5F85;&#x961F;&#x5217;&#x6EA2;&#x51FA;&#x65F6;&#x542F;&#x7528;cookie&#x5904;&#x7406;&#xFF0C;&#x9632;&#x8303;&#x5C11;&#x91CF;&#x7684;SYN&#x653B;&#x51FB;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x8868;&#x793A;&#x5173;&#x95ED;&#x3002;</p>
+<p>net.ipv4.tcp_syncookies = 1</p>
+<p>#&#x8868;&#x793A;SYN&#x961F;&#x5217;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x9884;&#x8BBE;&#x4E3A;1024&#xFF0C;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x961F;&#x5217;&#x957F;&#x5EA6;&#x4E3A;262 144&#xFF0C;&#x4EE5;&#x5BB9;&#x7EB3;&#x66F4;&#x591A;&#x7B49;&#x5F85;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>net.ipv4.tcp_max_syn_backlog = 262144</p>
+<p>#&#x7CFB;&#x7EDF;&#x540C;&#x65F6;&#x4FDD;&#x6301;TIME_WAIT&#x5957;&#x63A5;&#x5B57;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x6570;&#x503C;&#x5C06;&#x7ACB;&#x523B;&#x88AB;&#x6E05;&#x695A;&#x5E76;&#x8F93;&#x51FA;&#x8B66;&#x544A;&#x4FE1;&#x606F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;180000&#x3002;&#x5BF9;&#x4E8E;squid&#x6765;&#x8BF4;&#x6548;&#x679C;&#x4E0D;&#x662F;&#x5F88;&#x5927;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x63A7;&#x5236;TIME_WAIT&#x5957;&#x63A5;&#x5B57;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x907F;&#x514D;squid&#x670D;&#x52A1;&#x5668;&#x88AB;&#x62D6;&#x6B7B;&#x3002;</p>
+<p>net.ipv4.tcp_max_tw_buckets =5000</p>
+<p>#&#x8868;&#x793A;&#x7CFB;&#x7EDF;&#x4E2D;&#x6700;&#x591A;&#x6709;&#x591A;&#x5C11;TCP&#x5957;&#x63A5;&#x5B57;&#x4E0D;&#x88AB;&#x5173;&#x8054;&#x5230;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x8FDE;&#x63A5;&#x5C31;&#x4F1A;&#x590D;&#x4F4D;&#x5E76;&#x8F93;&#x51FA;&#x8B66;&#x544A;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#x4EC5;&#x4EC5;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x7B80;&#x5355;&#x7684;DoS&#x653B;&#x51FB;&#x3002;&#x6B64;&#x503C;&#x4E0D;&#x80FD;&#x592A;&#x5C0F;&#x3002;</p>
+<p>net.ipv4.tcp_max_orphans = 16384</p>
+<p># &#x589E;&#x52A0;TCP&#x6700;&#x5927;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;</p>
+<p>net.ipv4.tcp_rmem=4096 87380 4194304</p>
+<p>net.ipv4.tcp_wmem=4096 16384 4194304</p>
+<p>2&#x3001;keepalived&#x65B9;&#x9762;</p>
+<p>#keepalived&#x542F;&#x7528;&#x65F6;TCP&#x53D1;&#x9001;keepalived&#x6D88;&#x606F;&#x7684;&#x62FC;&#x5EA6;&#x3002;&#x9ED8;&#x8BA4;2&#x5C0F;&#x65F6;&#x3002;</p>
+<p>net.ipv4.tcp_keepalive_time = 600</p>
+<p>#TCP&#x53D1;&#x9001;keepalive&#x63A2;&#x6D4B;&#x4EE5;&#x786E;&#x5B9A;&#x8BE5;&#x8FDE;&#x63A5;&#x5DF2;&#x7ECF;&#x65AD;&#x5F00;&#x7684;&#x6B21;&#x6570;&#x3002;&#x6839;&#x636E;&#x60C5;&#x5F62;&#x4E5F;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x5730;&#x7F29;&#x77ED;&#x6B64;&#x503C;&#x3002;</p>
+<p>net.ipv4.tcp_keepalive_probes = 5</p>
+<p>#&#x63A2;&#x6D4B;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7684;&#x9891;&#x7387;&#xFF0C;&#x4E58;&#x4EE5;tcp_keepalive_probes&#x5C31;&#x5F97;&#x5230;&#x5BF9;&#x4E8E;&#x4ECE;&#x5F00;&#x59CB;&#x63A2;&#x6D4B;&#x4EE5;&#x6765;&#x6CA1;&#x6709;&#x54CD;&#x5E94;&#x7684;&#x8FDE;&#x63A5;&#x6740;&#x9664;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;75&#x79D2;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6CA1;&#x6709;&#x6D3B;&#x52A8;&#x7684;&#x8FDE;&#x63A5;&#x5C06;&#x5728;&#x5927;&#x7EA6;11&#x5206;&#x949F;&#x4EE5;&#x540E;&#x5C06;&#x88AB;&#x4E22;&#x5F03;&#x3002;&#x5BF9;&#x4E8E;&#x666E;&#x901A;&#x5E94;&#x7528;&#x6765;&#x8BF4;,&#x8FD9;&#x4E2A;&#x503C;&#x6709;&#x4E00;&#x4E9B;&#x504F;&#x5927;,&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x6539;&#x5C0F;.&#x7279;&#x522B;&#x662F;web&#x7C7B;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x6539;&#x5C0F;&#x8BE5;&#x503C;&#x3002;</p>
+<p>net.ipv4.tcp_keepalive_intvl = 15</p>
+<p>3&#x3001;&#x7AEF;&#x53E3;&#x65B9;&#x9762;</p>
+<p>#&#x6307;&#x5B9A;&#x5916;&#x90E8;&#x8FDE;&#x63A5;&#x7684;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;32768 61000&#x3002;</p>
+<p>net.ipv4.ip_local_port_range = 1024 65000</p>
+<p>#&#x5B9A;&#x4E49;&#x4E86;&#x7CFB;&#x7EDF;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6700;&#x5927;&#x7684;&#x76D1;&#x542C;&#x961F;&#x5217;&#x7684;&#x957F;&#x5EA6;, &#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7ECF;&#x5E38;&#x5904;&#x7406;&#x65B0;&#x8FDE;&#x63A5;&#x7684;&#x9AD8;&#x8D1F;&#x8F7D;
+web&#x670D;&#x52A1;&#x73AF;&#x5883;&#x6765;&#x8BF4;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;128&#xFF0C;&#x504F;&#x5C0F;&#x3002;</p>
+<p>net.core.somaxconn = 16384</p>
+<p>#&#x8868;&#x793A;&#x5F53;&#x5728;&#x6BCF;&#x4E2A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x63A5;&#x6536;&#x6570;&#x636E;&#x5305;&#x7684;&#x901F;&#x7387;&#x6BD4;&#x5185;&#x6838;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x5305;&#x7684;&#x901F;&#x7387;&#x5FEB;&#x65F6;&#xFF0C;&#x5141;&#x8BB8;&#x53D1;&#x9001;&#x5230;&#x961F;&#x5217;&#x7684;&#x6570;&#x636E;&#x5305;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;&#x3002;</p>
+<p>net.core.netdev_max_backlog = 16384</p>
+<p>#&#x907F;&#x514D;&#x653E;&#x5927;&#x653B;&#x51FB;</p>
+<p>net.ipv4.icmp_echo_ignore_broadcasts=1</p>
+<p>PS&#xFF1A;&#x4FEE;&#x6539;&#x751F;&#x6548;</p>
+<p>vi /etc/sysctl.conf</p>
+<p>&#x589E;&#x52A0;&#x5408;&#x9002;&#x53C2;&#x6570;&#x540E;&#x751F;&#x6548;&#x914D;&#x7F6E;</p>
+<p>sysctl -p</p>
+<p>&#x4E8C;&#x3001;&#x538B;&#x6D4B;&#x8C03;&#x4F18;&#x53C2;&#x6570;&#x53C2;&#x8003;</p>
+<p># &#x5141;&#x8BB8;&#x7B49;&#x5F85;&#x4E2D;&#x7684;&#x76D1;&#x542C;&#xFF0C; &#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x6700;&#x5927;socket&#x8FDE;&#x63A5;&#x6570;</p>
+<p>echo 50000 &gt;/proc/sys/net/core/somaxconn</p>
+<p>#tcp&#x8FDE;&#x63A5;&#x5FEB;&#x901F;&#x56DE;&#x6536;&#xFF1A;0-&#x4E0D;&#x52A0;&#x5FEB;tcp&#x56DE;&#x6536; 1-&#x52A0;&#x5FEB;tcp&#x56DE;&#x6536;</p>
+<p>echo 1 &gt;/proc/sys/net/ipv4/tcp_tw_recycle</p>
+<p># tcp&#x8FDE;&#x63A5;&#x91CD;&#x7528; &#xFF1A;0-&#x4E0D;&#x542F;&#x7528;&#x7A7A;tcp&#x56DE;&#x6536; 1-&#x7A7A;tcp&#x56DE;&#x6536;</p>
+<p>echo 1 &gt;/proc/sys/net/ipv4/tcp_tw_reuse</p>
+<p>#&#x4E0D;&#x62B5;&#x5FA1;&#x6D2A;&#x6C34;&#x653B;&#x51FB;&#xFF1A;0-&#x53BB;&#x9664;&#x6D2A;&#x6C34;&#x653B;&#x51FB;&#x62B5;&#x5FA1; 1-&#x542F;&#x7528;&#x6D2A;&#x6C34;&#x653B;&#x51FB;&#x62B5;&#x5FA1;</p>
+<p>echo 0 &gt;/proc/sys/net/ipv4/tcp_syncookies</p>
+<p>#&#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x6570;&#x91CF;</p>
+<p>echo &quot;ulimit -n 50000&quot; &gt;&gt; /etc/profile</p>
+<p>source /etc/profile</p>
+<p>#&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x6700;&#x5927;&#x8FDB;&#x7A0B;&#x6570;</p>
+<p>vi /etc/security/limits.conf</p>
+<p>oracle soft nproc 16384</p>
+<p>oracle hard nproc 16384</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="利用Shell脚本检测WebURL状态.html" class="navigation navigation-prev " aria-label="Previous page: 利用Shell脚本检测WebURL状态">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="判断端口是否异常，然后重启服务.html" class="navigation navigation-next " aria-label="Next page: 判断端口是否异常，然后重启服务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"内核优化","level":"1.31","depth":1,"next":{"title":"判断端口是否异常，然后重启服务","level":"1.32","depth":1,"path":"判断端口是否异常，然后重启服务.md","ref":"判断端口是否异常，然后重启服务.md","articles":[]},"previous":{"title":"利用Shell脚本检测WebURL状态","level":"1.30","depth":1,"path":"利用Shell脚本检测WebURL状态.md","ref":"利用Shell脚本检测WebURL状态.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"内核优化.md","mtime":"2019-03-22T06:28:31.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:20:11.587Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

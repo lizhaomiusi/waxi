@@ -1,0 +1,504 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Vsphere_6.5_ssh · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Vsphere_6故障.html" />
+    
+    
+    <link rel="prev" href="MS_2012建立ISCSI软存储.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="docker_中国官方镜像加速.html">
+            
+                <a href="docker_中国官方镜像加速.html">
+            
+                    
+                    docker_中国官方镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="docker常用命令.html">
+            
+                <a href="docker常用命令.html">
+            
+                    
+                    docker常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="docker的一个简单方式.html">
+            
+                <a href="docker的一个简单方式.html">
+            
+                    
+                    docker的一个简单方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="docker在CentOS7部署.html">
+            
+                <a href="docker在CentOS7部署.html">
+            
+                    
+                    docker在CentOS7部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ESXI4G内存解决.html">
+            
+                <a href="ESXI4G内存解决.html">
+            
+                    
+                    ESXI4G内存解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ESXI6.7安装.html">
+            
+                <a href="ESXI6.7安装.html">
+            
+                    
+                    ESXI6.7安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="MS_2012建立ISCSI软存储.html">
+            
+                <a href="MS_2012建立ISCSI软存储.html">
+            
+                    
+                    MS_2012建立ISCSI软存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="Vsphere_6.5_ssh.html">
+            
+                <a href="Vsphere_6.5_ssh.html">
+            
+                    
+                    Vsphere_6.5_ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Vsphere_6故障.html">
+            
+                <a href="Vsphere_6故障.html">
+            
+                    
+                    Vsphere_6故障
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="xenserver服务器虚拟化.html">
+            
+                <a href="xenserver服务器虚拟化.html">
+            
+                    
+                    xenserver服务器虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Vsphere_6.5_ssh</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Vsphere_6.5_ssh<br><a href="http://blog.sina.com.cn/s/blog_1885d23df0102ygod.html" target="_blank">http://blog.sina.com.cn/s/blog_1885d23df0102ygod.html</a><br><a href="https://kb.vmware.com/articleview?docid=2147152&amp;lang=zh_CN" target="_blank">https://kb.vmware.com/articleview?docid=2147152&amp;lang=zh_CN</a></p>
+<p><a href="https://kb.vmware.com/articleview?docid=2147152?=zh_CN" target="_blank">https://kb.vmware.com/articleview?docid=2147152?=zh_CN</a></p>
+<h2 id="&#x505C;&#x6B62;&#x3001;&#x542F;&#x52A8;&#x6216;&#x91CD;&#x65B0;&#x542F;&#x52A8;-vcenter-server-appliance-65-&#x4E2D;&#x7684;&#x670D;&#x52A1;-2147152">&#x505C;&#x6B62;&#x3001;&#x542F;&#x52A8;&#x6216;&#x91CD;&#x65B0;&#x542F;&#x52A8; vCenter Server Appliance 6.5 &#x4E2D;&#x7684;&#x670D;&#x52A1; (2147152)</h2>
+<p>&#x672C;&#x6587;&#x63D0;&#x4F9B;&#x6709;&#x5173;&#x5982;&#x4F55;&#x4F7F;&#x7528; service-control &#x547D;&#x4EE4;&#x7BA1;&#x7406; vCenter Server Appliance
+&#x7684;&#x4FE1;&#x606F;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Appliance Shell &#x6216; BASH Shell &#x8BBF;&#x95EE;&#x8BE5;&#x547D;&#x4EE4;&#x3002;<br>Service-control<br>&#x8981;&#x67E5;&#x770B;&#x53EF;&#x7528;&#x547D;&#x4EE4;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C; service-control --help&#x547D;&#x4EE4;&#xFF1A;  </p>
+<p># service-control --help<br>usage: service-control [-h] [--start] [--stop] [--status] [--list]
+[--list-services] [--vmon-profile VMON_PROFILE] [--all] [--ignore] ...  </p>
+<p>&#x5BF9; VMware &#x670D;&#x52A1;&#x6267;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9009;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x57FA;&#x4E8E;&#x5F53;&#x524D;&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;<br>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; --all &#x548C; --vmon-profile &#x9009;&#x9879;&#x66FF;&#x4EE3;&#x6B64;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x3002;  </p>
+<p>&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#xFF1A;<br>services&#x8981;&#x5BF9;&#x5176;&#x64CD;&#x4F5C;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x7684;&#x670D;&#x52A1;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;</th>
+<th>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x53C2;&#x6570;</td>
+<td>&#x63CF;&#x8FF0;</td>
+</tr>
+<tr>
+<td>-h,--helpshow</td>
+<td>&#x663E;&#x793A;&#x5E2E;&#x52A9;&#x6D88;&#x606F;&#x5E76;&#x9000;&#x51FA;</td>
+</tr>
+<tr>
+<td>--startPerform</td>
+<td>&#x5BF9; VMware &#x670D;&#x52A1;&#x6267;&#x884C;&#x542F;&#x52A8;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>--stop</td>
+<td>&#x5BF9; VMware &#x670D;&#x52A1;&#x6267;&#x884C;&#x505C;&#x6B62;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>--status</td>
+<td>&#x83B7;&#x53D6; VMware &#x670D;&#x52A1;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>--list</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x53EF;&#x63A7;&#x5236;&#x7684; VMware &#x670D;&#x52A1;&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x9009;&#x9879;&#x5C06;&#x5F88;&#x5FEB;&#x5F03;&#x7528;&#x3002;&#x4EC5;&#x53EF;&#x4F7F;&#x7528; --list-services&#x3002;</td>
+</tr>
+<tr>
+<td>--list-servicesLists</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x53EF;&#x63A7;&#x5236;&#x7684; VMware &#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>--vmon-profile</td>
+<td>VMON_PROFILE</td>
+</tr>
+<tr>
+<td>--all</td>
+<td>&#x4E0E;&#x7ED9;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x5173;&#x8054;&#x7684;&#x670D;&#x52A1;&#x3002;&#x542F;&#x52A8;/&#x505C;&#x6B62;&#x6240;&#x6709;&#x5C5E;&#x4E8E;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x548C;&#x9ED8;&#x8BA4; mgmt &#x670D;&#x52A1;&#x7684; VMware &#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>--ignore</td>
+<td>&#x5FFD;&#x7565;&#x9519;&#x8BEF;&#x3002;&#x5373;&#x4F7F;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x4E5F;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x7ED9;&#x5B9A;&#x64CD;&#x4F5C;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8981;&#x5217;&#x51FA; vCenter Server Appliance 6.5 &#x4E0A;&#x5B89;&#x88C5;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;service-control
+--list-services&#x547D;&#x4EE4;&#xFF1A;  </p>
+<p># service-control --list-services<br>vmware-vpostgres (VMware Postgres)<br>vmware-imagebuilder (VMware Image Builder Manager)<br>vmware-cm (VMware Component Manager)<br>vmware-vpxd (VMware vCenter Server)<br>vmware-sps (VMware vSphere Profile-Driven Storage Service)<br>applmgmt (VMware Appliance Management Service)<br>vmware-statsmonitor (VMware Appliance Monitoring Service)<br>vmware-rhttpproxy (VMware HTTP Reverse Proxy)<br>vmware-vapi-endpoint (VMware vAPI Endpoint)<br>vmware-stsd (VMware Security Token Service)<br>lwsmd (Likewise Service Manager)<br>vmafdd (VMware Authentication Framework)<br>vmware-psc-client (VMware Platform Services Controller Client)<br>vmware-vsm (VMware vService Manager)<br>vmonapi (VMware Service Lifecycle Manager API)<br>vmware-perfcharts (VMware Performance Charts)<br>vmware-updatemgr (VMware Update Manager)<br>vmware-vmon (VMware Service Lifecycle Manager)<br>vmware-vsan-health (VMware VSAN Health Service)<br>vsphere-client (VMware vSphere Web Client)<br>vmware-sts-idmd (VMware Identity Management Service)<br>vmcad (VMware Certificate Service)<br>vmware-eam (VMware ESX Agent Manager)<br>vmware-cis-license (VMware License Service)<br>vmcam (VMware vSphere Authentication Proxy)<br>pschealth (VMware Platform Services Controller Health Monitor)<br>vmdird (VMware Directory Service)<br>vmware-mbcs (VMware Message Bus Configuration Service)<br>vmware-vcha (VMware vCenter High Availability)<br>vsphere-ui (VMware vSphere Client)<br>vmware-content-library (VMware Content Library Service)<br>vmdnsd (VMware Domain Name Service)<br>vmware-sca (VMware Service Control Agent)<br>vmware-netdumper (VMware vSphere ESXi Dump Collector)<br>vmware-vpxd-svcs (VMware vCenter-Services)<br>vmware-rbd-watchdog (VMware vSphere Auto Deploy Waiter)  </p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x8BE5;&#x5217;&#x8868;&#x56E0; Platform Services Controller &#x670D;&#x52A1;&#x662F;&#x5D4C;&#x5165;&#x5F0F;&#x8FD8;&#x662F;&#x5916;&#x90E8;&#x7684;&#x800C;&#x5F02;&#x3002;  </p>
+<p>&#x8981;&#x5217;&#x51FA;&#x6240;&#x6709;&#x670D;&#x52A1;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;service-control
+--status&#x547D;&#x4EE4;&#x3002;&#x5728;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x60A8;&#x4F1A;&#x770B;&#x5230;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x548C;&#x5DF2;&#x505C;&#x6B62;&#x7684;&#x670D;&#x52A1;&#x3002;  </p>
+<p># service-control --status  </p>
+<p>&#x6B63;&#x5728;&#x8FD0;&#x884C;&#xFF1A;  </p>
+<p>applmgmt lwsmd pschealth vmafdd vmcad vmdird vmdnsd vmonapi vmware-cis-license
+vmware-cm vmware-content-library vmware-eam vmware-perfcharts vmware-psc-client
+vmware-rhttpproxy vmware-sca vmware-sps vmware-statsmonitor vmware-sts-idmd
+vmware-stsd vmware-updatemgr vmware-vapi-endpoint vmware-vmon vmware-vpostgres
+vmware-vpxd vmware-vpxd-svcs vmware-vsan-health vmware-vsm vsphere-client
+vsphere-ui  </p>
+<p>&#x5DF2;&#x505C;&#x6B62;&#xFF1A;  </p>
+<p>vmcam vmware-imagebuilder vmware-mbcs vmware-netdumper vmware-rbd-watchdog
+vmware-vcha  </p>
+<p>&#x8981;&#x67E5;&#x8BE2;&#x5355;&#x4E2A;&#x670D;&#x52A1;&#x7684;&#x76F8;&#x540C;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;service-control --status service_name&#x547D;&#x4EE4;&#xFF1A;  </p>
+<p># service-control --status vmware-cm  </p>
+<p>Running: vmware-cm  </p>
+<p>&#x8981;&#x505C;&#x6B62;&#x5355;&#x4E2A; VMware &#x670D;&#x52A1;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;service-control --stop service_name&#x547D;&#x4EE4;&#xFF1A;  </p>
+<p># service-control --stop vmware-cm  </p>
+<p>&#x8981;&#x542F;&#x52A8;&#x5355;&#x4E2A; VMware &#x670D;&#x52A1;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C; service-control --start service_name &#x547D;&#x4EE4;&#xFF1A;  </p>
+<p># service-control --start vmware-cm  </p>
+<p>&#x8981;&#x505C;&#x6B62;&#x6240;&#x6709; VMware &#x670D;&#x52A1;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C; service-control --stop --all &#x547D;&#x4EE4;&#xFF1A;  </p>
+<p># service-control --stop --all  </p>
+<p>&#x8981;&#x542F;&#x52A8;&#x6240;&#x6709; VMware &#x670D;&#x52A1;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C; service-control --start --all &#x547D;&#x4EE4;&#xFF1A;  </p>
+<p># service-control --start --all  </p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x5B58;&#x5728; service-control --restart &#x547D;&#x4EE4;&#x3002;  </p>
+<p>Photon OS  </p>
+<p>&#x5BF9;&#x4E8E; Photon OS &#x670D;&#x52A1;&#x64CD;&#x4F5C;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x4F7F;&#x7528;&#x5176; SLES &#x7B49;&#x6548;&#x547D;&#x4EE4;&#x3002;&#x5FC5;&#x987B;&#x4ECE; BASH
+Shell &#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;</th>
+<th>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Photon OS &#x547D;&#x4EE4;</td>
+<td>SLES &#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td>systemctl start \<service\></service\></td>
+<td>service \<service\> start</service\></td>
+</tr>
+<tr>
+<td>systemctl stop \<service\></service\></td>
+<td>service \<service\> stop</service\></td>
+</tr>
+<tr>
+<td>systemctl restart \<service\></service\></td>
+<td>service \<service\> restart</service\></td>
+</tr>
+<tr>
+<td>systemctl reload \<service\></service\></td>
+<td>service \<service\> reload</service\></td>
+</tr>
+<tr>
+<td>systemctl condrestart \<service\></service\></td>
+<td>service \<service\> condrestart</service\></td>
+</tr>
+<tr>
+<td>systemctl status \<service\></service\></td>
+<td>service \<service\> status</service\></td>
+</tr>
+<tr>
+<td>systemctl enable \<service\></service\></td>
+<td>chkconfig \<service\> on</service\></td>
+</tr>
+<tr>
+<td>systemctl disable \<service\></service\></td>
+<td>chkconfig \<service\> off</service\></td>
+</tr>
+<tr>
+<td>systemctl daemon-reload</td>
+<td>chkconfig \<service\> --add</service\></td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MS_2012建立ISCSI软存储.html" class="navigation navigation-prev " aria-label="Previous page: MS_2012建立ISCSI软存储">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Vsphere_6故障.html" class="navigation navigation-next " aria-label="Next page: Vsphere_6故障">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Vsphere_6.5_ssh","level":"1.9","depth":1,"next":{"title":"Vsphere_6故障","level":"1.10","depth":1,"path":"Vsphere_6故障.md","ref":"Vsphere_6故障.md","articles":[]},"previous":{"title":"MS_2012建立ISCSI软存储","level":"1.8","depth":1,"path":"MS_2012建立ISCSI软存储.md","ref":"MS_2012建立ISCSI软存储.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Vsphere_6.5_ssh.md","mtime":"2019-03-22T06:24:41.210Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:21:18.068Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

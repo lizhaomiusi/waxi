@@ -1,0 +1,760 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>for循环 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="git脚本.html" />
+    
+    
+    <link rel="prev" href="find命令.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1shell一句话脚本.html">
+            
+                <a href="1shell一句话脚本.html">
+            
+                    
+                    1shell一句话脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="awk命令.html">
+            
+                <a href="awk命令.html">
+            
+                    
+                    awk命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="case命令.html">
+            
+                <a href="case命令.html">
+            
+                    
+                    case命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="DDOS中禁攻击者IP.html">
+            
+                <a href="DDOS中禁攻击者IP.html">
+            
+                    
+                    DDOS中禁攻击者IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="EOF转义问题.html">
+            
+                <a href="EOF转义问题.html">
+            
+                    
+                    EOF转义问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="find命令.html">
+            
+                <a href="find命令.html">
+            
+                    
+                    find命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="for循环.html">
+            
+                <a href="for循环.html">
+            
+                    
+                    for循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="git脚本.html">
+            
+                <a href="git脚本.html">
+            
+                    
+                    git脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="grep命令.html">
+            
+                <a href="grep命令.html">
+            
+                    
+                    grep命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="if判断.html">
+            
+                <a href="if判断.html">
+            
+                    
+                    if判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="mysql数据库定期自动备份脚本.html">
+            
+                <a href="mysql数据库定期自动备份脚本.html">
+            
+                    
+                    mysql数据库定期自动备份脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="read命令.html">
+            
+                <a href="read命令.html">
+            
+                    
+                    read命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="rm回收站.html">
+            
+                <a href="rm回收站.html">
+            
+                    
+                    rm回收站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="rsync备份.html">
+            
+                <a href="rsync备份.html">
+            
+                    
+                    rsync备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="sed命令.html">
+            
+                <a href="sed命令.html">
+            
+                    
+                    sed命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell备份.html">
+            
+                <a href="shell备份.html">
+            
+                    
+                    shell备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="shell打印99乘法表.html">
+            
+                <a href="shell打印99乘法表.html">
+            
+                    
+                    shell打印99乘法表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="shell格式化输出带颜色变量.html">
+            
+                <a href="shell格式化输出带颜色变量.html">
+            
+                    
+                    shell格式化输出带颜色变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="Shell脚本编写.html">
+            
+                <a href="Shell脚本编写.html">
+            
+                    
+                    Shell脚本编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                <a href="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                    
+                    shell脚本编写启动、停止和重启脚本，并添加到系统服务中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="sshd脚本解析.html">
+            
+                <a href="sshd脚本解析.html">
+            
+                    
+                    sshd脚本解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="vim命令.html">
+            
+                <a href="vim命令.html">
+            
+                    
+                    vim命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="按时间创建目录打包.html">
+            
+                <a href="按时间创建目录打包.html">
+            
+                    
+                    按时间创建目录打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="鸡兔同笼.html">
+            
+                <a href="鸡兔同笼.html">
+            
+                    
+                    鸡兔同笼
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="监控mysql脚本.html">
+            
+                <a href="监控mysql脚本.html">
+            
+                    
+                    监控mysql脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="监控脚本使用情况.html">
+            
+                <a href="监控脚本使用情况.html">
+            
+                    
+                    监控脚本使用情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="监控某服务_有没有开启.html">
+            
+                <a href="监控某服务_有没有开启.html">
+            
+                    
+                    监控某服务_有没有开启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="利用Shell脚本检测WebURL状态.html">
+            
+                <a href="利用Shell脚本检测WebURL状态.html">
+            
+                    
+                    利用Shell脚本检测WebURL状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="内核优化.html">
+            
+                <a href="内核优化.html">
+            
+                    
+                    内核优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="判断端口是否异常，然后重启服务.html">
+            
+                <a href="判断端口是否异常，然后重启服务.html">
+            
+                    
+                    判断端口是否异常，然后重启服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="批量创建用户和密码.html">
+            
+                <a href="批量创建用户和密码.html">
+            
+                    
+                    批量创建用户和密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="批量修改主机名脚本.html">
+            
+                <a href="批量修改主机名脚本.html">
+            
+                    
+                    批量修改主机名脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="生成随机密码命令.html">
+            
+                <a href="生成随机密码命令.html">
+            
+                    
+                    生成随机密码命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="使用mtime删除历史文件或日志文件.html">
+            
+                <a href="使用mtime删除历史文件或日志文件.html">
+            
+                    
+                    使用mtime删除历史文件或日志文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="正则表达式.html">
+            
+                <a href="正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >for循环</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://www.jianshu.com/p/f973002a7ca2" target="_blank">https://www.jianshu.com/p/f973002a7ca2</a><br><a href="https://blog.csdn.net/babyfish13/article/details/52981110" target="_blank">https://blog.csdn.net/babyfish13/article/details/52981110</a><br><a href="https://blog.csdn.net/taiyang1987912/article/details/38929069" target="_blank">https://blog.csdn.net/taiyang1987912/article/details/38929069</a></p>
+<p>for&#x5FAA;&#x73AF;<br>while&#x5FAA;&#x73AF;  </p>
+<hr>
+<p>for&#x5FAA;&#x73AF;<br>for&#x5FAA;&#x73AF;&#x4E00;&#x822C;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;<br>&#x5C5E;&#x4E8E;&#x201C;&#x5F53;&#x578B;&#x5FAA;&#x73AF;&#x201D;&#xFF0C;&#x5373;&#x201C;&#x5F53;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x201D;&#x3002;  </p>
+<p>for &#x53D8;&#x91CF; in &#x5E38;&#x91CF;&#x5217;&#x8868;; do &#x4E00;&#x4E9B;&#x547D;&#x4EE4;; done;<br>for file in $(ls); do echo $file; done<br>for i in `seq 10`; do echo $i; done  </p>
+<p>for (( &#x53D8;&#x91CF;&#x521D;&#x59CB;&#x5316;; &#x6761;&#x4EF6;&#x5224;&#x65AD;; &#x53D8;&#x91CF;&#x81EA;&#x53D8; )); do &#x4E00;&#x4E9B;&#x547D;&#x4EE4;; done;<br>for((i=0; i\&lt;10; i++)); do echo $i; done</p>
+<p>---  </p>
+<p>&#x7B2C;&#x4E00;&#x79CD; &#x5217;&#x8868;for&#x5FAA;&#x73AF;<br>for &#x53D8;&#x91CF; in &#x503C;1 &#x503C;2 &#x503C;3 ...<br>do<br>&#x52A8;&#x4F5C;1<br>&#x52A8;&#x4F5C;2<br>... ...<br>done</p>
+<p>---  </p>
+<p>&#x7B2C;&#x4E8C;&#x79CD; &#x7C7B;C&#x98CE;&#x683C;&#x7684;for&#x5FAA;&#x73AF;<br>for ((&#x8BBE;&#x7F6E;&#x8BA1;&#x6570;&#x5668;;&#x6D4B;&#x8BD5;&#x8BA1;&#x6570;&#x5668;;&#x589E;&#x52A0;&#x8BA1;&#x6570;&#x5668;))<br>do<br>&#x52A8;&#x4F5C;1<br>&#x52A8;&#x4F5C;2<br>... ...<br>done  </p>
+<p>&#x7C7B;C&#x98CE;&#x683C;&#x7684;for&#x5FAA;&#x73AF;<br>#!/bin/bash<br>for((i=1;i\&lt;=5;i++));<br>do<br>echo $(expr $i \* $i + 1);<br>done<br>&#x6216;&#x8005;  </p>
+<p>#!/bin/bash<br>awk &apos;BEGIN{for(i=1; i\&lt;=5; i++)<br>print (i*i+1)<br>}&apos;</p>
+<p>---  </p>
+<p>while&#x5FAA;&#x73AF;<br>while &#x6761;&#x4EF6;<br>do<br>&#x52A8;&#x4F5C;1<br>&#x52A8;&#x4F5C;2<br>... ...<br>done<br>&#x5F53;while&#x540E;&#x6761;&#x4EF6;&#x4E3A;&#x771F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x6267;&#x884C;do&#x548C;done&#x4E4B;&#x95F4;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x77E5;&#x9053;&#x6761;&#x4EF6;&#x4E3A;&#x5047;&#x7ED3;&#x675F;  </p>
+<p>while true<br>do<br>...<br>done<br>&#xFF1A;shell&#x91CC;&#x53EB;&#x505A;&#x7A7A;&#x6307;&#x4EE4;&#xFF0C;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x505A;  </p>
+<p>&#x4E5F;&#x79F0;&#x4E3A;&#x524D;&#x6D4B;&#x8BD5;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF0C;&#x91CD;&#x590D;&#x6B21;&#x6570;&#x662F;&#x5229;&#x7528;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x6765;&#x63A7;&#x5236;&#x662F;&#x5426;&#x7EE7;&#x7EED;&#x91CD;&#x590D;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x8BED;&#x53E5;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6B7B;&#x5FAA;&#x73AF;&#xFF0C;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;&#x5FAA;&#x73AF;&#x4F53;&#x4E2D;&#x5305;&#x542B;&#x5FAA;&#x73AF;&#x51FA;&#x53E3;&#x6761;&#x4EF6;&#x5373;&#x8868;&#x8FBE;&#x5F0F;&#x5B58;&#x5728;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x4E3A;&#x975E;0&#x7684;&#x60C5;&#x51B5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BA1;&#x7B97;1~100&#x4EE5;&#x5185;&#x6240;&#x6709;&#x7684;&#x5947;&#x6570;&#x4E4B;&#x548C;&#xFF1A;<br>#!/bin/bash<br>sum=0<br>i=1<br>while(( i \&lt;= 100 ))<br>do<br>let &quot;sum+=i&quot;<br>let &quot;i += 2&quot;<br>done<br>echo &quot;sum=$sum&quot;</p>
+<p>---  </p>
+<p>while read line&#x5FAA;&#x73AF;<br>&#x6309;&#x884C;&#x8BFB;&#x6587;&#x4EF6; &#x4E00;&#x79D2;&#x8BFB;&#x4E00;&#x884C;<br>while read line<br>do<br>echo $line<br>sleep 1<br>done \&lt; /etc/passwd</p>
+<p>---  </p>
+<p>&#x5217;&#x8868;&#x5FAA;&#x73AF;<br>selcet &#x53D8;&#x91CF; in &#x547D;&#x4EE4;1 &#x547D;&#x4EE4;2 &#x547D;&#x4EE4;3 ... ...<br>do<br>&#x90FD;&#x80FD;&#x505A;<br>done<br>&#x751F;&#x6210;&#x547D;&#x4EE4;&#x5217;&#x8868;  </p>
+<p>select&#x7ED3;&#x6784;&#x4ECE;&#x6280;&#x672F;&#x89D2;&#x5EA6;&#x770B;&#x4E0D;&#x80FD;&#x7B97;&#x662F;&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#xFF0C;&#x53EA;&#x662F;&#x76F8;&#x4F3C;&#x800C;&#x5DF2;&#xFF0C;&#x5B83;&#x662F;bash&#x7684;&#x6269;&#x5C55;&#x7ED3;&#x6784;&#x7528;&#x4E8E;&#x4EA4;&#x4E92;&#x5F0F;&#x83DC;&#x5355;&#x663E;&#x793A;&#xFF0C;&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#x4E8E;case&#x7ED3;&#x6784;&#xFF0C;&#x4F46;&#x662F;&#x6BD4;case&#x7684;&#x4EA4;&#x4E92;&#x6027;&#x8981;&#x597D;&#x3002;&#x5728;&#x904D;&#x5386;&#x5217;&#x8868;&#x529F;&#x80FD;&#x4E2D;&#xFF0C;select&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5FAA;&#x73AF;&#x7684;&#x529F;&#x80FD;&#x3002;<br>&#x4F8B;&#x5982;&#xFF0C;&#x4EE5;&#x4E0B;&#x9009;&#x62E9;&#xFF0C;&#x53EA;&#x6709;&#x9009;&#x62E9;white&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9000;&#x51FA;&#x5FAA;&#x73AF;<br>#!/bin/bash<br>select color in &quot;red&quot; &quot;blue&quot; &quot;green&quot; &quot;white&quot; &quot;black&quot;<br>do<br>echo $color<br>done</p>
+<p>---  </p>
+<p>until&#x5FAA;&#x73AF;<br>until &#x6761;&#x4EF6;<br>do<br>&#x52A8;&#x4F5C;1<br>&#x52A8;&#x4F5C;2<br>... ...<br>done<br>&#x5F53;until&#x540E;&#x7684;&#x6761;&#x4EF6;wi&#x5047;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x6267;&#x884C;do &#x548C;done&#x4E4B;&#x95F4;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x76F4;&#x5230;&#x6761;&#x4EF6;&#x4E3A;&#x771F;&#x7ED3;&#x675F;  </p>
+<p>until&#x547D;&#x4EE4;&#x548C;while&#x547D;&#x4EE4;&#x7C7B;&#x4F3C;&#xFF0C;while&#x80FD;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;until&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x3002;&#x4F46;&#x533A;&#x522B;&#x662F;until&#x5FAA;&#x73AF;&#x7684;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x662F;&#x4E3A;0&#xFF08;&#x4E0E;while&#x521A;&#x597D;&#x76F8;&#x53CD;&#xFF09;&#xFF0C;&#x5373;whie&#x5FAA;&#x73AF;&#x5728;&#x6761;&#x4EF6;&#x4E3A;&#x771F;&#x65F6;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#xFF0C;&#x800C;until&#x5219;&#x5728;&#x6761;&#x4EF6;&#x4E3A;&#x5047;&#x65F6;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x3002;<br>&#x4F8B;&#x5982;&#xFF0C;&#x8BA1;&#x7B97;1~100&#x4EE5;&#x5185;&#x6240;&#x6709;&#x7684;&#x5947;&#x6570;&#x4E4B;&#x548C;&#xFF1A;<br>#!/bin/bash<br>i=1<br>sum=0<br>until [[ &quot;$i&quot; -gt 100 ]] #&#x76F4;&#x5230;i&#x5927;&#x4E8E;100<br>do<br>let &quot;sum+=i&quot;<br>let &quot;i += 2&quot;<br>done<br>echo &quot;sum=$sum&quot;</p>
+<p>---  </p>
+<p>&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x7B26;<br>continue&#xFF0C;break&#xFF0C;exit  </p>
+<p>break &#x8DF3;&#x51FA;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;<br>continue &#x8DF3;&#x51FA;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#xFF0C;&#x4E0D;&#x5728;&#x6267;&#x884C;continue&#x540E;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;<br>exit &#x4F1A;&#x76F4;&#x63A5;&#x9000;&#x51FA;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;  </p>
+<p>&#x5728;&#x5FAA;&#x73AF;&#x8BED;&#x6CD5;&#x4E2D;&#xFF0C;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x5FAA;&#x73AF;&#x9000;&#x51FA;&#x6216;&#x8DF3;&#x8FC7;&#x672C;&#x6B21;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x7B26;&#x3002;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x7B26;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4E24;&#x4E2A;&#xFF1A;break&#x548C;continue&#x3002;  </p>
+<p>break&#xFF1A;&#x9000;&#x51FA;&#x672C;&#x5C42;&#x5FAA;&#x73AF;&#x5FAA;&#x73AF;&#x3002;<br>continue&#xFF1A;&#x53EA;&#x9000;&#x51FA;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x4ECD;&#x7136;&#x6267;&#x884C;&#x540E;&#x7EE7;&#x7EED;&#x5FAA;&#x73AF;&#x3002;  </p>
+<p>#break&#x8DF3;&#x51FA;&#x6B7B;&#x5FAA;&#x73AF; &#x8DF3;&#x51FA;&#x6240;&#x6709;<br>continue&#x8DF3;&#x6B7B;&#x5FAA;&#x73AF; &#x53EA;&#x8DF3;&#x5F53;&#x524D;&#x4E00;&#x6B21;<br>break&#x9000;&#x51FA;&#x672C;&#x5C42;&#x5FAA;&#x73AF;<br>&#x5728;for&#x3001;while&#x548C;until&#x5FAA;&#x73AF;&#x4E2D;break&#x53EF;&#x5F3A;&#x884C;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#x3002;<br>&#x6CE8;&#x610F;&#xFF1A;break&#x8BED;&#x53E5;&#x4EC5;&#x80FD;&#x9000;&#x51FA;&#x5F53;&#x524D;&#x7684;&#x5FAA;&#x73AF;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E24;&#x5C42;&#x5FAA;&#x73AF;&#x5D4C;&#x5957;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5728;&#x5916;&#x5C42;&#x5FAA;&#x73AF;&#x4E2D;&#x4F7F;&#x7528;break&#x3002;<br>&#x4F8B;&#x5982;,&#x8BA1;&#x7B97;1~100&#x4EE5;&#x5185;&#x6240;&#x6709;&#x7684;&#x5947;&#x6570;&#x4E4B;&#x548C;&#xFF1A;<br>#!/bin/bash<br>sum=0<br>for (( i=1; i \&lt;= 1000; i+=2))<br>do<br>if [ &quot;$i&quot; -lt 100 ]<br>then<br>let &quot;sum+=i&quot;<br>elif [ &quot;$i&quot; -gt 100 ]<br>then<br>echo &quot;sum=$sum&quot;<br>break<br>fi<br>done  </p>
+<p>continue&#x9000;&#x51FA;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;<br>&#x5728;for&#x3001;while&#x548C;until&#x4E2D;&#x7528;&#x4E8E;&#x8BA9;&#x811A;&#x672C;&#x8DF3;&#x8FC7;&#x5176;&#x540E;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x3002;<br>&#x4F8B;&#x5982;&#xFF0C;&#x663E;&#x793A;10&#x4EE5;&#x5185;&#x80FD;&#x88AB;3&#x6574;&#x9664;&#x7684;&#x6B63;&#x6574;&#x6570;&#x3002;<br>#!/bin/bash<br>for (( i=1; i \&lt; 10; i++ ))<br>do<br>let &quot;tmp=i%3&quot; #&#x88AB;3&#x6574;&#x9664;<br>if [ &quot;$tmp&quot; -ne 0 ]<br>then<br>continue<br>fi<br>echo -n &quot;$i &quot;<br>done<br>echo &quot;&quot;</p>
+<p>---  </p>
+<p>&#x5FAA;&#x73AF;&#x7EC3;&#x4E60;</p>
+<p>---  </p>
+<p>1&#x3001;&#x6570;&#x5B57;&#x5FAA;&#x73AF;<br>#!/bin/bash<br>for value in {1..5}<br>#for value in 1 2 3 4 5<br>do<br>echo &quot;Now value is $value...&quot;<br>done</p>
+<p>---  </p>
+<p>&#x8BA1;&#x7B97;1&#xFF5E;100&#x5185;&#x6240;&#x6709;&#x7684;&#x5947;&#x6570;&#x4E4B;&#x548C;&#x3002;<br>#!/bin/bash<br>sum=0<br>for i in {1..100..2}<br>do<br>let &quot;sum+=i&quot;<br>done<br>echo &quot;sum=$sum&quot;</p>
+<p>---  </p>
+<p>#&#x8BA1;&#x7B97;<br>#for&#x5FAA;&#x73AF;&#x6C42;35&#x4EE5;&#x5185;&#x7684;&#x548C;<br>for((i=1;i\&lt;=35;i++));<br>do<br>sum=`expr $sum + $i`<br>done<br>echo $sum</p>
+<p>---  </p>
+<p>#&#x8BA1;&#x7B97;1~5&#x4E2D;&#x6570;&#x5B57;&#x7684;&#x5E73;&#x65B9;+1<br>#!/bin/bash<br>for i in $(seq 1 5)<br>do<br>echo $(expr $i \* $i + 1);<br>done</p>
+<p>---  </p>
+<p>&#x5B57;&#x7B26;&#x4E32;for&#x5FAA;&#x73AF;<br>&#x663E;&#x793A;&#x53C2;&#x6570;&#x5217;&#x8868;&#x7684;&#x6240;&#x6709;&#x5355;&#x8BCD;<br>#!/bin/bash<br>for i in v1 v2 v3<br>do<br>echo value is: $i<br>done</p>
+<p>---  </p>
+<p>&#x663E;&#x793A;list&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5355;&#x8BCD;<br>#!/bin/bash<br>list=&quot;Earth is the Home of Human! &quot;;<br>for i in $list;<br>do<br>echo word is $i;<br>done</p>
+<p>---  </p>
+<p>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x5217;&#x8868;<br>#!/bin/bash  </p>
+<p>for i in $*<br>do<br>echo $i is input value\! ;<br>done</p>
+<p>---</p>
+<p>&#x8DEF;&#x5F84;&#x67E5;&#x627E;for&#x5FAA;&#x73AF;<br>&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;<br>#!/bin/bash  </p>
+<p>for file in $( ls )<br>do<br>echo &quot;file: $file&quot;<br>done</p>
+<p>---  </p>
+<p>for file in $( ls )&#x8BED;&#x6CD5;&#x7684;&#x7B49;&#x6548;&#x8BED;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;<br>for file in `ls`<br>&#x6216;&#x8005;<br>for file in *</p>
+<p>---  </p>
+<p>&#x901A;&#x914D;&#x7B26;&#x67E5;&#x627E;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;<br>#!/bin/bash<br>for file in /root/*;<br>do<br>echo $file;<br>done</p>
+<p>---  </p>
+<p>&#x901A;&#x914D;&#x7B26;&#x67E5;&#x627E;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0B;&#x7B26;&#x5408;&#x6307;&#x5B9A;&#x6269;&#x5C55;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;<br>#!/bin/bash  </p>
+<p>for file in /root/study/shell/*.sh;<br>do<br>echo $file;<br>done  </p>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="find命令.html" class="navigation navigation-prev " aria-label="Previous page: find命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="git脚本.html" class="navigation navigation-next " aria-label="Next page: git脚本">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"for循环","level":"1.8","depth":1,"next":{"title":"git脚本","level":"1.9","depth":1,"path":"git脚本.md","ref":"git脚本.md","articles":[]},"previous":{"title":"find命令","level":"1.7","depth":1,"path":"find命令.md","ref":"find命令.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"for循环.md","mtime":"2019-03-22T06:26:56.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:20:11.587Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

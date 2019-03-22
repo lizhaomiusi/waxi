@@ -1,0 +1,1086 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>故障-~etc~fstab文件配置错误导致系统启动异常 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="故障-CentOS修改内核引导顺序.html" />
+    
+    
+    <link rel="prev" href="高可用负载-实现LVS高可用集群.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="部署-ansible环境.html">
+            
+                <a href="部署-ansible环境.html">
+            
+                    
+                    部署-ansible环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="部署-cobbler.html">
+            
+                <a href="部署-cobbler.html">
+            
+                    
+                    部署-cobbler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="部署-EPEL源_yum源.html">
+            
+                <a href="部署-EPEL源_yum源.html">
+            
+                    
+                    部署-EPEL源_yum源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="部署-PXE.html">
+            
+                <a href="部署-PXE.html">
+            
+                    
+                    部署-PXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="部署-yum仓库配置.html">
+            
+                <a href="部署-yum仓库配置.html">
+            
+                    
+                    部署-yum仓库配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="部署-同步阿里云镜像的rpm包.html">
+            
+                <a href="部署-同步阿里云镜像的rpm包.html">
+            
+                    
+                    部署-同步阿里云镜像的rpm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                <a href="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                    
+                    方案-Tengine结合lua防御cc攻击案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="高可用负载-HAProxy.html">
+            
+                <a href="高可用负载-HAProxy.html">
+            
+                    
+                    高可用负载-HAProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="高可用负载-HAproxy+keepalived.html">
+            
+                <a href="高可用负载-HAproxy+keepalived.html">
+            
+                    
+                    高可用负载-HAproxy+keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="高可用负载-Keepalived.html">
+            
+                <a href="高可用负载-Keepalived.html">
+            
+                    
+                    高可用负载-Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="高可用负载-LVS+keepalive.html">
+            
+                <a href="高可用负载-LVS+keepalive.html">
+            
+                    
+                    高可用负载-LVS+keepalive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="高可用负载-LVS+keepalived快速环境.html">
+            
+                <a href="高可用负载-LVS+keepalived快速环境.html">
+            
+                    
+                    高可用负载-LVS+keepalived快速环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="高可用负载-LVS四层负载均衡.html">
+            
+                <a href="高可用负载-LVS四层负载均衡.html">
+            
+                    
+                    高可用负载-LVS四层负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="高可用负载-nginx.html">
+            
+                <a href="高可用负载-nginx.html">
+            
+                    
+                    高可用负载-nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="高可用负载-nginx+keepalive高可用.html">
+            
+                <a href="高可用负载-nginx+keepalive高可用.html">
+            
+                    
+                    高可用负载-nginx+keepalive高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="高可用负载-Nginx高可用双主.html">
+            
+                <a href="高可用负载-Nginx高可用双主.html">
+            
+                    
+                    高可用负载-Nginx高可用双主
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                <a href="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                    
+                    高可用负载-部署docker+nginx+keepalived实现高可用web集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="高可用负载-实现LVS高可用集群.html">
+            
+                <a href="高可用负载-实现LVS高可用集群.html">
+            
+                    
+                    高可用负载-实现LVS高可用集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.20" data-path="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                <a href="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                    
+                    故障-~etc~fstab文件配置错误导致系统启动异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="故障-CentOS修改内核引导顺序.html">
+            
+                <a href="故障-CentOS修改内核引导顺序.html">
+            
+                    
+                    故障-CentOS修改内核引导顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="故障-ping丢包或不通时链路测试说明.html">
+            
+                <a href="故障-ping丢包或不通时链路测试说明.html">
+            
+                    
+                    故障-ping丢包或不通时链路测试说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="故障-YUM的常用方法和常见问题处理.html">
+            
+                <a href="故障-YUM的常用方法和常见问题处理.html">
+            
+                    
+                    故障-YUM的常用方法和常见问题处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="故障-编译安装错误常见问题.html">
+            
+                <a href="故障-编译安装错误常见问题.html">
+            
+                    
+                    故障-编译安装错误常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="故障-目录误操作权限修改为777的修复方法.html">
+            
+                <a href="故障-目录误操作权限修改为777的修复方法.html">
+            
+                    
+                    故障-目录误操作权限修改为777的修复方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                <a href="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                    
+                    故障-排查Linux实例异常CPU使用率100%
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                <a href="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                    
+                    故障-启动或禁止用户或IP通过SSH登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="故障-启动网卡失败.html">
+            
+                <a href="故障-启动网卡失败.html">
+            
+                    
+                    故障-启动网卡失败
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="故障-通过MD5验证传输文件内容一致性.html">
+            
+                <a href="故障-通过MD5验证传输文件内容一致性.html">
+            
+                    
+                    故障-通过MD5验证传输文件内容一致性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                <a href="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                    
+                    故障-通过rm-f删除大量文件时报错：Argumentlisttoolong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="故障-网络异常时抓包操作说明.html">
+            
+                <a href="故障-网络异常时抓包操作说明.html">
+            
+                    
+                    故障-网络异常时抓包操作说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="故障-系统添加“回收站”.html">
+            
+                <a href="故障-系统添加“回收站”.html">
+            
+                    
+                    故障-系统添加“回收站”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="故障-系统无法正常启动.html">
+            
+                <a href="故障-系统无法正常启动.html">
+            
+                    
+                    故障-系统无法正常启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="监控-zabbix_API方式.html">
+            
+                <a href="监控-zabbix_API方式.html">
+            
+                    
+                    监控-zabbix_API方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="监控-zabbix-agent端的配置.html">
+            
+                <a href="监控-zabbix-agent端的配置.html">
+            
+                    
+                    监控-zabbix-agent端的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="监控-zabbix部署.html">
+            
+                <a href="监控-zabbix部署.html">
+            
+                    
+                    监控-zabbix部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="监控-zabbix部署1.html">
+            
+                <a href="监控-zabbix部署1.html">
+            
+                    
+                    监控-zabbix部署1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="监控-zabbix监控nginx.html">
+            
+                <a href="监控-zabbix监控nginx.html">
+            
+                    
+                    监控-zabbix监控nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="监控-监控CPU和内存的日志工具.html">
+            
+                <a href="监控-监控CPU和内存的日志工具.html">
+            
+                    
+                    监控-监控CPU和内存的日志工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="批量分发密钥-1密钥对创建.html">
+            
+                <a href="批量分发密钥-1密钥对创建.html">
+            
+                    
+                    批量分发密钥-1密钥对创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="批量分发密钥-ansible方式.html">
+            
+                <a href="批量分发密钥-ansible方式.html">
+            
+                    
+                    批量分发密钥-ansible方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="批量分发密钥-sshpass方式.html">
+            
+                <a href="批量分发密钥-sshpass方式.html">
+            
+                    
+                    批量分发密钥-sshpass方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="批量分发密钥-去除yes-no的提示.html">
+            
+                <a href="批量分发密钥-去除yes-no的提示.html">
+            
+                    
+                    批量分发密钥-去除yes-no的提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="普通用户添加ssh或禁止ssh.html">
+            
+                <a href="普通用户添加ssh或禁止ssh.html">
+            
+                    
+                    普通用户添加ssh或禁止ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="使用NGINX+LUA实现WAF功能.html">
+            
+                <a href="使用NGINX+LUA实现WAF功能.html">
+            
+                    
+                    使用NGINX+LUA实现WAF功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="网盘-Cloudreve_on_Docker.html">
+            
+                <a href="网盘-Cloudreve_on_Docker.html">
+            
+                    
+                    网盘-Cloudreve_on_Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="网盘-Docker+Nextcloud快速部署.html">
+            
+                <a href="网盘-Docker+Nextcloud快速部署.html">
+            
+                    
+                    网盘-Docker+Nextcloud快速部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="网盘-OpenMediaVault_NAS.html">
+            
+                <a href="网盘-OpenMediaVault_NAS.html">
+            
+                    
+                    网盘-OpenMediaVault_NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="网盘-owncloud存储.html">
+            
+                <a href="网盘-owncloud存储.html">
+            
+                    
+                    网盘-owncloud存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="文档-git_idoc文档中心.html">
+            
+                <a href="文档-git_idoc文档中心.html">
+            
+                    
+                    文档-git_idoc文档中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="文档-gitbook文档中心服务.html">
+            
+                <a href="文档-gitbook文档中心服务.html">
+            
+                    
+                    文档-gitbook文档中心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="文档-git命令推送github.html">
+            
+                <a href="文档-git命令推送github.html">
+            
+                    
+                    文档-git命令推送github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="文档-mindoc配置.html">
+            
+                <a href="文档-mindoc配置.html">
+            
+                    
+                    文档-mindoc配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                <a href="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                    
+                    文档-npm更换成淘宝镜像源以及cnpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="应用-6X-LNMP安装与部署.html">
+            
+                <a href="应用-6X-LNMP安装与部署.html">
+            
+                    
+                    应用-6X-LNMP安装与部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="应用-6xyum安装LNMP.html">
+            
+                <a href="应用-6xyum安装LNMP.html">
+            
+                    
+                    应用-6xyum安装LNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="应用-6x编译LNMP环境.html">
+            
+                <a href="应用-6x编译LNMP环境.html">
+            
+                    
+                    应用-6x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="应用-7x编译LNMP环境.html">
+            
+                <a href="应用-7x编译LNMP环境.html">
+            
+                    
+                    应用-7x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="应用-chkconfig命令.html">
+            
+                <a href="应用-chkconfig命令.html">
+            
+                    
+                    应用-chkconfig命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="应用-docker部署LAMP.html">
+            
+                <a href="应用-docker部署LAMP.html">
+            
+                    
+                    应用-docker部署LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="应用-rsync+inotify配置.html">
+            
+                <a href="应用-rsync+inotify配置.html">
+            
+                    
+                    应用-rsync+inotify配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="应用-VPN服务器之PPTP.html">
+            
+                <a href="应用-VPN服务器之PPTP.html">
+            
+                    
+                    应用-VPN服务器之PPTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="应用-堡垒机Teleport.html">
+            
+                <a href="应用-堡垒机Teleport.html">
+            
+                    
+                    应用-堡垒机Teleport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="应用-可视化实时Web日志分析工具.html">
+            
+                <a href="应用-可视化实时Web日志分析工具.html">
+            
+                    
+                    应用-可视化实时Web日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="应用-文件权限加固.html">
+            
+                <a href="应用-文件权限加固.html">
+            
+                    
+                    应用-文件权限加固
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >故障-~etc~fstab文件配置错误导致系统启动异常</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6545;&#x969C;-/etc/fstab&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x9519;&#x8BEF;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x5F02;&#x5E38;</p>
+<p>Linux&#x7CFB;&#x7EDF;&#xFF08;&#x5305;&#x62EC;Ubuntu&#xFF09;&#x91CC;&#x7684;/etc/fstab&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x670D;&#x52A1;&#x5668;&#x7684;&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#x5165;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x6302;&#x8F7D;&#x4FE1;&#x606F;&#x6216;&#x8005;&#x8BE5;&#x6587;&#x4EF6;&#x81EA;&#x8EAB;&#x5B58;&#x5728;&#x8BBF;&#x95EE;&#x9519;&#x8BEF;&#xFF08;&#x6743;&#x9650;&#x914D;&#x7F6E;&#x3001;&#x6587;&#x4EF6;&#x4E22;&#x5931;&#x7B49;&#xFF09;&#xFF0C;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#x5C31;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x5BFC;&#x81F4;&#x542F;&#x52A8;&#x5931;&#x8D25;&#x3002;&#x672C;&#x6587;&#x63CF;&#x8FF0;&#x4E86;CentOS&#x548C;Ubuntu&#x7CFB;&#x7EDF;&#x91CC;&#x56E0;&#x4E3A;/etc/fstab&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x9519;&#x8BEF;&#x5BFC;&#x81F4;&#x542F;&#x52A8;&#x5931;&#x8D25;&#x7684;&#x73B0;&#x8C61;&#xFF0C;&#x5E76;&#x7ED9;&#x51FA;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>CentOS</p>
+<p>&#x95EE;&#x9898;&#x73B0;&#x8C61;</p>
+<p>&#x901A;&#x8FC7;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x8F6F;&#x4EF6;&#x65E0;&#x6CD5;&#x767B;&#x5F55;Linux&#x5B9E;&#x4F8B;&#xFF0C;&#x901A;&#x8FC7; &#x7BA1;&#x7406;&#x7EC8;&#x7AEF;
+&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x65F6;&#x7CFB;&#x7EDF;&#x8FDB;&#x5165;&#x5230;&#x6025;&#x6551;&#x6A21;&#x5F0F;&#xFF08;emergency mode&#xFF09;&#xFF0C;&#x62A5;&#x9519; systemctl default to try
+again to boot into default mode</p>
+<p>&#x95EE;&#x9898;&#x539F;&#x56E0;</p>
+<p>&#x4E00;&#x822C;&#x662F;&#x56E0;&#x4E3A;/etc/fstab&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#x5165;&#x4E86;&#x9519;&#x8BEF;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6216;&#x8005;&#x78C1;&#x76D8;&#x7684;&#x5206;&#x533A;&#x4FE1;&#x606F;&#x4E0D;&#x6B63;&#x786E;&#x3002;</p>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</p>
+<p>&#x5C1D;&#x8BD5;&#x6309;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x4FEE;&#x590D;&#xFF1A;</p>
+<p>&#x901A;&#x8FC7; &#x7BA1;&#x7406;&#x7EC8;&#x7AEF; &#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;ECS&#x5B9E;&#x4F8B;&#x3002;&#x7CFB;&#x7EDF;&#x63D0;&#x793A;&#x8FDB;&#x5165;&#x6025;&#x6551;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x8F93;&#x5165;&#x5B9E;&#x4F8B;&#x767B;&#x5F55;&#x5BC6;&#x7801;&#x3002;</p>
+<p>&#x8FD0;&#x884C; mount / -o remount,rw&#xFF0C;&#x53D8;&#x66F4;&#x6839;&#x5206;&#x533A;&#x7684;&#x6302;&#x8F7D;&#x6A21;&#x5F0F;&#x4E3A;&#x8BFB;&#x5199;&#x3002;</p>
+<p>&#x8FD0;&#x884C; blkid
+&#x67E5;&#x770B;ECS&#x5B9E;&#x4F8B;&#x4E0A;&#x78C1;&#x76D8;&#x7684;&#x5206;&#x533A;&#x60C5;&#x51B5;&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x672C;&#x793A;&#x4F8B;&#x4E2D;&#x7684;ECS&#x5B9E;&#x4F8B;&#x6570;&#x636E;&#x76D8;&#x5206;&#x533A;&#x4E3A;/dev/xvdb1&#xFF0C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E3A;ext4&#x3002;</p>
+<p>&#x8FD0;&#x884C; vim /etc/fstab&#xFF0C;&#x68C0;&#x67E5;&#x78C1;&#x76D8;&#x7684;&#x5206;&#x533A;&#x4FE1;&#x606F;&#x4E0E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x548C; blkid
+&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x4E00;&#x81F4;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x6309;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x4FEE;&#x6539;&#xFF1A;</p>
+<p>&#x5C06;&#x5149;&#x6807;&#x79FB;&#x5230;&#x5F02;&#x5E38;&#x7684;&#x53C2;&#x6570;&#x884C;&#xFF0C;&#x6309; i &#x952E;&#x8FDB;&#x5165;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x5199;&#x5165;&#x6B63;&#x786E;&#x7684;&#x5206;&#x533A;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6309; Esc &#x952E;&#x9000;&#x51FA;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF0C;&#x5E76;&#x8F93;&#x5165; :wq!&#xFF0C;&#x6309;&#x56DE;&#x8F66;&#x952E;&#x540E;&#x4FDD;&#x5B58;&#x5E76;&#x9000;&#x51FA;&#x3002;</p>
+<p>&#x8FD0;&#x884C; reboot &#x91CD;&#x542F;&#x7CFB;&#x7EDF;&#x3002;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x80FD;&#x6210;&#x529F;&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="高可用负载-实现LVS高可用集群.html" class="navigation navigation-prev " aria-label="Previous page: 高可用负载-实现LVS高可用集群">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="故障-CentOS修改内核引导顺序.html" class="navigation navigation-next " aria-label="Next page: 故障-CentOS修改内核引导顺序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"故障-~etc~fstab文件配置错误导致系统启动异常","level":"1.20","depth":1,"next":{"title":"故障-CentOS修改内核引导顺序","level":"1.21","depth":1,"path":"故障-CentOS修改内核引导顺序.md","ref":"故障-CentOS修改内核引导顺序.md","articles":[]},"previous":{"title":"高可用负载-实现LVS高可用集群","level":"1.19","depth":1,"path":"高可用负载-实现LVS高可用集群.md","ref":"高可用负载-实现LVS高可用集群.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"故障-~etc~fstab文件配置错误导致系统启动异常.md","mtime":"2019-03-22T05:29:43.354Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:16:12.436Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

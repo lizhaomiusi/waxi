@@ -1,0 +1,1115 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>批量分发密钥-ansible方式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="批量分发密钥-sshpass方式.html" />
+    
+    
+    <link rel="prev" href="批量分发密钥-1密钥对创建.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="部署-ansible环境.html">
+            
+                <a href="部署-ansible环境.html">
+            
+                    
+                    部署-ansible环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="部署-cobbler.html">
+            
+                <a href="部署-cobbler.html">
+            
+                    
+                    部署-cobbler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="部署-EPEL源_yum源.html">
+            
+                <a href="部署-EPEL源_yum源.html">
+            
+                    
+                    部署-EPEL源_yum源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="部署-PXE.html">
+            
+                <a href="部署-PXE.html">
+            
+                    
+                    部署-PXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="部署-yum仓库配置.html">
+            
+                <a href="部署-yum仓库配置.html">
+            
+                    
+                    部署-yum仓库配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="部署-同步阿里云镜像的rpm包.html">
+            
+                <a href="部署-同步阿里云镜像的rpm包.html">
+            
+                    
+                    部署-同步阿里云镜像的rpm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                <a href="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                    
+                    方案-Tengine结合lua防御cc攻击案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="高可用负载-HAProxy.html">
+            
+                <a href="高可用负载-HAProxy.html">
+            
+                    
+                    高可用负载-HAProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="高可用负载-HAproxy+keepalived.html">
+            
+                <a href="高可用负载-HAproxy+keepalived.html">
+            
+                    
+                    高可用负载-HAproxy+keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="高可用负载-Keepalived.html">
+            
+                <a href="高可用负载-Keepalived.html">
+            
+                    
+                    高可用负载-Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="高可用负载-LVS+keepalive.html">
+            
+                <a href="高可用负载-LVS+keepalive.html">
+            
+                    
+                    高可用负载-LVS+keepalive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="高可用负载-LVS+keepalived快速环境.html">
+            
+                <a href="高可用负载-LVS+keepalived快速环境.html">
+            
+                    
+                    高可用负载-LVS+keepalived快速环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="高可用负载-LVS四层负载均衡.html">
+            
+                <a href="高可用负载-LVS四层负载均衡.html">
+            
+                    
+                    高可用负载-LVS四层负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="高可用负载-nginx.html">
+            
+                <a href="高可用负载-nginx.html">
+            
+                    
+                    高可用负载-nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="高可用负载-nginx+keepalive高可用.html">
+            
+                <a href="高可用负载-nginx+keepalive高可用.html">
+            
+                    
+                    高可用负载-nginx+keepalive高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="高可用负载-Nginx高可用双主.html">
+            
+                <a href="高可用负载-Nginx高可用双主.html">
+            
+                    
+                    高可用负载-Nginx高可用双主
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                <a href="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                    
+                    高可用负载-部署docker+nginx+keepalived实现高可用web集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="高可用负载-实现LVS高可用集群.html">
+            
+                <a href="高可用负载-实现LVS高可用集群.html">
+            
+                    
+                    高可用负载-实现LVS高可用集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                <a href="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                    
+                    故障-~etc~fstab文件配置错误导致系统启动异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="故障-CentOS修改内核引导顺序.html">
+            
+                <a href="故障-CentOS修改内核引导顺序.html">
+            
+                    
+                    故障-CentOS修改内核引导顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="故障-ping丢包或不通时链路测试说明.html">
+            
+                <a href="故障-ping丢包或不通时链路测试说明.html">
+            
+                    
+                    故障-ping丢包或不通时链路测试说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="故障-YUM的常用方法和常见问题处理.html">
+            
+                <a href="故障-YUM的常用方法和常见问题处理.html">
+            
+                    
+                    故障-YUM的常用方法和常见问题处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="故障-编译安装错误常见问题.html">
+            
+                <a href="故障-编译安装错误常见问题.html">
+            
+                    
+                    故障-编译安装错误常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="故障-目录误操作权限修改为777的修复方法.html">
+            
+                <a href="故障-目录误操作权限修改为777的修复方法.html">
+            
+                    
+                    故障-目录误操作权限修改为777的修复方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                <a href="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                    
+                    故障-排查Linux实例异常CPU使用率100%
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                <a href="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                    
+                    故障-启动或禁止用户或IP通过SSH登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="故障-启动网卡失败.html">
+            
+                <a href="故障-启动网卡失败.html">
+            
+                    
+                    故障-启动网卡失败
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="故障-通过MD5验证传输文件内容一致性.html">
+            
+                <a href="故障-通过MD5验证传输文件内容一致性.html">
+            
+                    
+                    故障-通过MD5验证传输文件内容一致性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                <a href="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                    
+                    故障-通过rm-f删除大量文件时报错：Argumentlisttoolong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="故障-网络异常时抓包操作说明.html">
+            
+                <a href="故障-网络异常时抓包操作说明.html">
+            
+                    
+                    故障-网络异常时抓包操作说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="故障-系统添加“回收站”.html">
+            
+                <a href="故障-系统添加“回收站”.html">
+            
+                    
+                    故障-系统添加“回收站”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="故障-系统无法正常启动.html">
+            
+                <a href="故障-系统无法正常启动.html">
+            
+                    
+                    故障-系统无法正常启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="监控-zabbix_API方式.html">
+            
+                <a href="监控-zabbix_API方式.html">
+            
+                    
+                    监控-zabbix_API方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="监控-zabbix-agent端的配置.html">
+            
+                <a href="监控-zabbix-agent端的配置.html">
+            
+                    
+                    监控-zabbix-agent端的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="监控-zabbix部署.html">
+            
+                <a href="监控-zabbix部署.html">
+            
+                    
+                    监控-zabbix部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="监控-zabbix部署1.html">
+            
+                <a href="监控-zabbix部署1.html">
+            
+                    
+                    监控-zabbix部署1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="监控-zabbix监控nginx.html">
+            
+                <a href="监控-zabbix监控nginx.html">
+            
+                    
+                    监控-zabbix监控nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="监控-监控CPU和内存的日志工具.html">
+            
+                <a href="监控-监控CPU和内存的日志工具.html">
+            
+                    
+                    监控-监控CPU和内存的日志工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="批量分发密钥-1密钥对创建.html">
+            
+                <a href="批量分发密钥-1密钥对创建.html">
+            
+                    
+                    批量分发密钥-1密钥对创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.41" data-path="批量分发密钥-ansible方式.html">
+            
+                <a href="批量分发密钥-ansible方式.html">
+            
+                    
+                    批量分发密钥-ansible方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="批量分发密钥-sshpass方式.html">
+            
+                <a href="批量分发密钥-sshpass方式.html">
+            
+                    
+                    批量分发密钥-sshpass方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="批量分发密钥-去除yes-no的提示.html">
+            
+                <a href="批量分发密钥-去除yes-no的提示.html">
+            
+                    
+                    批量分发密钥-去除yes-no的提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="普通用户添加ssh或禁止ssh.html">
+            
+                <a href="普通用户添加ssh或禁止ssh.html">
+            
+                    
+                    普通用户添加ssh或禁止ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="使用NGINX+LUA实现WAF功能.html">
+            
+                <a href="使用NGINX+LUA实现WAF功能.html">
+            
+                    
+                    使用NGINX+LUA实现WAF功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="网盘-Cloudreve_on_Docker.html">
+            
+                <a href="网盘-Cloudreve_on_Docker.html">
+            
+                    
+                    网盘-Cloudreve_on_Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="网盘-Docker+Nextcloud快速部署.html">
+            
+                <a href="网盘-Docker+Nextcloud快速部署.html">
+            
+                    
+                    网盘-Docker+Nextcloud快速部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="网盘-OpenMediaVault_NAS.html">
+            
+                <a href="网盘-OpenMediaVault_NAS.html">
+            
+                    
+                    网盘-OpenMediaVault_NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="网盘-owncloud存储.html">
+            
+                <a href="网盘-owncloud存储.html">
+            
+                    
+                    网盘-owncloud存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="文档-git_idoc文档中心.html">
+            
+                <a href="文档-git_idoc文档中心.html">
+            
+                    
+                    文档-git_idoc文档中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="文档-gitbook文档中心服务.html">
+            
+                <a href="文档-gitbook文档中心服务.html">
+            
+                    
+                    文档-gitbook文档中心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="文档-git命令推送github.html">
+            
+                <a href="文档-git命令推送github.html">
+            
+                    
+                    文档-git命令推送github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="文档-mindoc配置.html">
+            
+                <a href="文档-mindoc配置.html">
+            
+                    
+                    文档-mindoc配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                <a href="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                    
+                    文档-npm更换成淘宝镜像源以及cnpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="应用-6X-LNMP安装与部署.html">
+            
+                <a href="应用-6X-LNMP安装与部署.html">
+            
+                    
+                    应用-6X-LNMP安装与部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="应用-6xyum安装LNMP.html">
+            
+                <a href="应用-6xyum安装LNMP.html">
+            
+                    
+                    应用-6xyum安装LNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="应用-6x编译LNMP环境.html">
+            
+                <a href="应用-6x编译LNMP环境.html">
+            
+                    
+                    应用-6x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="应用-7x编译LNMP环境.html">
+            
+                <a href="应用-7x编译LNMP环境.html">
+            
+                    
+                    应用-7x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="应用-chkconfig命令.html">
+            
+                <a href="应用-chkconfig命令.html">
+            
+                    
+                    应用-chkconfig命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="应用-docker部署LAMP.html">
+            
+                <a href="应用-docker部署LAMP.html">
+            
+                    
+                    应用-docker部署LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="应用-rsync+inotify配置.html">
+            
+                <a href="应用-rsync+inotify配置.html">
+            
+                    
+                    应用-rsync+inotify配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="应用-VPN服务器之PPTP.html">
+            
+                <a href="应用-VPN服务器之PPTP.html">
+            
+                    
+                    应用-VPN服务器之PPTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="应用-堡垒机Teleport.html">
+            
+                <a href="应用-堡垒机Teleport.html">
+            
+                    
+                    应用-堡垒机Teleport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="应用-可视化实时Web日志分析工具.html">
+            
+                <a href="应用-可视化实时Web日志分析工具.html">
+            
+                    
+                    应用-可视化实时Web日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="应用-文件权限加固.html">
+            
+                <a href="应用-文件权限加固.html">
+            
+                    
+                    应用-文件权限加固
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >批量分发密钥-ansible方式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://www.cnblogs.com/amosli/p/6122908.html" target="_blank">https://www.cnblogs.com/amosli/p/6122908.html</a><br><a href="https://www.jianshu.com/p/4b5bd1f871bb" target="_blank">https://www.jianshu.com/p/4b5bd1f871bb</a></p>
+<p>&#x6279;&#x91CF;&#x5206;&#x53D1;&#x5BC6;&#x94A5;&#x65F6;&#xFF0C;&#x65B0;&#x673A;&#x5668;&#x4F1A;&#x63D0;&#x793A;&#x8F93;&#x5165; (yes/no)? &#x521B;&#x5EFA;&#x514D;&#x624B;&#x5DE5;&#x8F93;&#x5165;yes</p>
+<p>/etc/ansible/hosts&#xFF0C;ansible&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p>[nginx]</p>
+<p>10.1.2.71</p>
+<p>10.1.2.72</p>
+<p>/etc/ssh/ssh_config&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#xFF1A;</p>
+<p>StrictHostKeyChecking no</p>
+<p>&#x8FD0;&#x884C;&#xFF1A;</p>
+<p>ansible all -m ping</p>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x56DE;&#x539F;&#x6765;&#x7684;&#xFF1A;</p>
+<p>StrictHostKeyChecking ask</p>
+<p>&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<p>cat .ssh/known_hosts</p>
+<p>ssh 172.16.0.3</p>
+<p>&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x6279;&#x91CF;&#x64CD;&#x4F5C;&#x673A;&#x5668;(&#x4E00;&#x5F00;&#x59CB;&#x673A;&#x5668;&#x65E0;&#x516C;&#x94A5;)</p>
+<p>&#x683C;&#x5F0F;&#xFF1A;&#x3010;&#x4E3B;&#x673A;&#x540D;&#x3011; &#x3010;&#x4E3B;&#x673A;&#x5730;&#x5740;&#x3011; &#x3010;&#x4E3B;&#x673A;&#x5BC6;&#x7801;&#x3011; &#x9ED8;&#x8BA4;&#x662F;root&#x7528;&#x6237;&#x6765;&#x8FDB;&#x884C;&#x7684;</p>
+<p>cat /etc/ansible/hosts</p>
+<p>[base]<br>ansible_ssh_user=&quot;tomcat&quot; ansible_ssh_port=22 ansible_ssh_host=192.168.21.61
+ansible_ssh_pass=&quot;qqq111&quot;<br>mysql_172 ansible_ssh_port=22 ansible_ssh_host=172.16.0.3
+ansible_ssh_pass=123456 host_key_checking=false ansible_sudo_pass=&apos;123456&apos;</p>
+<p>&#x65B0;&#x7248;&#x7684;ansible(2.4) hosts&#x6709;&#x66F4;&#x65B0;&#xFF0C; &#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#xFF1A;<br>[ces1]<br>192.168.21.61 ansible_user=ansible ansible_ssh_pass=&quot;qqq111&quot;<br>192.168.21.62 ansible_user=ansible ansible_ssh_pass=&quot;qqq111&quot;</p>
+<p>&#x6D4B;&#x8BD5;</p>
+<p>ansible -i host all -m shell -a &quot;pwd&quot; --user user1</p>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#xFF08;&#x5E38;&#x7528;&#xFF09;</p>
+<p>&#x811A;&#x672C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x516C;&#x94A5;</p>
+<p>chmod +x /usr/local/src/script</p>
+<p>#!/bin/bash</p>
+<p>mkdir /root/.ssh</p>
+<p>chmod 700 /root/.ssh</p>
+<p>echo &apos;&#x516C;&#x94A5;&#x5185;&#x5BB9;&apos; &gt;&gt;/root/.ssh/authorized_keys</p>
+<p>chmod 600 /root/.ssh/authorized_keys</p>
+<p>ansible all -m script -a &quot;/usr/local/src/script&quot;</p>
+<p>&#x8865;&#x5145;&#xFF1A;&#x5982;&#x679C;&#x662F;&#x7528;&#x666E;&#x901A;&#x7528;&#x6237;&#x6765;&#x7BA1;&#x7406;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x6279;&#x91CF;&#x521B;&#x5EFA;&#x7528;&#x6237;&#x548C;&#x6DFB;&#x52A0;sudo &#x6743;&#x9650;</p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;</p>
+<p>ansible-playbook&#x63A8;&#x9001;ymal&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x5230;&#x4E86;authoried_keys&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<br><a href="http://docs.ansible.com/authorized_key_module.html" target="_blank">http://docs.ansible.com/authorized_key_module.html</a></p>
+<p>&#x5C06;&#x4EE5;&#x4E0B;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x4E3A;&#xFF1A;push.ssh.ymal # &#x6CE8;&#x610F;&#x4E3B;&#x673A; &#x7528;&#x6237;&#x540D; &#x76EE;&#x5F55;<br>cat push.ssh.ymal</p>
+<p>&#x6267;&#x884C;&#x63A8;&#x9001;&#x547D;&#x4EE4;<br>ansible-playbook push.ssh.ymal  </p>
+<p>&#x5982;&#x82E5;&#x62A5;&#x9519;,&#x89E3;&#x51B3;<br>Using a SSH password instead of a key is not possible because Host Key checking
+is enabled and sshpass does not support this. Please add this host&apos;s fingerprint
+to your known_hosts file to manage this host.<br>&#x4FEE;&#x6539;host_key_checking(&#x9ED8;&#x8BA4;&#x662F;check&#x7684;)&#xFF1A; #
+&#x90A3;&#x4E48;&#x4E3A;&#x4EC0;&#x4E48;&#x5931;&#x8D25;&#x4E86;&#x5462;&#xFF1F;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x5C31;&#x662F;&#x521D;&#x59CB;ssh&#x8BBF;&#x95EE;&#x5BA2;&#x6237;&#x673A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x6709;&#x68C0;&#x9A8C;&#x516C;&#x94A5;&#x7684;&#x63D0;&#x793A;&#x3002;&#x53EA;&#x8981;&#x914D;&#x7F6E;&#x7981;&#x7528;&#x5373;&#x53EF;&#x3002;<br>vi /etc/ansible/ansible.cfg<br># uncomment this to disable SSH key host checking<br>host_key_checking = False # &#x8BBE;&#x7F6E;&#x4E3A;False</p>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53BB;&#x9664;&#x5BC6;&#x7801;</p>
+<p>[mysql]</p>
+<p>mysql_172 ansible_ssh_port=22 ansible_ssh_host=172.16.0.3
+ansible_sudo_pass=&apos;123456&apos;</p>
+<p>&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<p>ansible -i hosts all -m shell -a &apos;pwd&apos; --user djidba
+--private-key=/home/user1/.ssh/id_rsa</p>
+<p>&#x6D4B;&#x8BD5;<br># &#x67E5;&#x770B;&#x5404;&#x673A;&#x5668;&#x65F6;&#x95F4;<br>ansible all -a date<br># ansible all -m command -a date # &#x4F5C;&#x7528;&#x540C;&#x4E0A;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="批量分发密钥-1密钥对创建.html" class="navigation navigation-prev " aria-label="Previous page: 批量分发密钥-1密钥对创建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="批量分发密钥-sshpass方式.html" class="navigation navigation-next " aria-label="Next page: 批量分发密钥-sshpass方式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"批量分发密钥-ansible方式","level":"1.41","depth":1,"next":{"title":"批量分发密钥-sshpass方式","level":"1.42","depth":1,"path":"批量分发密钥-sshpass方式.md","ref":"批量分发密钥-sshpass方式.md","articles":[]},"previous":{"title":"批量分发密钥-1密钥对创建","level":"1.40","depth":1,"path":"批量分发密钥-1密钥对创建.md","ref":"批量分发密钥-1密钥对创建.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"批量分发密钥-ansible方式.md","mtime":"2019-03-22T08:16:06.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:16:12.436Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

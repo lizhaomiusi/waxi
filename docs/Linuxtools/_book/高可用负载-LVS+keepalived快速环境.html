@@ -1,0 +1,1199 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>高可用负载-LVS+keepalived快速环境 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="高可用负载-LVS四层负载均衡.html" />
+    
+    
+    <link rel="prev" href="高可用负载-LVS+keepalive.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="部署-ansible环境.html">
+            
+                <a href="部署-ansible环境.html">
+            
+                    
+                    部署-ansible环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="部署-cobbler.html">
+            
+                <a href="部署-cobbler.html">
+            
+                    
+                    部署-cobbler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="部署-EPEL源_yum源.html">
+            
+                <a href="部署-EPEL源_yum源.html">
+            
+                    
+                    部署-EPEL源_yum源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="部署-PXE.html">
+            
+                <a href="部署-PXE.html">
+            
+                    
+                    部署-PXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="部署-yum仓库配置.html">
+            
+                <a href="部署-yum仓库配置.html">
+            
+                    
+                    部署-yum仓库配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="部署-同步阿里云镜像的rpm包.html">
+            
+                <a href="部署-同步阿里云镜像的rpm包.html">
+            
+                    
+                    部署-同步阿里云镜像的rpm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                <a href="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                    
+                    方案-Tengine结合lua防御cc攻击案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="高可用负载-HAProxy.html">
+            
+                <a href="高可用负载-HAProxy.html">
+            
+                    
+                    高可用负载-HAProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="高可用负载-HAproxy+keepalived.html">
+            
+                <a href="高可用负载-HAproxy+keepalived.html">
+            
+                    
+                    高可用负载-HAproxy+keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="高可用负载-Keepalived.html">
+            
+                <a href="高可用负载-Keepalived.html">
+            
+                    
+                    高可用负载-Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="高可用负载-LVS+keepalive.html">
+            
+                <a href="高可用负载-LVS+keepalive.html">
+            
+                    
+                    高可用负载-LVS+keepalive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="高可用负载-LVS+keepalived快速环境.html">
+            
+                <a href="高可用负载-LVS+keepalived快速环境.html">
+            
+                    
+                    高可用负载-LVS+keepalived快速环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="高可用负载-LVS四层负载均衡.html">
+            
+                <a href="高可用负载-LVS四层负载均衡.html">
+            
+                    
+                    高可用负载-LVS四层负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="高可用负载-nginx.html">
+            
+                <a href="高可用负载-nginx.html">
+            
+                    
+                    高可用负载-nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="高可用负载-nginx+keepalive高可用.html">
+            
+                <a href="高可用负载-nginx+keepalive高可用.html">
+            
+                    
+                    高可用负载-nginx+keepalive高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="高可用负载-Nginx高可用双主.html">
+            
+                <a href="高可用负载-Nginx高可用双主.html">
+            
+                    
+                    高可用负载-Nginx高可用双主
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                <a href="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                    
+                    高可用负载-部署docker+nginx+keepalived实现高可用web集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="高可用负载-实现LVS高可用集群.html">
+            
+                <a href="高可用负载-实现LVS高可用集群.html">
+            
+                    
+                    高可用负载-实现LVS高可用集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                <a href="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                    
+                    故障-~etc~fstab文件配置错误导致系统启动异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="故障-CentOS修改内核引导顺序.html">
+            
+                <a href="故障-CentOS修改内核引导顺序.html">
+            
+                    
+                    故障-CentOS修改内核引导顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="故障-ping丢包或不通时链路测试说明.html">
+            
+                <a href="故障-ping丢包或不通时链路测试说明.html">
+            
+                    
+                    故障-ping丢包或不通时链路测试说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="故障-YUM的常用方法和常见问题处理.html">
+            
+                <a href="故障-YUM的常用方法和常见问题处理.html">
+            
+                    
+                    故障-YUM的常用方法和常见问题处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="故障-编译安装错误常见问题.html">
+            
+                <a href="故障-编译安装错误常见问题.html">
+            
+                    
+                    故障-编译安装错误常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="故障-目录误操作权限修改为777的修复方法.html">
+            
+                <a href="故障-目录误操作权限修改为777的修复方法.html">
+            
+                    
+                    故障-目录误操作权限修改为777的修复方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                <a href="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                    
+                    故障-排查Linux实例异常CPU使用率100%
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                <a href="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                    
+                    故障-启动或禁止用户或IP通过SSH登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="故障-启动网卡失败.html">
+            
+                <a href="故障-启动网卡失败.html">
+            
+                    
+                    故障-启动网卡失败
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="故障-通过MD5验证传输文件内容一致性.html">
+            
+                <a href="故障-通过MD5验证传输文件内容一致性.html">
+            
+                    
+                    故障-通过MD5验证传输文件内容一致性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                <a href="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                    
+                    故障-通过rm-f删除大量文件时报错：Argumentlisttoolong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="故障-网络异常时抓包操作说明.html">
+            
+                <a href="故障-网络异常时抓包操作说明.html">
+            
+                    
+                    故障-网络异常时抓包操作说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="故障-系统添加“回收站”.html">
+            
+                <a href="故障-系统添加“回收站”.html">
+            
+                    
+                    故障-系统添加“回收站”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="故障-系统无法正常启动.html">
+            
+                <a href="故障-系统无法正常启动.html">
+            
+                    
+                    故障-系统无法正常启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="监控-zabbix_API方式.html">
+            
+                <a href="监控-zabbix_API方式.html">
+            
+                    
+                    监控-zabbix_API方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="监控-zabbix-agent端的配置.html">
+            
+                <a href="监控-zabbix-agent端的配置.html">
+            
+                    
+                    监控-zabbix-agent端的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="监控-zabbix部署.html">
+            
+                <a href="监控-zabbix部署.html">
+            
+                    
+                    监控-zabbix部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="监控-zabbix部署1.html">
+            
+                <a href="监控-zabbix部署1.html">
+            
+                    
+                    监控-zabbix部署1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="监控-zabbix监控nginx.html">
+            
+                <a href="监控-zabbix监控nginx.html">
+            
+                    
+                    监控-zabbix监控nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="监控-监控CPU和内存的日志工具.html">
+            
+                <a href="监控-监控CPU和内存的日志工具.html">
+            
+                    
+                    监控-监控CPU和内存的日志工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="批量分发密钥-1密钥对创建.html">
+            
+                <a href="批量分发密钥-1密钥对创建.html">
+            
+                    
+                    批量分发密钥-1密钥对创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="批量分发密钥-ansible方式.html">
+            
+                <a href="批量分发密钥-ansible方式.html">
+            
+                    
+                    批量分发密钥-ansible方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="批量分发密钥-sshpass方式.html">
+            
+                <a href="批量分发密钥-sshpass方式.html">
+            
+                    
+                    批量分发密钥-sshpass方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="批量分发密钥-去除yes-no的提示.html">
+            
+                <a href="批量分发密钥-去除yes-no的提示.html">
+            
+                    
+                    批量分发密钥-去除yes-no的提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="普通用户添加ssh或禁止ssh.html">
+            
+                <a href="普通用户添加ssh或禁止ssh.html">
+            
+                    
+                    普通用户添加ssh或禁止ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="使用NGINX+LUA实现WAF功能.html">
+            
+                <a href="使用NGINX+LUA实现WAF功能.html">
+            
+                    
+                    使用NGINX+LUA实现WAF功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="网盘-Cloudreve_on_Docker.html">
+            
+                <a href="网盘-Cloudreve_on_Docker.html">
+            
+                    
+                    网盘-Cloudreve_on_Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="网盘-Docker+Nextcloud快速部署.html">
+            
+                <a href="网盘-Docker+Nextcloud快速部署.html">
+            
+                    
+                    网盘-Docker+Nextcloud快速部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="网盘-OpenMediaVault_NAS.html">
+            
+                <a href="网盘-OpenMediaVault_NAS.html">
+            
+                    
+                    网盘-OpenMediaVault_NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="网盘-owncloud存储.html">
+            
+                <a href="网盘-owncloud存储.html">
+            
+                    
+                    网盘-owncloud存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="文档-git_idoc文档中心.html">
+            
+                <a href="文档-git_idoc文档中心.html">
+            
+                    
+                    文档-git_idoc文档中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="文档-gitbook文档中心服务.html">
+            
+                <a href="文档-gitbook文档中心服务.html">
+            
+                    
+                    文档-gitbook文档中心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="文档-git命令推送github.html">
+            
+                <a href="文档-git命令推送github.html">
+            
+                    
+                    文档-git命令推送github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="文档-mindoc配置.html">
+            
+                <a href="文档-mindoc配置.html">
+            
+                    
+                    文档-mindoc配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                <a href="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                    
+                    文档-npm更换成淘宝镜像源以及cnpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="应用-6X-LNMP安装与部署.html">
+            
+                <a href="应用-6X-LNMP安装与部署.html">
+            
+                    
+                    应用-6X-LNMP安装与部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="应用-6xyum安装LNMP.html">
+            
+                <a href="应用-6xyum安装LNMP.html">
+            
+                    
+                    应用-6xyum安装LNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="应用-6x编译LNMP环境.html">
+            
+                <a href="应用-6x编译LNMP环境.html">
+            
+                    
+                    应用-6x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="应用-7x编译LNMP环境.html">
+            
+                <a href="应用-7x编译LNMP环境.html">
+            
+                    
+                    应用-7x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="应用-chkconfig命令.html">
+            
+                <a href="应用-chkconfig命令.html">
+            
+                    
+                    应用-chkconfig命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="应用-docker部署LAMP.html">
+            
+                <a href="应用-docker部署LAMP.html">
+            
+                    
+                    应用-docker部署LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="应用-rsync+inotify配置.html">
+            
+                <a href="应用-rsync+inotify配置.html">
+            
+                    
+                    应用-rsync+inotify配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="应用-VPN服务器之PPTP.html">
+            
+                <a href="应用-VPN服务器之PPTP.html">
+            
+                    
+                    应用-VPN服务器之PPTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="应用-堡垒机Teleport.html">
+            
+                <a href="应用-堡垒机Teleport.html">
+            
+                    
+                    应用-堡垒机Teleport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="应用-可视化实时Web日志分析工具.html">
+            
+                <a href="应用-可视化实时Web日志分析工具.html">
+            
+                    
+                    应用-可视化实时Web日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="应用-文件权限加固.html">
+            
+                <a href="应用-文件权限加固.html">
+            
+                    
+                    应用-文件权限加固
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >高可用负载-LVS+keepalived快速环境</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x9AD8;&#x53EF;&#x7528;&#x8D1F;&#x8F7D;-LVS+keepalived&#x5FEB;&#x901F;&#x73AF;&#x5883;</p>
+<p>centos6</p>
+<p># LVS &#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x6A21;&#x5F0F;&#xFF1A;DR&#xFF08;&#x76F4;&#x63A5;&#x8DEF;&#x7531;&#xFF09;</p>
+<p>192.168.18.31 master(LVS)</p>
+<p>192.168.18.32 slave(LVS)</p>
+<p>192.168.18.18 VIP</p>
+<p>192.168.18.11 web1</p>
+<p>192.168.18.12 web2</p>
+<p>##################################</p>
+<p>#&#x624B;&#x52A8;&#x914D;&#x7F6E;&#x6D4B;&#x8BD5;</p>
+<p>###LVS &#x5B89;&#x88C5;&#x914D;&#x7F6E;</p>
+<p>yum install ipvsadm -y</p>
+<p>rpm -ql ipvsadm</p>
+<p># ipvsadm</p>
+<p># lsmod|grep ip_vs</p>
+<p>#&#x6DFB;&#x52A0;VIP</p>
+<p>/sbin/ifconfig eth1:1 192.168.18.18/24 up</p>
+<p>#ifconfig eth1:1 down #&#x6D4B;&#x8BD5;&#x5B8C;&#x540E;&#x505C;&#x6B62;VIP</p>
+<p>ipvsadm -C #&#x6E05;&#x7A7A;</p>
+<p>#&#x6DFB;&#x52A0;&#x865A;&#x62DF;&#x670D;&#x52A1;</p>
+<p>ipvsadm -A -t 192.168.18.18:80 -s wrr -p 20</p>
+<p>#&#x6DFB;&#x52A0;&#x540E;&#x7AEF;&#x670D;&#x52A1;</p>
+<p>ipvsadm -a -t 192.168.18.18:80 -r 192.168.18.11:80 -g -w 1</p>
+<p>ipvsadm -a -t 192.168.18.18:80 -r 192.168.18.12:80 -g -w 1</p>
+<p>#&#x5220;&#x9664;ipvsadm -d -t 192.168.18.18:80 -r 192.168.18.11:80</p>
+<p>ipvsadm -L -n #&#x67E5;&#x770B;&#x5217;&#x8868;</p>
+<p>##########</p>
+<p>##################################</p>
+<p># &#x540E;&#x7AEF;WEB&#x914D;&#x7F6E;</p>
+<p># &#x5B89;&#x88C5;Apache&#x6216;nginx&#xFF0C;&#x542F;&#x52A8;&#x670D;&#x52A1;</p>
+<p># yum install httpd -y</p>
+<p># echo &#x201C;this is rs1&#x201D; &gt; /var/www/html/index.html</p>
+<p># service httpd restart</p>
+<p>vim lvs-rs.sh</p>
+<p>#!/bin/bash</p>
+<p># &#x914D;&#x7F6E;VIP&#x3001;&#x914D;&#x7F6E;ARP&#x6291;&#x5236;</p>
+<p>VIP=192.168.18.18</p>
+<p>. /etc/rc.d/init.d/functions</p>
+<p>case &quot;$1&quot; in</p>
+<p>start)</p>
+<p>echo &quot; start LVS of REALServer&quot;</p>
+<p>/sbin/ifconfig lo:0 $VIP broadcast $VIP netmask 255.255.255.255 up</p>
+<p>/sbin/route add -host $VIP dev lo:0</p>
+<p>echo &quot;1&quot; &gt;/proc/sys/net/ipv4/conf/lo/arp_ignore</p>
+<p>echo &quot;2&quot; &gt;/proc/sys/net/ipv4/conf/lo/arp_announce</p>
+<p>echo &quot;1&quot; &gt;/proc/sys/net/ipv4/conf/all/arp_ignore</p>
+<p>echo &quot;2&quot; &gt;/proc/sys/net/ipv4/conf/all/arp_announce</p>
+<p>sysctl -p &gt;/dev/null 2&gt;&amp;1</p>
+<p>;;</p>
+<p>stop)</p>
+<p>/sbin/ifconfig lo:0 down</p>
+<p>echo &quot;close LVS Directorserver&quot;</p>
+<p>echo &quot;0&quot; &gt;/proc/sys/net/ipv4/conf/lo/arp_ignore</p>
+<p>echo &quot;0&quot; &gt;/proc/sys/net/ipv4/conf/lo/arp_announce</p>
+<p>echo &quot;0&quot; &gt;/proc/sys/net/ipv4/conf/all/arp_ignore</p>
+<p>echo &quot;0&quot; &gt;/proc/sys/net/ipv4/conf/all/arp_announce</p>
+<p>;;</p>
+<p>*)</p>
+<p>echo &quot;Usage: $0 {start|stop}&quot;</p>
+<p>exit 1</p>
+<p>esac</p>
+<p>exit 0</p>
+<p>#&#x7ED9;&#x811A;&#x672C;&#x52A0;&#x6743;&#x9650;&#xFF0C;&#x5E76;&#x6267;&#x884C;</p>
+<p>chmod +x lvs-rs.sh</p>
+<p>chmod 755 /etc/rc.d/init.d/functions</p>
+<p>./lvs-rs.sh start</p>
+<p>##################################</p>
+<p>#LVS+keepalived &#x914D;&#x7F6E;</p>
+<p>yum install keepalived -y</p>
+<p>#rpm -ql keepalived</p>
+<p>#&#x5206;&#x522B;&#x5B89;&#x88C5;&#x914D;&#x7F6E;keepalived</p>
+<p>cp /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak</p>
+<p>vim /etc/keepalived/keepalived.conf</p>
+<p>/etc/init.d/keepalived restart</p>
+<p>/etc/init.d/keepalived stop #&#x5173;&#x95ED;&#x3001;&#x5F00;&#x542F;LVS_MASTER&#x6D4B;&#x8BD5;</p>
+<p>ip add #&#x67E5;&#x770B;VIP</p>
+<p>#&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>#####keepalived&#x914D;&#x7F6E;</p>
+<p>! Configuration File forkeepalived</p>
+<p>global_defs {</p>
+<p># notification_email {</p>
+<p># test\@sina.com #&#x6545;&#x969C;&#x63A5;&#x53D7;&#x8054;&#x7CFB;&#x4EBA;</p>
+<p># }</p>
+<p># notification_email_from admin\@test.com #&#x6545;&#x969C;&#x53D1;&#x9001;&#x4EBA;</p>
+<p># smtp_server 127.0.0.1 #&#x672C;&#x673A;&#x53D1;&#x9001;&#x90AE;&#x4EF6;</p>
+<p># smtp_connect_timeout 30</p>
+<p>router_id LVS_MASTER</p>
+<p>#router_id LVS_BACKUP #LVS_BACKUP</p>
+<p>}</p>
+<p>vrrp_instance VI_1 {</p>
+<p>state MASTER</p>
+<p>#state BACKUP</p>
+<p>interface eth1</p>
+<p>virtual_router_id 18 #&#x865A;&#x62DF;&#x8DEF;&#x7531;&#x6807;&#x8BC6;&#xFF0C;&#x4E3B;&#x4ECE;&#x76F8;&#x540C;</p>
+<p>priority 100</p>
+<p>#priority 90 #BACKUP</p>
+<p>advert_int 1</p>
+<p>authentication {</p>
+<p>auth_type PASS</p>
+<p>auth_pass 1111 #&#x4E3B;&#x4ECE;&#x8BA4;&#x8BC1;&#x5BC6;&#x7801;&#x5FC5;&#x987B;&#x4E00;&#x81F4;</p>
+<p>}</p>
+<p>virtual_ipaddress { #Web&#x865A;&#x62DF;IP&#xFF08;VTP&#xFF09;</p>
+<p>192.168.18.18/24</p>
+<p>}</p>
+<p>}</p>
+<p>###real_server###</p>
+<p>virtual_server 192.168.18.18 80 { #&#x5B9A;&#x4E49;&#x865A;&#x62DF;IP&#x548C;&#x7AEF;&#x53E3;</p>
+<p>delay_loop 6 #&#x68C0;&#x67E5;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;</p>
+<p>lb_algo rr #&#x8BBE;&#x7F6E;&#x8D1F;&#x8F7D;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#xFF0C;rr&#x4E3A;&#x8F6E;&#x8BAD;</p>
+<p>lb_kind DR #&#x8BBE;&#x7F6E;LVS&#x8D1F;&#x8F7D;&#x5747;&#x8861;DR&#x6A21;&#x5F0F;</p>
+<p>persistence_timeout 30 #&#x540C;&#x4E00;IP&#x7684;&#x8FDE;&#x63A5;30&#x79D2;&#x5185;&#x88AB;&#x5206;&#x914D;&#x5230;&#x540C;&#x4E00;&#x53F0;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;</p>
+<p>protocol TCP #&#x4F7F;&#x7528;TCP&#x534F;&#x8BAE;&#x68C0;&#x67E5;realserver&#x72B6;&#x6001;</p>
+<p>real_server 192.168.18.11 80 { #&#x7B2C;&#x4E00;&#x4E2A;web&#x670D;&#x52A1;&#x5668;</p>
+<p>weight 3 #&#x8282;&#x70B9;&#x6743;&#x91CD;&#x503C;</p>
+<p>TCP_CHECK { #&#x5065;&#x5EB7;&#x68C0;&#x67E5;&#x65B9;&#x5F0F;</p>
+<p>connect_timeout 3 #&#x8FDE;&#x63A5;&#x8D85;&#x65F6;</p>
+<p>nb_get_retry 3 #&#x91CD;&#x8BD5;&#x6B21;&#x6570;</p>
+<p>delay_before_retry 3 #&#x91CD;&#x8BD5;&#x95F4;&#x9694;/S</p>
+<p>}</p>
+<p>}</p>
+<p>real_server 192.168.18.12 80 { #&#x7B2C;&#x4E8C;&#x4E2A;web&#x670D;&#x52A1;&#x5668;</p>
+<p>weight 3</p>
+<p>TCP_CHECK {</p>
+<p>connect_timeout 3</p>
+<p>nb_get_retry 3</p>
+<p>delay_before_retry 3</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>#####keepalived&#x914D;&#x7F6E;</p>
+<p>##</p>
+<p>curl <a href="http://192.168.18.18" target="_blank">http://192.168.18.18</a> &gt;/tmp/null #http&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;</p>
+<p>tail -10 /var/log/nginx/access.log #&#x67E5;&#x770B;nginx&#x65E5;&#x5FD7;</p>
+<p>tail -10 /etc/httpd/logs/access_log #&#x67E5;&#x770B;Apache&#x65E5;&#x5FD7;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="高可用负载-LVS+keepalive.html" class="navigation navigation-prev " aria-label="Previous page: 高可用负载-LVS+keepalive">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="高可用负载-LVS四层负载均衡.html" class="navigation navigation-next " aria-label="Next page: 高可用负载-LVS四层负载均衡">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"高可用负载-LVS+keepalived快速环境","level":"1.13","depth":1,"next":{"title":"高可用负载-LVS四层负载均衡","level":"1.14","depth":1,"path":"高可用负载-LVS四层负载均衡.md","ref":"高可用负载-LVS四层负载均衡.md","articles":[]},"previous":{"title":"高可用负载-LVS+keepalive","level":"1.12","depth":1,"path":"高可用负载-LVS+keepalive.md","ref":"高可用负载-LVS+keepalive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"高可用负载-LVS+keepalived快速环境.md","mtime":"2019-03-22T05:27:44.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:16:12.436Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

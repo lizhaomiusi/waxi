@@ -1,0 +1,933 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>应该知道的LINUX技巧 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="系统屏蔽某个IP的访问.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1常用查询.html">
+            
+                <a href="1常用查询.html">
+            
+                    
+                    1常用查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1日常配置.html">
+            
+                <a href="1日常配置.html">
+            
+                    
+                    1日常配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="25个必须记住的SSH命令.html">
+            
+                <a href="25个必须记住的SSH命令.html">
+            
+                    
+                    25个必须记住的SSH命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="centos_6_网卡问题.html">
+            
+                <a href="centos_6_网卡问题.html">
+            
+                    
+                    centos6网卡问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="centos_7_网卡配置.html">
+            
+                <a href="centos_7_网卡配置.html">
+            
+                    
+                    centos7网卡配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CentOS7添加新磁盘而不用重启.html">
+            
+                <a href="CentOS7添加新磁盘而不用重启.html">
+            
+                    
+                    CentOS7添加新磁盘而不用重启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Centos系统优化.html">
+            
+                <a href="Centos系统优化.html">
+            
+                    
+                    Centos系统优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="crond命令_定时任务.html">
+            
+                <a href="crond命令_定时任务.html">
+            
+                    
+                    crond命令_定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="diff命令.html">
+            
+                <a href="diff命令.html">
+            
+                    
+                    diff命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="iptables的四表五链.html">
+            
+                <a href="iptables的四表五链.html">
+            
+                    
+                    iptables的四表五链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="linux查看和修改PATH环境变量的方法.html">
+            
+                <a href="linux查看和修改PATH环境变量的方法.html">
+            
+                    
+                    linux查看和修改PATH环境变量的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="linux磁盘空间满了.html">
+            
+                <a href="linux磁盘空间满了.html">
+            
+                    
+                    linux磁盘空间满了
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Linux设置SFTP服务用户目录权限.html">
+            
+                <a href="Linux设置SFTP服务用户目录权限.html">
+            
+                    
+                    Linux设置SFTP服务用户目录权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="linux忘记密码.html">
+            
+                <a href="linux忘记密码.html">
+            
+                    
+                    linux忘记密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="linux下添加路由.html">
+            
+                <a href="linux下添加路由.html">
+            
+                    
+                    linux下添加路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="man中文手册安装.html">
+            
+                <a href="man中文手册安装.html">
+            
+                    
+                    man中文手册安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="nc命令.html">
+            
+                <a href="nc命令.html">
+            
+                    
+                    nc命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="nmon性能测试工具.html">
+            
+                <a href="nmon性能测试工具.html">
+            
+                    
+                    nmon性能测试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="pdsh命令.html">
+            
+                <a href="pdsh命令.html">
+            
+                    
+                    pdsh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="pssh命令.html">
+            
+                <a href="pssh命令.html">
+            
+                    
+                    pssh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="rm_-rf_恢复.html">
+            
+                <a href="rm_-rf_恢复.html">
+            
+                    
+                    rm-rf恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="rsync-init.d脚本.html">
+            
+                <a href="rsync-init.d脚本.html">
+            
+                    
+                    rsync-init.d脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="rsync-win平台.html">
+            
+                <a href="rsync-win平台.html">
+            
+                    
+                    rsync-win平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="rsync-参数server端.html">
+            
+                <a href="rsync-参数server端.html">
+            
+                    
+                    rsync-参数server端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="rsync-参数客户端.html">
+            
+                <a href="rsync-参数客户端.html">
+            
+                    
+                    rsync-参数客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="rsync-服务端配置.html">
+            
+                <a href="rsync-服务端配置.html">
+            
+                    
+                    rsync-服务端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="rsync-故障.html">
+            
+                <a href="rsync-故障.html">
+            
+                    
+                    rsync-故障
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="rsync-客户端配置.html">
+            
+                <a href="rsync-客户端配置.html">
+            
+                    
+                    rsync-客户端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="sshpass命令.html">
+            
+                <a href="sshpass命令.html">
+            
+                    
+                    sshpass命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="SSH隧道.html">
+            
+                <a href="SSH隧道.html">
+            
+                    
+                    SSH隧道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="SSH远程连接服务慢解决.html">
+            
+                <a href="SSH远程连接服务慢解决.html">
+            
+                    
+                    SSH远程连接服务慢解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="systemctl命令.html">
+            
+                <a href="systemctl命令.html">
+            
+                    
+                    systemctl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="vnstat进行流量统计.html">
+            
+                <a href="vnstat进行流量统计.html">
+            
+                    
+                    vnstat进行流量统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="安装完centos7需要干.html">
+            
+                <a href="安装完centos7需要干.html">
+            
+                    
+                    安装完centos7需要干
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="安装状态监控Linux_Dash.html">
+            
+                <a href="安装状态监控Linux_Dash.html">
+            
+                    
+                    安装状态监控Linux_Dash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="常见安全检查方法.html">
+            
+                <a href="常见安全检查方法.html">
+            
+                    
+                    常见安全检查方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="服务器删除文件权限不够.html">
+            
+                <a href="服务器删除文件权限不够.html">
+            
+                    
+                    服务器删除文件权限不够
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="更改linux终端中用户名颜色.html">
+            
+                <a href="更改linux终端中用户名颜色.html">
+            
+                    
+                    更改linux终端中用户名颜色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="配置systemctl命令tab自动补全.html">
+            
+                <a href="配置systemctl命令tab自动补全.html">
+            
+                    
+                    配置systemctl命令tab自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="全能系统监控工具dstat.html">
+            
+                <a href="全能系统监控工具dstat.html">
+            
+                    
+                    全能系统监控工具dstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="生产场景如何对linux系统进行合理规划分区.html">
+            
+                <a href="生产场景如何对linux系统进行合理规划分区.html">
+            
+                    
+                    生产场景如何对linux系统进行合理规划分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="使用mkpasswd命令生成随机密码.html">
+            
+                <a href="使用mkpasswd命令生成随机密码.html">
+            
+                    
+                    使用mkpasswd命令生成随机密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="系统屏蔽某个IP的访问.html">
+            
+                <a href="系统屏蔽某个IP的访问.html">
+            
+                    
+                    系统屏蔽某个IP的访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.45" data-path="应该知道的LINUX技巧.html">
+            
+                <a href="应该知道的LINUX技巧.html">
+            
+                    
+                    应该知道的LINUX技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >应该知道的LINUX技巧</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#x7684;LINUX&#x6280;&#x5DE7;</p>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x6765;&#x6E90;&#x4E8E;Quroa&#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x7B54;&#x300A;What are some time-saving tips that every Linux
+user should know?&#x300B;--
+Linux&#x7528;&#x6237;&#x6709;&#x54EA;&#x4E9B;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#x7684;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x7684;&#x6280;&#x5DE7;&#x3002;&#x6211;&#x89C9;&#x5F97;&#x633A;&#x597D;&#x7684;&#xFF0C;&#x603B;&#x7ED3;&#x5F97;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x628A;&#x5176;&#x8F6C;&#x8FC7;&#x6765;&#xFF0C;&#x5E76;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x81EA;&#x5DF1;&#x7684;&#x7406;&#x89E3;&#x3002;
+&#x9996;&#x5148;&#xFF0C;&#x6211;&#x60F3;&#x544A;&#x8BC9;&#x5927;&#x5BB6;&#xFF0C;&#x5728;Unix/Linux&#x4E0B;&#xFF0C;&#x6700;&#x6709;&#x6548;&#x7387;&#x6280;&#x5DE7;&#x7684;&#x4E0D;&#x662F;&#x64CD;&#x4F5C;&#x56FE;&#x5F62;&#x754C;&#x9762;&#xFF0C;&#x800C;&#x662F;&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x547D;&#x4EE4;&#x884C;&#x610F;&#x5473;&#x7740;&#x81EA;&#x52A8;&#x5316;&#x3002;&#x5982;&#x679C;&#x4F60;&#x770B;&#x8FC7;&#x300A;&#x4F60;&#x53EF;&#x80FD;&#x4E0D;&#x77E5;&#x9053;&#x7684;Shell&#x300B;&#x4EE5;&#x53CA;&#x300A;28&#x4E2A;Unix/Linux&#x7684;&#x547D;&#x4EE4;&#x884C;&#x795E;&#x5668;&#x300B;&#x4F60;&#x5C31;&#x4F1A;&#x77E5;&#x9053;Linux&#x6709;&#x591A;&#x5F3A;&#x5927;&#xFF0C;&#x8FD9;&#x4E2A;&#x5F3A;&#x5927;&#x5B8C;&#x5168;&#x6765;&#x81EA;&#x4E8E;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x4E8E;&#x662F;&#xFF0C;&#x5C31;&#x7B97;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x53BB;&#x505A;&#x4E00;&#x4E2A;&#x73AF;&#x4FDD;&#x4E3B;&#x4E49;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x81F3;&#x5C11;&#x4ED6;&#x4EEC;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5C11;&#x71AC;&#x70B9;&#x591C;&#xFF0C;&#x4ECE;&#x800C;&#x6709;&#x5229;&#x4E8E;&#x4F60;&#x7684;&#x8EAB;&#x4F53;&#x5065;&#x5EB7;&#x548C;&#x6027;&#x751F;&#x6D3B;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x70B9;&#x957F;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x6B63;&#x5982;&#x4F5C;&#x8005;&#x6240;&#x8BF4;&#xFF0C;&#x4F60;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x77E5;&#x9053;&#x6240;&#x6709;&#x7684;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x5728;&#x5F88;&#x6C89;&#x91CD;&#x5730;&#x5728;&#x4F7F;&#x7528;Linux&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#x90FD;&#x503C;&#x5F97;&#x4F60;&#x770B;&#x4E00;&#x770B;&#x3002;
+&#xFF08;&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x77E5;&#x9053;&#x4E0B;&#x9762;&#x6D89;&#x53CA;&#x5230;&#x7684;&#x547D;&#x4EE4;&#x7684;&#x66F4;&#x591A;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x4F60;&#x4E00;&#x5B9A;&#x8981;man&#x4E00;&#x70B9;&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x9700;&#x8981;&#x5148;yum&#x6216;apt-get&#x6765;&#x5B89;&#x88C5;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;&#x522B;&#x5FD8;&#x4E86;Google&#x3002;&#x5982;&#x679C;&#x4F60;&#x8981;Baidu&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EC5;&#x4EE3;&#x8868;&#x8FD9;&#x4E2A;&#x5730;&#x7403;&#x4E0A;&#x6240;&#x6709;&#x7684;&#x751F;&#x7269;&#x5305;&#x62EC;&#x5FAE;&#x751F;&#x7269;&#x751A;&#x81F3;&#x7EC6;&#x83CC;&#x75C5;&#x6BD2;&#x548C;&#x5C0F;&#x5F3A;BS&#x4F60;&#x5230;&#x5B87;&#x5B99;&#x6BC1;&#x706D;&#xFF09;</p>
+<p>&#x57FA;&#x7840;</p>
+<p>&#x5B66;&#x4E60; Bash &#x3002;&#x4F60;&#x53EF;&#x4EE5;man
+bash&#x6765;&#x770B;&#x770B;bash&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x5E76;&#x4E0D;&#x590D;&#x6742;&#x4E5F;&#x5E76;&#x4E0D;&#x957F;&#x3002;&#x4F60;&#x7528;&#x522B;&#x7684;shell&#x4E5F;&#x884C;&#xFF0C;&#x4F46;&#x662F;bash&#x662F;&#x5F88;&#x5F3A;&#x5927;&#x7684;&#x5E76;&#x4E14;&#x4E5F;&#x662F;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x3002;&#xFF08;&#x5B66;&#x4E60;zsh&#x6216;tsch&#x53EA;&#x4F1A;&#x8BA9;&#x4F60;&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#x53D7;&#x5230;&#x9650;&#x5236;&#xFF09;</p>
+<p>&#x5B66;&#x4E60; vim
+&#x3002;&#x5728;Linux&#x4E0B;&#xFF0C;&#x57FA;&#x672C;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x53EF;&#x4E0E;&#x4E4B;&#x7ADE;&#x4E89;&#x7684;&#x7F16;&#x8BD1;&#x8F91;&#x5668;&#xFF08;&#x5C31;&#x7B97;&#x4F60;&#x662F;&#x4E00;&#x4E2A;Emacs&#x6216;Eclipse&#x7684;&#x91CD;&#x5EA6;&#x7528;&#x6237;&#xFF09;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x300A;&#x7B80;&#x660E;vim&#x653B;&#x7565;&#x300B;&#x548C;
+&#x300A;Vim&#x7684;&#x5192;&#x9669;&#x6E38;&#x620F;&#x300B;&#x4EE5;&#x53CA;&#x300A;&#x7ED9;&#x7A0B;&#x5E8F;&#x5458;&#x7684;Vim&#x901F;&#x67E5;&#x5361;&#x300B;&#x8FD8;&#x6709;&#x300A;&#x628A;Vim&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x7F16;&#x7A0B;&#x7684;IDE&#x300B;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x4E86;&#x89E3; ssh&#x3002;&#x660E;&#x767D;&#x4E0D;&#x9700;&#x8981;&#x53E3;&#x4EE4;&#x7684;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#xFF08;&#x901A;&#x8FC7;ssh-agent,
+ssh-add&#xFF09;&#xFF0C;&#x5B66;&#x4F1A;&#x7528;ssh&#x7FFB;&#x5899;&#xFF0C;&#x7528;scp&#x800C;&#x4E0D;&#x662F;ftp&#x4F20;&#x6587;&#x4EF6;&#xFF0C;&#x7B49;&#x7B49;&#x3002;&#x4F60;&#x77E5;&#x9053;&#x5417;&#xFF1F;scp
+&#x8FDC;&#x7AEF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6309;tab&#x952E;&#x6765;&#x67E5;&#x770B;&#x8FDC;&#x7AEF;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#xFF08;&#x5F53;&#x7136;&#xFF0C;&#x9700;&#x8981;&#x65E0;&#x53E3;&#x4EE4;&#x7684;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#xFF09;&#xFF0C;&#x8FD9;&#x90FD;&#x662F;bash&#x7684;&#x529F;&#x52B3;&#x3002;</p>
+<p>&#x719F;&#x6089;bash&#x7684;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#xFF0C;&#x5982;&#xFF1A; &amp;, Ctrl-Z, Ctrl-C, jobs, fg, bg, kill,
+&#x7B49;&#x7B49;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x8981;&#x77E5;&#x9053;Ctrl+&#xFF08;SIGQUIT&#xFF09;&#x548C;Ctrl+C &#xFF08;SIGINT&#xFF09;&#x7684;&#x533A;&#x522B;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x7684;&#x6587;&#x4EF6;&#x7BA1;&#x7406; &#xFF1A; ls &#x548C; ls -l (&#x4F60;&#x6700;&#x597D;&#x77E5;&#x9053; &#x201C;ls -l&#x201D; &#x7684;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x610F;&#x601D;), less, head,
+tail &#x548C; tail -f, ln &#x548C; ln -s (&#x4F60;&#x77E5;&#x9053;&#x660E;&#x767D;hard link&#x548C;soft link&#x7684;&#x4E0D;&#x540C;&#x548C;&#x4F18;&#x7F3A;&#x70B9;),
+chown, chmod, du (&#x5982;&#x679C;&#x4F60;&#x60F3;&#x770B;&#x770B;&#x78C1;&#x76D8;&#x7684;&#x5927;&#x5C0F; du -sk *), df,
+mount&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x539F;&#x4F5C;&#x8005;&#x5FD8;&#x4E86;find&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x57FA;&#x7840;&#x7684;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#xFF1A; ip &#x6216; ifconfig, dig&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x539F;&#x4F5C;&#x8005;&#x8FD8;&#x5FD8;&#x4E86;&#x5982;netstat, ping,
+traceroute, &#x7B49;</p>
+<p>&#x7406;&#x89E3;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD8;&#x6709;grep/egrep&#x7684;&#x5404;&#x79CD;&#x9009;&#x9879;&#x3002;&#x6BD4;&#x5982;&#xFF1A; -o, -A, &#x548C; -B
+&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x662F;&#x5F88;&#x503C;&#x5F97;&#x4E86;&#x89E3;&#x7684;&#x3002;</p>
+<p>&#x5B66;&#x4E60;&#x4F7F;&#x7528; apt-get &#x548C; yum
+&#x6765;&#x67E5;&#x627E;&#x548C;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#xFF08;&#x524D;&#x8005;&#x7684;&#x7ECF;&#x5178;&#x5206;&#x53D1;&#x5305;&#x662F;Ubuntu&#xFF0C;&#x540E;&#x8005;&#x7684;&#x7ECF;&#x5178;&#x5206;&#x53D1;&#x5305;&#x662F;Redhat&#xFF09;&#xFF0C;&#x6211;&#x8FD8;&#x5EFA;&#x8BAE;&#x4F60;&#x8BD5;&#x7740;&#x4ECE;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x3002;</p>
+<p>&#x65E5;&#x5E38;</p>
+<p>&#x5728; bash &#x91CC;&#xFF0C;&#x4F7F;&#x7528; Ctrl-R &#x800C;&#x4E0D;&#x662F;&#x4E0A;&#x4E0B;&#x5149;&#x6807;&#x952E;&#x6765;&#x67E5;&#x627E;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x5728; bash&#x91CC;&#xFF0C;&#x4F7F;&#x7528; Ctrl-W &#x6765;&#x5220;&#x9664;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;&#x4F7F;&#x7528; Ctrl-U &#x6765;&#x5220;&#x9664;&#x4E00;&#x884C;&#x3002;&#x8BF7;man
+bash&#x540E;&#x67E5;&#x627E;Readline Key Bindings&#x4E00;&#x8282;&#x6765;&#x770B;&#x770B;bash&#x7684;&#x9ED8;&#x8BA4;&#x70ED;&#x952E;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;Alt-.
+&#x628A;&#x4E0A;&#x4E00;&#x6B21;&#x547D;&#x4EE4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x6253;&#x51FA;&#x6765;&#xFF0C;&#x800C;Alt-* &#x5219;&#x5217;&#x51FA;&#x4F60;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x6B21;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF1A; cd - &#xFF08;&#x56DE;&#x5230;home&#x662F; cd ~&#xFF09;</p>
+<p>&#x4F7F;&#x7528;
+xargs&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5F3A;&#x5927;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;-L&#x6765;&#x9650;&#x5B9A;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;-P&#x6765;&#x6307;&#x5B9A;&#x5E76;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x4F60;&#x7684;&#x547D;&#x4EE4;&#x4F1A;&#x53D8;&#x6210;&#x4EC0;&#x4E48;&#x6837;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;xargs
+echo&#x6765;&#x770B;&#x770B;&#x4F1A;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x3002;&#x5F53;&#x7136;&#xFF0C; -I{} &#x4E5F;&#x5F88;&#x597D;&#x7528;&#x3002;&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>find . -name *.py | xargs grep some_function cat hosts | xargs -I{} ssh
+root\@{} hostname</p>
+<p>pstree -p
+&#x53EF;&#x4EE5;&#x5E2E;&#x4F60;&#x663E;&#x793A;&#x8FDB;&#x7A0B;&#x6811;&#x3002;&#xFF08;&#x8BFB;&#x8FC7;&#x6211;&#x7684;&#x90A3;&#x7BC7;&#x300A;&#x4E00;&#x4E2A;fork&#x7684;&#x9762;&#x8BD5;&#x9898;&#x300B;&#x7684;&#x4EBA;&#x5E94;&#x8BE5;&#x90FD;&#x4E0D;&#x964C;&#x751F;&#xFF09;</p>
+<p>&#x4F7F;&#x7528; pgrep &#x548C; pkill &#x6765;&#x627E;&#x5230;&#x6216;&#x662F;kill &#x67D0;&#x4E2A;&#x540D;&#x5B57;&#x7684;&#x8FDB;&#x7A0B;&#x3002; (-f &#x9009;&#x9879;&#x5F88;&#x6709;&#x7528;).</p>
+<p>&#x4E86;&#x89E3;&#x53EF;&#x4EE5;&#x53D1;&#x7ED9;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x53F7;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x8981;&#x6302;&#x8D77;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x4F7F;&#x7528; kill -STOP [pid]. &#x4F7F;&#x7528; man 7
+signal &#x6765;&#x67E5;&#x770B;&#x5404;&#x79CD;&#x4FE1;&#x53F7;&#xFF0C;&#x4F7F;&#x7528;kill -l &#x6765;&#x67E5;&#x770B;&#x6570;&#x5B57;&#x548C;&#x4FE1;&#x53F7;&#x7684;&#x5BF9;&#x5E94;&#x8868;</p>
+<p>&#x4F7F;&#x7528; nohup &#x6216; disown &#x5982;&#x679C;&#x4F60;&#x8981;&#x8BA9;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x5728;&#x540E;&#x53F0;&#x3002;</p>
+<p>&#x4F7F;&#x7528;netstat -lntp&#x6765;&#x770B;&#x770B;&#x6709;&#x4FA6;&#x542C;&#x5728;&#x7F51;&#x7EDC;&#x67D0;&#x7AEF;&#x53E3;&#x7684;&#x8FDB;&#x7A0B;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; lsof&#x3002;</p>
+<p>&#x5728;bash&#x7684;&#x811A;&#x672C;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; set -x &#x6765;debug&#x8F93;&#x51FA;&#x3002;&#x4F7F;&#x7528; set -e
+&#x6765;&#x5F53;&#x6709;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x5019;abort&#x6267;&#x884C;&#x3002;&#x8003;&#x8651;&#x4F7F;&#x7528; set -o pipefail
+&#x6765;&#x9650;&#x5236;&#x9519;&#x8BEF;&#x3002;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;trap&#x6765;&#x622A;&#x83B7;&#x4FE1;&#x53F7;&#xFF08;&#x5982;&#x622A;&#x83B7;ctrl+c&#xFF09;&#x3002;</p>
+<p>&#x5728;bash &#x811A;&#x672C;&#x4E2D;&#xFF0C;subshells (&#x5199;&#x5728;&#x5706;&#x62EC;&#x53F7;&#x91CC;&#x7684;)
+&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7EC4;&#x5408;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x3002;&#x4E00;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x4E34;&#x65F6;&#x5730;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p># do something in current dir(cd /some/other/dir; other-command)# continue in
+original dir</p>
+<p>&#x5728; bash &#x4E2D;&#xFF0C;&#x6CE8;&#x610F;&#x90A3;&#x91CC;&#x6709;&#x5F88;&#x591A;&#x7684;&#x53D8;&#x91CF;&#x5C55;&#x5F00;&#x3002;&#x5982;&#xFF1A;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x5B58;&#x5728;: ${name:?error
+message}&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;bash&#x7684;&#x811A;&#x672C;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E5F;&#x8BB8;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;
+input_file=${1:?usage: $0 input_file}&#x3002;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A; i=$(( (i + 1) % 5
+))&#x3002;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#xFF1A; {1..10}&#x3002; &#x622A;&#x65AD;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF1A; ${var%suffix} &#x548C; ${var#prefix}&#x3002;
+&#x793A;&#x4F8B;&#xFF1A; if var=foo.pdf, then echo ${var%.pdf}.txt prints &#x201C;foo.txt&#x201D;.</p>
+<p>&#x901A;&#x8FC7; \&lt;(some command) &#x53EF;&#x4EE5;&#x628A;&#x67D0;&#x547D;&#x4EE4;&#x5F53;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x3002;&#x793A;&#x4F8B;&#xFF1A;&#x6BD4;&#x8F83;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x548C;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;
+/etc/hosts&#xFF1A; diff /etc/hosts \&lt;(ssh somehost cat /etc/hosts)</p>
+<p>&#x4E86;&#x89E3;&#x4EC0;&#x4E48;&#x53EB; &#x201C;here documents&#x201D; &#xFF0C;&#x5C31;&#x662F;&#x8BF8;&#x5982; cat \&lt;\&lt;EOF &#x8FD9;&#x6837;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<p>&#x5728; bash&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x548C;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x3002;&#x5982;&#xFF1A; some-command &gt;logfile
+2&gt;&amp;1&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x8981;&#x786E;&#x8BA4;&#x67D0;&#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x628A;&#x67D0;&#x4E2A;&#x6253;&#x5F00;&#x4E86;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x91CD;&#x5B9A;&#x5411;&#x7ED9;&#x6807;&#x51C6;&#x8F93;&#x5165;&#xFF0C;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x662F;&#x52A0;&#x4E0A;
+&#x201C;\&lt;/dev/null&#x201D;&#xFF0C;&#x628A;/dev/null&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x3002;</p>
+<p>&#x4F7F;&#x7528; man ascii &#x6765;&#x67E5;&#x770B; ASCII &#x8868;&#x3002;</p>
+<p>&#x5728;&#x8FDC;&#x7AEF;&#x7684; ssh &#x4F1A;&#x8BDD;&#x91CC;&#xFF0C;&#x4F7F;&#x7528; screen &#x6216; dtach
+&#x6765;&#x4FDD;&#x5B58;&#x4F60;&#x7684;&#x4F1A;&#x8BDD;&#x3002;&#xFF08;&#x53C2;&#x770B;&#x300A;28&#x4E2A;Unix/Linux&#x7684;&#x547D;&#x4EE4;&#x884C;&#x795E;&#x5668;&#x300B;&#xFF09;</p>
+<p>&#x8981;&#x6765;debug Web&#xFF0C;&#x8BD5;&#x8BD5;curl &#x548C; curl -I &#x6216;&#x662F; wget &#x3002;&#x6211;&#x89C9;&#x5F97;debug
+Web&#x7684;&#x5229;&#x5668;&#x662F;firebug&#xFF0C;curl&#x548C;wget&#x662F;&#x7528;&#x6765;&#x6293;&#x7F51;&#x9875;&#x7684;&#xFF0C;&#x5475;&#x5475;&#x3002;</p>
+<p>&#x628A; HTML &#x8F6C;&#x6210;&#x6587;&#x672C;&#xFF1A; lynx -dump -stdin</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8981;&#x5904;&#x7406;XML&#xFF0C;&#x4F7F;&#x7528; xmlstarlet</p>
+<p>&#x5BF9;&#x4E8E; Amazon S3&#xFF0C; s3cmd &#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x547D;&#x4EE4;&#xFF08;&#x8FD8;&#x6709;&#x70B9;&#x4E0D;&#x6210;&#x719F;&#xFF09;</p>
+<p>&#x5728; ssh&#x4E2D;&#xFF0C;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x6765;&#x4F7F;&#x7528;ssh&#x96A7;&#x9053;&#x3002;&#x901A;&#x8FC7; -L or -D (&#x8FD8;&#x6709;-R) &#xFF0C;&#x7FFB;&#x5899;&#x795E;&#x5668;&#x3002;</p>
+<p>&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x5BF9;&#x4F60;&#x7684;ssh &#x505A;&#x70B9;&#x4F18;&#x5316;&#x3002;&#x6BD4;&#x5982;&#xFF0C;.ssh/config
+&#x5305;&#x542B;&#x7740;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#xFF1A;&#x907F;&#x514D;&#x94FE;&#x63A5;&#x88AB;&#x4E22;&#x5F03;&#xFF0C;&#x94FE;&#x63A5;&#x65B0;&#x7684;host&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x786E;&#x8BA4;&#xFF0C;&#x8F6C;&#x53D1;&#x8BA4;&#x8BC1;&#xFF0C;&#x4EE5;&#x524D;&#x4F7F;&#x7528;&#x538B;&#x7F29;&#xFF08;&#x5982;&#x679C;&#x4F60;&#x8981;&#x4F7F;&#x7528;scp&#x4F20;&#x6587;&#x4EF6;&#xFF09;&#xFF1A;</p>
+<p>TCPKeepAlive=yesServerAliveInterval=15ServerAliveCountMax=6StrictHostKeyChecking=noCompression=yesForwardAgent=yes</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x6709;&#x8F93;&#x4E86;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x6539;&#x53D8;&#x6CE8;&#x610F;&#x4E86;&#xFF0C;&#x4F46;&#x4F60;&#x53C8;&#x4E0D;&#x60F3;&#x5220;&#x9664;&#x5B83;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x8981;&#x5728;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x4E2D;&#x627E;&#x5230;&#x5B83;&#xFF0C;&#x4F46;&#x4F60;&#x4E5F;&#x4E0D;&#x60F3;&#x6267;&#x884C;&#x5B83;&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6309;&#x4E0B;
+Alt-# &#xFF0C;&#x4E8E;&#x662F;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x5173;&#x5C31;&#x88AB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;#&#x5B57;&#x7B26;&#xFF0C;&#x4E8E;&#x662F;&#x5C31;&#x88AB;&#x6CE8;&#x91CA;&#x6389;&#x4E86;&#x3002;</p>
+<p>&#x6570;&#x636E;&#x5904;&#x7406;</p>
+<p>&#x4E86;&#x89E3; sort &#x548C; uniq &#x547D;&#x4EE4; (&#x5305;&#x62EC; uniq &#x7684; -u &#x548C; -d &#x9009;&#x9879;).</p>
+<p>&#x4E86;&#x89E3;&#x7528; cut, paste, &#x548C; join &#x547D;&#x4EE4;&#x6765;&#x64CD;&#x4F5C;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;&#x5F88;&#x591A;&#x4EBA;&#x5FD8;&#x4E86;&#x5728;cut&#x524D;&#x4F7F;&#x7528;join&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x7528;sort/uniq&#x6765;&#x505A;&#x96C6;&#x5408;&#x4EA4;&#x96C6;&#x3001;&#x5E76;&#x96C6;&#x3001;&#x5DEE;&#x96C6;&#x80FD;&#x5F88;&#x5927;&#x5730;&#x4FC3;&#x8FDB;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x6548;&#x7387;&#x3002;&#x5047;&#x8BBE;&#x6709;&#x4E24;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;a&#x548C;b&#x5DF2;&#x89E3;&#x88AB;
+uniq&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x7528;sort/uniq&#x4F1A;&#x662F;&#x6700;&#x5FEB;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x65E0;&#x8BBA;&#x8FD9;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x6709;&#x591A;&#x5927;&#xFF08;sort&#x4E0D;&#x4F1A;&#x88AB;&#x5185;&#x5B58;&#x6240;&#x9650;&#xFF0C;&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;-T&#x9009;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;/tmp&#x76EE;&#x5F55;&#x5F88;&#x5C0F;&#xFF09;</p>
+<p>cat a b | sort | uniq &gt; c # c is a union b &#x5E76;&#x96C6; cat a b | sort | uniq -d
+&gt; c # c is a intersect b &#x4EA4;&#x96C6; cat a b b | sort | uniq -u &gt; c # c is set
+difference a - b &#x5DEE;&#x96C6;</p>
+<p>&#x4E86;&#x89E3;&#x548C;&#x5B57;&#x7B26;&#x96C6;&#x76F8;&#x5173;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x5305;&#x62EC;&#x6392;&#x5E8F;&#x548C;&#x6027;&#x80FD;&#x3002;&#x5F88;&#x591A;&#x7684;Linux&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x90FD;&#x4F1A;&#x8BBE;&#x7F6E;LANG
+&#x6216;&#x662F;&#x5176;&#x5B83;&#x548C;&#x5B57;&#x7B26;&#x96C6;&#x76F8;&#x5173;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#x53EF;&#x80FD;&#x4F1A;&#x8BA9;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#xFF08;&#x5982;&#xFF1A;sort&#xFF09;&#x7684;&#x6267;&#x884C;&#x6027;&#x80FD;&#x6162;N&#x591A;&#x500D;&#xFF08;&#x6CE8;&#xFF1A;&#x5C31;&#x7B97;&#x662F;&#x4F60;&#x7528;UTF-8&#x7F16;&#x7801;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5F88;&#x5B89;&#x5168;&#x5730;&#x4F7F;&#x7528;ASCII&#x6765;&#x5BF9;&#x5176;&#x6392;&#x5E8F;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;Disable&#x90A3;&#x4E2A;i18n
+&#x5E76;&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x57FA;&#x4E8E;byte&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x5C31;&#x8BBE;&#x7F6E;export LC_ALL=C &#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x5176;&#x653E;&#x5728;
+.bashrc&#xFF09;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x4F60;&#x7684;sort&#x547D;&#x4EE4;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x662F;&#x9519;&#x7684;&#x3002;</p>
+<p>&#x4E86;&#x89E3; awk &#x548C; sed&#xFF0C;&#x5E76;&#x7528;&#x4ED6;&#x4EEC;&#x6765;&#x505A;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x6C42;&#x7B2C;&#x4E09;&#x5217;&#x7684;&#x6570;&#x5B57;&#x4E4B;&#x548C;&#xFF1A;
+awk &#x2018;{ x += $3 } END { print x
+}&#x2019;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x6BD4;Python&#x5FEB;3&#x500D;&#xFF0C;&#x5E76;&#x6BD4;Python&#x7684;&#x4EE3;&#x7801;&#x5C11;&#x4E09;&#x500D;&#x3002;</p>
+<p>&#x4F7F;&#x7528; shuf &#x6765;&#x6253;&#x4E71;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x884C;&#x6216;&#x662F;&#x9009;&#x62E9;&#x6587;&#x4EF6;&#x4E2D;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x884C;&#x3002;</p>
+<p>&#x4E86;&#x89E3;sort&#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#x3002;&#x4E86;&#x89E3;key&#x662F;&#x4EC0;&#x4E48;&#xFF08;-t&#x548C;-k&#xFF09;&#x3002;&#x5177;&#x4F53;&#x8BF4;&#x6765;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;-k1,1&#x6765;&#x5BF9;&#x7B2C;&#x4E00;&#x5217;&#x6392;&#x5E8F;&#xFF0C;-k1&#x6765;&#x5BF9;&#x5168;&#x884C;&#x6392;&#x5E8F;&#x3002;</p>
+<p>Stable sort (sort -s)
+&#x4F1A;&#x5F88;&#x6709;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x8981;&#x60F3;&#x5BF9;&#x4E24;&#x4F8B;&#x6392;&#x5E8F;&#xFF0C;&#x5148;&#x662F;&#x4EE5;&#x7B2C;&#x4E8C;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4EE5;&#x7B2C;&#x4E00;&#x5217;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#xFF1A;
+sort -k1,1 | sort -s -k2,2</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x5728;bash&#x547D;&#x4EE4;&#x884C;&#x4E0B;&#xFF0C;Tab&#x952E;&#x662F;&#x7528;&#x6765;&#x505A;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x7684;&#x4E8B;&#x7684;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8F93;&#x5165;&#x4E00;&#x4E2A;Tab&#x5B57;&#x7B26;&#xFF08;&#x6BD4;&#x5982;&#xFF1A;&#x4F60;&#x60F3;&#x5728;sort
+-t&#x9009;&#x9879;&#x540E;&#x8F93;&#x5165;\<tab\>&#x5B57;&#x7B26;&#xFF09;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5148;&#x6309;Ctrl-V&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;Tab&#x952E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8F93;&#x5165;\<tab\>&#x5B57;&#x7B26;&#x4E86;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;$&#x2019;
+&#x2019;&#x3002;</tab\></tab\></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x67E5;&#x770B;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;hd&#x547D;&#x4EE4;&#xFF08;&#x5728;CentOS&#x4E0B;&#x662F;hexdump&#x547D;&#x4EE4;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x7F16;&#x8BD1;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;bvi&#x547D;&#x4EE4;&#xFF08;<a href="http://bvi.sourceforge.net/" target="_blank">http://bvi.sourceforge.net/</a>
+&#x5899;&#xFF09;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;strings&#xFF08;&#x914D;&#x5408;grep&#x7B49;&#xFF09;&#x6765;&#x67E5;&#x770B;&#x4E8C;&#x8FDB;&#x5236;&#x4E2D;&#x7684;&#x6587;&#x672C;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x8F6C;&#x7801;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BD5;&#x4E00;&#x4E0B; iconv&#x3002;&#x6216;&#x662F;&#x8BD5;&#x8BD5;&#x66F4;&#x5F3A;&#x7684; uconv
+&#x547D;&#x4EE4;&#xFF08;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x652F;&#x6301;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;Unicode&#x7F16;&#x7801;&#xFF09;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8981;&#x5206;&#x9694;&#x4E00;&#x4E2A;&#x5927;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;split&#x547D;&#x4EE4;&#xFF08;split by size&#xFF09;&#x548C;csplit&#x547D;&#x4EE4;&#xFF08;split
+by a pattern&#xFF09;&#x3002;</p>
+<p>&#x7CFB;&#x7EDF;&#x8C03;&#x8BD5;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x77E5;&#x9053;&#x78C1;&#x76D8;&#x3001;CPU&#x3001;&#x6216;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; iostat, netstat, top (&#x6216;&#x66F4;&#x597D;&#x7684;
+htop), &#x8FD8;&#x6709; dstat
+&#x547D;&#x4EE4;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x5730;&#x77E5;&#x9053;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#x4E8B;&#x3002;&#x5173;&#x4E8E;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x8FD8;&#x6709;iftop,
+iotop&#x7B49;&#xFF08;&#x53C2;&#x770B;&#x300A;28&#x4E2A;Unix/Linux&#x7684;&#x547D;&#x4EE4;&#x884C;&#x795E;&#x5668;&#x300B;&#xFF09;</p>
+<p>&#x8981;&#x4E86;&#x89E3;&#x5185;&#x5B58;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;free&#x548C;vmstat&#x547D;&#x4EE4;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x6CE8;&#x610F; &#x201C;cached&#x201D;
+&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;Linux&#x5185;&#x6838;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#x3002;&#x8FD8;&#x6709;free&#x7684;&#x503C;&#x3002;</p>
+<p>Java &#x7CFB;&#x7EDF;&#x76D1;&#x63A7;&#x6709;&#x4E00;&#x4E2A;&#x5C0F;&#x7684;&#x6280;&#x5DE7;&#x662F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;kill -3 \<pid\>
+&#x53D1;&#x4E00;&#x4E2A;SIGQUIT&#x7684;&#x4FE1;&#x53F7;&#x7ED9;JVM&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5806;&#x6808;&#x4FE1;&#x606F;&#xFF08;&#x5305;&#x62EC;&#x5783;&#x573E;&#x56DE;&#x6536;&#x7684;&#x4FE1;&#x606F;&#xFF09;dump&#x5230;stderr/logs&#x3002;</pid\></p>
+<p>&#x4F7F;&#x7528; mtr &#x4F1A;&#x6BD4;&#x4F7F;&#x7528; traceroute &#x8981;&#x66F4;&#x5BB9;&#x6613;&#x5B9A;&#x4F4D;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8981;&#x627E;&#x5230;&#x54EA;&#x4E2A;socket&#x6216;&#x8FDB;&#x7A0B;&#x5728;&#x4F7F;&#x7528;&#x7F51;&#x7EDC;&#x5E26;&#x5BBD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; iftop &#x6216; nethogs&#x3002;</p>
+<p>Apache&#x7684;&#x4E00;&#x4E2A;&#x53EB; ab
+&#x7684;&#x5DE5;&#x5177;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x7528;quick-and-dirty&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6D4B;&#x8BD5;&#x7F51;&#x7AD9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6027;&#x80FD;&#x8D1F;&#x8F7D;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x66F4;&#x4E3A;&#x590D;&#x6742;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;
+siege&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8981;&#x6293;&#x7F51;&#x7EDC;&#x5305;&#x7684;&#x8BDD;&#xFF0C;&#x8BD5;&#x8BD5; wireshark &#x6216; tshark&#x3002;</p>
+<p>&#x4E86;&#x89E3; strace &#x548C;
+ltrace&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x67E5;&#x770B;&#x8FDB;&#x7A0B;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x8FD9;&#x6709;&#x52A9;&#x4E8E;&#x4F60;&#x5206;&#x6790;&#x8FDB;&#x7A0B;&#x7684;hang&#x5728;&#x54EA;&#x4E86;&#xFF0C;&#x600E;&#x4E48;crash&#x548C;failed&#x7684;&#x3002;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x5176;&#x6765;&#x505A;&#x6027;&#x80FD;profile&#xFF0C;&#x4F7F;&#x7528;
+-c &#x9009;&#x9879;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;-p&#x9009;&#x9879;&#x6765;attach&#x4E0A;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x4E86;&#x89E3;&#x7528;ldd&#x547D;&#x4EE4;&#x6765;&#x68C0;&#x67E5;&#x76F8;&#x5173;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x3002;&#x6CE8;&#x610F;&#xFF1A;ldd&#x7684;&#x5B89;&#x5168;&#x95EE;&#x9898;</p>
+<p>&#x4F7F;&#x7528;gdb&#x6765;&#x8C03;&#x8BD5;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x6216;&#x5206;&#x6790;core
+dump&#x6587;&#x4EF6;&#x3002;&#x53C2;&#x770B;&#x6211;&#x5199;&#x7684;&#x300A;GDB&#x4E2D;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#x7684;&#x51E0;&#x4E2A;&#x8C03;&#x8BD5;&#x65B9;&#x6CD5;&#x300B;</p>
+<p>&#x5B66;&#x4F1A;&#x5230; /proc
+&#x76EE;&#x5F55;&#x4E2D;&#x67E5;&#x770B;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;Linux&#x5185;&#x6838;&#x8FD0;&#x884C;&#x65F6;&#x8BB0;&#x5F55;&#x7684;&#x6574;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x8FD0;&#x884C;&#x7EDF;&#x8BA1;&#x548C;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;
+/proc/cpuinfo, /proc/xxx/cwd, /proc/xxx/exe, /proc/xxx/fd/, /proc/xxx/smaps.</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8C03;&#x8BD5;&#x67D0;&#x4E2A;&#x4E1C;&#x897F;&#x4E3A;&#x4EC0;&#x4E48;&#x51FA;&#x9519;&#x65F6;&#xFF0C;sar&#x547D;&#x4EE4;&#x4F1A;&#x6709;&#x7528;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x770B;&#x770B; CPU, &#x5185;&#x5B58;, &#x7F51;&#x7EDC;,
+&#x7B49;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4F7F;&#x7528; dmesg &#x6765;&#x67E5;&#x770B;&#x4E00;&#x4E9B;&#x786C;&#x4EF6;&#x6216;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x7684;&#x4FE1;&#x606F;&#x6216;&#x95EE;&#x9898;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="系统屏蔽某个IP的访问.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 系统屏蔽某个IP的访问">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"应该知道的LINUX技巧","level":"1.45","depth":1,"previous":{"title":"系统屏蔽某个IP的访问","level":"1.44","depth":1,"path":"系统屏蔽某个IP的访问.md","ref":"系统屏蔽某个IP的访问.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"应该知道的LINUX技巧.md","mtime":"2019-03-22T02:28:24.902Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T07:59:19.170Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1371 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>故障-ping丢包或不通时链路测试说明 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="故障-YUM的常用方法和常见问题处理.html" />
+    
+    
+    <link rel="prev" href="故障-CentOS修改内核引导顺序.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="部署-ansible环境.html">
+            
+                <a href="部署-ansible环境.html">
+            
+                    
+                    部署-ansible环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="部署-cobbler.html">
+            
+                <a href="部署-cobbler.html">
+            
+                    
+                    部署-cobbler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="部署-EPEL源_yum源.html">
+            
+                <a href="部署-EPEL源_yum源.html">
+            
+                    
+                    部署-EPEL源_yum源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="部署-PXE.html">
+            
+                <a href="部署-PXE.html">
+            
+                    
+                    部署-PXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="部署-yum仓库配置.html">
+            
+                <a href="部署-yum仓库配置.html">
+            
+                    
+                    部署-yum仓库配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="部署-同步阿里云镜像的rpm包.html">
+            
+                <a href="部署-同步阿里云镜像的rpm包.html">
+            
+                    
+                    部署-同步阿里云镜像的rpm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                <a href="方案-Tengine结合lua防御cc攻击案例.html">
+            
+                    
+                    方案-Tengine结合lua防御cc攻击案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="高可用负载-HAProxy.html">
+            
+                <a href="高可用负载-HAProxy.html">
+            
+                    
+                    高可用负载-HAProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="高可用负载-HAproxy+keepalived.html">
+            
+                <a href="高可用负载-HAproxy+keepalived.html">
+            
+                    
+                    高可用负载-HAproxy+keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="高可用负载-Keepalived.html">
+            
+                <a href="高可用负载-Keepalived.html">
+            
+                    
+                    高可用负载-Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="高可用负载-LVS+keepalive.html">
+            
+                <a href="高可用负载-LVS+keepalive.html">
+            
+                    
+                    高可用负载-LVS+keepalive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="高可用负载-LVS+keepalived快速环境.html">
+            
+                <a href="高可用负载-LVS+keepalived快速环境.html">
+            
+                    
+                    高可用负载-LVS+keepalived快速环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="高可用负载-LVS四层负载均衡.html">
+            
+                <a href="高可用负载-LVS四层负载均衡.html">
+            
+                    
+                    高可用负载-LVS四层负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="高可用负载-nginx.html">
+            
+                <a href="高可用负载-nginx.html">
+            
+                    
+                    高可用负载-nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="高可用负载-nginx+keepalive高可用.html">
+            
+                <a href="高可用负载-nginx+keepalive高可用.html">
+            
+                    
+                    高可用负载-nginx+keepalive高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="高可用负载-Nginx高可用双主.html">
+            
+                <a href="高可用负载-Nginx高可用双主.html">
+            
+                    
+                    高可用负载-Nginx高可用双主
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                <a href="高可用负载-部署docker+nginx+keepalived实现高可用web集群.html">
+            
+                    
+                    高可用负载-部署docker+nginx+keepalived实现高可用web集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="高可用负载-实现LVS高可用集群.html">
+            
+                <a href="高可用负载-实现LVS高可用集群.html">
+            
+                    
+                    高可用负载-实现LVS高可用集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                <a href="故障-~etc~fstab文件配置错误导致系统启动异常.html">
+            
+                    
+                    故障-~etc~fstab文件配置错误导致系统启动异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="故障-CentOS修改内核引导顺序.html">
+            
+                <a href="故障-CentOS修改内核引导顺序.html">
+            
+                    
+                    故障-CentOS修改内核引导顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22" data-path="故障-ping丢包或不通时链路测试说明.html">
+            
+                <a href="故障-ping丢包或不通时链路测试说明.html">
+            
+                    
+                    故障-ping丢包或不通时链路测试说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="故障-YUM的常用方法和常见问题处理.html">
+            
+                <a href="故障-YUM的常用方法和常见问题处理.html">
+            
+                    
+                    故障-YUM的常用方法和常见问题处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="故障-编译安装错误常见问题.html">
+            
+                <a href="故障-编译安装错误常见问题.html">
+            
+                    
+                    故障-编译安装错误常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="故障-目录误操作权限修改为777的修复方法.html">
+            
+                <a href="故障-目录误操作权限修改为777的修复方法.html">
+            
+                    
+                    故障-目录误操作权限修改为777的修复方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                <a href="故障-排查Linux实例异常CPU使用率100%.html">
+            
+                    
+                    故障-排查Linux实例异常CPU使用率100%
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                <a href="故障-启动或禁止用户或IP通过SSH登录.html">
+            
+                    
+                    故障-启动或禁止用户或IP通过SSH登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="故障-启动网卡失败.html">
+            
+                <a href="故障-启动网卡失败.html">
+            
+                    
+                    故障-启动网卡失败
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="故障-通过MD5验证传输文件内容一致性.html">
+            
+                <a href="故障-通过MD5验证传输文件内容一致性.html">
+            
+                    
+                    故障-通过MD5验证传输文件内容一致性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                <a href="故障-通过rm-f删除大量文件时报错：Argumentlisttoolong.html">
+            
+                    
+                    故障-通过rm-f删除大量文件时报错：Argumentlisttoolong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="故障-网络异常时抓包操作说明.html">
+            
+                <a href="故障-网络异常时抓包操作说明.html">
+            
+                    
+                    故障-网络异常时抓包操作说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="故障-系统添加“回收站”.html">
+            
+                <a href="故障-系统添加“回收站”.html">
+            
+                    
+                    故障-系统添加“回收站”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="故障-系统无法正常启动.html">
+            
+                <a href="故障-系统无法正常启动.html">
+            
+                    
+                    故障-系统无法正常启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="监控-zabbix_API方式.html">
+            
+                <a href="监控-zabbix_API方式.html">
+            
+                    
+                    监控-zabbix_API方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="监控-zabbix-agent端的配置.html">
+            
+                <a href="监控-zabbix-agent端的配置.html">
+            
+                    
+                    监控-zabbix-agent端的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="监控-zabbix部署.html">
+            
+                <a href="监控-zabbix部署.html">
+            
+                    
+                    监控-zabbix部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="监控-zabbix部署1.html">
+            
+                <a href="监控-zabbix部署1.html">
+            
+                    
+                    监控-zabbix部署1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="监控-zabbix监控nginx.html">
+            
+                <a href="监控-zabbix监控nginx.html">
+            
+                    
+                    监控-zabbix监控nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="监控-监控CPU和内存的日志工具.html">
+            
+                <a href="监控-监控CPU和内存的日志工具.html">
+            
+                    
+                    监控-监控CPU和内存的日志工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="批量分发密钥-1密钥对创建.html">
+            
+                <a href="批量分发密钥-1密钥对创建.html">
+            
+                    
+                    批量分发密钥-1密钥对创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="批量分发密钥-ansible方式.html">
+            
+                <a href="批量分发密钥-ansible方式.html">
+            
+                    
+                    批量分发密钥-ansible方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="批量分发密钥-sshpass方式.html">
+            
+                <a href="批量分发密钥-sshpass方式.html">
+            
+                    
+                    批量分发密钥-sshpass方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="批量分发密钥-去除yes-no的提示.html">
+            
+                <a href="批量分发密钥-去除yes-no的提示.html">
+            
+                    
+                    批量分发密钥-去除yes-no的提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="普通用户添加ssh或禁止ssh.html">
+            
+                <a href="普通用户添加ssh或禁止ssh.html">
+            
+                    
+                    普通用户添加ssh或禁止ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="使用NGINX+LUA实现WAF功能.html">
+            
+                <a href="使用NGINX+LUA实现WAF功能.html">
+            
+                    
+                    使用NGINX+LUA实现WAF功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="网盘-Cloudreve_on_Docker.html">
+            
+                <a href="网盘-Cloudreve_on_Docker.html">
+            
+                    
+                    网盘-Cloudreve_on_Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="网盘-Docker+Nextcloud快速部署.html">
+            
+                <a href="网盘-Docker+Nextcloud快速部署.html">
+            
+                    
+                    网盘-Docker+Nextcloud快速部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="网盘-OpenMediaVault_NAS.html">
+            
+                <a href="网盘-OpenMediaVault_NAS.html">
+            
+                    
+                    网盘-OpenMediaVault_NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="网盘-owncloud存储.html">
+            
+                <a href="网盘-owncloud存储.html">
+            
+                    
+                    网盘-owncloud存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="文档-git_idoc文档中心.html">
+            
+                <a href="文档-git_idoc文档中心.html">
+            
+                    
+                    文档-git_idoc文档中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="文档-gitbook文档中心服务.html">
+            
+                <a href="文档-gitbook文档中心服务.html">
+            
+                    
+                    文档-gitbook文档中心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="文档-git命令推送github.html">
+            
+                <a href="文档-git命令推送github.html">
+            
+                    
+                    文档-git命令推送github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="文档-mindoc配置.html">
+            
+                <a href="文档-mindoc配置.html">
+            
+                    
+                    文档-mindoc配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                <a href="文档-npm更换成淘宝镜像源以及cnpm.html">
+            
+                    
+                    文档-npm更换成淘宝镜像源以及cnpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="应用-6X-LNMP安装与部署.html">
+            
+                <a href="应用-6X-LNMP安装与部署.html">
+            
+                    
+                    应用-6X-LNMP安装与部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="应用-6xyum安装LNMP.html">
+            
+                <a href="应用-6xyum安装LNMP.html">
+            
+                    
+                    应用-6xyum安装LNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="应用-6x编译LNMP环境.html">
+            
+                <a href="应用-6x编译LNMP环境.html">
+            
+                    
+                    应用-6x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="应用-7x编译LNMP环境.html">
+            
+                <a href="应用-7x编译LNMP环境.html">
+            
+                    
+                    应用-7x编译LNMP环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="应用-chkconfig命令.html">
+            
+                <a href="应用-chkconfig命令.html">
+            
+                    
+                    应用-chkconfig命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="应用-docker部署LAMP.html">
+            
+                <a href="应用-docker部署LAMP.html">
+            
+                    
+                    应用-docker部署LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="应用-rsync+inotify配置.html">
+            
+                <a href="应用-rsync+inotify配置.html">
+            
+                    
+                    应用-rsync+inotify配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="应用-VPN服务器之PPTP.html">
+            
+                <a href="应用-VPN服务器之PPTP.html">
+            
+                    
+                    应用-VPN服务器之PPTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="应用-堡垒机Teleport.html">
+            
+                <a href="应用-堡垒机Teleport.html">
+            
+                    
+                    应用-堡垒机Teleport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="应用-可视化实时Web日志分析工具.html">
+            
+                <a href="应用-可视化实时Web日志分析工具.html">
+            
+                    
+                    应用-可视化实时Web日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="应用-文件权限加固.html">
+            
+                <a href="应用-文件权限加固.html">
+            
+                    
+                    应用-文件权限加固
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >故障-ping丢包或不通时链路测试说明</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6545;&#x969C;-ping &#x4E22;&#x5305;&#x6216;&#x4E0D;&#x901A;&#x65F6;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x8BF4;&#x660E;</p>
+<p>&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x8BBF;&#x95EE;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x51FA;&#x73B0; ping &#x4E22;&#x5305;&#x6216; ping &#x4E0D;&#x901A;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; tracert &#x6216; mtr
+&#x7B49;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x6765;&#x5224;&#x65AD;&#x95EE;&#x9898;&#x6765;&#x6E90;&#x3002;&#x672C;&#x6587;&#x5148;&#x4ECB;&#x7ECD;&#x4E86;&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7684;&#x76F8;&#x5173;&#x5DE5;&#x5177;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x5206;&#x6790;&#x53CA;&#x6D4B;&#x8BD5;&#x6B65;&#x9AA4;&#x8FDB;&#x884C;&#x4E86;&#x8BF4;&#x660E;&#x3002;</p>
+<p>&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;</p>
+<p>&#x6839;&#x636E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x4E5F;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;&#x5206;&#x522B;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x5982;&#x4E0B;&#x3002;</p>
+<p>Linux &#x73AF;&#x5883;&#x4E0B;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;</p>
+<p>traceroute &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</p>
+<p>mtr &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF08;&#x5EFA;&#x8BAE;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#xFF09;</p>
+<p>traceroute &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</p>
+<p>traceroute &#x662F;&#x51E0;&#x4E4E;&#x6240;&#x6709; Linux &#x53D1;&#x884C;&#x7248;&#x672C;&#x9884;&#x88C5;&#x7684;&#x7F51;&#x7EDC;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x4E8E;&#x8DDF;&#x8E2A; Internet
+&#x534F;&#x8BAE;&#xFF08;IP&#xFF09;&#x6570;&#x636E;&#x5305;&#x4F20;&#x9001;&#x5230;&#x76EE;&#x6807;&#x5730;&#x5740;&#x65F6;&#x7ECF;&#x8FC7;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>traceroute &#x5148;&#x53D1;&#x9001;&#x5177;&#x6709;&#x5C0F;&#x7684;&#x6700;&#x5927;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#x503C;&#xFF08;Max_TTL&#xFF09;&#x7684; UDP
+&#x63A2;&#x6D4B;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x7136;&#x540E;&#x4FA6;&#x542C;&#x4ECE;&#x7F51;&#x5173;&#x5F00;&#x59CB;&#x7684;&#x6574;&#x4E2A;&#x94FE;&#x8DEF;&#x4E0A;&#x7684; ICMP TIME_EXCEEDED &#x54CD;&#x5E94;&#x3002;&#x63A2;&#x6D4B;&#x4ECE;
+TTL=1 &#x5F00;&#x59CB;&#xFF0C;TTL &#x503C;&#x9010;&#x6B65;&#x589E;&#x52A0;&#xFF0C;&#x76F4;&#x81F3;&#x63A5;&#x6536;&#x5230;ICMP PORT_UNREACHABLE &#x6D88;&#x606F;&#x3002;ICMP
+PORT_UNREACHABLE &#x6D88;&#x606F;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x5DF2;&#x7ECF;&#x88AB;&#x5B9A;&#x4F4D;&#xFF0C;&#x6216;&#x547D;&#x4EE4;&#x5DF2;&#x7ECF;&#x8FBE;&#x5230;&#x5141;&#x8BB8;&#x8DDF;&#x8E2A;&#x7684;&#x6700;&#x5927;
+TTL &#x503C;&#x3002;</p>
+<p>traceroute &#x9ED8;&#x8BA4;&#x53D1;&#x9001; UDP &#x6570;&#x636E;&#x5305;&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x63A2;&#x6D4B;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; -I &#x53C2;&#x6570;&#x6765;&#x6307;&#x5B9A;&#x53D1;&#x9001; ICMP
+&#x6570;&#x636E;&#x5305;&#x7528;&#x4E8E;&#x63A2;&#x6D4B;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>traceroute [-I] [ -m Max_ttl ] [ -n ] [ -p Port ] [ -q Nqueries ] [ -r ] [ -s
+SRC_Addr ] [ -t TypeOfService ] [ -f flow ] [ -v ] [ -w WaitTime ] Host [
+PacketSize ]</p>
+<p>&#x793A;&#x4F8B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<p>[root\@centos ~]# traceroute -I 223.5.5.5</p>
+<p>&#x5E38;&#x89C1;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>-d &#x4F7F;&#x7528;Socket&#x5C42;&#x7EA7;&#x7684;&#x6392;&#x9519;&#x529F;&#x80FD;&#x3002;</p>
+<p>-f &#x8BBE;&#x7F6E;&#x7B2C;&#x4E00;&#x4E2A;&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x5305;&#x7684;&#x5B58;&#x6D3B;&#x6570;&#x503C;TTL&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>-F &#x8BBE;&#x7F6E;&#x4E0D;&#x8981;&#x5206;&#x6BB5;&#x6807;&#x8BC6;&#x3002;</p>
+<p>-g &#x8BBE;&#x7F6E;&#x6765;&#x6E90;&#x8DEF;&#x7531;&#x7F51;&#x5173;&#xFF0C;&#x6700;&#x591A;&#x53EF;&#x8BBE;&#x7F6E;8&#x4E2A;&#x3002;</p>
+<p>-i &#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x7F51;&#x5361;&#x9001;&#x51FA;&#x6570;&#x636E;&#x5305;&#x3002;&#x7528;&#x4E8E;&#x4E3B;&#x673A;&#x6709;&#x591A;&#x4E2A;&#x7F51;&#x5361;&#x65F6;&#x3002;</p>
+<p>-I &#x4F7F;&#x7528;ICMP&#x6570;&#x636E;&#x5305;&#x66FF;&#x4EE3; UDP &#x6570;&#x636E;&#x5305;&#x8FDB;&#x884C;&#x63A2;&#x6D4B;&#x3002;</p>
+<p>-m &#x8BBE;&#x7F6E;&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x5305;&#x7684;&#x6700;&#x5927;&#x5B58;&#x6D3B;&#x6570;&#x503C;TTL&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>-n &#x76F4;&#x63A5;&#x4F7F;&#x7528;IP&#x5730;&#x5740;&#x800C;&#x975E;&#x4E3B;&#x673A;&#x540D;&#x79F0;&#xFF08;&#x7981;&#x7528; DNS &#x53CD;&#x67E5;&#xFF09;&#x3002;</p>
+<p>-p &#x8BBE;&#x7F6E;UDP&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x7684;&#x901A;&#x4FE1;&#x7AEF;&#x53E3;&#x3002;</p>
+<p>-r &#x5FFD;&#x7565;&#x666E;&#x901A;&#x7684;Routing Table&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x6570;&#x636E;&#x5305;&#x9001;&#x5230;&#x8FDC;&#x7AEF;&#x4E3B;&#x673A;&#x4E0A;&#x3002;</p>
+<p>-s &#x8BBE;&#x7F6E;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x9001;&#x51FA;&#x6570;&#x636E;&#x5305;&#x7684;IP&#x5730;&#x5740;&#x3002;</p>
+<p>-t &#x8BBE;&#x7F6E;&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x5305;&#x7684;TOS&#x6570;&#x503C;&#x3002;</p>
+<p>-v &#x8BE6;&#x7EC6;&#x663E;&#x793A;&#x6307;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>-w &#x8BBE;&#x7F6E;&#x7B49;&#x5F85;&#x8FDC;&#x7AEF;&#x4E3B;&#x673A;&#x56DE;&#x5305;&#x65F6;&#x95F4;&#x3002;</p>
+<p>-x &#x5F00;&#x542F;&#x6216;&#x5173;&#x95ED;&#x6570;&#x636E;&#x5305;&#x7684;&#x6B63;&#x786E;&#x6027;&#x68C0;&#x9A8C;&#x3002;</p>
+<p>mtr &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF08;&#x5EFA;&#x8BAE;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#xFF09;</p>
+<p>mtr &#xFF08;My traceroute&#xFF09;&#x4E5F;&#x662F;&#x51E0;&#x4E4E;&#x6240;&#x6709; Linux &#x53D1;&#x884C;&#x7248;&#x672C;&#x9884;&#x88C5;&#x7684;&#x7F51;&#x7EDC;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x3002;&#x4ED6;&#x628A; ping&#x548C;
+traceroute &#x7684;&#x529F;&#x80FD;&#x5E76;&#x5165;&#x4E86;&#x540C;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x529F;&#x80FD;&#x66F4;&#x5F3A;&#x5927;&#x3002;</p>
+<p>mtr &#x9ED8;&#x8BA4;&#x53D1;&#x9001; ICMP &#x6570;&#x636E;&#x5305;&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x63A2;&#x6D4B;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; -u &#x53C2;&#x6570;&#x6765;&#x6307;&#x5B9A;&#x4F7F;&#x7528; UDP
+&#x6570;&#x636E;&#x5305;&#x7528;&#x4E8E;&#x63A2;&#x6D4B;&#x3002;</p>
+<p>&#x76F8;&#x5BF9;&#x4E8E; traceroute &#x53EA;&#x4F1A;&#x505A;&#x4E00;&#x6B21;&#x94FE;&#x8DEF;&#x8DDF;&#x8E2A;&#x6D4B;&#x8BD5;&#xFF0C;mtr
+&#x4F1A;&#x5BF9;&#x94FE;&#x8DEF;&#x4E0A;&#x7684;&#x76F8;&#x5173;&#x8282;&#x70B9;&#x505A;&#x6301;&#x7EED;&#x63A2;&#x6D4B;&#x5E76;&#x7ED9;&#x51FA;&#x76F8;&#x5E94;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x3002;&#x6240;&#x4EE5;&#xFF0C;mtr&#x80FD;&#x907F;&#x514D;&#x8282;&#x70B9;&#x6CE2;&#x52A8;&#x5BF9;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x66F4;&#x6B63;&#x786E;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>mtr [-hvrctglspni46] [-help] [-version] [-report] [-report-cycles=COUNT]
+[-curses] [-gtk] [-raw] [-split] [-no-dns] [-address interface] [-psize=bytes/-s
+bytes] [-interval=SECONDS] HOSTNAME [PACKETSIZE]</p>
+<p>&#x793A;&#x4F8B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<p>[root\@centos ~]# mtr 223.5.5.5</p>
+<p>Loss% Snt Last Avg Best Wrst StDev</p>
+<ol>
+<li><p>10.59.209.130 0.0% 8 9.0 8.1 1.1 11.8 3.5</p>
+</li>
+<li><p>10.200.135.213 0.0% 8 0.9 0.8 0.6 0.9 0.0</p>
+</li>
+<li><p>10.200.135.213 0.0% 8 1.0 0.7 0.6 1.0 0.0</p>
+</li>
+<li><p>10.196.1.70 85.7% 8 37.9 37.9 37.9 37.9 0.0</p>
+</li>
+<li><p>139.199.98.197 0.0% 8 44.7 44.6 44.5 44.7 0.0</p>
+</li>
+</ol>
+<p>&#x5E38;&#x89C1;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>-r &#x6216; -report&#xFF1A;&#x4EE5;&#x62A5;&#x544A;&#x6A21;&#x5F0F;&#x663E;&#x793A;&#x8F93;&#x51FA;&#x3002;</p>
+<p>-p &#x6216; -split&#xFF1A;&#x5C06;&#x6BCF;&#x6B21;&#x8FFD;&#x8E2A;&#x7684;&#x7ED3;&#x679C;&#x5206;&#x522B;&#x5217;&#x51FA;&#x6765;&#xFF0C;&#x800C;&#x975E;&#x5982; -report&#x7EDF;&#x8BA1;&#x6574;&#x4E2A;&#x7ED3;&#x679C;&#x3002;</p>
+<p>-s &#x6216; -psize&#xFF1A;&#x6307;&#x5B9A;ping&#x6570;&#x636E;&#x5305;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>-n &#x6216; -no-dns&#xFF1A;&#x4E0D;&#x5BF9;IP&#x5730;&#x5740;&#x505A;&#x57DF;&#x540D;&#x53CD;&#x89E3;&#x6790;&#x3002;</p>
+<p>-a &#x6216; -address&#xFF1A;&#x8BBE;&#x7F6E;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5305;&#x7684;IP&#x5730;&#x5740;&#x3002;&#x7528;&#x4E8E;&#x4E3B;&#x673A;&#x6709;&#x591A;&#x4E2A;IP&#x65F6;&#x3002;</p>
+<p>-4&#xFF1A;&#x53EA;&#x4F7F;&#x7528; IPv4 &#x534F;&#x8BAE;&#x3002;</p>
+<p>-6&#xFF1A;&#x53EA;&#x4F7F;&#x7528; IPv6 &#x534F;&#x8BAE;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; mtr &#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8F93;&#x5165;&#x76F8;&#x5E94;&#x5B57;&#x6BCD;&#x6765;&#x5FEB;&#x901F;&#x5207;&#x6362;&#x6A21;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<p>&#xFF1F;&#x6216; h&#xFF1A;&#x663E;&#x793A;&#x5E2E;&#x52A9;&#x83DC;&#x5355;&#x3002;</p>
+<p>d&#xFF1A;&#x5207;&#x6362;&#x663E;&#x793A;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>n&#xFF1A;&#x5207;&#x6362;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528; DNS &#x57DF;&#x540D;&#x89E3;&#x6790;&#x3002;</p>
+<p>u&#xFF1A;&#x5207;&#x6362;&#x4F7F;&#x7528; ICMP&#x6216; UDP &#x6570;&#x636E;&#x5305;&#x8FDB;&#x884C;&#x63A2;&#x6D4B;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x4E0B;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E2D;&#x5404;&#x6570;&#x636E;&#x5217;&#x7684;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x7B2C;&#x4E00;&#x5217;&#xFF08;Host&#xFF09;&#xFF1A;&#x8282;&#x70B9;IP&#x5730;&#x5740;&#x548C;&#x57DF;&#x540D;&#x3002;&#x5982;&#x524D;&#x9762;&#x6240;&#x793A;&#xFF0C;&#x6309;n&#x952E;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x663E;&#x793A;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x5217;&#xFF08;Loss%&#xFF09;&#xFF1A;&#x8282;&#x70B9;&#x4E22;&#x5305;&#x7387;&#x3002;</p>
+<p>&#x7B2C;&#x4E09;&#x5217;&#xFF08;Snt&#xFF09;&#xFF1A;&#x6BCF;&#x79D2;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5305;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;10&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53C2;&#x6570; -c &#x6307;&#x5B9A;&#x3002;</p>
+<p>&#x7B2C;&#x56DB;&#x5217;&#xFF08;Last&#xFF09;&#xFF1A;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x7684;&#x63A2;&#x6D4B;&#x5EF6;&#x8FDF;&#x503C;&#x3002;</p>
+<p>&#x7B2C;&#x4E94;&#x3001;&#x516D;&#x3001;&#x4E03;&#x5217;&#xFF08;Avg&#x3001;Best&#x3001;Wrst&#xFF09;&#xFF1A;&#x5206;&#x522B;&#x662F;&#x63A2;&#x6D4B;&#x5EF6;&#x8FDF;&#x7684;&#x5E73;&#x5747;&#x503C;&#x3001;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;&#x3002;</p>
+<p>&#x7B2C;&#x516B;&#x5217;&#xFF08;StDev&#xFF09;&#xFF1A;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#x3002;&#x8D8A;&#x5927;&#x8BF4;&#x660E;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x8D8A;&#x4E0D;&#x7A33;&#x5B9A;&#x3002;</p>
+<p>Windows &#x73AF;&#x5883;&#x4E0B;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;</p>
+<p>TRACERT &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</p>
+<p>WinMTR &#x5DE5;&#x5177;&#xFF08;&#x5EFA;&#x8BAE;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#xFF09;</p>
+<p>TRACERT &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</p>
+<p>TRACERT (Trace Route) &#x662F; Windows &#x81EA;&#x5E26;&#x7684;&#x7F51;&#x7EDC;&#x8BCA;&#x65AD;&#x547D;&#x4EE4;&#x884C;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x7528;&#x4E8E;&#x8DDF;&#x8E2A; Internet
+&#x534F;&#x8BAE; (IP) &#x6570;&#x636E;&#x5305;&#x4F20;&#x9001;&#x5230;&#x76EE;&#x6807;&#x5730;&#x5740;&#x65F6;&#x7ECF;&#x8FC7;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>TRACERT &#x901A;&#x8FC7;&#x5411;&#x76EE;&#x6807;&#x5730;&#x5740;&#x53D1;&#x9001; ICMP
+&#x6570;&#x636E;&#x5305;&#x6765;&#x786E;&#x5B9A;&#x5230;&#x76EE;&#x6807;&#x5730;&#x5740;&#x7684;&#x8DEF;&#x7531;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5305;&#x4E2D;&#xFF0C;TRACERT &#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x540C;&#x7684;
+IP&#x201C;&#x751F;&#x5B58;&#x671F;&#x201D;(TTL) &#x503C;&#x3002;&#x7531;&#x4E8E;&#x8981;&#x6C42;&#x6CBF;&#x9014;&#x7684;&#x8DEF;&#x7531;&#x5668;&#x5728;&#x8F6C;&#x53D1;&#x6570;&#x636E;&#x5305;&#x524D;&#x81F3;&#x5C11;&#x5FC5;&#x987B;&#x5C06; TTL &#x51CF;&#x5C11;
+1&#xFF0C;&#x56E0;&#x6B64; TTL &#x5B9E;&#x9645;&#x4E0A;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x8DC3;&#x70B9;&#x8BA1;&#x6570;&#x5668; (hop counter)&#x3002;&#x5F53;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x5305;&#x7684; TTL &#x8FBE;&#x5230;&#x96F6;
+(0) &#x65F6;&#xFF0C;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x5C31;&#x4F1A;&#x5411;&#x6E90;&#x8BA1;&#x7B97;&#x673A;&#x53D1;&#x9001;&#x4E00;&#x4E2A; ICMP&#x201C;&#x8D85;&#x65F6;&#x201D;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
+<p>TRACERT &#x7B2C;&#x4E00;&#x6B21;&#x53D1;&#x9001; TTL &#x4E3A; 1 &#x7684;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x5E76;&#x5728;&#x6BCF;&#x6B21;&#x540E;&#x7EED;&#x4F20;&#x8F93;&#x65F6;&#x5C06; TTL &#x589E;&#x52A0;
+1&#xFF0C;&#x76F4;&#x5230;&#x76EE;&#x6807;&#x5730;&#x5740;&#x54CD;&#x5E94;&#x6216;&#x8FBE;&#x5230; TTL &#x7684;&#x6700;&#x5927;&#x503C;&#x3002;&#x4E2D;&#x95F4;&#x8DEF;&#x7531;&#x5668;&#x53D1;&#x9001;&#x56DE;&#x6765;&#x7684;
+ICMP&#x201C;&#x8D85;&#x65F6;&#x201D;&#x6D88;&#x606F;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x8BD5;&#x7528;</p>
+<p>tracert [-d] [-h maximum_hops] [-j host-list] [-w timeout] [-R] [-S srcaddr]
+[-4] [-6] target_name</p>
+<p>&#x793A;&#x4F8B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<p>&#x8BD5;&#x7528;</p>
+<p>C:\&gt; tracert -d 223.5.5.5&#x901A;&#x8FC7;&#x6700;&#x591A; 30 &#x4E2A;&#x8DC3;&#x70B9;&#x8DDF;&#x8E2A;&#x5230; 223.5.5.5 &#x7684;&#x8DEF;&#x7531; 1
+&#x8BF7;&#x6C42;&#x8D85;&#x65F6;&#x3002; 2 9 ms 3 ms 12 ms 192.168.17.20 3 4 ms 9 ms 2 ms 111.1.20.41 4 9 ms 2
+ms 1 ms 111.1.34.197 5 11 ms 211.140.0.57 6 3 ms 2 ms 2 ms 211.138.114.62 7 2 ms
+2 ms 1 ms 42.120.244.190 8 32 ms 4 ms 3 ms 42.120.244.238 9 &#x8BF7;&#x6C42;&#x8D85;&#x65F6;&#x3002; 10 3 ms 2
+ms 2 ms 223.5.5.5&#x8DDF;&#x8E2A;&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x5E38;&#x89C1;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>-d&#xFF1A;&#x6307;&#x5B9A;&#x4E0D;&#x5C06;&#x5730;&#x5740;&#x89E3;&#x6790;&#x4E3A;&#x4E3B;&#x673A;&#x540D;&#xFF08;&#x7981;&#x7528; DNS &#x53CD;&#x89E3;&#xFF09;&#x3002;</p>
+<p>-h&#xFF1A;maximum_hops&#xFF0C;&#x6307;&#x5B9A;&#x641C;&#x7D22;&#x76EE;&#x6807;&#x5730;&#x5740;&#x65F6;&#x7684;&#x6700;&#x5927;&#x8DC3;&#x70B9;&#x6570;&#x3002;</p>
+<p>-j&#xFF1A; host-list&#xFF0C;&#x6307;&#x5B9A;&#x6CBF;&#x4E3B;&#x673A;&#x5217;&#x8868;&#x7684;&#x677E;&#x6563;&#x6E90;&#x8DEF;&#x7531;&#x3002;</p>
+<p>-w&#xFF1A;timeout&#xFF0C;&#x7531;&#x6BCF;&#x4E2A;&#x56DE;&#x590D;&#x7684; timeout &#x6307;&#x5B9A;&#x7684;&#x7B49;&#x5F85;&#x6BEB;&#x79D2;&#x6570;&#x3002;</p>
+<p>-R&#xFF1A;&#x8DDF;&#x8E2A;&#x5F80;&#x8FD4;&#x884C;&#x7A0B;&#x8DEF;&#x5F84;(&#x4EC5;&#x9002;&#x7528;&#x4E8E; IPv6)&#x3002;</p>
+<p>-S&#xFF1A;srcaddr&#xFF0C;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x6E90;&#x5730;&#x5740;(&#x4EC5;&#x9002;&#x7528;&#x4E8E; IPv6)&#x3002;</p>
+<p>-4&#xFF1A;&#x5F3A;&#x5236;&#x4F7F;&#x7528; IPv4&#x3002;</p>
+<p>-6&#xFF1A;&#x5F3A;&#x5236;&#x4F7F;&#x7528; IPv6&#x3002;</p>
+<p>target_host&#xFF1A;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x57DF;&#x540D;&#x6216; IP &#x5730;&#x5740;&#x3002;</p>
+<p>WinMTR &#x5DE5;&#x5177;&#xFF08;&#x5EFA;&#x8BAE;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#xFF09;</p>
+<p>WinMTR &#x662F; mtr &#x5DE5;&#x5177;&#x5728; Windows &#x73AF;&#x5883;&#x4E0B;&#x7684;&#x56FE;&#x5F62;&#x5316;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x8FDB;&#x884C;&#x4E86;&#x529F;&#x80FD;&#x7B80;&#x5316;&#xFF0C;&#x53EA;&#x652F;&#x6301;
+mtr&#x90E8;&#x5206;&#x53C2;&#x6570;&#x7684;&#x8C03;&#x6574;&#x8BBE;&#x7F6E;&#x3002;WinMTR &#x9ED8;&#x8BA4;&#x53D1;&#x9001;ICMP &#x6570;&#x636E;&#x5305;&#x8FDB;&#x884C;&#x63A2;&#x6D4B;&#xFF0C;&#x65E0;&#x6CD5;&#x5207;&#x6362;&#x3002;</p>
+<p>WinMTR &#x53EF;&#x4EE5;&#x4ECE;&#x5176;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x4E0B;&#x8F7D;&#x83B7;&#x53D6;&#x3002;</p>
+<p>&#x548C; mtr &#x4E00;&#x6837;&#xFF0C;&#x76F8;&#x6BD4; tracert&#xFF0C;WinMTR
+&#x80FD;&#x907F;&#x514D;&#x8282;&#x70B9;&#x6CE2;&#x52A8;&#x5BF9;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x6240;&#x4EE5;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x66F4;&#x6B63;&#x786E;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5728; WinMTR
+&#x53EF;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F18;&#x5148;&#x4F7F;&#x7528; WinMTR &#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>WinMTR &#x65E0;&#x9700;&#x5B89;&#x88C5;&#xFF0C;&#x76F4;&#x63A5;&#x89E3;&#x538B;&#x8FD0;&#x884C;&#x5373;&#x53EF;&#x3002;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x5728; Host &#x5B57;&#x6BB5;&#x8F93;&#x5165;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x6216;
+IP&#xFF08;&#x6CE8;&#x610F;&#x524D;&#x9762;&#x4E0D;&#x8981;&#x5305;&#x542B;&#x7A7A;&#x683C;&#xFF09;&#x3002;</p>
+<p>&#x70B9;&#x51FB; Start &#x5F00;&#x59CB;&#x6D4B;&#x8BD5;&#xFF08;&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;&#x540E;&#xFF0C;&#x76F8;&#x5E94;&#x6309;&#x94AE;&#x53D8;&#x6210;&#x4E86; Stop&#xFF09;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#xFF0C;&#x70B9;&#x51FB; Stop &#x505C;&#x6B62;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p>&#x5176;&#x5B83;&#x9009;&#x9879;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>Copy Text to clipboard&#xFF1A;&#x5C06;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4EE5;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x590D;&#x5236;&#x5230;&#x7C98;&#x8D34;&#x677F;&#x3002;</p>
+<p>Copy HTML to clipboard&#xFF1A;&#x5C06;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4EE5; HTML &#x683C;&#x5F0F;&#x590D;&#x5236;&#x5230;&#x7C98;&#x8D34;&#x677F;&#x3002;</p>
+<p>Export TEXT&#xFF1A;&#x5C06;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4EE5;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x5BFC;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x3002;</p>
+<p>Export HTML&#xFF1A;&#x5C06;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4EE5; HTML &#x683C;&#x5F0F;&#x5BFC;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x3002;</p>
+<p>Options&#xFF1A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;</p>
+<p>Interval&#xFF08;sec&#xFF09;&#xFF1A;&#x6BCF;&#x6B21;&#x63A2;&#x6D4B;&#x7684;&#x95F4;&#x9694;&#xFF08;&#x8FC7;&#x671F;&#xFF09;&#x65F6;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; 1 &#x79D2;&#x3002;</p>
+<p>Ping size(bytes)&#xFF1A; ping &#x63A2;&#x6D4B;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5305;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; 64 &#x5B57;&#x8282;&#x3002;&#x3001;</p>
+<p>Max hosts in LRU list&#xFF1A; LRU &#x5217;&#x8868;&#x652F;&#x6301;&#x7684;&#x6700;&#x5927;&#x4E3B;&#x673A;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 128&#x3002;</p>
+<p>Resolve names&#xFF1A;&#x901A;&#x8FC7;&#x53CD;&#x67E5; IP &#x4EE5;&#x57DF;&#x540D;&#x663E;&#x793A;&#x76F8;&#x5173;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x4E0B;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E2D;&#x5404;&#x6570;&#x636E;&#x5217;&#x7684;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x7B2C;&#x4E00;&#x5217;&#xFF08;Hostname&#xFF09;&#xFF1A;&#x8282;&#x70B9; IP &#x6216;&#x57DF;&#x540D;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x5217;&#xFF08;Nr&#xFF09;&#xFF1A;&#x8282;&#x70B9;&#x7F16;&#x53F7;&#x3002;</p>
+<p>&#x7B2C;&#x4E09;&#x5217;&#xFF08;Loss%&#xFF09;&#xFF1A;&#x8282;&#x70B9;&#x4E22;&#x5305;&#x7387;&#x3002;</p>
+<p>&#x7B2C;&#x56DB;&#x5217;&#xFF08;Sent&#xFF09;&#xFF1A;&#x5DF2;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x5305;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x7B2C;&#x4E94;&#x5217;&#xFF08;Recv&#xFF09;&#xFF1A;&#x5DF2;&#x6210;&#x529F;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#x5305;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x7B2C;&#x516D;&#x3001;&#x4E03;&#x3001;&#x516B;&#x3001;&#x4E5D;&#x5217;&#xFF08;Best
+&#x3001;Avg&#x3001;Worst&#x3001;Last&#xFF09;&#xFF1A;&#x5206;&#x522B;&#x662F;&#x5230;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x5EF6;&#x8FDF;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x3001;&#x5E73;&#x5747;&#x503C;&#x3001;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x503C;&#x3002;</p>
+<p>&#x7B2C;&#x516B;&#x5217;&#xFF08;StDev&#xFF09;&#xFF1A;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#x3002;&#x8D8A;&#x5927;&#x8BF4;&#x660E;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x8D8A;&#x4E0D;&#x7A33;&#x5B9A;&#x3002;</p>
+<p>&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x5206;&#x6790;&#x7B80;&#x8981;&#x8BF4;&#x660E;</p>
+<p>&#x7531;&#x4E8E;
+mtr&#xFF08;WinMTR&#xFF09;&#x6709;&#x66F4;&#x9AD8;&#x7684;&#x51C6;&#x786E;&#x6027;&#x3002;&#x672C;&#x6587;&#x4EE5;&#x5176;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4E3A;&#x4F8B;&#xFF0C;&#x5BF9;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x7684;&#x5206;&#x6790;&#x8FDB;&#x884C;&#x7B80;&#x8981;&#x8BF4;&#x660E;&#x3002;</p>
+<p>&#x540E;&#x7EED;&#x8BF4;&#x660E;&#xFF0C;&#x4EE5;&#x5982;&#x4E0B;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x4E3A;&#x57FA;&#x7840;&#x8FDB;&#x884C;&#x9610;&#x8FF0;&#xFF1A;</p>
+<p><img src="media/cea9a181f75fc19334e6d230677c5cc8.png" alt=""></p>
+<p>&#x5BF9;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x5982;&#x4E0B;&#x8981;&#x70B9;&#xFF1A;</p>
+<p>&#x7F51;&#x7EDC;&#x533A;&#x57DF;</p>
+<p>&#x94FE;&#x8DEF;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<p>&#x7ED3;&#x5408;Avg&#xFF08;&#x5E73;&#x5747;&#x503C;&#xFF09;&#x548C; StDev&#xFF08;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#xFF09;&#x7EFC;&#x5408;&#x5224;&#x65AD;</p>
+<p>Loss%&#xFF08;&#x4E22;&#x5305;&#x7387;&#xFF09;&#x7684;&#x5224;&#x65AD;</p>
+<p>&#x5173;&#x4E8E;&#x5EF6;&#x8FDF;</p>
+<p>&#x7F51;&#x7EDC;&#x533A;&#x57DF;</p>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x5230;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6574;&#x4E2A;&#x94FE;&#x8DEF;&#xFF0C;&#x4F1A;&#x663E;&#x8457;&#x7684;&#x5305;&#x542B;&#x5982;&#x4E0B;&#x533A;&#x57DF;&#xFF1A;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#xFF08;&#x672C;&#x5730;&#x5C40;&#x57DF;&#x7F51;&#x548C;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x63D0;&#x4F9B;&#x5546;&#x7F51;&#x7EDC;&#xFF09;&#xFF1A;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x4E2D;&#x7684;&#x533A;&#x57DF;
+A&#x3002;&#x5982;&#x679C;&#x8BE5;&#x533A;&#x57DF;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5BF9;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x76F8;&#x5E94;&#x6392;&#x67E5;&#x5206;&#x6790;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x63D0;&#x4F9B;&#x5546;&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5411;&#x5F53;&#x5730;&#x8FD0;&#x8425;&#x5546;&#x53CD;&#x9988;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x8FD0;&#x8425;&#x5546;&#x9AA8;&#x5E72;&#x7F51;&#x7EDC;&#xFF1A;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x4E2D;&#x7684;&#x533A;&#x57DF;
+B&#x3002;&#x5982;&#x679C;&#x8BE5;&#x533A;&#x57DF;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5F02;&#x5E38;&#x8282;&#x70B9; IP
+&#x67E5;&#x8BE2;&#x5F52;&#x5C5E;&#x8FD0;&#x8425;&#x5546;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;&#x6216;&#x901A;&#x8FC7;&#x963F;&#x91CC;&#x4E91;&#x552E;&#x540E;&#x6280;&#x672F;&#x652F;&#x6301;&#xFF0C;&#x5411;&#x76F8;&#x5E94;&#x8FD0;&#x8425;&#x5546;&#x53CD;&#x9988;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#xFF08;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x5F52;&#x5C5E;&#x7F51;&#x7EDC;&#x63D0;&#x4F9B;&#x5546;&#x7F51;&#x7EDC;&#xFF09;:
+&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x4E2D;&#x7684;&#x533A;&#x57DF;
+C&#x3002;&#x5982;&#x679C;&#x8BE5;&#x533A;&#x57DF;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5411;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x5F52;&#x5C5E;&#x7F51;&#x7EDC;&#x63D0;&#x4F9B;&#x5546;&#x53CD;&#x9988;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x94FE;&#x8DEF;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<p>&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x4E2D;&#x7684;&#x533A;&#x57DF; D
+&#x6240;&#x793A;&#x3002;&#x5982;&#x679C;&#x4E2D;&#x95F4;&#x94FE;&#x8DEF;&#x67D0;&#x4E9B;&#x90E8;&#x5206;&#x542F;&#x7528;&#x4E86;&#x94FE;&#x8DEF;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;&#x5219; mtr
+&#x53EA;&#x4F1A;&#x5BF9;&#x9996;&#x5C3E;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x7F16;&#x53F7;&#x548C;&#x63A2;&#x6D4B;&#x7EDF;&#x8BA1;&#x3002;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x53EA;&#x4F1A;&#x663E;&#x793A;&#x76F8;&#x5E94;&#x7684; IP &#x6216;&#x57DF;&#x540D;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x7ED3;&#x5408;Avg&#xFF08;&#x5E73;&#x5747;&#x503C;&#xFF09;&#x548C; StDev&#xFF08;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#xFF09;&#x7EFC;&#x5408;&#x5224;&#x65AD;</p>
+<p>&#x7531;&#x4E8E;&#x94FE;&#x8DEF;&#x6296;&#x52A8;&#x6216;&#x5176;&#x5B83;&#x56E0;&#x7D20;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x8282;&#x70B9;&#x7684; Best &#x548C; Worst &#x503C;&#x53EF;&#x80FD;&#x76F8;&#x5DEE;&#x5F88;&#x5927;&#x3002;&#x800C;
+Avg&#xFF08;&#x5E73;&#x5747;&#x503C;&#xFF09;
+&#x7EDF;&#x8BA1;&#x4E86;&#x81EA;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x4EE5;&#x6765;&#x6240;&#x6709;&#x63A2;&#x6D4B;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x80FD;&#x66F4;&#x597D;&#x7684;&#x53CD;&#x5E94;&#x51FA;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x7684;&#x7F51;&#x7EDC;&#x8D28;&#x91CF;&#x3002;</p>
+<p>&#x800C;
+StDev&#xFF08;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#x503C;&#xFF09;&#x8D8A;&#x9AD8;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x6570;&#x636E;&#x5305;&#x5728;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x7684;&#x5EF6;&#x65F6;&#x503C;&#x8D8A;&#x4E0D;&#x76F8;&#x540C;&#xFF08;&#x8D8A;&#x79BB;&#x6563;&#xFF09;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#x503C;&#x53EF;&#x7528;&#x4E8E;&#x534F;&#x52A9;&#x5224;&#x65AD;
+Avg
+&#x662F;&#x5426;&#x771F;&#x5B9E;&#x53CD;&#x5E94;&#x4E86;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x7684;&#x7F51;&#x7EDC;&#x8D28;&#x91CF;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#x5F88;&#x5927;&#xFF0C;&#x8BF4;&#x660E;&#x6570;&#x636E;&#x5305;&#x7684;&#x5EF6;&#x8FDF;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x3002;&#x53EF;&#x80FD;&#x67D0;&#x4E9B;&#x6570;&#x636E;&#x5305;&#x5EF6;&#x8FDF;&#x5F88;&#x5C0F;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;25ms&#xFF09;&#xFF0C;&#x800C;&#x53E6;&#x4E00;&#x4E9B;&#x5EF6;&#x8FDF;&#x5374;&#x5F88;&#x5927;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;350ms&#xFF09;&#xFF0C;&#x4F46;&#x6700;&#x7EC8;&#x5F97;&#x5230;&#x7684;&#x5E73;&#x5747;&#x5EF6;&#x8FDF;&#x53CD;&#x800C;&#x53EF;&#x80FD;&#x662F;&#x6B63;&#x5E38;&#x7684;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6B64;&#x65F6;
+Avg &#x5E76;&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x53CD;&#x5E94;&#x51FA;&#x5B9E;&#x9645;&#x7684;&#x7F51;&#x7EDC;&#x8D28;&#x91CF;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x5EFA;&#x8BAE;&#x7684;&#x5206;&#x6790;&#x6807;&#x51C6;&#x662F;&#xFF1A;</p>
+<p>&#x5982;&#x679C; StDev &#x5F88;&#x9AD8;&#xFF0C;&#x5219;&#x540C;&#x6B65;&#x89C2;&#x5BDF;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x7684; Best &#x548C; Wrst&#xFF0C;&#x6765;&#x5224;&#x65AD;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x662F;&#x5426;&#x5B58;&#x5728;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x5982;&#x679C; StDev &#x4E0D;&#x9AD8;&#xFF0C;&#x5219;&#x901A;&#x8FC7; Avg&#x6765;&#x5224;&#x65AD;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x662F;&#x5426;&#x5B58;&#x5728;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;&#x4E0A;&#x8FF0; StDev
+&#x201C;&#x9AD8;&#x201D;&#x6216;&#x8005;&#x201C;&#x4E0D;&#x9AD8;&#x201D;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x5177;&#x4F53;&#x7684;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x6807;&#x51C6;&#x3002;&#x800C;&#x9700;&#x8981;&#x6839;&#x636E;&#x540C;&#x4E00;&#x8282;&#x70B9;&#x5176;&#x5B83;&#x5217;&#x7684;&#x5EF6;&#x8FDF;&#x503C;&#x5927;&#x5C0F;&#x6765;&#x8FDB;&#x884C;&#x76F8;&#x5BF9;&#x8BC4;&#x4F30;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;
+Avg &#x4E3A; 30ms&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x5F53; StDev &#x4E3A; 25ms&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x662F;&#x5F88;&#x9AD8;&#x7684;&#x504F;&#x5DEE;&#x3002;&#x800C;&#x5982;&#x679C; Avg &#x4E3A;
+325ms&#xFF0C;&#x5219;&#x540C;&#x6837;&#x7684; StDev&#xFF08;25ms&#xFF09;&#xFF0C;&#x53CD;&#x800C;&#x8BA4;&#x4E3A;&#x662F;&#x4E0D;&#x9AD8;&#x7684;&#x504F;&#x5DEE;&#x3002;</p>
+<p>Loss%&#xFF08;&#x4E22;&#x5305;&#x7387;&#xFF09;&#x7684;&#x5224;&#x65AD;</p>
+<p>&#x4EFB;&#x4E00;&#x8282;&#x70B9;&#x7684;
+Loss%&#xFF08;&#x4E22;&#x5305;&#x7387;&#xFF09;&#x5982;&#x679C;&#x4E0D;&#x4E3A;&#x96F6;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x8FD9;&#x4E00;&#x8DF3;&#x7F51;&#x7EDC;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x95EE;&#x9898;&#x3002;&#x5BFC;&#x81F4;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x4E22;&#x5305;&#x7684;&#x539F;&#x56E0;&#x901A;&#x5E38;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
+<p>&#x8FD0;&#x8425;&#x5546;&#x57FA;&#x4E8E;&#x5B89;&#x5168;&#x6216;&#x6027;&#x80FD;&#x9700;&#x6C42;&#xFF0C;&#x4EBA;&#x4E3A;&#x9650;&#x5236;&#x4E86;&#x8282;&#x70B9;&#x7684; ICMP &#x53D1;&#x9001;&#x901F;&#x7387;&#xFF0C;&#x5BFC;&#x81F4;&#x4E22;&#x5305;&#x3002;</p>
+<p>&#x8282;&#x70B9;&#x786E;&#x5B9E;&#x5B58;&#x5728;&#x5F02;&#x5E38;&#xFF0C;&#x5BFC;&#x81F4;&#x4E22;&#x5305;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x5F02;&#x5E38;&#x8282;&#x70B9;&#x53CA;&#x5176;&#x540E;&#x7EED;&#x8282;&#x70B9;&#x7684;&#x4E22;&#x5305;&#x60C5;&#x51B5;&#xFF0C;&#x6765;&#x5224;&#x5B9A;&#x4E22;&#x5305;&#x539F;&#x56E0;&#xFF1A;</p>
+<p>&#x5982;&#x679C;&#x968F;&#x540E;&#x8282;&#x70B9;&#x5747;&#x6CA1;&#x6709;&#x4E22;&#x5305;&#xFF0C;&#x5219;&#x901A;&#x5E38;&#x8BF4;&#x660E;&#x5F02;&#x5E38;&#x8282;&#x70B9;&#x4E22;&#x5305;&#x662F;&#x7531;&#x4E8E;&#x8FD0;&#x8425;&#x5546;&#x7B56;&#x7565;&#x9650;&#x5236;&#x6240;&#x81F4;&#x3002;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x76F8;&#x5173;&#x4E22;&#x5305;&#x3002;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x4E2D;&#x7684;&#x7B2C;
+2 &#x8DF3;&#x6240;&#x793A;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x968F;&#x540E;&#x8282;&#x70B9;&#x4E5F;&#x51FA;&#x73B0;&#x4E22;&#x5305;&#xFF0C;&#x5219;&#x901A;&#x5E38;&#x8BF4;&#x660E;&#x5F02;&#x5E38;&#x8282;&#x70B9;&#x786E;&#x5B9E;&#x5B58;&#x5728;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#xFF0C;&#x5BFC;&#x81F4;&#x4E22;&#x5305;&#x3002;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x4E2D;&#x7684;&#x7B2C;
+5 &#x8DF3;&#x6240;&#x793A;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x662F;&#xFF0C;&#x524D;&#x8FF0;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x53EF;&#x80FD;&#x540C;&#x65F6;&#x53D1;&#x751F;&#x3002;&#x5373;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x65E2;&#x5B58;&#x5728;&#x7B56;&#x7565;&#x9650;&#x901F;&#xFF0C;&#x53C8;&#x5B58;&#x5728;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#x3002;&#x5BF9;&#x4E8E;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C;&#x5F02;&#x5E38;&#x8282;&#x70B9;&#x53CA;&#x5176;&#x540E;&#x7EED;&#x8282;&#x70B9;&#x8FDE;&#x7EED;&#x51FA;&#x73B0;&#x4E22;&#x5305;&#xFF0C;&#x800C;&#x4E14;&#x5404;&#x8282;&#x70B9;&#x7684;&#x4E22;&#x5305;&#x7387;&#x4E0D;&#x540C;&#xFF0C;&#x5219;&#x901A;&#x5E38;&#x4EE5;&#x6700;&#x540E;&#x51E0;&#x8DF3;&#x7684;&#x4E22;&#x5305;&#x7387;&#x4E3A;&#x51C6;&#x3002;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x5728;&#x7B2C;
+5&#x3001;6&#x3001;7&#x8DF3;&#x5747;&#x51FA;&#x73B0;&#x4E86;&#x4E22;&#x5305;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x7EC8;&#x4E22;&#x5305;&#x60C5;&#x51B5;&#xFF0C;&#x4EE5;&#x7B2C; 7 &#x8DF3;&#x7684; 40% &#x4F5C;&#x4E3A;&#x53C2;&#x8003;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x5EF6;&#x8FDF;</p>
+<p>&#x5EF6;&#x8FDF;&#x8DF3;&#x53D8;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x67D0;&#x4E00;&#x8DF3;&#x4E4B;&#x540E;&#x5EF6;&#x8FDF;&#x660E;&#x663E;&#x9661;&#x589E;&#xFF0C;&#x5219;&#x901A;&#x5E38;&#x5224;&#x65AD;&#x8BE5;&#x8282;&#x70B9;&#x5B58;&#x5728;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#x3002;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x4ECE;&#x7B2C;
+5 &#x8DF3;&#x4E4B;&#x540E;&#x7684;&#x540E;&#x7EED;&#x8282;&#x70B9;&#x5EF6;&#x8FDF;&#x660E;&#x663E;&#x9661;&#x589E;&#xFF0C;&#x5219;&#x63A8;&#x65AD;&#x662F;&#x7B2C; 5 &#x8DF3;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x4E86;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x9AD8;&#x5EF6;&#x8FDF;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x5B8C;&#x5168;&#x610F;&#x5473;&#x7740;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x5B58;&#x5728;&#x5F02;&#x5E38;&#x3002;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x7B2C;
+5
+&#x8DF3;&#x4E4B;&#x540E;&#xFF0C;&#x867D;&#x7136;&#x540E;&#x7EED;&#x8282;&#x70B9;&#x5EF6;&#x8FDF;&#x660E;&#x663E;&#x9661;&#x589E;&#xFF0C;&#x4F46;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x6700;&#x7EC8;&#x4ECD;&#x7136;&#x6B63;&#x5E38;&#x5230;&#x8FBE;&#x4E86;&#x76EE;&#x7684;&#x4E3B;&#x673A;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5EF6;&#x8FDF;&#x5927;&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x5728;&#x6570;&#x636E;&#x56DE;&#x5305;&#x94FE;&#x8DEF;&#x4E2D;&#x5F15;&#x53D1;&#x7684;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x597D;&#x7ED3;&#x5408;&#x53CD;&#x5411;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x4E00;&#x5E76;&#x5206;&#x6790;&#x3002;</p>
+<p>ICMP &#x9650;&#x901F;&#x5BFC;&#x81F4;&#x5EF6;&#x8FDF;&#x589E;&#x52A0;</p>
+<p>ICMP
+&#x7B56;&#x7565;&#x9650;&#x901F;&#x4E5F;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x7684;&#x5EF6;&#x8FDF;&#x9661;&#x589E;&#xFF0C;&#x4F46;&#x540E;&#x7EED;&#x8282;&#x70B9;&#x901A;&#x5E38;&#x4F1A;&#x6062;&#x590D;&#x6B63;&#x5E38;&#x3002;&#x5982;&#x524D;&#x6587;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x793A;&#x4F8B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x7B2C;
+3 &#x8DF3;&#x6709; 100%
+&#x7684;&#x4E22;&#x5305;&#x7387;&#xFF0C;&#x540C;&#x65F6;&#x5EF6;&#x8FDF;&#x4E5F;&#x660E;&#x663E;&#x9661;&#x589E;&#x3002;&#x4F46;&#x968F;&#x540E;&#x8282;&#x70B9;&#x7684;&#x5EF6;&#x8FDF;&#x9A6C;&#x4E0A;&#x6062;&#x590D;&#x4E86;&#x6B63;&#x5E38;&#x3002;&#x6240;&#x4EE5;&#x5224;&#x65AD;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5EF6;&#x8FDF;&#x9661;&#x589E;&#x53CA;&#x4E22;&#x5305;&#x662F;&#x7531;&#x4E8E;&#x7B56;&#x7565;&#x9650;&#x901F;&#x6240;&#x81F4;&#x3002;</p>
+<p>&#x5E38;&#x89C1;&#x94FE;&#x8DEF;&#x5F02;&#x5E38;&#x573A;&#x666F;&#x548C;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</p>
+<p>&#x5E38;&#x89C1;&#x7684;&#x94FE;&#x8DEF;&#x5F02;&#x5E38;&#x573A;&#x666F;&#x53CA;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x5B9E;&#x4F8B;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<p>&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x4E0D;&#x5F53;</p>
+<p>ICMP &#x9650;&#x901F;</p>
+<p>&#x73AF;&#x8DEF;</p>
+<p>&#x94FE;&#x8DEF;&#x4E2D;&#x65AD;</p>
+<p>&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x4E0D;&#x5F53;</p>
+<p>&#x793A;&#x4F8B;&#x6570;&#x636E;&#xFF1A;</p>
+<p>t\@mycentos6 ~]# mtr -no-dns www.google.comMy traceroute [v0.75]mycentos6.6
+(0.0.0.0) Wed Jun 15 19:06:29 2016Keys: Help Display mode Restart statistics
+Order of fields quit Packets Pings Host Loss% Snt Last Avg Best Wrst StDev 1.
+??? 2. ??? 3. 111.1.20.41 0.0% 10 521.3 90.1 2.7 521.3 211.3 4. 111.1.34.209
+0.0% 10 2.9 4.7 1.6 10.6 3.9 5. 211.138.126.29 80.0% 10 3.0 3.0 3.0 3.0 0.0 6.
+221.183.14.85 0.0% 10 1.7 7.2 1.6 34.9 13.6 7. 221.183.10.5 0.0% 10 5.2 5.2 5.1
+5.2 0.0 221.183.11.5 8. 221.183.23.26 0.0% 10 5.3 5.2 5.1 5.3 0.1 9.
+173.194.200.105 100.0% 10 0.0 0.0 0.0 0.0 0.0</p>
+<p>&#x5728;&#x8BE5;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x5305;&#x5728;&#x76EE;&#x6807;&#x5730;&#x5740;&#x51FA;&#x73B0;&#x4E86; 100%
+&#x7684;&#x4E22;&#x5305;&#x3002;&#x4E4D;&#x4E00;&#x770B;&#x662F;&#x6570;&#x636E;&#x5305;&#x6CA1;&#x6709;&#x5230;&#x8FBE;&#xFF0C;&#x5176;&#x5B9E;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x76F8;&#x5173;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF08;&#x6BD4;&#x5982;&#x9632;&#x706B;&#x5899;&#x3001;iptables
+&#x7B49;&#xFF09;&#x7981;&#x7528;&#x4E86; ICMP &#x6240;&#x81F4;&#xFF0C;&#x5BFC;&#x81F4;&#x76EE;&#x7684;&#x4E3B;&#x673A;&#x65E0;&#x6CD5;&#x53D1;&#x9001;&#x4EFB;&#x4F55;&#x5E94;&#x7B54;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x8BE5;&#x573A;&#x666F;&#x9700;&#x8981;&#x6392;&#x67E5;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B89;&#x5168;&#x7B56;&#x7565;&#x914D;&#x7F6E;&#x3002;</p>
+<p>ICMP &#x9650;&#x901F;</p>
+<p>&#x793A;&#x4F8B;&#x6570;&#x636E;&#xFF1A;</p>
+<p>[root\@mycentos6 ~]# mtr -no-dns www.google.comMy traceroute
+[v0.75]mycentos6.6 (0.0.0.0) Wed Jun 15 19:06:29 2016Keys: Help Display mode
+Restart statistics Order of fields quit Packets Pings Host Loss% Snt Last Avg
+Best Wrst StDev1. 63.247.74.43 0.0% 10 0.3 0.6 0.3 1.2 0.32. 63.247.64.157 0.0%
+10 0.4 1.0 0.4 6.1 1.83. 209.51.130.213 0.0% 10 0.8 2.7 0.8 19.0 5.74.
+aix.pr1.atl.google.com 0.0% 10 6.7 6.8 6.7 6.9 0.15. 72.14.233.56 60.0% 10 27.2
+25.3 23.1 26.4 2.96. 209.85.254.247 0.0% 10 39.1 39.4 39.1 39.7 0.27.
+64.233.174.46 0.0% 10 39.6 40.4 39.4 46.9 2.38. gw-in-f147.1e100.net 0.0% 10
+39.6 40.5 39.5 46.7 2.2</p>
+<p>&#x5728;&#x8BE5;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5728;&#x7B2C; 5 &#x8DF3;&#x51FA;&#x73B0;&#x4E86;&#x660E;&#x663E;&#x7684;&#x4E22;&#x5305;&#xFF0C;&#x4F46;&#x540E;&#x7EED;&#x8282;&#x70B9;&#x5747;&#x672A;&#x89C1;&#x5F02;&#x5E38;&#x3002;&#x6240;&#x4EE5;&#x63A8;&#x65AD;&#x662F;&#x8BE5;&#x8282;&#x70B9;
+ICMP &#x9650;&#x901F;&#x6240;&#x81F4;&#x3002;</p>
+<p>&#x8BE5;&#x573A;&#x666F;&#x5BF9;&#x6700;&#x7EC8;&#x5BA2;&#x6237;&#x7AEF;&#x5230;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x4E0D;&#x4F1A;&#x6709;&#x5F71;&#x54CD;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5206;&#x6790;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x3002;</p>
+<p>&#x73AF;&#x8DEF;</p>
+<p>&#x793A;&#x4F8B;&#x6570;&#x636E;&#xFF1A;</p>
+<p>[root\@mycentos6 ~]# mtr -no-dns www.google.comMy traceroute
+[v0.75]mycentos6.6 (0.0.0.0) Wed Jun 15 19:06:29 2016Keys: Help Display mode
+Restart statistics Order of fields quit Packets Pings Host Loss% Snt Last Avg
+Best Wrst StDev1. 63.247.74.43 0.0% 10 0.3 0.6 0.3 1.2 0.32. 63.247.64.157 0.0%
+10 0.4 1.0 0.4 6.1 1.83. 209.51.130.213 0.0% 10 0.8 2.7 0.8 19.0 5.74.
+aix.pr1.atl.google.com 0.0% 10 6.7 6.8 6.7 6.9 0.15. 72.14.233.56 0.0% 10 0.0
+0.0 0.0 0.0 0.06. 72.14.233.57 0.0% 10 0.0 0.0 0.0 0.0 0.07. 72.14.233.56 0.0%
+10 0.0 0.0 0.0 0.0 0.08. 72.14.233.57 0.0% 10 0.0 0.0 0.0 0.0 0.09 ??? 0.0% 10
+0.0 0.0 0.0 0.0 0.0</p>
+<p>&#x5728;&#x8BE5;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x5305;&#x5728;&#x7B2C; 5
+&#x8DF3;&#x4E4B;&#x540E;&#x51FA;&#x73B0;&#x4E86;&#x5FAA;&#x73AF;&#x8DF3;&#x8F6C;&#xFF0C;&#x5BFC;&#x81F4;&#x6700;&#x7EC8;&#x65E0;&#x6CD5;&#x5230;&#x8FBE;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x7531;&#x4E8E;&#x8FD0;&#x8425;&#x5546;&#x76F8;&#x5173;&#x8282;&#x70B9;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x5F02;&#x5E38;&#x6240;&#x81F4;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x8BE5;&#x573A;&#x666F;&#x9700;&#x8981;&#x8054;&#x7CFB;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x5F52;&#x5C5E;&#x8FD0;&#x8425;&#x5546;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x94FE;&#x8DEF;&#x4E2D;&#x65AD;</p>
+<p>&#x793A;&#x4F8B;&#x6570;&#x636E;&#xFF1A;</p>
+<p>t\@mycentos6 ~]# mtr -no-dns www.google.comMy traceroute [v0.75]mycentos6.6
+(0.0.0.0) Wed Jun 15 19:06:29 2016Keys: Help Display mode Restart statistics
+Order of fields quit Packets Pings Host Loss% Snt Last Avg Best Wrst StDev1.
+63.247.74.43 0.0% 10 0.3 0.6 0.3 1.2 0.32. 63.247.64.157 0.0% 10 0.4 1.0 0.4 6.1
+1.83. 209.51.130.213 0.0% 10 0.8 2.7 0.8 19.0 5.74. aix.pr1.atl.google.com 0.0%
+10 6.7 6.8 6.7 6.9 0.15. ??? 0.0% 10 0.0 0.0 0.0 0.0 0.06. ??? 0.0% 10 0.0 0.0
+0.0 0.0 0.07. ??? 0.0% 10 0.0 0.0 0.0 0.0 0.08. ??? 0.0% 10 0.0 0.0 0.0 0.0 0.09
+??? 0.0% 10 0.0 0.0 0.0 0.0 0.0</p>
+<p>&#x5728;&#x8BE5;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x5305;&#x5728;&#x7B2C; 4
+&#x8DF3;&#x4E4B;&#x540E;&#x5C31;&#x65E0;&#x6CD5;&#x6536;&#x5230;&#x4EFB;&#x4F55;&#x53CD;&#x9988;&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x7531;&#x4E8E;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x4E2D;&#x65AD;&#x6240;&#x81F4;&#x3002;&#x5EFA;&#x8BAE;&#x7ED3;&#x5408;&#x53CD;&#x5411;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x505A;&#x8FDB;&#x4E00;&#x6B65;&#x786E;&#x8BA4;&#x3002;</p>
+<p>&#x8BE5;&#x573A;&#x666F;&#x9700;&#x8981;&#x8054;&#x7CFB;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x5F52;&#x5C5E;&#x8FD0;&#x8425;&#x5546;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x6B65;&#x9AA4;</p>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#x6D41;&#x7A0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p>&#x76F8;&#x5173;&#x6B65;&#x9AA4;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x5BF9;&#x5E94;&#x516C;&#x7F51; IP</p>
+<p>&#x6B63;&#x5411;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#xFF08;ping &#x548C; mtr&#xFF09;</p>
+<p>&#x53CD;&#x5411;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#xFF08;ping &#x548C; mtr&#xFF09;</p>
+<p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x5206;&#x6790;</p>
+<p>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x5BF9;&#x5E94;&#x516C;&#x7F51; IP</p>
+<p>&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x8BBF;&#x95EE; ip.taobao.com &#x7B49;&#x7F51;&#x7AD9;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF0C;&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x5BF9;&#x5E94;&#x7684;&#x516C;&#x7F51; IP&#x3002;</p>
+<p>&#x6B63;&#x5411;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#xFF08;ping &#x548C; mtr&#xFF09;</p>
+<p>&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x5411;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x505A; ping &#x548C; mtr &#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<p>&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x5411;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x6216; IP &#x505A;&#x6301;&#x7EED;&#x7684; ping &#x6D4B;&#x8BD5;&#xFF08;&#x5EFA;&#x8BAE;&#x81F3;&#x5C11; ping 100
+&#x4E2A;&#x6570;&#x636E;&#x5305;&#xFF09;&#xFF0C;&#x8BB0;&#x5F55;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x4F7F;&#x7528; WinMTR &#x6216;
+mtr&#xFF0C;&#x8BBE;&#x7F6E;&#x6D4B;&#x8BD5;&#x76EE;&#x7684;&#x5730;&#x5740;&#x4E3A;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x6216;IP&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#xFF0C;&#x8BB0;&#x5F55;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x53CD;&#x5411;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#xFF08;ping &#x548C; mtr&#xFF09;</p>
+<p>&#x8FDB;&#x5165;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x7CFB;&#x7EDF;&#x5185;&#x90E8;&#xFF0C;&#x505A;&#x53CD;&#x5411; ping &#x548C; mtr &#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;</p>
+<p>&#x4ECE;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x5411;&#x524D;&#x8FF0;&#x6B65;&#x9AA4; 1 &#x83B7;&#x53D6;&#x7684;&#x5BA2;&#x6237;&#x7AEF; IP&#x505A;&#x6301;&#x7EED;&#x7684; ping &#x6D4B;&#x8BD5;&#xFF08;&#x5EFA;&#x8BAE;&#x81F3;&#x5C11; ping 100
+&#x4E2A;&#x6570;&#x636E;&#x5305;&#xFF09;&#xFF0C;&#x8BB0;&#x5F55;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x6839;&#x636E;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x4F7F;&#x7528; WinMTR &#x6216; mtr&#xFF0C;&#x8BBE;&#x7F6E;&#x6D4B;&#x8BD5;&#x76EE;&#x7684;&#x5730;&#x5740;&#x4E3A;&#x524D;&#x8FF0;&#x6B65;&#x9AA4;
+1 &#x83B7;&#x53D6;&#x7684;&#x5BA2;&#x6237;&#x7AEF; IP&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x6D4B;&#x8BD5;&#xFF0C;&#x8BB0;&#x5F55;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x5206;&#x6790;</p>
+<p>&#x53C2;&#x9605;&#x524D;&#x8FF0;&#x8BF4;&#x660E;&#xFF0C;&#x5BF9;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;&#x786E;&#x8BA4;&#x5F02;&#x5E38;&#x8282;&#x70B9;&#x540E;&#xFF0C;&#x8BBF;&#x95EE; ip.taobao.com
+&#x7B49;&#x7F51;&#x7AD9;&#x67E5;&#x8BE2;&#x3001;&#x83B7;&#x53D6;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#x5F52;&#x5C5E;&#x8FD0;&#x8425;&#x5546;&#x53CA;&#x7F51;&#x7EDC;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5BF9;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x76F8;&#x5E94;&#x6392;&#x67E5;&#x5206;&#x6790;&#x3002;&#x5982;&#x679C;&#x662F;&#x8FD0;&#x8425;&#x5546;&#x76F8;&#x5173;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x6216;&#x8054;&#x7CFB;&#x963F;&#x91CC;&#x4E91;&#x552E;&#x540E;&#x6280;&#x672F;&#x652F;&#x6301;&#x5411;&#x76F8;&#x5E94;&#x8FD0;&#x8425;&#x5546;&#x53CD;&#x9988;&#x95EE;&#x9898;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="故障-CentOS修改内核引导顺序.html" class="navigation navigation-prev " aria-label="Previous page: 故障-CentOS修改内核引导顺序">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="故障-YUM的常用方法和常见问题处理.html" class="navigation navigation-next " aria-label="Next page: 故障-YUM的常用方法和常见问题处理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"故障-ping丢包或不通时链路测试说明","level":"1.22","depth":1,"next":{"title":"故障-YUM的常用方法和常见问题处理","level":"1.23","depth":1,"path":"故障-YUM的常用方法和常见问题处理.md","ref":"故障-YUM的常用方法和常见问题处理.md","articles":[]},"previous":{"title":"故障-CentOS修改内核引导顺序","level":"1.21","depth":1,"path":"故障-CentOS修改内核引导顺序.md","ref":"故障-CentOS修改内核引导顺序.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"故障-ping丢包或不通时链路测试说明.md","mtime":"2019-03-22T05:29:35.653Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:16:12.436Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,645 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>实验--Eth-Trunk链路聚合配置 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="实验--GVRP_VLAN注册协议.html" />
+    
+    
+    <link rel="prev" href="实验--DHCP配置.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="MSTP+VRRP的实验.html">
+            
+                <a href="MSTP+VRRP的实验.html">
+            
+                    
+                    MSTP+VRRP的实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="DELL_R720.html">
+            
+                <a href="DELL_R720.html">
+            
+                    
+                    DELL_R720
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="nmap-抓包工具.html">
+            
+                <a href="nmap-抓包工具.html">
+            
+                    
+                    nmap-抓包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="常用命令.html">
+            
+                <a href="常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="解决方案实验.html">
+            
+                <a href="解决方案实验.html">
+            
+                    
+                    解决方案实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="链路聚合典型配置.html">
+            
+                <a href="链路聚合典型配置.html">
+            
+                    
+                    链路聚合典型配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="山石网科.html">
+            
+                <a href="山石网科.html">
+            
+                    
+                    山石网科
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="实验--ACL配置.html">
+            
+                <a href="实验--ACL配置.html">
+            
+                    
+                    实验--ACL配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="实验--DHCP配置.html">
+            
+                <a href="实验--DHCP配置.html">
+            
+                    
+                    实验--DHCP配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="实验--Eth-Trunk链路聚合配置.html">
+            
+                <a href="实验--Eth-Trunk链路聚合配置.html">
+            
+                    
+                    实验--Eth-Trunk链路聚合配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="实验--GVRP_VLAN注册协议.html">
+            
+                <a href="实验--GVRP_VLAN注册协议.html">
+            
+                    
+                    实验--GVRP_VLAN注册协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="实验--HDLC和PPP配置.html">
+            
+                <a href="实验--HDLC和PPP配置.html">
+            
+                    
+                    实验--HDLC和PPP配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="实验--hybrid配置.html">
+            
+                <a href="实验--hybrid配置.html">
+            
+                    
+                    实验--hybrid配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="实验--hybrid数据流向.html">
+            
+                <a href="实验--hybrid数据流向.html">
+            
+                    
+                    实验--hybrid数据流向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="实验--IPSec_VPN_配置.html">
+            
+                <a href="实验--IPSec_VPN_配置.html">
+            
+                    
+                    实验--IPSecVPN配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="实验--NAT配置.html">
+            
+                <a href="实验--NAT配置.html">
+            
+                    
+                    实验--NAT配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="实验--OSPF配置.html">
+            
+                <a href="实验--OSPF配置.html">
+            
+                    
+                    实验--OSPF配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="实验--OSPF协议.html">
+            
+                <a href="实验--OSPF协议.html">
+            
+                    
+                    实验--OSPF协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="实验--RIP配置.html">
+            
+                <a href="实验--RIP配置.html">
+            
+                    
+                    实验--RIP配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="实验--Smart_Link和Monitor_Link交换间冗余.html">
+            
+                <a href="实验--Smart_Link和Monitor_Link交换间冗余.html">
+            
+                    
+                    实验--Smart_Link和Monitor_Link交换间冗余
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="实验--STP生成树配置.html">
+            
+                <a href="实验--STP生成树配置.html">
+            
+                    
+                    实验--STP生成树配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="实验--Trunk配置.html">
+            
+                <a href="实验--Trunk配置.html">
+            
+                    
+                    实验--Trunk配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="实验--VLAN配置.html">
+            
+                <a href="实验--VLAN配置.html">
+            
+                    
+                    实验--VLAN配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="实验--VRRP配置.html">
+            
+                <a href="实验--VRRP配置.html">
+            
+                    
+                    实验--VRRP配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="实验--单臂路由配置.html">
+            
+                <a href="实验--单臂路由配置.html">
+            
+                    
+                    实验--单臂路由配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="实验--基础配置.html">
+            
+                <a href="实验--基础配置.html">
+            
+                    
+                    实验--基础配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="实验--静态路由配置.html">
+            
+                <a href="实验--静态路由配置.html">
+            
+                    
+                    实验--静态路由配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="实验--三层交换配置.html">
+            
+                <a href="实验--三层交换配置.html">
+            
+                    
+                    实验--三层交换配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="思科常用命令.html">
+            
+                <a href="思科常用命令.html">
+            
+                    
+                    思科常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="中小型园区解决方案.html">
+            
+                <a href="中小型园区解决方案.html">
+            
+                    
+                    中小型园区解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >实验--Eth-Trunk链路聚合配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x63A5;&#x53E3;&#x901F;&#x7387;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;</p>
+<p>&#x624B;&#x52A8;&#x6A21;&#x5F0F;&#x914D;&#x7F6E;&#x94FE;&#x8DEF;&#x805A;&#x5408;&#x7684;&#x65B9;&#x6CD5;<br>&#x9759;&#x6001;LACP&#x6A21;&#x5F0F;&#x914D;&#x7F6E;&#x94FE;&#x8DEF;&#x805A;&#x5408;&#x7684;&#x65B9;&#x6CD5;<br>&#x9759;&#x6001;LACP&#x6A21;&#x5F0F;&#x4E0B;&#x914D;&#x7F6E;&#x63A5;&#x53E3;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x65B9;&#x6CD5;  </p>
+<p>&#x63A5;&#x53E3;&#x901F;&#x7387;&#x914D;&#x7F6E;<br>&#x534E;&#x4E3A;&#x4EA4;&#x6362;&#x673A;&#x63A5;&#x53E3;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x4E86;&#x81EA;&#x534F;&#x5546;&#x529F;&#x80FD;&#x3002;&#x5728;&#x672C;&#x4EFB;&#x52A1;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x914D;&#x7F6E;S1&#x4E0E;S2&#x4E0A;G0/0/9&#x548C;G0/0/10&#x63A5;&#x53E3;&#x7684;&#x901F;&#x7387;&#x3002;<br>[sw1]dis int g 0/0/9<br>&#x5728;&#x4FEE;&#x6539;&#x63A5;&#x53E3;&#x7684;&#x901F;&#x7387;&#x4E4B;&#x524D;&#x5E94;&#x5148;&#x5173;&#x95ED;&#x63A5;&#x53E3;&#x7684;&#x81EA;&#x534F;&#x5546;&#x529F;&#x80FD;&#xFF0C;&#x7136;&#x540E;&#x5C06;S1&#x4E0A;&#x7684;G0/0/9&#x548C;G0/0/10&#x63A5;&#x53E3;&#x7684;&#x901F;&#x7387;&#x914D;&#x7F6E;&#x4E3A;100
+Mbit/s&#x3002;<br>[S1]interface GigabitEthernet 0/0/9<br>[S1-GigabitEthernet0/0/9]undo negotiation auto<br>[S1-GigabitEthernet0/0/9]speed 100<br>[S1-GigabitEthernet0/0/9]quit<br>[S1]interface GigabitEthernet 0/0/10<br>[S1-GigabitEthernet0/0/10]undo negotiation auto<br>[S1-GigabitEthernet0/0/10]speed 100<br>&#x540C;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x5C06;S2&#x4E0A;&#x7684;G0/0/9&#x548C;G0/0/10&#x63A5;&#x53E3;&#x7684;&#x901F;&#x7387;&#x914D;&#x7F6E;&#x4E3A;100 Mbit/s&#x3002;<br>\<quidway\>system-view<br>[Quidway]sysname S2<br>[S2]interface GigabitEthernet 0/0/9<br>[S2-GigabitEthernet0/0/9]undo negotiation auto<br>[S2-GigabitEthernet0/0/9]speed 100<br>[S2-GigabitEthernet0/0/9]quit<br>[S2]interface GigabitEthernet 0/0/10<br>[S2-GigabitEthernet0/0/10]undo negotiation auto<br>[S2-GigabitEthernet0/0/10]speed 100</quidway\></p>
+<p>&#x914D;&#x7F6E;eth-trunk &#x5B9E;&#x73B0;&#x94FE;&#x8DEF;&#x805A;&#x5408; &#x4E24;&#x79CD;&#x6A21;&#x5F0F;<br>Eth-Trunk&#x662F;&#x4E00;&#x79CD;&#x6346;&#x7ED1;&#x6280;&#x672F;&#xFF0C;&#x4ED6;&#x5C06;&#x591A;&#x4E2A;&#x7269;&#x7406;&#x63A5;&#x53E3;&#x6346;&#x7ED1;&#x6210;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x63A5;&#x53E3;&#xFF0C;&#x6346;&#x7ED1;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x6BCF;&#x4E2A;&#x7269;&#x7406;&#x63A5;&#x53E3;&#x6210;&#x4E3A;&#x6210;&#x5458;&#x63A5;&#x53E3;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;<br>&#x8D1F;&#x8F7D;&#x5206;&#x62C5;&#xFF1A;&#x5728;&#x4E00;&#x4E2A;eth-trunk&#x63A5;&#x53E3;&#x5185;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6D41;&#x91CF;&#x8D1F;&#x8F7D;&#x5206;&#x62C5;<br>&#x63D0;&#x9AD8;&#x53EF;&#x9760;&#x6027;&#xFF1A;&#x5F53;&#x67D0;&#x4E2A;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x8FDE;&#x63A5;&#x7684;&#x7269;&#x7406;&#x94FE;&#x8DEF;&#x51FA;&#x73B0;&#x6545;&#x969C;&#x65F6;&#xFF0C;&#x6D41;&#x91CF;&#x4F1A;&#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x53EF;&#x7528;&#x7684;&#x94FE;&#x8DEF;&#x4E0A;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x6574;&#x4E2A;trunk&#x94FE;&#x8DEF;&#x7684;&#x53EF;&#x9760;&#x6027;<br>&#x589E;&#x52A0;&#x5E26;&#x5BBD;&#xFF1A;trunk&#x63A5;&#x53E3;&#x7684;&#x603B;&#x5E26;&#x5BBD;&#x662F;&#x5404;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x5E26;&#x5BBD;&#x4E4B;&#x548C;<br>Eth-Trunk&#x5728;&#x903B;&#x8F91;&#x4E0A;&#x628A;&#x591A;&#x6761;&#x7269;&#x7406;&#x94FE;&#x8DEF;&#x6346;&#x7ED1;&#x7B49;&#x540C;&#x4E8E;&#x4E00;&#x6761;&#x903B;&#x8F91;&#x94FE;&#x8DEF;&#xFF0C;&#x5BF9;&#x4E0A;&#x5C42;&#x6570;&#x636E;&#x900F;&#x660E;&#x4F20;&#x8F93;&#x3002;&#x6240;&#x6709;Eth-Trunk&#x4E2D;&#x7269;&#x7406;&#x63A5;&#x53E3;&#x7684;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x4E00;&#x81F4;&#xFF0C;<br>&#x624B;&#x5DE5;&#x8D1F;&#x8F7D;&#x5206;&#x62C5;<br>&#x5B9E;&#x9A8C;&#x73AF;&#x5883;  </p>
+<p><img src="media/e441a0c251905690d81e64d2d496781b.png" alt=""></p>
+<p>&#x5148;&#x5C06;s1&#x4E0E;s2&#x4E0A;&#x4E92;&#x8054;&#x7684;g0/0/2&#x548C;g0/0/5&#x63A5;&#x53E3;&#x5173;&#x95ED;,&#x6A21;&#x62DF;&#x53EA;&#x6709;&#x4E00;&#x6761;&#x94FE;&#x8DEF;&#x7684;&#x65F6;&#x5019;<br>int g 0/0/2<br>shutdown<br>int g 0/0/5<br>shutdown<br>&#x73B0;&#x5728;&#x589E;&#x52A0;&#x4E00;&#x6761;&#x94FE;&#x8DEF;,&#x5E26;&#x5BBD;&#x589E;&#x52A0;&#x5230;2Gbit/s,&#x5728;&#x672A;&#x914D;&#x7F6E;Eth-Trunk&#x65F6;&#x53EA;&#x6709;&#x4E00;&#x6761;&#x94FE;&#x8DEF;&#x5728;&#x5DE5;&#x4F5C;,<br>&#x6A21;&#x62DF;&#x5F00;&#x542F;&#x4E24;&#x4E2A;g0/0/2&#x63A5;&#x53E3;<br>int g 0/0/2<br>undo shutdown<br>&#x589E;&#x52A0;&#x94FE;&#x8DEF;&#x540E;,<br>dis stp brief # &#x5728;&#x4E24;&#x4E2A;&#x4EA4;&#x6362;&#x4E0A;&#x67E5;&#x770B;stp<br>&#x8BE5;&#x62D3;&#x6251;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;STP&#x534F;&#x8BAE;,&#x4F1A;&#x963B;&#x585E;&#x4E00;&#x6761;&#x94FE;&#x8DEF;  </p>
+<p>&#x94FE;&#x8DEF;&#x805A;&#x5408;&#x5206;&#x4E24;&#x79CD;<br>&#x914D;&#x7F6E;Eth-Trunk&#x5B9E;&#x73B0;&#x94FE;&#x8DEF;&#x805A;&#x5408;<br>Eth-Trunk&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;<br>&#x624B;&#x5DE5;&#x8D1F;&#x8F7D;&#x5206;&#x62C5;&#xFF1A;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x94FE;&#x8DEF;&#x805A;&#x5408;&#x7EC4;&#xFF0C;&#x5E76;&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x63A5;&#x53E3;&#x52A0;&#x5165;&#x5230;&#x521B;&#x5EFA;&#x7684;Eth-Trunk&#x4E2D;<br>&#x9759;&#x6001;LACP&#xFF1A;&#x901A;&#x8FC7;LACP&#x534F;&#x8BAE;&#x534F;&#x5546;Eth-Trunk&#x53C2;&#x6570;&#x540E;&#x81EA;&#x4E3B;&#x9009;&#x62E9;&#x6D3B;&#x52A8;&#x63A5;&#x53E3;  </p>
+<p>&#x624B;&#x5DE5;&#x8D1F;&#x8F7D;&#x5206;&#x62C5;&#x6A21;&#x5F0F;<br>&#x521B;&#x5EFA;Eth-Trunk 1 &#x63A5;&#x53E3;&#xFF0C;<br>&#x914D;&#x7F6E; sw1 sw2 &#x540C;&#x65F6;&#x6267;&#x884C;&#x547D;&#x4EE4; &#x521B;&#x5EFA; eth-trunk 1 &#x5E76;&#x52A0;&#x5165;&#x63A5;&#x53E3;<br>int Eth-Trunk 1<br>mode manual load-balance #&#x6307;&#x5B9A;&#x624B;&#x5DE5;&#x8D1F;&#x8F7D;&#x5206;&#x62C5;&#x65B9;&#x5F0F;<br>interface GigabitEthernet0/0/1<br>eth-trunk 1<br>interface GigabitEthernet0/0/2<br>eth-trunk 1  </p>
+<p>dis eth-trunk 1<br>dis interface Eth-Trunk 1<br>dis stp brief<br>&#x53EF;&#x4EE5;&#x770B;&#x5230;<br>&#x63A5;&#x53E3;&#x603B;&#x5E26;&#x5BBD;&#x662F;,&#x63A5;&#x53E3;&#x4E4B;&#x548C;<br>&#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x6A21;&#x62DF;&#x6545;&#x969C;,ping&#x6D4B;&#x8BD5;</p>
+<p>&#x9759;&#x6001;LACP&#x6A21;&#x5F0F;<br><a href="https://www.cnblogs.com/GyForever1004/p/9238356.html" target="_blank">https://www.cnblogs.com/GyForever1004/p/9238356.html</a><br>&#x5047;&#x8BBE;&#x4E00;&#x6761;&#x51FA;&#x73B0;&#x6545;&#x969C;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x6761;&#x94FE;&#x8DEF;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x5E26;&#x5BBD;&#xFF0C;&#x73B0;&#x5728;&#x5728;&#x90E8;&#x7F72;&#x4E00;&#x6761;&#x94FE;&#x8DEF;&#x4F5C;&#x4E3A;&#x5907;&#x4EFD;&#x94FE;&#x8DEF;&#xFF0C;&#x5E76;&#x91C7;&#x7528;&#x9759;&#x6001;LACP&#x6A21;&#x5F0F;&#x914D;&#x7F6E;Eth-Trunk&#x5B9E;&#x73B0;&#x4E24;&#x6761;&#x94FE;&#x8DEF;&#x540C;&#x65F6;&#x8F6C;&#x53D1;&#xFF0C;&#x4E00;&#x6761;&#x94FE;&#x8DEF;&#x5907;&#x4EFD;&#xFF0C;&#x5F53;&#x5176;&#x4E2D;&#x4E00;&#x6761;&#x8F6C;&#x53D1;&#x94FE;&#x8DEF;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x5907;&#x4EFD;&#x94FE;&#x8DEF;&#x53EF;&#x7ACB;&#x5373;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8F6C;&#x53D1;<br>[s1]int Eth-Trunk 1<br>[s1-Eth-Trunk1]mode lacp-static<br>Error: Error in changing trunk working mode. There is(are) port(s) in the trunk.<br>&#x63D0;&#x793A;&#x9519;&#x8BEF;&#x9700;&#x8981;&#x5148;&#x5C06;&#x52A0;&#x5165;&#x5230;eth-trunk&#x63A5;&#x53E3;&#x4E0B;&#x7269;&#x7406;&#x63A5;&#x53E3;&#x5220;&#x9664;<br># &#x7136;&#x540E;&#x5728;s1&#x548C;s2&#x4E0A;&#x7684;Eth-Trunk 1&#x63A5;&#x53E3;&#x4E0B;&#x6539;&#x4E3A;LACP&#x6A21;&#x5F0F;&#xFF0C;&#x5E76;&#x5C06;3&#x4E2A;&#x63A5;&#x53E3;&#x5206;&#x522B;&#x52A0;&#x5165;&#x5230;Eth-Trunk
+1 &#x63A5;&#x53E3;<br>interface Eth-Trunk1<br>mode lacp-static<br>interface GigabitEthernet0/0/1<br>eth-trunk 1<br>interface GigabitEthernet0/0/2<br>eth-trunk 1<br>interface GigabitEthernet0/0/5<br>eth-trunk 1  </p>
+<p>&#x6700;&#x7EC8;&#x914D;&#x7F6E; &#x8BBE;&#x7F6E;&#x8FD9;&#x4E9B;&#x94FE;&#x8DEF;&#x4EE5;&#x8D1F;&#x8F7D;&#x5206;&#x62C5;&#x7684;&#x65B9;&#x5F0F;&#x8F6C;&#x53D1;&#x6570;&#x636E;<br>[sw1]dis current-configuration<br>#
+&#x914D;&#x7F6E;&#x63A5;&#x53E3;&#x7684;&#x6D3B;&#x52A8;&#x4F18;&#x5148;&#x7EA7;&#x5C06;&#x9ED8;&#x8BA4;&#x7684;32768&#x6539;&#x4E3A;100,&#x76EE;&#x7684;&#x662F;&#x4F7F;g0/0/1|g0/0/2&#x63A5;&#x53E3;&#x6210;&#x4E3A;&#x6D3B;&#x52A8;&#x72B6;&#x6001;&#x4F7F;&#x5176;&#x6210;&#x4E3A;&#x4E3B;&#x52A8;&#x7AEF;-&#x503C;&#x8D8A;&#x4F4E;&#x7EA7;&#x522B;&#x8D8A;&#x9AD8;,&#x5E76;&#x6309;&#x7167;&#x4E3B;&#x52A8;&#x7AEF;&#x8BBE;&#x5907;&#x6765;&#x9009;&#x62E9;&#x6D3B;&#x52A8;&#x63A5;&#x53E3;<br>lacp priority 100<br># &#x63A5;&#x53E3;&#x9600;&#x503C;&#x6539;&#x4E3A;2(&#x9ED8;&#x8BA4;&#x6D3B;&#x52A8;&#x63A5;&#x53E3;&#x6700;&#x5927;&#x9600;&#x503C;8)&#x5C31;&#x662F;&#x5904;&#x4E8E;&#x6D3B;&#x52A8;&#x7684;&#x63A5;&#x53E3;<br>interface Eth-Trunk1<br>mode lacp-static<br>max active-linknumber 2<br>interface GigabitEthernet0/0/1<br>eth-trunk 1<br>#
+&#x5728;s1&#x4E0A;&#x914D;&#x7F6E;&#x63A5;&#x53E3;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x786E;&#x5B9A;&#x6D3B;&#x52A8;&#x94FE;&#x8DEF;,&#x914D;&#x7F6E;&#x63A5;&#x53E3;&#x7684;&#x6D3B;&#x52A8;&#x4F18;&#x5148;&#x7EA7;&#x5C06;&#x9ED8;&#x8BA4;&#x7684;32768&#x6539;&#x4E3A;100.&#x4F7F;g0/0/1&#x548C;g0/0/2&#x63A5;&#x53E3;&#x6210;&#x4E3A;&#x6D3B;&#x52A8;&#x72B6;&#x6001;<br>lacp priority 100<br>interface GigabitEthernet0/0/2<br>eth-trunk 1<br>lacp priority 100<br>interface GigabitEthernet0/0/5<br>eth-trunk 1  </p>
+<p>[sw2]dis current-configuration<br>interface Eth-Trunk1<br>mode lacp-static<br>interface GigabitEthernet0/0/1<br>eth-trunk 1<br>lacp priority 100<br>interface GigabitEthernet0/0/2<br>eth-trunk 1<br>lacp priority 100<br>interface GigabitEthernet0/0/5<br>eth-trunk 1  </p>
+<p>&#x6D4B;&#x8BD5;<br>dis eth-trunk 1 #&#x67E5;&#x770B;&#x72B6;&#x6001;<br>&#x5173;&#x95ED;s1 &#x7684;g0/0/1 &#x6D4B;&#x8BD5; g0/0/5&#x5904;&#x4E8E;&#x6D3B;&#x52A8;<br>&#x5F00;&#x542F;s1 &#x7684;g0/0/1 &#x6D4B;&#x8BD5; g0/0/5&#x5904;&#x4E8E;&#x4E0D;&#x6D3B;&#x52A8;<br>PS<br>1 &#x53EA;&#x80FD;&#x5220;&#x9664;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x7684;&#x805A;&#x5408;&#x53E3;<br>2 &#x4E8C;&#x5C42;&#x805A;&#x5408;&#x53E3;&#x6210;&#x5458;&#x4E5F;&#x5FC5;&#x987B;&#x4E3A;2&#x5C42; 3&#x5C42;&#x4E3A;3&#x5C42;<br>3 &#x6700;&#x591A;&#x53EF;&#x4EE5;&#x52A0;&#x5165;8&#x4E2A;&#x6210;&#x5458;&#x7AEF;&#x53E3;<br>4 &#x52A0;&#x5165;&#x5230;&#x805A;&#x5408;&#x53E3;&#x7684;&#x63A5;&#x53E3;&#x5FC5;&#x987B;&#x662F;hybrid&#x63A5;&#x53E3;&#x7C7B;&#x578B;<br>5 &#x4E0D;&#x80FD;&#x5D4C;&#x5957;&#x4F7F;&#x7528;&#x805A;&#x5408;&#x53E3;<br>6 &#x4E00;&#x4E2A;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x53EA;&#x80FD;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x805A;&#x5408;&#x53E3;<br>7 &#x805A;&#x5408;&#x53E3;&#x7684;&#x6210;&#x5458;&#x53E3;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x76F8;&#x540C;<br>8 &#x4E24;&#x7AEF;&#x90FD;&#x8981;&#x914D;&#x7F6E;&#x805A;&#x5408;&#x53E3;<br>9 R1====R2&#x901F;&#x7387;&#x8F83;&#x4F4E;&#x7684;&#x63A5;&#x53E3;&#x53EF;&#x80FD;&#x62E5;&#x585E;&#x6216;&#x8005;&#x4E22;&#x5305;<br>10&#x6709;&#x805A;&#x5408;&#x53E3;&#x6765;&#x5B66;&#x4E60;MAC&#x5730;&#x5740;,&#x6210;&#x5458;&#x7AEF;&#x53E3;&#x5C31;&#x4E0D;&#x518D;&#x5B66;&#x4E60;MAC  </p>
+<p>&#x67E5;&#x770B;ID&#x4E3A;10&#x7684;Eth-Trunk&#x63A5;&#x53E3;&#xFF08;LACP&#x6A21;&#x5F0F;&#xFF09;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;<br>\<huawei\> display eth-trunk 10<br>Eth-Trunk10&apos;s state information is:<br>Local:<br>LAG ID: 10 WorkingMode: LACP  </huawei\></p>
+<p>&#x67E5;&#x770B; Eth-Trunk &#x7684;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x4FE1;&#x606F;<br># &#x67E5;&#x770B;ID&#x4E3A;2&#x7684;Eth-Trunk&#x7684;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x4FE1;&#x606F;&#x3002;<br>\<huawei\> display trunkmembership eth-trunk 2  </huawei\></p>
+<p>&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x652F;&#x6301;&#x7684;&#x94FE;&#x8DEF;&#x805A;&#x5408;&#x7EC4;&#x6570;&#x76EE;&#x548C;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x6570;&#x76EE;<br>&#x8BF4;&#x660E;<br>V200R005&#x53CA;&#x4EE5;&#x540E;&#x7248;&#x672C;&#x652F;&#x6301;&#x6B64;&#x547D;&#x4EE4;&#x3002;<br># &#x67E5;&#x770B;&#x8BBE;&#x5907;&#x652F;&#x6301;&#x7684;&#x94FE;&#x8DEF;&#x805A;&#x5408;&#x7EC4;&#x6570;&#x76EE;&#x548C;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x6570;&#x76EE;&#x3002;<br>\<huawei\> display trunk configuration  </huawei\></p>
+<p>Item Default Current Configured  </p>
+<p>trunk-group 128 64 64<br>trunk-member 8 16 16<br># display trunk configuration &#x547D;&#x4EE4;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x63CF;&#x8FF0;<br>Item # &#x9879;&#x76EE;&#x540D;&#x79F0;&#x3002;<br>Default # &#x8BBE;&#x5907;&#x7F3A;&#x7701;&#x60C5;&#x51B5;&#x4E0B;&#x652F;&#x6301;&#x7684;Eth-Trunk&#x7684;&#x89C4;&#x683C;&#x3002;<br>Current # &#x8BBE;&#x5907;&#x5F53;&#x524D;&#x652F;&#x6301;&#x7684;Eth-Trunk&#x7684;&#x89C4;&#x683C;&#x3002;<br>Configured # &#x8BBE;&#x5907;&#x5F53;&#x524D;&#x914D;&#x7F6E;&#x7684;Eth-Trunk&#x7684;&#x89C4;&#x683C;&#xFF0C;&#x82E5;&#x4E0E;Current&#x5217;&#x4E0D;&#x540C;&#xFF0C;&#x5219;<br>&#x5728;&#x91CD;&#x542F;&#x8BBE;&#x5907;&#x540E;Configured&#x5217;&#x914D;&#x7F6E;&#x751F;&#x6548;&#x3002;<br>trunk-group # &#x8BBE;&#x5907;&#x652F;&#x6301;&#x7684;Eth-Trunk&#x7EC4;&#x7684;&#x6570;&#x76EE;&#x3002;<br>trunk-member # &#x6BCF;&#x4E2A;Eth-Trunk&#x7EC4;&#x652F;&#x6301;&#x7684;&#x6210;&#x5458;&#x63A5;&#x53E3;&#x6570;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="实验--DHCP配置.html" class="navigation navigation-prev " aria-label="Previous page: 实验--DHCP配置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="实验--GVRP_VLAN注册协议.html" class="navigation navigation-next " aria-label="Next page: 实验--GVRP_VLAN注册协议">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"实验--Eth-Trunk链路聚合配置","level":"1.11","depth":1,"next":{"title":"实验--GVRP_VLAN注册协议","level":"1.12","depth":1,"path":"实验--GVRP_VLAN注册协议.md","ref":"实验--GVRP_VLAN注册协议.md","articles":[]},"previous":{"title":"实验--DHCP配置","level":"1.10","depth":1,"path":"实验--DHCP配置.md","ref":"实验--DHCP配置.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"实验--Eth-Trunk链路聚合配置.md","mtime":"2019-03-22T05:24:40.374Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T07:37:25.787Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

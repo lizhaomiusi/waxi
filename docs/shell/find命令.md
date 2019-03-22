@@ -1,0 +1,95 @@
+find命令 \# 查找  
+语法：  
+find [path] [参数] [动作]  
+  
+参数 作用  
+-type 匹配文件类型  
+b 块设备文件  
+d 目录  
+c 字符设备文件  
+p 管道文件  
+l 链接文件  
+f 普通文件  
+-name 匹配名称  
+-iname 忽略大小写  
+-size 匹配文件的大小（+50KB为查找超过50KB的文件，而-50KB为查找小于50KB的文件）  
+-mtime -n +n 匹配修改内容的时间（-n指n天以内，+n指n天以前）  
+-atime -n +n 匹配访问文件的时间（-n指n天以内，+n指n天以前）  
+-ctime -n +n 匹配修改文件权限的时间（-n指n天以内，+n指n天以前）  
+-newer f1 !f2 匹配比文件f1新但比f2旧的文件  
+-user 匹配所有者  
+-group 匹配所有组  
+-nouser 匹配无所有者的文件  
+-nogroup 匹配无所有组的文件  
+-depth 查找文件先查找当前目录,在查找子目录  
+-follow 如果遇到符号链接文件,就跟踪  
+-perm 匹配权限（mode为完全匹配，-mode为包含即可）  
+-prune 忽略某个目录  
+-empty 文件大小问0或空目录  
+! 取反  
+查找到的文件进一步处理  
+-exec \#
+后面可跟用于进一步处理搜索结果的命令,用于把find命令搜索到的结果交由紧随其后的命令作进一步处理  
+find . -type f -exec ls -l {} \\;  
+其中的{}表示find命令搜索出的每一个文件  
+并且命令的结尾必须是“\\;”  
+\|xargs \# 管道 \|xargs -i xargs是给命令传递参数的一个过滤器 查询出来的结果
+传递到下一个命令
+
+\---
+
+基本查找:  
+find / -name file1 \#从 '/' 开始进入根文件系统查找文件和目录  
+find / -user user1 \# 查找属于用户 'user1' 的文件和目录  
+find /home/user1 -name \\\*.bin \#在目录 '/ home/user1' 中查找以 '.bin'
+结尾的文件  
+find /usr/bin -type f -atime +100 \# 查找在过去100天内未被使用过的执行文件  
+find /usr/bin -type f -mtime -10 \# 查找在10天内被创建或者修改过的文件  
+find / -group cat \#查找在系统中属于groupcat的文件  
+find / -atime -10 \#查找在系统中最后10分钟访问的文件  
+find / -empty \#查找在系统中为空的文件或者文件夹  
+find / -mmin -5 \#查找在系统中最后5分钟里修改过的文件  
+find / -mtime -1 \#查找在系统中最后24小时里修改过的文件  
+find / -nouser \#查找在系统中属于作废用户的文件  
+find / -user fred \#查找在系统中属于FRED这个用户的文件  
+find \~ -name "\*.txt" -print \#在\$HOME中查.txt文件并显示  
+find . -name "[A-Z]\*" -print \#查以大写字母开头的文件  
+find /etc -name "host\*" -print \#查以host开头的文件  
+find /etc -name "host\*" -print \#查以host开头的文件  
+find . -size +1000000c -print \#查长度大于1Mb的文件  
+find . -size 100c -print \# 查长度为100c的文件  
+find . -size +10 -print \#查长度超过期作废10块的文件（1块=512字节）  
+  
+\#查以两个小写字母和两个数字开头的txt文件  
+find . -name "[a-z][a-z][0-9][0-9].txt" -print
+
+\---
+
+进一步处理文件例子  
+-exec {} \\;的例子  
+\#找出所有归属于linuxprobe用户的文件并复制到/root/findresults目录  
+find / -user linuxprobe -exec cp -a {} /root/findresults/ \\;  
+find /root/data/ -type f -name "\*.txt" -exec ls -l {}\\;  
+\#查所有用户都可读写执行的文件同-perm 777  
+find . -perm -007 -exec ls -l {};  
+\#在/logs目录中查找更改时间在5日以前的文件并删除它们：  
+find logs -type f -mtime +5 -exec rm {} \\;
+
+\---
+
+\|xargs的例子  
+find -name '\*.[ch]' \| xargs grep -E 'expr' \#
+在当前目录及其子目录所有.c和.h文件中查找 'expr'  
+find -type f -print0 \| xargs -r0 grep -F 'expr' \#
+在当前目录及其子目录的常规文件中查找 'expr'  
+find -maxdepth 1 -type f \| xargs grep -F 'expr' \# 在当前目录中查找 'expr'  
+find /root/data/ -type f \| xargs rm -rf \#删除目录下所有文件，保留一个指定文件
+查找该文件  
+find /root/data/ -type f -name "\*.txt" \|xargs rm -rf \#查找到文件删除  
+\# 查找目标文件的包含root的替换成admin  
+find /root/ -type f -name 'passwd\*' \|xargs sed 's\#root\#administrator\#g'  
+\#查找当前目录下7天前的文件 删除  
+find ./ -type f -name "\*.\*" -mtime +7 \|xargs rm  
+\#查找 -type f按文件类型查找 -name按名字查找用""括起来!取反，管道\| xargs
+-传递参数 xargs是给命令传递参数的一个过滤器  
+find /root/data/ -type f ! -name "a.txt" \|xargs rm -f

@@ -1,0 +1,812 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vnstat进行流量统计 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="安装完centos7需要干.html" />
+    
+    
+    <link rel="prev" href="systemctl命令.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1常用查询.html">
+            
+                <a href="1常用查询.html">
+            
+                    
+                    1常用查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1日常配置.html">
+            
+                <a href="1日常配置.html">
+            
+                    
+                    1日常配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="25个必须记住的SSH命令.html">
+            
+                <a href="25个必须记住的SSH命令.html">
+            
+                    
+                    25个必须记住的SSH命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="centos_6_网卡问题.html">
+            
+                <a href="centos_6_网卡问题.html">
+            
+                    
+                    centos6网卡问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="centos_7_网卡配置.html">
+            
+                <a href="centos_7_网卡配置.html">
+            
+                    
+                    centos7网卡配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CentOS7添加新磁盘而不用重启.html">
+            
+                <a href="CentOS7添加新磁盘而不用重启.html">
+            
+                    
+                    CentOS7添加新磁盘而不用重启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Centos系统优化.html">
+            
+                <a href="Centos系统优化.html">
+            
+                    
+                    Centos系统优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="crond命令_定时任务.html">
+            
+                <a href="crond命令_定时任务.html">
+            
+                    
+                    crond命令_定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="diff命令.html">
+            
+                <a href="diff命令.html">
+            
+                    
+                    diff命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="iptables的四表五链.html">
+            
+                <a href="iptables的四表五链.html">
+            
+                    
+                    iptables的四表五链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="linux查看和修改PATH环境变量的方法.html">
+            
+                <a href="linux查看和修改PATH环境变量的方法.html">
+            
+                    
+                    linux查看和修改PATH环境变量的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="linux磁盘空间满了.html">
+            
+                <a href="linux磁盘空间满了.html">
+            
+                    
+                    linux磁盘空间满了
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Linux设置SFTP服务用户目录权限.html">
+            
+                <a href="Linux设置SFTP服务用户目录权限.html">
+            
+                    
+                    Linux设置SFTP服务用户目录权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="linux忘记密码.html">
+            
+                <a href="linux忘记密码.html">
+            
+                    
+                    linux忘记密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="linux下添加路由.html">
+            
+                <a href="linux下添加路由.html">
+            
+                    
+                    linux下添加路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="man中文手册安装.html">
+            
+                <a href="man中文手册安装.html">
+            
+                    
+                    man中文手册安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="nc命令.html">
+            
+                <a href="nc命令.html">
+            
+                    
+                    nc命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="nmon性能测试工具.html">
+            
+                <a href="nmon性能测试工具.html">
+            
+                    
+                    nmon性能测试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="pdsh命令.html">
+            
+                <a href="pdsh命令.html">
+            
+                    
+                    pdsh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="pssh命令.html">
+            
+                <a href="pssh命令.html">
+            
+                    
+                    pssh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="rm_-rf_恢复.html">
+            
+                <a href="rm_-rf_恢复.html">
+            
+                    
+                    rm-rf恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="rsync-init.d脚本.html">
+            
+                <a href="rsync-init.d脚本.html">
+            
+                    
+                    rsync-init.d脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="rsync-win平台.html">
+            
+                <a href="rsync-win平台.html">
+            
+                    
+                    rsync-win平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="rsync-参数server端.html">
+            
+                <a href="rsync-参数server端.html">
+            
+                    
+                    rsync-参数server端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="rsync-参数客户端.html">
+            
+                <a href="rsync-参数客户端.html">
+            
+                    
+                    rsync-参数客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="rsync-服务端配置.html">
+            
+                <a href="rsync-服务端配置.html">
+            
+                    
+                    rsync-服务端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="rsync-故障.html">
+            
+                <a href="rsync-故障.html">
+            
+                    
+                    rsync-故障
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="rsync-客户端配置.html">
+            
+                <a href="rsync-客户端配置.html">
+            
+                    
+                    rsync-客户端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="sshpass命令.html">
+            
+                <a href="sshpass命令.html">
+            
+                    
+                    sshpass命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="SSH隧道.html">
+            
+                <a href="SSH隧道.html">
+            
+                    
+                    SSH隧道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="SSH远程连接服务慢解决.html">
+            
+                <a href="SSH远程连接服务慢解决.html">
+            
+                    
+                    SSH远程连接服务慢解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="systemctl命令.html">
+            
+                <a href="systemctl命令.html">
+            
+                    
+                    systemctl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.34" data-path="vnstat进行流量统计.html">
+            
+                <a href="vnstat进行流量统计.html">
+            
+                    
+                    vnstat进行流量统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="安装完centos7需要干.html">
+            
+                <a href="安装完centos7需要干.html">
+            
+                    
+                    安装完centos7需要干
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="安装状态监控Linux_Dash.html">
+            
+                <a href="安装状态监控Linux_Dash.html">
+            
+                    
+                    安装状态监控Linux_Dash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="常见安全检查方法.html">
+            
+                <a href="常见安全检查方法.html">
+            
+                    
+                    常见安全检查方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="服务器删除文件权限不够.html">
+            
+                <a href="服务器删除文件权限不够.html">
+            
+                    
+                    服务器删除文件权限不够
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="更改linux终端中用户名颜色.html">
+            
+                <a href="更改linux终端中用户名颜色.html">
+            
+                    
+                    更改linux终端中用户名颜色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="配置systemctl命令tab自动补全.html">
+            
+                <a href="配置systemctl命令tab自动补全.html">
+            
+                    
+                    配置systemctl命令tab自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="全能系统监控工具dstat.html">
+            
+                <a href="全能系统监控工具dstat.html">
+            
+                    
+                    全能系统监控工具dstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="生产场景如何对linux系统进行合理规划分区.html">
+            
+                <a href="生产场景如何对linux系统进行合理规划分区.html">
+            
+                    
+                    生产场景如何对linux系统进行合理规划分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="使用mkpasswd命令生成随机密码.html">
+            
+                <a href="使用mkpasswd命令生成随机密码.html">
+            
+                    
+                    使用mkpasswd命令生成随机密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="系统屏蔽某个IP的访问.html">
+            
+                <a href="系统屏蔽某个IP的访问.html">
+            
+                    
+                    系统屏蔽某个IP的访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="应该知道的LINUX技巧.html">
+            
+                <a href="应该知道的LINUX技巧.html">
+            
+                    
+                    应该知道的LINUX技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >vnstat进行流量统计</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>linux - &#x5229;&#x7528;vnstat&#x8FDB;&#x884C;&#x6D41;&#x91CF;&#x7EDF;&#x8BA1;</p>
+<p>&#x5728;Linux&#x4E0B;&#xFF0C;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x7EDF;&#x8BA1;&#x53CA;&#x5206;&#x6790;&#x6D41;&#x91CF;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;vnstat&#x3002;<br>centos&#x4E0A;&#x9762;&#x9700;&#x8981;&#x5B89;&#x88C5;epel-release&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;yum&#x5B89;&#x88C5;&#x4E86;  </p>
+<p>yum -y install epel-release<br>yum -y install vnstat<br>&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;<br>wget -c <a href="http://humdi.net/vnstat/vnstat-1.18.tar.gz" target="_blank">http://humdi.net/vnstat/vnstat-1.18.tar.gz</a><br>tar zxvf vnstat-1.18<br>cd vnstat-1.18<br>./configure<br>make &amp;&amp; make install<br>&#x8FD9;&#x6837;vnstat &#x5C31;&#x5B89;&#x88C5;&#x597D;&#x4E86;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x8981;&#x8BBE;&#x7F6E;vnstat(&#x5982;&#x679C;&#x662F;yum&#x6216;apt-get
+&#x5B89;&#x88C5;&#x7684;vnstat&#x4E0D;&#x9700;&#x8981;&#x4E0B;&#x9762;&#x7684;&#x8BBE;&#x7F6E;)&#x3002;<br>cp examples/init.d/centos/vnstat /etc/init.d/<br>chmod +x /etc/init.d/vnstat<br>chkconfig --add vnstat<br>chkconfig vnstat on  </p>
+<p>&#x542F;&#x52A8;vnstat daemon&#xFF1A;<br>/etc/init.d/vnstat start  </p>
+<p>&#x7F16;&#x8BD1;&#x5B89;&#x88C5;vnstat&#x7684;&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x3002;<br>&#x4F7F;&#x7528;<br>vnstat --help<br>vnStat 1.18 by Teemu Toivola \<tst at="" iki="" dot="" fi\=""><br>-q, --query query database #&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x9762;&#x6240;&#x6709;&#x6570;&#x636E;<br>-h, --hours show hours #&#x67E5;&#x770B;&#x6700;&#x8FD1;24&#x5C0F;&#x65F6;&#x7684;&#x6D41;&#x91CF;&#x60C5;&#x51B5;<br>-d, --days show days #&#x6309;&#x5929;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;<br>-m, --months show months #&#x6309;&#x6708;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;<br>-w, --weeks show weeks #&#x6309;&#x5468;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;<br>-t, --top10 show top 10 days #&#x67E5;&#x770B;top10&#x5929;&#x7684;&#x6D41;&#x91CF;<br>-s, --short use short output<br>-u, --update update database #&#x66F4;&#x65B0;&#x6570;&#x636E;&#x5E93;<br>-i, --iface select interface (default: eth0) #&#x6307;&#x5B9A;&#x7F51;&#x53E3;<br>-?, --help short help<br>-v, --version show version<br>-tr, --traffic calculate traffic<br>-ru, --rateunit swap configured rate unit<br>-l, --live show transfer rate in real time<br>See also &quot;--longhelp&quot; for complete options list and &quot;man vnstat&quot;.  </tst></p>
+<p>vnstate&#x52A0;&#x4E0A;&#x9762;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x5230;&#x5BF9;&#x5E94;&#x65F6;&#x95F4;&#x7684;&#x6D41;&#x91CF;&#x53CA;&#x5E73;&#x5747;&#x7F51;&#x901F;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="systemctl命令.html" class="navigation navigation-prev " aria-label="Previous page: systemctl命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="安装完centos7需要干.html" class="navigation navigation-next " aria-label="Next page: 安装完centos7需要干">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vnstat进行流量统计","level":"1.34","depth":1,"next":{"title":"安装完centos7需要干","level":"1.35","depth":1,"path":"安装完centos7需要干.md","ref":"安装完centos7需要干.md","articles":[]},"previous":{"title":"systemctl命令","level":"1.33","depth":1,"path":"systemctl命令.md","ref":"systemctl命令.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vnstat进行流量统计.md","mtime":"2019-03-22T02:38:40.223Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T07:59:19.170Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

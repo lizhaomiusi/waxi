@@ -1,0 +1,795 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>sed命令 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell备份.html" />
+    
+    
+    <link rel="prev" href="rsync备份.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1shell一句话脚本.html">
+            
+                <a href="1shell一句话脚本.html">
+            
+                    
+                    1shell一句话脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="awk命令.html">
+            
+                <a href="awk命令.html">
+            
+                    
+                    awk命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="case命令.html">
+            
+                <a href="case命令.html">
+            
+                    
+                    case命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="DDOS中禁攻击者IP.html">
+            
+                <a href="DDOS中禁攻击者IP.html">
+            
+                    
+                    DDOS中禁攻击者IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="EOF转义问题.html">
+            
+                <a href="EOF转义问题.html">
+            
+                    
+                    EOF转义问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="find命令.html">
+            
+                <a href="find命令.html">
+            
+                    
+                    find命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="for循环.html">
+            
+                <a href="for循环.html">
+            
+                    
+                    for循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="git脚本.html">
+            
+                <a href="git脚本.html">
+            
+                    
+                    git脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="grep命令.html">
+            
+                <a href="grep命令.html">
+            
+                    
+                    grep命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="if判断.html">
+            
+                <a href="if判断.html">
+            
+                    
+                    if判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="mysql数据库定期自动备份脚本.html">
+            
+                <a href="mysql数据库定期自动备份脚本.html">
+            
+                    
+                    mysql数据库定期自动备份脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="read命令.html">
+            
+                <a href="read命令.html">
+            
+                    
+                    read命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="rm回收站.html">
+            
+                <a href="rm回收站.html">
+            
+                    
+                    rm回收站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="rsync备份.html">
+            
+                <a href="rsync备份.html">
+            
+                    
+                    rsync备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16" data-path="sed命令.html">
+            
+                <a href="sed命令.html">
+            
+                    
+                    sed命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell备份.html">
+            
+                <a href="shell备份.html">
+            
+                    
+                    shell备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="shell打印99乘法表.html">
+            
+                <a href="shell打印99乘法表.html">
+            
+                    
+                    shell打印99乘法表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="shell格式化输出带颜色变量.html">
+            
+                <a href="shell格式化输出带颜色变量.html">
+            
+                    
+                    shell格式化输出带颜色变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="Shell脚本编写.html">
+            
+                <a href="Shell脚本编写.html">
+            
+                    
+                    Shell脚本编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                <a href="shell脚本编写启动、停止和重启脚本，并添加到系统服务中.html">
+            
+                    
+                    shell脚本编写启动、停止和重启脚本，并添加到系统服务中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="sshd脚本解析.html">
+            
+                <a href="sshd脚本解析.html">
+            
+                    
+                    sshd脚本解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="vim命令.html">
+            
+                <a href="vim命令.html">
+            
+                    
+                    vim命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="按时间创建目录打包.html">
+            
+                <a href="按时间创建目录打包.html">
+            
+                    
+                    按时间创建目录打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="鸡兔同笼.html">
+            
+                <a href="鸡兔同笼.html">
+            
+                    
+                    鸡兔同笼
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="监控mysql脚本.html">
+            
+                <a href="监控mysql脚本.html">
+            
+                    
+                    监控mysql脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="监控脚本使用情况.html">
+            
+                <a href="监控脚本使用情况.html">
+            
+                    
+                    监控脚本使用情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="监控某服务_有没有开启.html">
+            
+                <a href="监控某服务_有没有开启.html">
+            
+                    
+                    监控某服务_有没有开启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="利用Shell脚本检测WebURL状态.html">
+            
+                <a href="利用Shell脚本检测WebURL状态.html">
+            
+                    
+                    利用Shell脚本检测WebURL状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="内核优化.html">
+            
+                <a href="内核优化.html">
+            
+                    
+                    内核优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="判断端口是否异常，然后重启服务.html">
+            
+                <a href="判断端口是否异常，然后重启服务.html">
+            
+                    
+                    判断端口是否异常，然后重启服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="批量创建用户和密码.html">
+            
+                <a href="批量创建用户和密码.html">
+            
+                    
+                    批量创建用户和密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="批量修改主机名脚本.html">
+            
+                <a href="批量修改主机名脚本.html">
+            
+                    
+                    批量修改主机名脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="生成随机密码命令.html">
+            
+                <a href="生成随机密码命令.html">
+            
+                    
+                    生成随机密码命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="使用mtime删除历史文件或日志文件.html">
+            
+                <a href="使用mtime删除历史文件或日志文件.html">
+            
+                    
+                    使用mtime删除历史文件或日志文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="正则表达式.html">
+            
+                <a href="正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >sed命令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>sed&#x547D;&#x4EE4; # &#x66FF;&#x6362; &#x5904;&#x7406;&#x884C;</p>
+<p><a href="https://www.cnblogs.com/ginvip/p/6376049.html" target="_blank">https://www.cnblogs.com/ginvip/p/6376049.html</a><br><a href="https://www.cnblogs.com/DragonFire/p/6600121.html" target="_blank">https://www.cnblogs.com/DragonFire/p/6600121.html</a><br><a href="https://blog.oldboyedu.com/commands-sed/" target="_blank">https://blog.oldboyedu.com/commands-sed/</a></p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;<br>sed [&#x53C2;&#x6570;] [&#x52A8;&#x4F5C;] [file]<br>&#x9009;&#x9879;&#x4E0E;&#x53C2;&#x6570;&#xFF1A;<br>-n &#x4F7F;&#x7528;&#x5B89;&#x9759;(silent)&#x6A21;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x52A0;&#x4E0A; -n &#x53C2;&#x6570;&#x540E;&#xFF0C;&#x5219;&#x53EA;&#x6709;&#x7ECF;&#x8FC7;sed
+&#x7279;&#x6B8A;&#x5904;&#x7406;&#x7684;&#x90A3;&#x4E00;&#x884C;(&#x6216;&#x8005;&#x52A8;&#x4F5C;)&#x624D;&#x4F1A;&#x88AB;&#x5217;&#x51FA;&#x6765;&#x3002;<br>-e &#x76F4;&#x63A5;&#x5728;&#x547D;&#x4EE4;&#x5217;&#x6A21;&#x5F0F;&#x4E0A;&#x8FDB;&#x884C; sed &#x7684;&#x52A8;&#x4F5C;&#x7F16;&#x8F91;&#xFF1B;&#x591A;&#x91CD;&#x5339;&#x914D;<br>-f &#x76F4;&#x63A5;&#x5C06; sed &#x7684;&#x52A8;&#x4F5C;&#x5199;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#xFF0C; -f filename &#x5219;&#x53EF;&#x4EE5;&#x8FD0;&#x884C; filename &#x5185;&#x7684; sed
+&#x52A8;&#x4F5C;&#xFF1B;<br>-r sed
+&#x7684;&#x52A8;&#x4F5C;&#x652F;&#x6301;&#x7684;&#x662F;&#x5EF6;&#x4F38;&#x578B;&#x6B63;&#x89C4;&#x8868;&#x793A;&#x6CD5;&#x7684;&#x8BED;&#x6CD5;&#x3002;(&#x9ED8;&#x8BA4;&#x662F;&#x57FA;&#x7840;&#x6B63;&#x89C4;&#x8868;&#x793A;&#x6CD5;&#x8BED;&#x6CD5;)&#x652F;&#x6301;&#x6269;&#x5C55;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5982;+&#x3001;|\()&#x7B49;&#x7279;&#x6B8A;&#x7B26;&#x53F7;<br>-i &#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8F93;&#x51FA;&#x5230;&#x7EC8;&#x7AEF;&#x3002;<br>-p print&#x6253;&#x5370; &apos;2p&apos;&#x7B2C;&#x4E8C;&#x884C; &apos;3p&apos;&#x7B2C;&#x4E09;&#x884C;&apos; 2,5p&apos;2~5&#x884C;<br>-d delete&#x5220;&#x9664;  </p>
+<p>&#x589E;&#x5220;&#x6539;&#x67E5;<br>a # &#x65B0;&#x589E;&#x884C;&#xFF0C;&#x8FFD;&#x52A0;&#x6587;&#x672C;&#x5230;&#x6307;&#x5B9A;&#x884C;&#x540E;<br>i # &#x63D2;&#x5165;&#x884C;&#xFF0C;&#x63D2;&#x5165;&#x6587;&#x672C;&#x5230;&#x6307;&#x5B9A;&#x884C;&#x524D;</p>
+<p>&#x793A;&#x4F8B; &#x5355;&#x884C;&#x589E;&#x52A0;<br>sed &apos;2a 106,mysql,mysql&apos; 111.txt<br>sed &apos;2i 106,mysql,mysql&apos; 111.txt</p>
+<p>&#x591A;&#x884C;&#x589E;&#x52A0;<br>cat 111.txt |sed &apos;2i 106,mysql,mysql\n107,nginx,nginx&apos;<br>cat 111.txt |sed &apos;2i 106,mysql,mysql \<br>107,nginx,nginx&apos;</p>
+<p>---</p>
+<p>d # &#x5220;&#x9664;&#x884C;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x5220;&#x9664;&#xFF0C;&#x6240;&#x4EE5; d &#x540E;&#x9762;&#x901A;&#x5E38;&#x4E0D;&#x63A5;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x5730;&#x5740;&#x8868;&#x793A;&#x7684;&#x884C;&#xFF1B;<br>sed &apos;2,4d&apos; shell.sh # &#x5220;&#x9664;2&#x5230;4&#x884C;<br>sed &apos;/sd/d&apos; shell.sh # &#x5220;&#x9664; &#x6B63;&#x5219; &#x5220;&#x9664;&#x5305;&#x542B;sd&#x7684;&#x884C;<br>sed &apos;/\^2/d&apos; test.txt # &#x5220;&#x9664;&#x4EE5;2&#x5F00;&#x5934;&#x7684;&#x884C;<br>sed &apos;/wq$/d&apos; shell.sh # &#x5220;&#x9664;&#x4EE5;wq&#x7ED3;&#x5C3E;&#x7684;&#x884C;<br>sed -n &apos;1d&apos; abc # &#x4EC0;&#x4E48;&#x5185;&#x5BB9;&#x4E5F;&#x4E0D;&#x663E;&#x793A;, &#x56E0;&#x4E3A;&#x7ECF;&#x8FC7;sed&#x5904;&#x7406;&#x7684;&#x884C;, &#x662F;&#x4E2A;&#x5220;&#x9664;&#x64CD;&#x4F5C;,
+&#x6240;&#x4EE5;&#x4E0D;&#x73B0;&#x5B9E;.<br>sed &apos;2,$d&apos; abc # &#x5220;&#x9664;abc&#x4E2D;&#x4ECE;&#x7B2C;&#x4E8C;&#x884C;&#x5230;&#x6700;&#x540E;&#x4E00;&#x884C;&#x6240;&#x6709;&#x7684;&#x5185;&#x5BB9;, &#x6CE8;&#x610F;,
+$&#x7B26;&#x53F7;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x8868;&#x793A;&#x884C;&#x672B;&#x5C3E;, &#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x5E76;&#x6CA1;&#x6709;&#x8BF4;&#x90A3;&#x884C;&#x672B;&#x5C3E;, &#x5C31;&#x4F1A;&#x6307;&#x6700;&#x540E;&#x4E00;&#x884C;&#x672B;&#x5C3E;,
+\^&#x5F00;&#x5934;, &#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x54EA;&#x884C;&#x5F00;&#x5934;, &#x90A3;&#x4E48;&#x5C31;&#x662F;&#x7B2C;&#x4E00;&#x884C;&#x5F00;&#x5934;<br>sed &apos;$d&apos; abc # &#x53EA;&#x5220;&#x9664;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x884C;, &#x56E0;&#x4E3A;&#x5E76;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x662F;&#x90A3;&#x884C;&#x672B;&#x5C3E;,
+&#x5C31;&#x8BA4;&#x4E3A;&#x662F;&#x6700;&#x540E;&#x4E00;&#x884C;&#x672B;&#x5C3E;<br>sed &apos;/test/d&apos; abc # &#x6587;&#x4EF6;&#x4E2D;&#x6240;&#x6709;&#x5E26; test &#x7684;&#x884C;, &#x5168;&#x90E8;&#x5220;&#x9664;<br>cat 111.txt |sed &apos;1~2d&apos; # &#x8868;&#x793A;&#x5220;1,3,5&#x7684;&#x884C;</p>
+<p>---</p>
+<p>c # &#x4FEE;&#x6539;&#x884C;&#xFF0C;c &#x7684;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x63A5;&#x5B57;&#x4E32;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x4E32;&#x53EF;&#x4EE5;&#x53D6;&#x4EE3;n1,n2&#x4E4B;&#x95F4;&#x7684;&#x884C;<br>cat /etc/passwd -n | sed &apos;2,5c 1111111111111sssssssssssss&apos;
+#2~5&#x884C;&#x66FF;&#x6362;&#x6210;&#x4E86;c&#x540E;&#x9762;&#x7684;</p>
+<p>---</p>
+<p>s # &#x66FF;&#x6362;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#x7684;&#x5DE5;&#x4F5C;,&#x901A;&#x5E38;&#x8FD9;&#x4E2A; s &#x7684;&#x52A8;&#x4F5C;&#x53EF;&#x4EE5;&#x642D;&#x914D;&#x6B63;&#x89C4;&#x8868;&#x793A;&#x6CD5;&#xFF0C;&#x4F8B;&#x5982;
+1,20s#old#new#g &#x4E00;&#x822C;&#x662F;&#x66FF;&#x6362;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x800C;&#x4E0D;&#x662F;&#x6574;&#x884C;<br>sed&#x8F6F;&#x4EF6;&#x66FF;&#x6362;&#x6A21;&#x578B;(&#x65B9;&#x6846;&#x2587;&#x88AB;&#x66FF;&#x6362;&#x6210;&#x4E09;&#x89D2;&#x25B2;)<br>sed -i &apos;s/&#x2587;/&#x25B2;/g&apos; oldboy.log<br>sed -i &apos;s#&#x2587;#&#x25B2;#g&apos; oldboy.log</p>
+<p>---</p>
+<p>&#x4E24;&#x8FB9;&#x662F;&#x5F15;&#x53F7;&#xFF0C;&#x5F15;&#x53F7;&#x91CC;&#x9762;&#x7684;&#x4E24;&#x8FB9;&#x5206;&#x522B;&#x4E3A;s&#x548C;g&#xFF0C;&#x4E2D;&#x95F4;&#x662F;&#x4E09;&#x4E2A;&#x4E00;&#x6837;&#x7684;&#x5B57;&#x7B26;/&#x6216;#&#x4F5C;&#x4E3A;&#x5B9A;&#x754C;&#x7B26;&#x3002;#&#x80FD;&#x5728;&#x66FF;&#x6362;&#x5185;&#x5BB9;&#x5305;&#x542B;/&#x6709;&#x52A9;&#x4E8E;&#x533A;&#x522B;&#x3002;&#x5B9A;&#x754C;&#x7B26;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7B26;&#x53F7;&#x5982;:&#x6216;|&#x7B49;&#xFF0C;&#x4F46;&#x5F53;&#x66FF;&#x6362;&#x5185;&#x5BB9;&#x5305;&#x542B;&#x5B9A;&#x754C;&#x7B26;&#x65F6;&#xFF0C;&#x9700;&#x8F6C;&#x4E49;&#x5373;:
+|&#x3002;&#x7ECF;&#x8FC7;&#x957F;&#x671F;&#x5B9E;&#x8DF5;&#xFF0C;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x4F7F;&#x7528;#&#x4F5C;&#x4E3A;&#x5B9A;&#x754C;&#x7B26;&#x3002;<br>&#x5B9A;&#x754C;&#x7B26;/&#x6216;#&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4E4B;&#x95F4;&#x7684;&#x5C31;&#x662F;&#x88AB;&#x66FF;&#x6362;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x548C;&#x7B2C;&#x4E09;&#x4E2A;&#x4E4B;&#x95F4;&#x7684;&#x5C31;&#x662F;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5185;&#x5BB9;&#x3002;<br>s#&#x2587;#&#x25B2;#g&#xFF0C;&#x2587;&#x80FD;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4F46;&#x25B2;&#x4E0D;&#x80FD;&#x7528;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x5177;&#x4F53;&#x7684;&#x3002;</p>
+<p>---</p>
+<p>&#x7528;///&#x6216;###&#xFF08;&#x4EFB;&#x610F;&#x6210;&#x5BF9;&#x7684;&#x7B26;&#x53F7;&#x90FD;&#x53EF;&#x4EE5;&#xFF09;&#x8FD9;&#x6837;&#x7684;&#x6846;&#x67B6;&#x6765;&#x5F15;&#x7528;&#x9700;&#x8981;&#x66FF;&#x6362;&#x7684;&#x548C;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5185;&#x5BB9;&#xFF0C;<br>s/old/new/&#x6216;s#old#new# # &#x628A;old&#x4E00;&#x8BCD;&#x66FF;&#x6362;&#x4E3A;new&#xFF0C;&#x9ED8;&#x8BA4;&#x53EA;&#x66FF;&#x6362;&#x6BCF;&#x884C;&#x7B2C;&#x4E00;&#x4E2A;<br>sed &apos;1,2s/tom/TOM/g&apos; /etc/passwd # &#x628A;&#x7B2C;&#x4E00;&#x7B2C;&#x4E8C;&#x884C;&#x7684;tom&#x66FF;&#x6362;&#x4E3A;TOM<br>sed &apos;5,$s/aa/AA/g&apos; test.txt # &#x4E5F;&#x53EF;&#x4EE5;&#x662F;5~&#x6587;&#x672B;&#x6240;&#x6709;&#x884C;<br>sed &apos;/\^[0-9]/s/aa/AA/g&apos; test.txt # &#x5339;&#x914D;&#x5934;&#x662F;&#x6570;&#x5B57;&#x7684;&#x884C;<br>sed &apos;/root/s/root/ROOT/g&apos; /etc/passwd # &#x5339;&#x914D;&#x5305;&#x542B;root&#x7684;&#x884C;&#xFF0C;&#x5E76;&#x628A;root&#x66FF;&#x6362;ROOT<br>sed &apos;1s/aa/AA/g&apos; test.txt # &#x9650;&#x5B9A;&#x53EA;&#x5BF9;&#x7B2C;&#x4E00;&#x884C;&#x8FDB;&#x884C;&#x66FF;&#x6362;<br>sed s#$x#$y#g test.txt # &#x53D8;&#x91CF;&#x66FF;&#x6362;</p>
+<p>---</p>
+<p>&#x5206;&#x7EC4;&#x66FF;&#x6362;\( \)&#x548C;\1&#x7684;&#x4F7F;&#x7528;&#x8BF4;&#x660E;<br>sed&#x8F6F;&#x4EF6;&#x7684;\(
+\)&#x7684;&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x8BB0;&#x4F4F;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;\1&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x8BB0;&#x4F4F;&#x7684;&#x6A21;&#x5F0F;&#x5373;&#x7B2C;&#x4E00;&#x4E2A;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5339;&#x914D;&#x5185;&#x5BB9;&#xFF0C;\2&#x7B2C;&#x4E8C;&#x8BB0;&#x4F4F;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x7B2C;&#x4E8C;&#x4E2A;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5339;&#x914D;&#x5185;&#x5BB9;&#xFF0C;sed&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x8BB0;&#x4F4F;9&#x4E2A;&#x3002;  </p>
+<p>[root\@oldboy ~]# echo I am oldboy teacher. |sed &apos;s#\^.*am \([a-z].*\)
+tea.*$#\1#g&apos;<br>oldboy<br>[root\@oldboy ~]# echo I am oldboy teacher. |sed -r &apos;s#\^.*am ([a-z].*)
+tea.*$#\1#g&apos;<br>oldboy<br>[root\@oldboy ~]# echo I am oldboy teacher. |sed -r &apos;s#I (.*) (.*)
+teacher.#\1\2#g&apos;<br>amoldboy</p>
+<p>---</p>
+<p>p # &#x5217;&#x5370;&#xFF0C;&#x4EA6;&#x5373;&#x5C06;&#x67D0;&#x4E2A;&#x9009;&#x62E9;&#x7684;&#x6570;&#x636E;&#x5370;&#x51FA;&#x3002;&#x901A;&#x5E38; p &#x4F1A;&#x4E0E;&#x53C2;&#x6570; sed -n &#x4E00;&#x8D77;&#x8FD0;&#x884C;<br>cat /etc/passwd -n | sed -n &apos;2,5p&apos; #-n&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x8F93;&#x51FA; &#x6253;&#x5370;2-5&#x884C;  </p>
+<p>sed&#x7684;&#x6B63;&#x5219;&#x4E2D; \(\) &#x548C; \{m,n\} &#x9700;&#x8981;&#x8F6C;&#x4E49;<br>&#x5982; \ $ * + ( )  </p>
+<p>. &#x8868;&#x793A;&#x4EFB;&#x610F;&#x5B57;&#x7B26;<br>* &#x8868;&#x793A;&#x96F6;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;<br>\+ &#x4E00;&#x6B21;&#x6216;&#x591A;&#x6B21;&#x3000;&#x3000;<br>\? &#x96F6;&#x6B21;&#x6216;&#x4E00;&#x6B21;<br>\| &#x8868;&#x793A;&#x6216;&#x8BED;&#x6CD5;</p>
+<p>---</p>
+<p>sed&#x7684;&#x5B9A;&#x5740;&#x4E0E;&#x547D;&#x4EE4;&#xFF1A;<br>&#x5B9A;&#x5740;&#x51B3;&#x5B9A;&#x4E86;sed&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x800C;&#x547D;&#x4EE4;&#x51B3;&#x5B9A;&#x4E86;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x5199;sed&#x8BED;&#x53E5;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x201C;&#x5C06;x&#x884C;&#x5230;y&#x884C;&#x4E2D;&#x5E26;&#x6709;z&#x5B57;&#x7B26;&#x7684;&#x5185;&#x5BB9;&#x505A;a&#x64CD;&#x4F5C;&#x201D;&#xFF0C;&#x6BD4;&#x5982;&#x4ECE;1-10&#x884C;&#x4E2D;&#x5220;&#x9664;root&#x5F00;&#x5934;&#x7684;&#x884C;&#x3002;&#x901A;&#x5E38;&#x628A;&#x5B9A;&#x5740;&#x4E0E;&#x547D;&#x4EE4;&#x7528;&#x5355;&#x5F15;&#x53F7;&#x5F15;&#x8D77;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x6B63;&#x5219;&#x5339;&#x914D;&#x7684;&#x8BDD;&#xFF0C;&#x8981;&#x4F7F;&#x7528;//&#x6765;&#x5C06;&#x6B63;&#x5219;&#x5185;&#x5BB9;&#x56CA;&#x62EC;&#x8FDB;&#x53BB;&#x3002;</p>
+<p>---</p>
+<p>q # &#x9000;&#x51FA;, &#x5339;&#x914D;&#x5230;&#x67D0;&#x884C;&#x9000;&#x51FA;, &#x63D0;&#x9AD8;&#x6548;&#x7387;<br>r # &#x5339;&#x914D;&#x5230;&#x7684;&#x884C;&#x8BFB;&#x53D6;&#x67D0;&#x6587;&#x4EF6; &#x4F8B;&#x5982;: sed &apos;1r qqq&apos; abc , &#x6CE8;&#x610F;,
+&#x5199;&#x5165;&#x7684;&#x6587;&#x672C;&#x662F;&#x5199;&#x5728;&#x4E86;&#x7B2C;1&#x884C;&#x7684;&#x540E;&#x8FB9;, &#x4E5F;&#x5C31;&#x662F;&#x7B2C;2&#x884C;<br>w # file, &#x5339;&#x914D;&#x5230;&#x7684;&#x884C;&#x5199;&#x5165;&#x67D0;&#x6587;&#x4EF6; &#x4F8B;&#x5982;: sed -n &apos;/m/w qqq&apos; abc ,
+&#x4ECE;abc&#x4E2D;&#x8BFB;&#x53D6;&#x5E26;m&#x7684;&#x884C;&#x5199;&#x5230;qqq&#x6587;&#x4EF6;&#x4E2D;, &#x6CE8;&#x610F;, &#x8FD9;&#x4E2A;&#x5199;&#x5165;&#x5E26;&#x6709;&#x8986;&#x76D6;&#x6027;.</p>
+<p>---</p>
+<p>-r #&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;<br>echo &apos;qwe1234qwe&apos;|sed -r &apos;s/[0-9]{3}//&apos; #&#x5220;&#x9664;&#x5305;&#x542B;&#x6570;&#x5B57;&#x7684;&#x524D;3&#x4E2A;<br>-e #&#x591A;&#x91CD;&#x5339;&#x914D;<br>cat anaconda-ks.cfg |sed -e &apos;s/sd/sd111/g&apos; -e &apos;s/sd111/sd222/g&apos;
+#&#x548C;&#x52A0;&#x7BA1;&#x9053;&#x66FF;&#x6362;&#x7C7B;&#x4F3C;</p>
+<p>---</p>
+<p>q # &#x9000;&#x51FA;&#x547D;&#x4EE4;<br>&#x7531;&#x4E8E;sed&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#x662F;&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x5904;&#x7406;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x90A3;&#x4E48;&#x5F53;&#x9047;&#x5230;&#x5904;&#x7406;&#x5DE8;&#x5927;&#x6587;&#x4EF6;&#x65F6;&#x5C31;&#x4F1A;&#x8017;&#x8D39;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x660E;&#x786E;&#x53EA;&#x9700;&#x8981;&#x5904;&#x7406;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x524D;100&#x884C;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E0A;&#x8BE5;&#x9009;&#x9879;&#x4E86;&#xFF0C;&#x793A;&#x4F8B;&#xFF1A;<br>cat bigfile | sed &apos;1,100d;100q&apos; #&#x5904;&#x7406;&#x5230;&#x7B2C;100&#x884C;&#x540E;&#x5C31;&#x9000;&#x51FA;</p>
+<p>---</p>
+<p>sed&#x7684;&#x540E;&#x9879;&#x5F15;&#x7528;&#xFF1A;<br>&#x62EC;&#x53F7;&#x5185;&#x7684;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x9762;&#x76F4;&#x63A5;&#x88AB;&#x5F15;&#x7528;&#xFF0C;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x5185;&#x5BB9;&#x662F;\1&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&amp;&#x7B26;&#x53F7;&#x4EE3;&#x8868;&#x524D;&#x9762;&#x6240;&#x5339;&#x914D;&#x5230;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x3002;&#x540E;&#x9879;&#x5F15;&#x7528;&#x53EF;&#x7528;&#x4E8E;&#x66F4;&#x6362;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7684;&#x4F4D;&#x7F6E;&#x6216;&#x8005;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x6CE8;&#x91CA;&#x7B49;<br>cat ces.txt | sed -nr &apos;s#(.*)(mysql)(.*) # \1\2\3#gp&apos; #&#x53D6;&#xFF08;&#xFF09;&#x4E2D;&#x5185;&#x5BB9;
+-r&#x662F;&#x5F00;&#x542F;&#x6269;&#x5C55;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;<br>ifconfig | sed -n &apos;2p&apos; |sed -nr &apos;s#.*dr:(.*) Bc.*#\1#gp&apos;
+#&#x4E5F;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x53D6;IP<br>ifconfig ens33 | sed -n &apos;2p&apos;| sed -nr &apos;s#.*t (.*) n.*#\1#gp&apos; #&#x53D6;IP&#x5730;&#x5740;</p>
+<p># &#x5728;&#x6BCF;&#x884C;&#x6700;&#x540E;|&#x6700;&#x524D;&#x6DFB;&#x52A0;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>sed -r &apos;s#(.*)#\1test#g&apos; /etc/passwd</p>
+<p>sed -r &apos;s#(.*)#\#\1#g&apos; /etc/passwd</p>
+<p># &#x4FEE;&#x6539;passwd&#x91CC;&#x9762;/sbin/nologin&#x4E3A;/bin/nologin</p>
+<p>sed -r &apos;s#/s(bin/nologin)#\1#g&apos; /etc/passwd</p>
+<p># &#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x5B57;&#x7B26; &#x4F7F; quiet&quot;&#x53D8;&#x6210; quiet xyz&quot;</p>
+<p>sed -r &apos;s#(quiet)#\1 xyz#g&apos; /etc/default/grub</p>
+<p>sed -r &apos;/GRUB_CMDLINE_LINUX/s#(.*)&quot;$#\1 xyz&quot;#g&apos; /etc/default/grub</p>
+<p>---</p>
+<p># &amp;&#x7528;&#x6CD5;<br>echo &apos;123456789&apos; |sed -r &apos;s#[0-9]{3}#[&amp;]#g&apos; #&#x8868;&#x793A;&#x5339;&#x914D;&#x5230;&#x4EC0;&#x4E48;&#x5C31;&#x66FF;&#x6362;&#x4EC0;&#x4E48;<br>[123][456][789]  </p>
+<p>&#x4E3E;&#x4F8B;:<br>sed &apos;/test/a RRRRRRR&apos; abc # &#x5C06; RRRRRRR &#x8FFD;&#x52A0;&#x5230;&#x6240;&#x6709;&#x7684;&#x5E26; test &#x884C;&#x7684;&#x4E0B;&#x4E00;&#x884C;
+&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x901A;&#x8FC7;&#x884C; # sed &apos;1,5c RRRRRRR&apos; abc<br>sed &apos;1c hello world&apos; test.txt # &#x66FF;&#x6362;&#x884C; &#x66FF;&#x6362;&#x6307;&#x5B9A;&#x884C;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x4E3A;c&#x540E;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x4E32;<br>sed &apos;/\^2/c hello world&apos; test.txt # &#x6B63;&#x5219;&#x66FF;&#x6362;&#x884C; &#x66FF;&#x6362;&#x4EE5;2&#x5F00;&#x5934;&#x7684;&#x884C;<br>sed &apos;/test/c RRR&apos; abc # &#x5C06; RRR &#x66FF;&#x6362;&#x6240;&#x6709;&#x5E26; test &#x7684;&#x884C;, &#x5F53;&#x7136;,
+&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x901A;&#x8FC7;&#x884C;&#x6765;&#x8FDB;&#x884C;&#x66FF;&#x6362;, &#x6BD4;&#x5982; sed &apos;1,5c RRRRRRR&apos; abc<br>sed &apos;s/$/#/g&apos; # &#x6BCF;&#x884C;&#x5F00;&#x5934;&#x6DFB;&#x52A0;# sed &apos;s/\^/#/g&apos;&#x4E5F;&#x53EF;&#x4EE5;<br>sed -r &apos;3,5s/.*/#&amp;/&apos; ces.txt # &#x628A;345&#x884C;&#x524D;&#x9762;&#x589E;&#x52A0;#&#x53F7;<br>sed -ir &apos;1,10s/\^/#/&apos; ces.txt # &#x6279;&#x91CF;&#x589E;&#x52A0;&#x6CE8;&#x91CA;&#x7684;&#x6700;&#x7B80;&#x6D01;&#x529E;&#x6CD5;<br>sed -r &apos;s/(.)(.)(.*)/\1\2#\3/&apos; ces.txt # &#x5728;&#x6BCF;&#x884C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x6BCD;&#x524D;&#x52A0;&#x6CE8;&#x91CA;<br>sed -ir &apos;s#(.*)#\1#g&apos; ces.txt # -ir -&#x5B57;&#x7B26; &#xFF1A;()&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x7528;\1&#x8868;&#x8FBE;&#x51FA;&#x6765;<br>cat file | sed -nr &apos;/=+/p&apos; # &#x6253;&#x5370;&#x51FA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;=&#x53F7;&#x7684;&#x884C;<br>cat ces.txt.bak |sed -n &apos;s/sha512/sha511/p&apos; #
+&#x7531;&#x4E8E;sed&#x9ED8;&#x8BA4;&#x4F1A;&#x628A;&#x6240;&#x6709;&#x884C;&#x90FD;&#x8F93;&#x51FA;&#xFF0C;&#x52A0;&#x4E0A;-n&#x9009;&#x9879;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#xFF0C;&#x5728;&#x5339;&#x914D;&#x6761;&#x4EF6;&#x6700;&#x540E;&#x52A0;p&#x6807;&#x7B7E;&#x5C31;&#x53EF;&#x4EE5;&#x53EA;&#x663E;&#x793A;&#x51FA;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x5185;&#x5BB9;&#xFF0C;</p>
+<p>cat dashazi |grep &apos;qq&apos;|sed -n &apos;s#\^qq.##gp&apos; # &#x67E5;&#x627E;&#x5230;qq&#x7684;&#x60F3; &#x628A;qq.&#x66FF;&#x6362;&#x4E3A;&#x7A7A;
+p&#x662F;&#x6253;&#x5370;&#x7684;&#x610F;&#x601D;<br>sed -i.bak &apos;s#&#x6E90;&#x5185;&#x5BB9;#&#x76EE;&#x6807;&#x5185;&#x5BB9;#g&apos; ces.txt # &#x4E3A;&#x907F;&#x514D;&#x8986;&#x76D6;&#x6E90;&#x6587;&#x4EF6;
+&#x5728;-i&#x7684;&#x53C2;&#x6570;&#x540E;&#x52A0;.bak&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;.bak&#x7684;&#x5907;&#x4EFD;&#x6587;&#x4EF6;<br>sed -e &apos;s/tom/TOM/&apos; -e &apos;s/tom/jerry/&apos; /etc/passwd #
+&#x7531;&#x4E8E;&#x7B2C;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x65F6;&#x628A;tom&#x6362;&#x6210;&#x4E86;TOM&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x5C31;&#x4E0D;&#x5B58;&#x5728;tom&#x5B57;&#x6BB5;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x518D;&#x66FF;&#x6362;&#x4E3A;jerry</p>
+<p>sed &apos;s/tom/TOM/;s/tom/jerry/&apos; /etc/passwd # &#x5206;&#x53F7;&#x4E5F;&#x53EF;&#x4EE5;&#x4EE3;&#x66FF;-e&#x9009;&#x9879;</p>
+<p>sed -n &apos;5,10p&apos; anaconda-ks.cfg # &#x6253;&#x5370;5~10&#x884C;<br>sed -n &apos;5,+5p&apos; anaconda-ks.cfg # &#x540C;&#x4E0A;</p>
+<p>sed -i &apos;s#old#new#g&apos; ces.txt # &quot;#&quot;&#x5206;&#x9694;&#x7B26;&#x53EF;&#x4EE5;&#x7528;/\@=&#x4EE3;&#x66FF; s&#x67E5;&#x627E;&#x9700;&#x8981;&#x66FF;&#x6362;&#x7684;&#x5185;&#x5BB9;
+g&#x83B7;&#x5F97;&#x5185;&#x5B58;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x66FF;&#x4EE3;&#x5F53;&#x524D;&#x6A21;&#x677F;&#x5757;&#x4E2D;&#x7684;&#x6587;&#x672C;&#xFF0C;s# #
+#g&#x9700;&#x8981;&#x642D;&#x914D;&#x4F7F;&#x7528;&#xFF0C;&#x8868;&#x793A;&#x5BF9;&#x5F53;&#x524D;&#x884C;&#x5168;&#x5C40;&#x5339;&#x914D;&#x66FF;&#x6362;,&#x82E5;&#x4E0D;&#x52A0;g &#x8868;&#x793A;&#x4FEE;&#x6539;&#x5339;&#x914D;&#x7684;&#x6BCF;&#x884C;&#x7B2C;&#x4E00;&#x4E2A;<br>sed -nr &apos;s#([\^:]+)(:.*:)(/.*$)#\3\2\1#gp&apos; /etc/passwd #
+\1&#x5339;&#x914D;&#x4E0D;&#x4EE5;:&#x5F00;&#x5934;&#x7684; \2&#x5339;&#x914D;:.*&#xFF1A; \3&#x5339;&#x914D;/&#x7ED3;&#x5C3E;&#x7684;</p>
+<p>&#x53D6;&#x6D88;C&#x8BED;&#x8A00;&#x6CE8;&#x91CA;&#x884C;<br>cat zhushu |sed &apos;s/\/\/.*$//g&apos; |sed &apos;s#\/\*.*\*\/##g&apos; |sed
+&apos;/\^\/\*/,/\*\//d&apos; |grep -v &apos;\^$&apos; |sed -r &apos;/\^[ \t]+$/d&apos;</p>
+<p># &#x53D6;&#x6D88;&#x4E09;&#x79CD;&#x6CE8;&#x91CA;&#x8FC7;&#x6EE4; //&#x6CE8;&#x91CA; &#x7684;&#x884C; &#x8FC7;&#x6EE4; /*---*/&#x7684;&#x884C; &#x8FC7;&#x6EE4; &#x5305;&#x542B;&#x6362;&#x884C;&#x7684;&#x6CE8;&#x91CA;
+&#x8FC7;&#x6EE4;&#x7A7A;&#x884C;-v&#x53D6;&#x53CD; &#x8FC7;&#x6EE4;&#x6709;&#x7A7A;&#x683C;&#x548C;tab&#x7684;&#x884C; -r &#x5F00;&#x542F;&#x6B63;&#x5219;<br>cat zhushu<br>#include\<stdio.h\><br>/*<br>made by dashazi<br>*/<br>int main()<br>// echo hello<br>print(&quot;hello world\n&quot;); /*-----------------------*/  </stdio.h\></p>
+<hr>
+<p>cat ssd |sed -r &apos;s/[\^ ]+[[:space:]]//2&apos; # &#x628A;&#x7B2C;&#x4E8C;&#x5217;&#x66FF;&#x6362;&#x6389; [\^
+]+[[:space:]]&#x5339;&#x914D;&#x7B2C;&#x4E8C;&#x5217;<br>cat ssd |sed -r &apos;s/[\^ ]+[[ ]+//2&apos; # &#x7B49;&#x4E8E;&#x4E0A;&#x9762; &#x597D;&#x50CF;&#x4E5F;&#x53EF;&#x4EE5;<br>cat ssd |sed -r &apos;s/\^[ ]+//g&apos; # &#x5220;&#x9664;&#x6BCF;&#x884C;&#x5F00;&#x5934;&#x7684;&#x6240;&#x6709;&#x7A7A;&#x683C;  </p>
+<p>&#x5C06;&#x5927;&#x5199;&#x90FD;&#x7528;&#xFF08;&#xFF09;&#x8D77;&#x6765;<br>cat ssd |tr &apos;d&apos; &apos;D&apos; |sed -r &apos;s/([A-Z])/(\1)/g&apos;<br>cat ssd |tr &apos;d&apos; &apos;D&apos; |sed -r &apos;s/[A-Z]/(&amp;)/g&apos;<br>cat ssd |sed -r &apos;/\^[#]|\^$/d&apos; # &#x8FC7;&#x6EE4;#&#x5F00;&#x5934;&#x548C;&#x7A7A;&#x884C; |&#x662F;&#x6216;&#x8005;  </p>
+<p>linux sed&#x6279;&#x91CF;&#x66FF;&#x6362;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;<br>sed -i &apos;s/lgside/main/g&apos; `grep -rl lgside /home/zn/work/project-template`  </p>
+<p>&#x6309;&#x5B57;&#x7B26;&#x4E32;&#x67E5;&#x8BE2;<br>[root\@oldboy ~]# sed -n &apos;/CTO/p&apos; person.txt<br>102,zhangyao,CTO<br>[root\@oldboy ~]# sed -n &apos;/CTO/,/CFO/p&apos; person.txt<br>102,zhangyao,CTO<br>103,Alex,COO<br>104,yy,CFO  </p>
+<p>&#x6DF7;&#x5408;&#x67E5;&#x8BE2;<br>[root\@oldboy ~]# sed -n &apos;2,/CFO/p&apos; person.txt<br>102,zhangyao,CTO<br>103,Alex,COO<br>104,yy,CFO<br>[root\@oldboy ~]# sed -n &apos;/feixue/,2p&apos; person.txt<br>105,feixue,CIO<br>#&#x2192;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF0C;&#x524D;&#x4E24;&#x884C;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x5230;feixue&#xFF0C;&#x5C31;&#x5411;&#x540E;&#x5339;&#x914D;&#xFF0C;&#x5982;&#x679C;&#x5339;&#x914D;&#x5230;feixue&#x5C31;&#x6253;&#x5370;&#x6B64;&#x884C;&#x3002;</p>
+<p>&#x5728;&#x6BCF;&#x884C;&#x7684;&#x5934;&#x6DFB;&#x52A0;&#x5B57;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;&quot;HEAD&quot;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>sed &apos;s/\^/HEAD&amp;/g&apos; test.file</p>
+<p>&#x5728;&#x6BCF;&#x884C;&#x7684;&#x884C;&#x5C3E;&#x6DFB;&#x52A0;&#x5B57;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;&#x201C;TAIL&#x201D;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>sed &apos;s/$/&amp;TAIL/g&apos; test.file</p>
+<p>&#x8BF4;&#x660E;
+&apos;s/$/&amp;TAIL/g&apos;&#x4E2D;&#x7684;&#x5B57;&#x7B26;g&#x4EE3;&#x8868;&#x6BCF;&#x884C;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x7B26;&#x5168;&#x90E8;&#x66FF;&#x6362;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x5904;&#x6DFB;&#x52A0;&#xFF0C;g&#x5C31;&#x6709;&#x7528;&#x4E86;&#xFF0C;&#x5426;&#x5219;&#x53EA;&#x4F1A;&#x66FF;&#x6362;&#x6BCF;&#x884C;&#x7B2C;&#x4E00;&#x4E2A;&#xFF0C;&#x800C;&#x4E0D;&#x7EE7;&#x7EED;&#x5F80;&#x540E;&#x627E;&#x4E86;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rsync备份.html" class="navigation navigation-prev " aria-label="Previous page: rsync备份">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell备份.html" class="navigation navigation-next " aria-label="Next page: shell备份">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sed命令","level":"1.16","depth":1,"next":{"title":"shell备份","level":"1.17","depth":1,"path":"shell备份.md","ref":"shell备份.md","articles":[]},"previous":{"title":"rsync备份","level":"1.15","depth":1,"path":"rsync备份.md","ref":"rsync备份.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"sed命令.md","mtime":"2019-03-22T06:27:56.334Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T08:20:11.587Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

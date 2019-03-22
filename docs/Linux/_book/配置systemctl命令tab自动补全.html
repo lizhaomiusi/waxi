@@ -1,0 +1,1058 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>配置systemctl命令tab自动补全 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="全能系统监控工具dstat.html" />
+    
+    
+    <link rel="prev" href="更改linux终端中用户名颜色.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1常用查询.html">
+            
+                <a href="1常用查询.html">
+            
+                    
+                    1常用查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1日常配置.html">
+            
+                <a href="1日常配置.html">
+            
+                    
+                    1日常配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="25个必须记住的SSH命令.html">
+            
+                <a href="25个必须记住的SSH命令.html">
+            
+                    
+                    25个必须记住的SSH命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="centos_6_网卡问题.html">
+            
+                <a href="centos_6_网卡问题.html">
+            
+                    
+                    centos6网卡问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="centos_7_网卡配置.html">
+            
+                <a href="centos_7_网卡配置.html">
+            
+                    
+                    centos7网卡配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CentOS7添加新磁盘而不用重启.html">
+            
+                <a href="CentOS7添加新磁盘而不用重启.html">
+            
+                    
+                    CentOS7添加新磁盘而不用重启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Centos系统优化.html">
+            
+                <a href="Centos系统优化.html">
+            
+                    
+                    Centos系统优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="crond命令_定时任务.html">
+            
+                <a href="crond命令_定时任务.html">
+            
+                    
+                    crond命令_定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="diff命令.html">
+            
+                <a href="diff命令.html">
+            
+                    
+                    diff命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="iptables的四表五链.html">
+            
+                <a href="iptables的四表五链.html">
+            
+                    
+                    iptables的四表五链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="linux查看和修改PATH环境变量的方法.html">
+            
+                <a href="linux查看和修改PATH环境变量的方法.html">
+            
+                    
+                    linux查看和修改PATH环境变量的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="linux磁盘空间满了.html">
+            
+                <a href="linux磁盘空间满了.html">
+            
+                    
+                    linux磁盘空间满了
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Linux设置SFTP服务用户目录权限.html">
+            
+                <a href="Linux设置SFTP服务用户目录权限.html">
+            
+                    
+                    Linux设置SFTP服务用户目录权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="linux忘记密码.html">
+            
+                <a href="linux忘记密码.html">
+            
+                    
+                    linux忘记密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="linux下添加路由.html">
+            
+                <a href="linux下添加路由.html">
+            
+                    
+                    linux下添加路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="man中文手册安装.html">
+            
+                <a href="man中文手册安装.html">
+            
+                    
+                    man中文手册安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="nc命令.html">
+            
+                <a href="nc命令.html">
+            
+                    
+                    nc命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="nmon性能测试工具.html">
+            
+                <a href="nmon性能测试工具.html">
+            
+                    
+                    nmon性能测试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="pdsh命令.html">
+            
+                <a href="pdsh命令.html">
+            
+                    
+                    pdsh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="pssh命令.html">
+            
+                <a href="pssh命令.html">
+            
+                    
+                    pssh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="rm_-rf_恢复.html">
+            
+                <a href="rm_-rf_恢复.html">
+            
+                    
+                    rm-rf恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="rsync-init.d脚本.html">
+            
+                <a href="rsync-init.d脚本.html">
+            
+                    
+                    rsync-init.d脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="rsync-win平台.html">
+            
+                <a href="rsync-win平台.html">
+            
+                    
+                    rsync-win平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="rsync-参数server端.html">
+            
+                <a href="rsync-参数server端.html">
+            
+                    
+                    rsync-参数server端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="rsync-参数客户端.html">
+            
+                <a href="rsync-参数客户端.html">
+            
+                    
+                    rsync-参数客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="rsync-服务端配置.html">
+            
+                <a href="rsync-服务端配置.html">
+            
+                    
+                    rsync-服务端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="rsync-故障.html">
+            
+                <a href="rsync-故障.html">
+            
+                    
+                    rsync-故障
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="rsync-客户端配置.html">
+            
+                <a href="rsync-客户端配置.html">
+            
+                    
+                    rsync-客户端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="sshpass命令.html">
+            
+                <a href="sshpass命令.html">
+            
+                    
+                    sshpass命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="SSH隧道.html">
+            
+                <a href="SSH隧道.html">
+            
+                    
+                    SSH隧道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="SSH远程连接服务慢解决.html">
+            
+                <a href="SSH远程连接服务慢解决.html">
+            
+                    
+                    SSH远程连接服务慢解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="systemctl命令.html">
+            
+                <a href="systemctl命令.html">
+            
+                    
+                    systemctl命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="vnstat进行流量统计.html">
+            
+                <a href="vnstat进行流量统计.html">
+            
+                    
+                    vnstat进行流量统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="安装完centos7需要干.html">
+            
+                <a href="安装完centos7需要干.html">
+            
+                    
+                    安装完centos7需要干
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="安装状态监控Linux_Dash.html">
+            
+                <a href="安装状态监控Linux_Dash.html">
+            
+                    
+                    安装状态监控Linux_Dash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="常见安全检查方法.html">
+            
+                <a href="常见安全检查方法.html">
+            
+                    
+                    常见安全检查方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="服务器删除文件权限不够.html">
+            
+                <a href="服务器删除文件权限不够.html">
+            
+                    
+                    服务器删除文件权限不够
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="更改linux终端中用户名颜色.html">
+            
+                <a href="更改linux终端中用户名颜色.html">
+            
+                    
+                    更改linux终端中用户名颜色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.40" data-path="配置systemctl命令tab自动补全.html">
+            
+                <a href="配置systemctl命令tab自动补全.html">
+            
+                    
+                    配置systemctl命令tab自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="全能系统监控工具dstat.html">
+            
+                <a href="全能系统监控工具dstat.html">
+            
+                    
+                    全能系统监控工具dstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="生产场景如何对linux系统进行合理规划分区.html">
+            
+                <a href="生产场景如何对linux系统进行合理规划分区.html">
+            
+                    
+                    生产场景如何对linux系统进行合理规划分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="使用mkpasswd命令生成随机密码.html">
+            
+                <a href="使用mkpasswd命令生成随机密码.html">
+            
+                    
+                    使用mkpasswd命令生成随机密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="系统屏蔽某个IP的访问.html">
+            
+                <a href="系统屏蔽某个IP的访问.html">
+            
+                    
+                    系统屏蔽某个IP的访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="应该知道的LINUX技巧.html">
+            
+                <a href="应该知道的LINUX技巧.html">
+            
+                    
+                    应该知道的LINUX技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >配置systemctl命令tab自动补全</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x914D;&#x7F6E;systemctl&#x547D;&#x4EE4;tab&#x81EA;&#x52A8;&#x8865;&#x5168;</p>
+<p><a href="https://www.cnblogs.com/shanwater/p/6847196.html" target="_blank">https://www.cnblogs.com/shanwater/p/6847196.html</a></p>
+<p>CentOS7&#x5229;&#x7528;systemctl&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;</p>
+<p><a href="https://www.cnblogs.com/saneri/p/7778756.html" target="_blank">https://www.cnblogs.com/saneri/p/7778756.html</a>  </p>
+<p>&#x7CFB;&#x7EDF;&#x7248;&#x672C;<br>[root\@test ~]# uname -r<br>3.10.0-229.el7.x86_64  </p>
+<p>[root\@test ~]# cat /etc/redhat-release<br>CentOS Linux release 7.1.1503 (Core)  </p>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;<br>yum install -y bash-completion<br>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x9000;&#x51FA;&#x7EC8;&#x7AEF;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#x540E;&#x751F;&#x6548;  </p>
+<p>CentOS7&#x4E2D;systemctl&#x7684;&#x4F7F;&#x7528;<br>CentOS
+7.x&#x5F00;&#x59CB;&#xFF0C;CentOS&#x5F00;&#x59CB;&#x4F7F;&#x7528;systemd&#x670D;&#x52A1;&#x6765;&#x4EE3;&#x66FF;daemon&#xFF0C;&#x539F;&#x6765;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x548C;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x7684;&#x76F8;&#x5173;&#x547D;&#x4EE4;&#x5168;&#x90E8;&#x7531;systemctl&#x547D;&#x4EE4;&#x6765;&#x4EE3;&#x66FF;&#x3002;  </p>
+<p>1&#x3001;&#x539F;&#x6765;&#x7684; service &#x547D;&#x4EE4;&#x4E0E; systemctl &#x547D;&#x4EE4;&#x5BF9;&#x6BD4;</p>
+<table>
+<thead>
+<tr>
+<th>daemon&#x547D;&#x4EE4;</th>
+<th>systemctl&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service [&#x670D;&#x52A1;] start</td>
+<td>systemctl start [unit type]</td>
+<td>&#x542F;&#x52A8;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>service [&#x670D;&#x52A1;] stop</td>
+<td>systemctl stop [unit type]</td>
+<td>&#x505C;&#x6B62;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>service [&#x670D;&#x52A1;] restart</td>
+<td>systemctl restart [unit type]</td>
+<td>&#x91CD;&#x542F;&#x670D;&#x52A1;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6B64;&#x5916;&#x8FD8;&#x662F;&#x4E8C;&#x4E2A;systemctl&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x4E0E;service&#x547D;&#x4EE4;&#x53C2;&#x6570;&#x5BF9;&#x5E94;<br>&#x2022; status&#xFF1A;&#x53C2;&#x6570;&#x6765;&#x67E5;&#x770B;&#x670D;&#x52A1;&#x8FD0;&#x884C;&#x60C5;&#x51B5;<br>&#x2022;
+reload&#xFF1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x670D;&#x52A1;&#xFF0C;&#x52A0;&#x8F7D;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x670D;&#x52A1;&#x90FD;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;network.service&#xFF09;<br>&#x5E94;&#x7528;&#x4E3E;&#x4F8B;&#xFF1A;<br>#&#x542F;&#x52A8;&#x7F51;&#x7EDC;&#x670D;&#x52A1;<br>systemctl start network.service<br>#&#x505C;&#x6B62;&#x7F51;&#x7EDC;&#x670D;&#x52A1;<br>systemctl stop network.service<br>#&#x91CD;&#x542F;&#x7F51;&#x7EDC;&#x670D;&#x52A1;<br>systemctl restart network.service<br>#&#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x72B6;&#x6001;<br>systemctl status network.serivce  </p>
+<p>2&#x3001;&#x539F;&#x6765;&#x7684;chkconfig &#x547D;&#x4EE4;&#x4E0E; systemctl &#x547D;&#x4EE4;&#x5BF9;&#x6BD4;  </p>
+<p>2.1&#x3001;&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x542F;&#x52A8;/&#x4E0D;&#x542F;&#x52A8;</p>
+<table>
+<thead>
+<tr>
+<th>daemon&#x547D;&#x4EE4;</th>
+<th>systemctl&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chkconfig [&#x670D;&#x52A1;] on</td>
+<td>systemctl enable [unit type]</td>
+<td>&#x8BBE;&#x7F6E;&#x670D;&#x52A1;&#x5F00;&#x673A;&#x542F;&#x52A8;</td>
+</tr>
+<tr>
+<td>chkconfig [&#x670D;&#x52A1;] off</td>
+<td>systemctl disable [unit type]</td>
+<td>&#x8BBE;&#x5907;&#x670D;&#x52A1;&#x7981;&#x6B62;&#x5F00;&#x673A;&#x542F;&#x52A8;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5E94;&#x7528;&#x4E3E;&#x4F8B;&#xFF1A;<br>#&#x505C;&#x6B62;cup&#x7535;&#x6E90;&#x7BA1;&#x7406;&#x670D;&#x52A1;<br>systemctl stop cups.service<br>#&#x7981;&#x6B62;cups&#x670D;&#x52A1;&#x5F00;&#x673A;&#x542F;&#x52A8;<br>systemctl disable cups.service<br>#&#x67E5;&#x770B;cups&#x670D;&#x52A1;&#x72B6;&#x6001;<br>systemctl status cups.service<br>#&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;cups&#x670D;&#x52A1;&#x5F00;&#x673A;&#x542F;&#x52A8;<br>systemctl enable cups.service  </p>
+<p>2.2&#x3001;&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4E0A;&#x4E0A;&#x6240;&#x6709;&#x7684;&#x670D;&#x52A1;<br>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;<br>systemctl [command] [-type=TYPE] [-all]<br>&#x53C2;&#x6570;&#x8BE6;&#x89E3;&#xFF1A;<br>command - list-units&#xFF1A;&#x4F9D;&#x636E;unit&#x5217;&#x51FA;&#x6240;&#x6709;&#x542F;&#x52A8;&#x7684;unit&#x3002;&#x52A0;&#x4E0A; -all
+&#x624D;&#x4F1A;&#x5217;&#x51FA;&#x6CA1;&#x542F;&#x52A8;&#x7684;unit; - list-unit-files:&#x4F9D;&#x636E;/usr/lib/systemd/system/
+&#x5185;&#x7684;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#xFF0C;&#x5217;&#x51FA;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x5217;&#x8868;<br>-type=TYPE - &#x4E3A;unit type, &#x4E3B;&#x8981;&#x6709;service, socket, target<br>&#x5E94;&#x7528;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>systemctl&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemctl</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>systemctl list-units</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x542F;&#x52A8;unit</td>
+</tr>
+<tr>
+<td>systemctl list-unit-files</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x542F;&#x52A8;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>systemctl list-units -type=service -all</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;service&#x7C7B;&#x578B;&#x7684;unit</td>
+</tr>
+<tr>
+<td>systemctl list-units -type=service -all grep cpu</td>
+<td>&#x5217;&#x51FA; cpu&#x7535;&#x6E90;&#x7BA1;&#x7406;&#x673A;&#x5236;&#x7684;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>systemctl list-units -type=target -all</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;target</td>
+</tr>
+</tbody>
+</table>
+<p>3&#x3001;systemctl&#x7279;&#x6B8A;&#x7684;&#x7528;&#x6CD5;</p>
+<table>
+<thead>
+<tr>
+<th>systemctl&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemctl is-active [unit type]</td>
+<td>&#x67E5;&#x770B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x8FD0;&#x884C;</td>
+</tr>
+<tr>
+<td>systemctl is-enable [unit type]</td>
+<td>&#x67E5;&#x770B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F00;&#x673A;&#x542F;&#x52A8;</td>
+</tr>
+<tr>
+<td>systemctl mask [unit type]</td>
+<td>&#x6CE8;&#x9500;&#x6307;&#x5B9A;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>systemctl unmask [unit type]</td>
+<td>&#x53D6;&#x6D88;&#x6CE8;&#x9500;&#x6307;&#x5B9A;&#x670D;&#x52A1;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5E94;&#x7528;&#x4E3E;&#x4F8B;&#xFF1A;<br>#&#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x662F;&#x5426;&#x542F;&#x52A8;<br>systemctl is-active network.service<br>#&#x68C0;&#x67E5;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F00;&#x673A;&#x542F;&#x52A8;<br>systemctl is-enable network.service<br>#&#x505C;&#x6B62;cups&#x670D;&#x52A1;<br>systemctl stop cups.service<br>#&#x6CE8;&#x9500;cups&#x670D;&#x52A1;<br>systemctl mask cups.service<br>#&#x67E5;&#x770B;cups&#x670D;&#x52A1;&#x72B6;&#x6001;<br>systemctl status cups.service<br>#&#x53D6;&#x6D88;&#x6CE8;&#x9500;cups&#x670D;&#x52A1;<br>systemctl unmask cups.service  </p>
+<p>4&#x3001;init &#x547D;&#x4EE4;&#x4E0E;systemctl&#x547D;&#x4EE4;&#x5BF9;&#x6BD4;</p>
+<table>
+<thead>
+<tr>
+<th>init&#x547D;&#x4EE4;</th>
+<th>systemctl&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>init 0</td>
+<td>systemctl poweroff</td>
+<td>&#x7CFB;&#x7EDF;&#x5173;&#x673A;</td>
+</tr>
+<tr>
+<td>init 6</td>
+<td>systemctl reboot</td>
+<td>&#x91CD;&#x65B0;&#x542F;&#x52A8;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0E;&#x5F00;&#x5173;&#x673A;&#x76F8;&#x5173;&#x7684;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>systemctl&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemctl suspend</td>
+<td>&#x8FDB;&#x5165;&#x7761;&#x7720;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>systemctl hibernate</td>
+<td>&#x8FDB;&#x5165;&#x4F11;&#x7720;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>systemctl rescue</td>
+<td>&#x5F3A;&#x5236;&#x8FDB;&#x5165;&#x6551;&#x63F4;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>systemctl emergency</td>
+<td>&#x5F3A;&#x5236;&#x8FDB;&#x5165;&#x7D27;&#x6025;&#x6551;&#x63F4;&#x6A21;&#x5F0F;</td>
+</tr>
+</tbody>
+</table>
+<p>5&#x3001;&#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x7EA7;&#x522B;  </p>
+<p>5.1&#x3001;&#x8FD0;&#x884C;&#x7EA7;&#x522B;&#x5BF9;&#x5E94;&#x8868;</p>
+<table>
+<thead>
+<tr>
+<th>init&#x7EA7;&#x522B;</th>
+<th>systemctl target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>shutdown.target</td>
+</tr>
+<tr>
+<td>1</td>
+<td>emergency.target</td>
+</tr>
+<tr>
+<td>2</td>
+<td>rescure.target</td>
+</tr>
+<tr>
+<td>3</td>
+<td>multi-user.target</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>graphical.target</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&#x65E0;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6B64;&#x5916;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;getty.target&#x7528;&#x6765;&#x8BBE;&#x7F6E;tty&#x7684;&#x6570;&#x91CF;&#x3002;  </p>
+<p>5.2&#x3001;&#x8BBE;&#x7F6E;&#x8FD0;&#x884C;&#x7EA7;&#x522B;<br>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;<br>systemctl [command] [unit.target]<br>&#x53C2;&#x6570;&#x8BE6;&#x89E3;&#xFF1A;<br>command:<br>&#x2022; get-default :&#x53D6;&#x5F97;&#x5F53;&#x524D;&#x7684;target<br>&#x2022; set-default :&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7684;target&#x4E3A;&#x9ED8;&#x8BA4;&#x7684;&#x8FD0;&#x884C;&#x7EA7;&#x522B;<br>&#x2022; isolate :&#x5207;&#x6362;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x8FD0;&#x884C;&#x7EA7;&#x522B;<br>&#x2022; unit.target :&#x4E3A;5.1&#x8868;&#x4E2D;&#x5217;&#x51FA;&#x7684;&#x8FD0;&#x884C;&#x7EA7;&#x522B;</p>
+<table>
+<thead>
+<tr>
+<th>systemctl&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemctl get-default</td>
+<td>&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x7684;&#x8FD0;&#x884C;&#x7EA7;&#x522B;</td>
+</tr>
+<tr>
+<td>systemctl set-default multi-user.target</td>
+<td>&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;&#x8FD0;&#x884C;&#x7EA7;&#x522B;&#x4E3A;mulit-user</td>
+</tr>
+<tr>
+<td>systemctl isolate multi-user.target</td>
+<td>&#x5728;&#x4E0D;&#x91CD;&#x542F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x8FD0;&#x884C;&#x7EA7;&#x522B;mulit-user&#x4E0B;</td>
+</tr>
+<tr>
+<td>systemctl isolate graphical.target</td>
+<td>&#x5728;&#x4E0D;&#x91CD;&#x542F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0B;</td>
+</tr>
+</tbody>
+</table>
+<p>6&#x3001;&#x4F7F;&#x7528;systemctl&#x5206;&#x6790;&#x5404;&#x670D;&#x52A1;&#x4E4B;&#x524D;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;<br>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;<br>systemctl list-dependencies [unit] [-reverse]<br>-reverse&#x662F;&#x7528;&#x6765;&#x68C0;&#x67E5;&#x5BFB;&#x54EA;&#x4E2A;unit&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x4E2A;unit<br>&#x5E94;&#x7528;&#x4E3E;&#x4F8B;&#xFF1A;<br>#&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7EA7;&#x522B;&#x7684;target<br>[root\@www ~]# systemctl get-default<br>multi-user.target  </p>
+<p>#&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7EA7;&#x522B;target(mult-user)&#x542F;&#x52A8;&#x4E86;&#x54EA;&#x4E9B;&#x670D;&#x52A1;<br>[root\@www ~]# systemctl list-dependencies<br>default.target<br>&#x251C;&#x2500;abrt-ccpp.service<br>&#x251C;&#x2500;abrt-oops.service<br>&#x251C;&#x2500;vsftpd.service<br>&#x251C;&#x2500;basic.target<br>&#x2502; &#x251C;&#x2500;alsa-restore.service<br>&#x2502; &#x251C;&#x2500;alsa-state.service<br>.....(&#x4E2D;&#x95F4;&#x7701;&#x7565;).....<br>&#x2502; &#x251C;&#x2500;sockets.target<br>&#x2502; &#x2502; &#x251C;&#x2500;avahi-daemon.socket<br>&#x2502; &#x2502; &#x251C;&#x2500;dbus.socket<br>.....(&#x4E2D;&#x95F4;&#x7701;&#x7565;).....<br>&#x2502; &#x251C;&#x2500;sysinit.target<br>&#x2502; &#x2502; &#x251C;&#x2500;dev-hugepages.mount<br>&#x2502; &#x2502; &#x251C;&#x2500;dev-mqueue.mount<br>.....(&#x4E2D;&#x95F4;&#x7701;&#x7565;).....<br>&#x2502; &#x2514;&#x2500;timers.target<br>&#x2502; &#x2514;&#x2500;systemd-tmpfiles-clean.timer<br>&#x251C;&#x2500;getty.target<br>&#x2502; &#x2514;&#x2500;getty\@tty1.service<br>&#x2514;&#x2500;remote-fs.target  </p>
+<p>#&#x67E5;&#x770B;&#x54EA;&#x4E9B;target&#x5F15;&#x7528;&#x4E86;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7EA7;&#x522B;&#x7684;target<br>[root\@www ~]# systemctl list-dependencies --reverse<br>default.target<br>&#x2514;&#x2500;graphical.target  </p>
+<p>7&#x3001;&#x5173;&#x95ED;&#x7F51;&#x7EDC;&#x670D;&#x52A1;<br>&#x5728;&#x4F7F;&#x7528;systemctl&#x5173;&#x95ED;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x65F6;&#x6709;&#x4E00;&#x4E9B;&#x7279;&#x6B8A; &#x9700;&#x8981;&#x540C;&#x65F6;&#x5173;&#x95ED;unit.servce&#x548C;unit.socket<br>&#x4F7F;&#x7528;systemctl&#x67E5;&#x770B;&#x5F00;&#x542F;&#x7684;sshd&#x670D;&#x52A1;<br>[root\@www system]# systemctl list-units --all | grep sshd<br>sshd-keygen.service loaded inactive dead OpenSSH Server Key Generation<br>sshd.service loaded active running OpenSSH server daemon<br>sshd.socket loaded inactive dead OpenSSH Server Socket<br>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7CFB;&#x7EDF;&#x540C;&#x65F6;&#x5F00;&#x542F;&#x4E86; sshd.service &#x548C; sshd.socket , &#x5982;&#x679C;&#x53EA;&#x95ED;&#x5173;&#x4E86; sshd.service
+&#x90A3;&#x4E48; sshd.socket&#x8FD8;&#x5728;&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#xFF0C;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x6709;&#x8981;&#x6C42;&#x8FDE;&#x63A5; sshd &#x65F6;&#x5C31;&#x4F1A;&#x542F;&#x52A8; sshd.service
+&#x3002;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x60F3;&#x5B8C;&#x5168;&#x5173;&#x95ED;sshd&#x670D;&#x52A1;&#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x540C;&#x65F6;&#x505C;&#x7528; sshd.service &#x548C; sshd.socket &#x3002;<br>systemctl stop sshd.service<br>systemctl stop sshd.socket<br>systemctl disable sshd.service sshd.socket<br>&#x7531;&#x4E8E;centos 7.x&#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x5B89;&#x88C5;net-tools&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;netstat
+&#x6765;&#x67E5;&#x770B;&#x4E3B;&#x673A;&#x5F00;&#x53D1;&#x7684;&#x5546;&#x54C1;&#x3002;&#x9700;&#x8981;&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;&#x6765;&#x83B7;&#x5F97;&#x8BE5;&#x5DE5;&#x5177;&#x5305;&#xFF1A;<br>yum -y install net-tools<br>&#x67E5;&#x770B;&#x662F;&#x5426;&#x5173;&#x95ED;22&#x7AEF;&#x53E3;<br>netstat -lnp |grep sshd  </p>
+<p>8&#x3001;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;firewall<br>Centos 7.x &#x4E2D;&#x53D6;&#x6D88;&#x4E86;iptables,
+&#x7528;firewall&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x3002;&#x8981;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#x5E76;&#x7981;&#x6B62;&#x5F00;&#x673A;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;:<br>systemctl stop firewalld.service<br>systemctl disable firewalld.service</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="更改linux终端中用户名颜色.html" class="navigation navigation-prev " aria-label="Previous page: 更改linux终端中用户名颜色">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="全能系统监控工具dstat.html" class="navigation navigation-next " aria-label="Next page: 全能系统监控工具dstat">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"配置systemctl命令tab自动补全","level":"1.40","depth":1,"next":{"title":"全能系统监控工具dstat","level":"1.41","depth":1,"path":"全能系统监控工具dstat.md","ref":"全能系统监控工具dstat.md","articles":[]},"previous":{"title":"更改linux终端中用户名颜色","level":"1.39","depth":1,"path":"更改linux终端中用户名颜色.md","ref":"更改linux终端中用户名颜色.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"配置systemctl命令tab自动补全.md","mtime":"2019-03-22T02:32:03.923Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T07:59:19.170Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
