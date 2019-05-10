@@ -155,11 +155,11 @@ disown $!
 
 # ./configure --prefix=/usr/local/php5 --with-mysql=/usr/local/mysql --enable-fpm  --enable-mbstring --with-mcrypt --with-mhash --with-config-file-path=/usr/local/php5/etc --with-mysqli=/usr/local/mysql/bin/mysql_config > $NULL
 
-#./configure --prefix=/usr/local/php5 \ 	#安装路仅
-#--with-mysql=/usr/local/mysql\ 			#指定MySQL位置
-#--enable-fpm \  						#安装PHP-fpm服务，必须要设置，开发人员可不要，运维人员必须要设置
+#./configure --prefix=/usr/local/php5 \		#安装路仅
+#--with-mysql=/usr/local/mysql\				#指定MySQL位置
+#--enable-fpm \								#安装PHP-fpm服务，必须要设置，开发人员可不要，运维人员必须要设置
 #--enable-mbstring \						#多字节字符[汉字支持]
-#--with-mcrypt  --with-mhash \ 			#启用加密和hash功能
+#--with-mcrypt  --with-mhash \ 				#启用加密和hash功能
 #--with-config-file-path=/usr/local/php5/etc\   #制定PHP的配置文件存放路径
 #--with-mysqli=/usr/local/mysql/bin/mysql_config
 #result_info $? "configure" "32"
