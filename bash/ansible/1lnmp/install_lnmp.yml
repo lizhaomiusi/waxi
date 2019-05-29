@@ -1,0 +1,51 @@
+---
+- hosts: webzu
+  remote_user: root
+
+  tasks: 
+    - name: copy rpmbao
+      copy: src=/1rpm/nginx dest=/1rpm/
+
+    - name: copy rpmbao
+      copy: src=/1rpm/mysql56 dest=/1rpm/
+
+    - name: copy rpmbao
+      copy: src=/1rpm/php56 dest=/1rpm/
+
+    - name: install nginx
+      shell: yum localinstall /1rpm/nginx/*.rpm -y
+      
+    - name: install mysqld
+      shell: yum localinstall /1rpm/mysql56/*.rpm -y
+      
+    - name: install php_fpm
+      shell: yum localinstall /1rpm/php56/*.rpm -y
+      
+    - name: start nginx service
+      service: name=nginx state=started enabled=yes
+      
+    - name: start mysqld service
+      service: name=mysqld state=started enabled=yes
+      
+    - name: start php_fpm service
+      service: name=php-fpm state=started enabled=yes
+
+    - name: copy index_php
+      copy: src=/1bash/ansible/1lnmp/index.php dest=/usr/share/nginx/html/index.php
+
+    - name: copy nginx_conf
+      copy: src=/1bash/ansible/1lnmp/nginx.conf dest=/etc/nginx/nginx.conf backup=yes
+      tags: cp-nginx
+      notify: 
+        - restart nginx
+        - chk 80
+
+    - name: change_mysql
+      script: /1bash/ansible/1lnmp/change_mysql.sh
+      tags: change_mysql
+
+  handlers: 
+    - name: restart nginx
+      service: name=nginx.service state=restarted
+    - name: chk 80
+      shell: netstat -ntlp |grep 80
