@@ -1,0 +1,1 @@
+wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz && tar xzf oneinstack-full.tar.gz && ./oneinstack/install.sh --nginx_option 1 --php_option 4 --db_option 3 --dbinstallmethod 1 --dbrootpwd qwe123 --reboot
